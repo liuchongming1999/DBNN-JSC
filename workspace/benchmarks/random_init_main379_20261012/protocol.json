@@ -1,0 +1,20 @@
+{
+  "checkpoint": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/diagonal_1ms_20261009/dbnn_w500_dt1ms_burn150_full_diag/best_checkpoint.pt",
+  "checkpoint_sha256": "737efcff1e6686bfb153fca8590a8b28a605fbdb08f9a68ff44e68af8867686d",
+  "manifest": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/spike_panel_20261009/main379/manifest.json",
+  "manifest_sha256": "6d379e3aff8ac5b5f82a10d13807a13cd544f55fb6c934c07215bdf624ff49ab",
+  "source": "validation-selected full-matrix run from random initialization",
+  "checkpoint_and_reset_frozen": true,
+  "sample_interval_ms": 1.0,
+  "reference_dt_ms": 0.1,
+  "voltage_mask_ms": 10,
+  "event_tolerance_ms": 5,
+  "repeats_for_timing": 3,
+  "test_inputs_used_for_training_or_selection": false,
+  "model": "one double-exponential kernel per site; quadratic + linear + bias; event reset",
+  "reset": {
+    "v_th": -58.0,
+    "reset_amp": 4.0,
+    "tau_reset": 40.0
+  }
+}

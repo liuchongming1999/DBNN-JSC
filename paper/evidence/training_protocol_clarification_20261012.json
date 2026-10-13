@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-12",
+  "initialization": "random",
+  "checkpoint_sha256": "737efcff1e6686bfb153fca8590a8b28a605fbdb08f9a68ff44e68af8867686d",
+  "source_protocol": "initialization_protocol.json",
+  "window_ms": 500,
+  "warmup_ms": 150,
+  "scored_ms": 350,
+  "crop_filter_initial_state": "zero",
+  "crop_reset_equation": "r_crop[j] = r_ref[n0+j] - alpha**j * r_ref[n0]",
+  "drive_target_equation": "u_target[j] = V_ref[n0+j] - r_crop[j]",
+  "evaluation_directory": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/random_init_main379_20261012",
+  "cases": 379,
+  "reference_spikes": 637,
+  "repeats_per_input": 3,
+  "voltage_mask_ms": 10,
+  "event_tolerance_ms": 5,
+  "pooled_rmse_mv": 0.4373965617816741,
+  "events": {
+    "tp": 335,
+    "fp": 431,
+    "fn": 302,
+    "precision": 0.43733681462140994,
+    "recall": 0.5259026687598116,
+    "f1": 0.4775481111903065,
+    "median_abs_error_ms": 3.100000002896195
+  },
+  "backend_equivalence_verified": true,
+  "experiment_server": "5090"
+}

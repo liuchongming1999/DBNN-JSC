@@ -1,0 +1,15 @@
+\begin{tabular}{lrrr}
+\toprule
+Method & RMSE (mV) & Event $F_1$ & Time (ms)\\
+\midrule
+DBNN GPU & 0.437 & 0.478 & 32.51 \\
+DBNN CPU, 1 core & 0.437 & 0.478 & 13566.08 \\
+DBNN CPU, 8 cores & 0.437 & 0.478 & 1964.34 \\
+TCN GPU \cite{beniaguev2021} & 0.864 & 0.213 & 13620.87 \\
+Branch-ELM GPU \cite{spieler2024} & 0.797 & 0.429 & 33299.14 \\
+LSTM GPU \cite{hochreiter1997,spieler2024} & 0.749 & 0.271 & 1541.29 \\
+NEURON, 8 cores \cite{hines1997,hines2008} & 0.340 & 0.310 & 521474.70 \\
+CoreNEURON, 1 core \cite{kumbhar2019} & 0.340 & 0.310 & 611363.33 \\
+Neuron\_Reduce, 1 core \cite{amsalem2020} & 4.265 & 0.061 & 78990.26 \\
+\bottomrule
+\end{tabular}

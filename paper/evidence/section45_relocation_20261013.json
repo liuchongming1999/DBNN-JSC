@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-13",
+  "request": "Relocate simplified former Section 4.5 explanations to Sections 3.2 and 5.3.",
+  "placements": {
+    "input_history": "Section 3.2 beside crop warm-up",
+    "event_sensitivity": "Section 5.3 beside voltage/event examples",
+    "full_bounds_and_derivations": "Appendix A.3"
+  },
+  "changes": [
+    {
+      "section": "appendices.tex",
+      "before_sha256": "0addcdee1fec86518c3bdb3fb3de1807b47addc88b09907f298161e8ef3247a1",
+      "after_sha256": "637047e7551a5750b10ecb315e311f63dad2421dcca3e984c56f69d6f67bb903"
+    },
+    {
+      "section": "conclusion.tex",
+      "before_sha256": "3a31a0a41c548cf7793d1d0a60228495b048b003758ce9d6c5d393f9c1f8d963",
+      "after_sha256": "36dbe5bfb5645bbe06f8f623575c8573bcc11d7886c72c5f4059e3837d450147"
+    },
+    {
+      "section": "experiments.tex",
+      "before_sha256": "0fd96ab89e5a9325f98941ac5e7b644dc32cd4f573e2ae9fe49f56e5f0185fb8",
+      "after_sha256": "592c8cb73d4c4ce72969fa25570aa8c675067ac17a145bbff367a08d0731c2c5"
+    },
+    {
+      "section": "method.tex",
+      "before_sha256": "178370b1ab72a62a308d9d51883f76ae6157bfcf2fb8e9fb792cdfacd2301a94",
+      "after_sha256": "4a6eefac42d549e2c83b2696050ea6525a62c6d9ace040f60a329ab28601861a"
+    },
+    {
+      "section": "theory.tex",
+      "before_sha256": "39c85f8d85e46f77a170ff8af860370b33a69f92b6da1993b7b5df1cb70c1588",
+      "after_sha256": "94cae1a261a504f89262f37e2773ef7569cf58060e3d9d8c5d2126e03c0ff836"
+    }
+  ],
+  "checks": {
+    "existing_display_equations_preserved_across_relocation": true,
+    "obsolete_section_references_removed": true,
+    "original_figures_tables_and_numerical_evidence_unchanged": true,
+    "no_overfull_boxes": true,
+    "references_resolved": true
+  },
+  "mathematical_scope": "The appendix event bound explicitly assumes continuous interpolants, a differentiable monotone reference voltage, a strictly positive slope lower bound, common past reset events, and both crossings in the same interval.",
+  "compiled_pdf_pages": 36,
+  "pdf_sha256": "56874bdcc14f7abc19157efee6587fa37800cb871c09f2e1d0f78a267c08c71f"
+}

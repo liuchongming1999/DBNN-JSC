@@ -1,0 +1,220 @@
+{
+  "finished": true,
+  "created": "2026-10-09T17:39:36+0800",
+  "case_id": "confirmatory_0182",
+  "engine": "CoreNEURON CPU",
+  "threads": 1,
+  "dt_ms": 0.5,
+  "A": 500,
+  "duration_ms": 8000.0,
+  "site_mode": "all",
+  "rate_hz": 50.0,
+  "input_events": 200495,
+  "input_sha256": "8c3daa5eb4ce46e7f5f36888839d30c220ecf37b04074850132b731234cda121",
+  "ids_sha256": "2253930180b5ae89248437a25b4c5ffeef3028bc8b3afb41da441cdbed841c56",
+  "spike_count": 0,
+  "spike_times_ms": [],
+  "timing": {
+    "warmup_ms": {
+      "median_ms": 162.3968631029129,
+      "mean_ms": 162.37695266803107,
+      "std_ms": 0.05033616146724836,
+      "runs_ms": [
+        162.41428814828396,
+        162.3968631029129,
+        162.3197067528963
+      ],
+      "n": 3
+    },
+    "schedule_ms": {
+      "median_ms": 205.3171694278717,
+      "mean_ms": 205.82190590600172,
+      "std_ms": 1.8378934301499912,
+      "runs_ms": [
+        207.85943046212196,
+        205.3171694278717,
+        204.2891178280115
+      ],
+      "n": 3
+    },
+    "solver_ms": {
+      "median_ms": 1970.5835096538067,
+      "mean_ms": 1970.9446895867586,
+      "std_ms": 1.149120521860246,
+      "runs_ms": [
+        1970.0195491313934,
+        1972.2310099750757,
+        1970.5835096538067
+      ],
+      "n": 3
+    },
+    "output_ms": {
+      "median_ms": 0.20906701683998108,
+      "mean_ms": 0.22987152139345804,
+      "std_ms": 0.0376868835314809,
+      "runs_ms": [
+        0.20906701683998108,
+        0.2071727067232132,
+        0.27337484061717987
+      ],
+      "n": 3
+    },
+    "steady_ms": {
+      "median_ms": 1970.8568844944239,
+      "mean_ms": 1971.1745611081521,
+      "std_ms": 1.1385231177914452,
+      "runs_ms": [
+        1970.2286161482334,
+        1972.438182681799,
+        1970.8568844944239
+      ],
+      "n": 3
+    },
+    "full_ms": {
+      "median_ms": 2340.1573728770018,
+      "mean_ms": 2339.3785568575063,
+      "std_ms": 1.6613827094853062,
+      "runs_ms": [
+        2340.507462620735,
+        2340.1573728770018,
+        2337.4708350747824
+      ],
+      "n": 3
+    },
+    "solver_cpu_ms": {
+      "median_ms": 1969.7548080000047,
+      "mean_ms": 1970.1019943333383,
+      "std_ms": 1.1389514354423687,
+      "runs_ms": [
+        1969.1770400000053,
+        1971.374135000005,
+        1969.7548080000047
+      ],
+      "n": 3
+    }
+  },
+  "repeats": [
+    {
+      "warmup_ms": 162.41428814828396,
+      "schedule_ms": 207.85943046212196,
+      "solver_ms": 1970.0195491313934,
+      "output_ms": 0.20906701683998108,
+      "steady_ms": 1970.2286161482334,
+      "full_ms": 2340.507462620735,
+      "solver_cpu_ms": 1969.1770400000053,
+      "spike_times_ms": [],
+      "loadavg": [
+        35.04,
+        21.24,
+        16.32
+      ],
+      "neuron_warmup_thread_seconds": [
+        0.15910053253173828
+      ]
+    },
+    {
+      "warmup_ms": 162.3968631029129,
+      "schedule_ms": 205.3171694278717,
+      "solver_ms": 1972.2310099750757,
+      "output_ms": 0.2071727067232132,
+      "steady_ms": 1972.438182681799,
+      "full_ms": 2340.1573728770018,
+      "solver_cpu_ms": 1971.374135000005,
+      "spike_times_ms": [],
+      "loadavg": [
+        36.16,
+        21.7,
+        16.5
+      ],
+      "neuron_warmup_thread_seconds": [
+        0.1590895652770996
+      ]
+    },
+    {
+      "warmup_ms": 162.3197067528963,
+      "schedule_ms": 204.2891178280115,
+      "solver_ms": 1970.5835096538067,
+      "output_ms": 0.27337484061717987,
+      "steady_ms": 1970.8568844944239,
+      "full_ms": 2337.4708350747824,
+      "solver_cpu_ms": 1969.7548080000047,
+      "spike_times_ms": [],
+      "loadavg": [
+        36.16,
+        21.7,
+        16.5
+      ],
+      "neuron_warmup_thread_seconds": [
+        0.15903544425964355
+      ]
+    }
+  ],
+  "validation": {
+    "against": "original expanded NEURON single-thread at identical dt",
+    "voltage_rmse_mv": 0.0,
+    "voltage_max_abs_mv": 0.0,
+    "event_times_equal_at_1e_5_ms": true,
+    "previous_spike_times_ms": [],
+    "repeat_voltage_max_abs_mv": 0.0,
+    "passed": true
+  },
+  "runtime": {
+    "neuron": "9.0.2",
+    "neuron_build": "cmake option default differences: 'NRN_ENABLE_CORENEURON=ON' 'NRN_ENABLE_PYTHON_DYNAMIC=ON' 'NRN_LINK_AGAINST_PYTHON=OFF' 'NRN_ENABLE_MPI_DYNAMIC=ON' 'NRN_MPI_DYNAMIC=/usr/include/openmpi-x86_64;/usr/include/mpich-x86_64' 'NRN_RX3D_OPT_LEVEL=1' 'CMAKE_BUILD_TYPE=Release' 'CMAKE_INSTALL_PREFIX=/tmp/tmpot7w3zjj/wheel/platlib' 'CMAKE_C_COMPILER=/opt/rh/gcc-toolset-10/root/usr/bin/gcc' 'CMAKE_CXX_COMPILER=/opt/rh/gcc-toolset-10/root/usr/bin/g++' 'PYTHON_EXECUTABLE=/tmp/build-env-ciooowse/bin/python' 'CORENRN_ENABLE_GPU=OFF' 'CORENRN_ENABLE_SHARED=ON'",
+    "model": {
+      "root": "/home/lcm/DBNN_L5PC_surrogate_20260928/source/ShaiEtAl2015",
+      "biophys_file": "L5PCbiophys5.hoc",
+      "morphology_file": "cell1.asc",
+      "num_synapses": 500,
+      "duration_ms": 16000.0,
+      "warmup_ms": 500.0,
+      "dt": 0.5,
+      "sample_interval_ms": 1.0,
+      "input_rate_hz": 50.0,
+      "exc_weight": 0.000188,
+      "inh_weight": 8e-05,
+      "exc_tau1_ms": 0.5,
+      "exc_tau2_ms": 5.0,
+      "inh_tau1_ms": 1.0,
+      "inh_tau2_ms": 10.0,
+      "inh_reversal_mv": -80.0,
+      "v_init": -75.0,
+      "spike_threshold": -20.0,
+      "seed": 20260425
+    },
+    "engine": "CoreNEURON CPU",
+    "requested_threads": 1,
+    "actual_threads": 1,
+    "core_library": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/neuron_single_20260928/model/x86_64/libcorenrnmech.so",
+    "core_library_sha256": "eaafcf318e811c2d65d4146e6f0295402bb753e801507b8e7847a844758a4171",
+    "omp_num_threads": "1",
+    "omp_wait_policy": "PASSIVE",
+    "sections_by_thread": [
+      196
+    ],
+    "compartments_by_thread": [
+      642
+    ],
+    "nonempty_cell_threads": 1,
+    "thread_busywait": 0,
+    "affinity": [
+      97
+    ],
+    "physical_cores": [
+      {
+        "cpu": 97,
+        "core": 25,
+        "socket": 1,
+        "siblings": "97,225"
+      }
+    ],
+    "model_preparation_ms": 233.87251235544682,
+    "input_protocol": "only manifest events; dormant zero-weight NetStims removed",
+    "resources": "shared server; selected physical-core affinity; other jobs left running",
+    "multisplit_requested": false
+  },
+  "source_script_sha256": "47c82ec84f478054b81b9ec947382f8098005cc9fb2afac5d221467a040403d4",
+  "voltage_file": "nt1_dt0.5_confirmatory_0182.npz",
+  "timer_scope": "steady_ms=solver+recording+1ms-grid interpolation; initialization, 500ms warmup, scheduling and model build separate",
+  "core_enabled_during_psolve": true
+}

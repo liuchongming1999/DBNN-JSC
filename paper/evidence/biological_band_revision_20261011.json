@@ -1,0 +1,180 @@
+{
+  "date": "2026-10-11",
+  "change": "Section 4.4 and Fig. 3: literature-motivated amplitude band, conductance-driving-force mechanism, fixed readout grid counts, and active-cell controls.",
+  "new_training_or_reference_simulation": false,
+  "band": {
+    "EPSP_mv": [
+      0.2,
+      6.0
+    ],
+    "IPSP_magnitude_mv_max": 3.0,
+    "lower_cutoff": "Numerical evaluation choice",
+    "upper_scales_sources": [
+      {
+        "key": "li2014",
+        "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004014",
+        "locator": "Discussion and passive-response expansion"
+      },
+      {
+        "key": "li2019",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6660781/",
+        "locator": "Figure 2(E,F): EPSP 0 to 6 mV, IPSP 0 to -3 mV"
+      }
+    ]
+  },
+  "passive_common_band": {
+    "grid_points": 224,
+    "first_within_5pct": 131,
+    "quadratic_within_5pct": 220,
+    "first_exceeds_5pct": 93,
+    "rescued_by_quadratic": 89
+  },
+  "passive_by_profile": {
+    "legacy_fast_pair": {
+      "grid_points": 40,
+      "first_exceeds_5pct": 18,
+      "rescued_by_quadratic": 16
+    },
+    "ampa_pair": {
+      "grid_points": 39,
+      "first_exceeds_5pct": 16,
+      "rescued_by_quadratic": 16
+    },
+    "delayed_pair": {
+      "grid_points": 39,
+      "first_exceeds_5pct": 13,
+      "rescued_by_quadratic": 13
+    },
+    "packet_pair": {
+      "grid_points": 28,
+      "first_exceeds_5pct": 17,
+      "rescued_by_quadratic": 17
+    },
+    "tonic_pair": {
+      "grid_points": 40,
+      "first_exceeds_5pct": 20,
+      "rescued_by_quadratic": 18
+    },
+    "poisson_pair": {
+      "grid_points": 38,
+      "first_exceeds_5pct": 9,
+      "rescued_by_quadratic": 9
+    }
+  },
+  "readout_scope": "One per passive temporal profile, fixed across all input strengths. Active coefficients fitted per spatial group on 9 independent strength pairs, fixed on held-out strengths.",
+  "active_panel": {
+    "rows": [
+      {
+        "profile": "proximal",
+        "strength": 1.5,
+        "epsp_peak_mv": 6.649149991358989,
+        "ipsp_abs_peak_mv": 0.5827288760011129,
+        "joint_response_rms_mv": 1.381546770783091,
+        "additive_rmse_mv": 0.08903831893665679,
+        "fixed_bilinear_rmse_mv": 0.025738750449848267,
+        "additive_relative_rms": 0.06444828421276531,
+        "fixed_bilinear_relative_rms": 0.018630386603023928,
+        "peak_total_input_conductance_bound_ns": 12.864,
+        "all_reference_events": 0,
+        "subthreshold": true,
+        "physiological_band": true,
+        "common_band": false
+      },
+      {
+        "profile": "proximal",
+        "strength": 2.0,
+        "epsp_peak_mv": 8.608880647728363,
+        "ipsp_abs_peak_mv": 0.7582516207374255,
+        "joint_response_rms_mv": 1.750564449848479,
+        "additive_rmse_mv": 0.15074704059180308,
+        "fixed_bilinear_rmse_mv": 0.042371598549831205,
+        "additive_relative_rms": 0.08611339080080775,
+        "fixed_bilinear_relative_rms": 0.024204535030686074,
+        "peak_total_input_conductance_bound_ns": 17.152,
+        "all_reference_events": 0,
+        "subthreshold": true,
+        "physiological_band": true,
+        "common_band": false
+      },
+      {
+        "profile": "distributed",
+        "strength": 1.5,
+        "epsp_peak_mv": 3.6832803353047154,
+        "ipsp_abs_peak_mv": 0.3108948504706177,
+        "joint_response_rms_mv": 0.8702583810495504,
+        "additive_rmse_mv": 0.033350411317742176,
+        "fixed_bilinear_rmse_mv": 0.011075735682321544,
+        "additive_relative_rms": 0.03832242474645387,
+        "fixed_bilinear_relative_rms": 0.012726950895852296,
+        "peak_total_input_conductance_bound_ns": 12.864,
+        "all_reference_events": 0,
+        "subthreshold": true,
+        "physiological_band": true,
+        "common_band": true
+      },
+      {
+        "profile": "distributed",
+        "strength": 2.0,
+        "epsp_peak_mv": 4.769046898478322,
+        "ipsp_abs_peak_mv": 0.4065347958098897,
+        "joint_response_rms_mv": 1.1155608454323904,
+        "additive_rmse_mv": 0.05530735477489094,
+        "fixed_bilinear_rmse_mv": 0.01885455502781476,
+        "additive_relative_rms": 0.04957807097779042,
+        "fixed_bilinear_relative_rms": 0.016901413405654937,
+        "peak_total_input_conductance_bound_ns": 17.152,
+        "all_reference_events": 0,
+        "subthreshold": true,
+        "physiological_band": true,
+        "common_band": true
+      },
+      {
+        "profile": "distributed",
+        "strength": 3.0,
+        "epsp_peak_mv": 6.779070397628061,
+        "ipsp_abs_peak_mv": 0.5874809498053253,
+        "joint_response_rms_mv": 1.5582290026841965,
+        "additive_rmse_mv": 0.11121630536105916,
+        "fixed_bilinear_rmse_mv": 0.039949066116128036,
+        "additive_relative_rms": 0.07137353057187266,
+        "fixed_bilinear_relative_rms": 0.025637480785758705,
+        "peak_total_input_conductance_bound_ns": 25.728,
+        "all_reference_events": 0,
+        "subthreshold": true,
+        "physiological_band": true,
+        "common_band": false
+      },
+      {
+        "profile": "distributed",
+        "strength": 4.0,
+        "epsp_peak_mv": 8.624141385642758,
+        "ipsp_abs_peak_mv": 0.7561063922498192,
+        "joint_response_rms_mv": 1.945360586720992,
+        "additive_rmse_mv": 0.18284214850754874,
+        "fixed_bilinear_rmse_mv": 0.06706632645190165,
+        "additive_relative_rms": 0.09398882127849564,
+        "fixed_bilinear_relative_rms": 0.0344750103963736,
+        "peak_total_input_conductance_bound_ns": 34.304,
+        "all_reference_events": 0,
+        "subthreshold": true,
+        "physiological_band": true,
+        "common_band": false
+      }
+    ],
+    "baseline": "Complete isolated finite responses, not Taylor first order.",
+    "spatial_profiles": [
+      "proximal",
+      "distributed"
+    ],
+    "all_subthreshold_proximal_distributed_rows_at_most_10mv_included": true,
+    "presentation_scope": "Reported comparison: proximal and spatially distributed input configurations. Appendix C gives their parameters and numerical controls.",
+    "aggregate_passive_counts_unchanged": true,
+    "main379_model_metrics_unchanged": true,
+    "reported_reference_trajectories": 80
+  },
+  "source_sha256": {
+    "passive_finite_strength.json": "c934657ea061650da66bc7b48c16f829121db411c55fe926ce7f4be3e390115e",
+    "l5pc_finite_strength.json": "0994e0d68023617d57277e87fd48a71f8cf7dc2d9be40dd370a33faab2b0d8e6",
+    "l5pc_half_step_validation.json": "b74a2c4ee044e49a974d7d76bfa415e006b3ffa6a263351cb05885ecf46dc62a"
+  }
+}

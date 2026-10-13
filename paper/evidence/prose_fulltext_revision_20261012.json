@@ -1,0 +1,88 @@
+{
+  "date": "2026-10-12",
+  "request": "Apply concise discussion principles across the complete manuscript while preserving clarity.",
+  "word_count_method": "English words excluding comments, inline/display math, ref/cite commands and LaTeX command names; caption text and table labels included.",
+  "changes": [
+    {
+      "section": "appendices.tex",
+      "english_words_before": 2602,
+      "english_words_after": 1953,
+      "source_sha256_before": "babb256c28e00120b1ac6e5bd207c43f2a866c3cadbd7cf06a6054ab29af39f9",
+      "source_sha256_after": "0addcdee1fec86518c3bdb3fb3de1807b47addc88b09907f298161e8ef3247a1"
+    },
+    {
+      "section": "conclusion.tex",
+      "english_words_before": 326,
+      "english_words_after": 201,
+      "source_sha256_before": "b033022278c6056b47f45897cb54ddaa4226e1e6612b41ea15e2d27a8c5f75c3",
+      "source_sha256_after": "3a31a0a41c548cf7793d1d0a60228495b048b003758ce9d6c5d393f9c1f8d963"
+    },
+    {
+      "section": "experiments.tex",
+      "english_words_before": 1556,
+      "english_words_after": 1341,
+      "source_sha256_before": "992e638a6c8f4ebd507a0f67b2a677832957d7c4bad1c41287b75810fc9124c1",
+      "source_sha256_after": "0fd96ab89e5a9325f98941ac5e7b644dc32cd4f573e2ae9fe49f56e5f0185fb8"
+    },
+    {
+      "section": "introduction.tex",
+      "english_words_before": 755,
+      "english_words_after": 549,
+      "source_sha256_before": "281f9ea7dd7299082f0b14a6093642bdb6d56e98f28a8582b8e973eb38ac683d",
+      "source_sha256_after": "ad9ccff9e75b6cb29b6e1c46d7b3664b55a1c8b547c0352586f7843f7e74d7b9"
+    },
+    {
+      "section": "method.tex",
+      "english_words_before": 1531,
+      "english_words_after": 1083,
+      "source_sha256_before": "2e381c772f7ad4f57639604012ec2032f9c8dcc4f40492930808154c5c70f0e8",
+      "source_sha256_after": "178370b1ab72a62a308d9d51883f76ae6157bfcf2fb8e9fb792cdfacd2301a94"
+    },
+    {
+      "section": "related.tex",
+      "english_words_before": 608,
+      "english_words_after": 443,
+      "source_sha256_before": "00f0ec314b32f538dce938f755c632b5d5928d670995516499de2b6ff29e59e7",
+      "source_sha256_after": "a14e121397aab6d71495ca5e2212a66dcfcf089ff0dba3d39fe3d6f76da39375"
+    },
+    {
+      "section": "theory.tex",
+      "english_words_before": 2853,
+      "english_words_after": 2425,
+      "source_sha256_before": "982f7ced22d233506f4983bb0b689d50f454c4c89adfb77eb6b729c124466ef2",
+      "source_sha256_after": "39c85f8d85e46f77a170ff8af860370b33a69f92b6da1993b7b5df1cb70c1588"
+    }
+  ],
+  "editing_principles": [
+    "Keep definitions, hypotheses, equations and core proofs in logical order.",
+    "Consolidate training hyperparameters and validation results in Appendix E.",
+    "Use prose for conclusions and refer to figures/tables for detailed numerical comparisons.",
+    "Retain reproduction recipes, metric definitions, input selection and timing boundaries."
+  ],
+  "checks": {
+    "all_existing_display_equations_identical": true,
+    "equation_and_section_labels_identical": true,
+    "citation_key_set_identical": true,
+    "existing_figures_tables_and_evidence_hashes_identical": true,
+    "changed_generated_tables": false,
+    "changed_checkpoint_or_numerical_results": false
+  },
+  "relocated_details": [
+    "AdamW learning rates, duration, batch size, weight decay, clipping and EMA to Appendix E.",
+    "Selected reset parameters and validation metrics to Appendix E.",
+    "Dynamic pair product RMS, coefficient variation and integration check to Appendix B.",
+    "GPU scan shape dispatch counts and block sizes to Appendix D."
+  ],
+  "final_pages": 37,
+  "pdf_sha256": "b95f5671499dfe7bcdaeb87de564aff08725b9f4f9b1c3cd87b92b33787ac503",
+  "layout_fixes": [
+    "Placed Fig. 2 before its discussion and following subsection without an isolated short page.",
+    "Placed the family table before the provenance paragraph and kept Appendix E headings with text."
+  ],
+  "verification": {
+    "compile_passed": true,
+    "overfull_boxes": false,
+    "undefined_references": false,
+    "visual_review": "All-page contact sheets and full-resolution model/theory/appendix flow checks inspected."
+  }
+}

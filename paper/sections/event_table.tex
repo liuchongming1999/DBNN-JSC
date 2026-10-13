@@ -1,0 +1,12 @@
+\begin{tabular}{lrrrrrl}
+\toprule
+Method & TP & FP & FN & $P$ & $R$ & F1 interval\\
+\midrule
+DBNN GPU & 335 & 431 & 302 & 0.437 & 0.526 & [0.440, 0.517] \\
+Branch-ELM GPU & 334 & 585 & 303 & 0.363 & 0.524 & [0.399, 0.460] \\
+LSTM GPU & 299 & 1271 & 338 & 0.190 & 0.469 & [0.248, 0.294] \\
+TCN GPU & 180 & 871 & 457 & 0.171 & 0.283 & [0.182, 0.244] \\
+NEURON, 8 cores & 160 & 236 & 477 & 0.404 & 0.251 & [0.267, 0.352] \\
+Neuron\_Reduce, 1 core & 258 & 7540 & 379 & 0.033 & 0.405 & [0.055, 0.068] \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,788 @@
+{
+  "created": "2026-09-28T20:15:23+0800",
+  "hardware": "RTX 5090 / SM120",
+  "exclusive_resources": false,
+  "mode": "frozen-checkpoint inference, zero initial state",
+  "validation_scope": "10 held-out sampled traces per shape in both passes; precision gates are empirical, not universal error bounds.",
+  "ieee_fallback": {
+    "version": 1,
+    "precision": "ieee",
+    "mode": "frozen-checkpoint inference",
+    "hardware": "RTX 5090",
+    "unknown_shape": "cuBLAS",
+    "selection": "screen candidates, freeze config, independently retest twice; conservative speed gates",
+    "shapes": {
+      "32:6001:1": {
+        "enabled": true,
+        "spec": {
+          "backend": "triton",
+          "config": 3,
+          "triangle": false,
+          "precision": "ieee"
+        },
+        "module_speed_ratio": 2.650392989610956,
+        "forward_device_ratio": 1.134396112609818,
+        "forward_wall_ratio": 1.0232580059253145
+      },
+      "128:6001:1": {
+        "enabled": true,
+        "spec": {
+          "backend": "pair",
+          "config": 0,
+          "triangle": true,
+          "precision": "ieee"
+        },
+        "module_speed_ratio": 1.5521204629475978,
+        "forward_device_ratio": 1.1188368475905348,
+        "forward_wall_ratio": 1.021119593505397
+      },
+      "500:6001:1": {
+        "enabled": true,
+        "spec": {
+          "backend": "triton",
+          "config": 3,
+          "triangle": true,
+          "precision": "ieee"
+        },
+        "module_speed_ratio": 1.5654802705464084,
+        "forward_device_ratio": 1.318876628869629,
+        "forward_wall_ratio": 1.1301090983506863
+      },
+      "32:6001:8": {
+        "enabled": true,
+        "spec": {
+          "backend": "pair",
+          "config": 0,
+          "triangle": true,
+          "precision": "ieee"
+        },
+        "module_speed_ratio": 4.837593727878104,
+        "forward_device_ratio": 1.608864619301986,
+        "forward_wall_ratio": 1.1301749955247204
+      },
+      "128:6001:8": {
+        "enabled": true,
+        "spec": {
+          "backend": "triton",
+          "config": 3,
+          "triangle": true,
+          "precision": "ieee"
+        },
+        "module_speed_ratio": 2.0459840024682645,
+        "forward_device_ratio": 1.310195759297977,
+        "forward_wall_ratio": 1.1280159109681347
+      },
+      "500:6001:8": {
+        "enabled": true,
+        "spec": {
+          "backend": "triton",
+          "config": 9,
+          "triangle": true,
+          "precision": "ieee"
+        },
+        "module_speed_ratio": 1.9626732810931853,
+        "forward_device_ratio": 1.5142303704916245,
+        "forward_wall_ratio": 1.3892676412473621
+      },
+      "1024:1001:1": {
+        "enabled": true,
+        "spec": {
+          "backend": "pair",
+          "config": 1,
+          "triangle": true,
+          "precision": "ieee"
+        },
+        "module_speed_ratio": 1.4928825084150459,
+        "forward_device_ratio": 1.3273971199261885,
+        "forward_wall_ratio": 1.0975554315241756
+      },
+      "2048:1001:1": {
+        "enabled": true,
+        "spec": {
+          "backend": "triton",
+          "config": 3,
+          "triangle": true,
+          "precision": "ieee"
+        },
+        "module_speed_ratio": 1.3633989742033608,
+        "forward_device_ratio": 1.2777727870671227,
+        "forward_wall_ratio": 1.1370301723594458
+      },
+      "2048:6001:1": {
+        "enabled": true,
+        "spec": {
+          "backend": "triton",
+          "config": 6,
+          "triangle": true,
+          "precision": "ieee"
+        },
+        "module_speed_ratio": 1.5375745102486358,
+        "forward_device_ratio": 1.421146074533596,
+        "forward_wall_ratio": 1.3053480948847753
+      }
+    }
+  },
+  "profiles": {
+    "strict": {
+      "max_abs_mv": 0.001,
+      "max_reset_mismatch_bins": 0,
+      "explicit_opt_in": false,
+      "shapes": {
+        "32:6001:1": {
+          "enabled": true,
+          "name": "combined_tf32",
+          "spec": {
+            "drive_spec": {
+              "kind": "tensor",
+              "backend": "tile",
+              "config": 0,
+              "triangle": false,
+              "precision": "tf32",
+              "rounding": true
+            },
+            "filter_spec": {
+              "block": 16,
+              "rows": 32,
+              "precision": "tf32",
+              "rounding": true
+            }
+          },
+          "uses_tensor_core": true,
+          "cublas_tf32_allowed": false,
+          "max_observed_mv": 0.000244140625,
+          "reset_mismatch_bins": 0,
+          "forward_device_speed_ratio": 3.271528487552531,
+          "forward_wall_speed_ratio": 1.1434002769277312
+        },
+        "128:6001:1": {
+          "enabled": true,
+          "name": "combined_tf32",
+          "spec": {
+            "drive_spec": {
+              "kind": "tensor",
+              "backend": "pair",
+              "config": 2,
+              "triangle": true,
+              "precision": "tf32",
+              "rounding": true
+            },
+            "filter_spec": {
+              "block": 16,
+              "rows": 32,
+              "precision": "tf32",
+              "rounding": true
+            }
+          },
+          "uses_tensor_core": true,
+          "cublas_tf32_allowed": false,
+          "max_observed_mv": 0.000457763671875,
+          "reset_mismatch_bins": 0,
+          "forward_device_speed_ratio": 2.185110362052466,
+          "forward_wall_speed_ratio": 1.1214508856861158
+        },
+        "500:6001:1": {
+          "enabled": true,
+          "name": "filter_tf32",
+          "spec": {
+            "drive_spec": {
+              "kind": "ieee",
+              "backend": "triton",
+              "config": 3,
+              "triangle": true,
+              "precision": "ieee"
+            },
+            "filter_spec": {
+              "block": 32,
+              "rows": 32,
+              "precision": "tf32",
+              "rounding": true
+            }
+          },
+          "uses_tensor_core": true,
+          "cublas_tf32_allowed": false,
+          "max_observed_mv": 0.000957489013671875,
+          "reset_mismatch_bins": 0,
+          "forward_device_speed_ratio": 1.295745763253412,
+          "forward_wall_speed_ratio": 1.0827614450308058
+        },
+        "32:6001:8": {
+          "enabled": true,
+          "name": "combined_tf32",
+          "spec": {
+            "drive_spec": {
+              "kind": "tensor",
+              "backend": "tile",
+              "config": 1,
+              "triangle": false,
+              "precision": "tf32",
+              "rounding": true
+            },
+            "filter_spec": {
+              "block": 16,
+              "rows": 32,
+              "precision": "tf32",
+              "rounding": true
+            }
+          },
+          "uses_tensor_core": true,
+          "cublas_tf32_allowed": false,
+          "max_observed_mv": 0.000244140625,
+          "reset_mismatch_bins": 0,
+          "forward_device_speed_ratio": 2.154078172088586,
+          "forward_wall_speed_ratio": 1.1216192025820035
+        },
+        "128:6001:8": {
+          "enabled": true,
+          "name": "combined_tf32",
+          "spec": {
+            "drive_spec": {
+              "kind": "tensor",
+              "backend": "tile",
+              "config": 6,
+              "triangle": true,
+              "precision": "tf32",
+              "rounding": true
+            },
+            "filter_spec": {
+              "block": 32,
+              "rows": 32,
+              "precision": "tf32",
+              "rounding": true
+            }
+          },
+          "uses_tensor_core": true,
+          "cublas_tf32_allowed": false,
+          "max_observed_mv": 0.0004730224609375,
+          "reset_mismatch_bins": 0,
+          "forward_device_speed_ratio": 1.7398949922859104,
+          "forward_wall_speed_ratio": 1.2114641195620641
+        },
+        "500:6001:8": {
+          "enabled": true,
+          "name": "filter_tf32",
+          "spec": {
+            "drive_spec": {
+              "kind": "ieee",
+              "backend": "triton",
+              "config": 9,
+              "triangle": true,
+              "precision": "ieee"
+            },
+            "filter_spec": {
+              "block": 64,
+              "rows": 16,
+              "precision": "tf32",
+              "rounding": true
+            }
+          },
+          "uses_tensor_core": true,
+          "cublas_tf32_allowed": false,
+          "max_observed_mv": 0.000957489013671875,
+          "reset_mismatch_bins": 0,
+          "forward_device_speed_ratio": 1.0928349785369174,
+          "forward_wall_speed_ratio": 1.0258305985363572
+        },
+        "1024:1001:1": {
+          "enabled": true,
+          "name": "filter_tf32x3",
+          "spec": {
+            "drive_spec": {
+              "kind": "ieee",
+              "backend": "pair",
+              "config": 1,
+              "triangle": true,
+              "precision": "ieee"
+            },
+            "filter_spec": {
+              "block": 16,
+              "rows": 32,
+              "precision": "tf32x3",
+              "rounding": false
+            }
+          },
+          "uses_tensor_core": true,
+          "cublas_tf32_allowed": false,
+          "max_observed_mv": 2.288818359375e-05,
+          "reset_mismatch_bins": 0,
+          "forward_device_speed_ratio": 1.061319252654663,
+          "forward_wall_speed_ratio": 1.0122702165292363
+        },
+        "2048:1001:1": {
+          "enabled": true,
+          "name": "filter_tf32x3",
+          "spec": {
+            "drive_spec": {
+              "kind": "ieee",
+              "backend": "triton",
+              "config": 3,
+              "triangle": true,
+              "precision": "ieee"
+            },
+            "filter_spec": {
+              "block": 16,
+              "rows": 32,
+              "precision": "tf32x3",
+              "rounding": false
+            }
+          },
+          "uses_tensor_core": true,
+          "cublas_tf32_allowed": false,
+          "max_observed_mv": 6.103515625e-05,
+          "reset_mismatch_bins": 0,
+          "forward_device_speed_ratio": 1.1013166780072614,
+          "forward_wall_speed_ratio": 1.0238422684143444
+        },
+        "2048:6001:1": {
+          "enabled": true,
+          "name": "filter_tf32x3",
+          "spec": {
+            "drive_spec": {
+              "kind": "ieee",
+              "backend": "triton",
+              "config": 6,
+              "triangle": true,
+              "precision": "ieee"
+            },
+            "filter_spec": {
+              "block": 32,
+              "rows": 32,
+              "precision": "tf32x3",
+              "rounding": false
+            }
+          },
+          "uses_tensor_core": true,
+          "cublas_tf32_allowed": false,
+          "max_observed_mv": 6.103515625e-05,
+          "reset_mismatch_bins": 0,
+          "forward_device_speed_ratio": 1.0537509028789767,
+          "forward_wall_speed_ratio": 1.0628212676241455
+        },
+        "500:6001:2": {
+          "enabled": true,
+          "name": "filter_tf32",
+          "spec": {
+            "drive_spec": {
+              "kind": "ieee",
+              "backend": "triton",
+              "config": 3,
+              "triangle": true,
+              "precision": "ieee"
+            },
+            "filter_spec": {
+              "block": 32,
+              "rows": 32,
+              "precision": "tf32",
+              "rounding": true
+            }
+          },
+          "uses_tensor_core": true,
+          "cublas_tf32_allowed": false,
+          "max_observed_mv": 0.000957489013671875,
+          "reset_mismatch_bins": 0,
+          "forward_device_speed_ratio": 1.286390247799487,
+          "forward_wall_speed_ratio": 1.078547230632741
+        },
+        "500:6001:4": {
+          "enabled": true,
+          "name": "filter_tf32x3",
+          "spec": {
+            "drive_spec": {
+              "kind": "ieee",
+              "backend": "triton",
+              "config": 9,
+              "triangle": true,
+              "precision": "ieee"
+            },
+            "filter_spec": {
+              "block": 32,
+              "rows": 32,
+              "precision": "tf32x3",
+              "rounding": false
+            }
+          },
+          "uses_tensor_core": true,
+          "cublas_tf32_allowed": false,
+          "max_observed_mv": 7.62939453125e-06,
+          "reset_mismatch_bins": 0,
+          "forward_device_speed_ratio": 1.293247869511999,
+          "forward_wall_speed_ratio": 1.1062074330947431
+        },
+        "8:1001:1": {
+          "enabled": true,
+          "name": "quad_tf32_strict",
+          "spec": {
+            "drive_spec": {
+              "kind": "tensor",
+              "backend": "tile",
+              "config": 0,
+              "triangle": false,
+              "precision": "tf32",
+              "rounding": true
+            },
+            "scan_block": 512
+          },
+          "uses_tensor_core": true,
+          "cublas_tf32_allowed": false,
+          "max_observed_mv": 7.62939453125e-06,
+          "reset_mismatch_bins": 0,
+          "forward_device_speed_ratio": 1.4808873851401918,
+          "forward_wall_speed_ratio": 1.0146362002811005
+        },
+        "128:301:1": {
+          "enabled": true,
+          "name": "quad_tf32",
+          "spec": {
+            "drive_spec": {
+              "kind": "tensor",
+              "backend": "pair",
+              "config": 1,
+              "triangle": true,
+              "precision": "tf32",
+              "rounding": true
+            },
+            "scan_block": 512
+          },
+          "uses_tensor_core": true,
+          "cublas_tf32_allowed": false,
+          "max_observed_mv": 0.0001068115234375,
+          "reset_mismatch_bins": 0,
+          "forward_device_speed_ratio": 1.1463326800747125,
+          "forward_wall_speed_ratio": 1.0068494174557001
+        }
+      }
+    },
+    "approximate_0p01mv": {
+      "max_abs_mv": 0.01,
+      "max_reset_mismatch_bins": 0,
+      "explicit_opt_in": true,
+      "shapes": {
+        "32:6001:1": {
+          "enabled": true,
+          "name": "combined_tf32",
+          "spec": {
+            "drive_spec": {
+              "kind": "tensor",
+              "backend": "tile",
+              "config": 0,
+              "triangle": false,
+              "precision": "tf32",
+              "rounding": true
+            },
+            "filter_spec": {
+              "block": 16,
+              "rows": 32,
+              "precision": "tf32",
+              "rounding": true
+            }
+          },
+          "uses_tensor_core": true,
+          "cublas_tf32_allowed": false,
+          "max_observed_mv": 0.000244140625,
+          "reset_mismatch_bins": 0,
+          "forward_device_speed_ratio": 3.271528487552531,
+          "forward_wall_speed_ratio": 1.1434002769277312
+        },
+        "128:6001:1": {
+          "enabled": true,
+          "name": "combined_tf32",
+          "spec": {
+            "drive_spec": {
+              "kind": "tensor",
+              "backend": "pair",
+              "config": 2,
+              "triangle": true,
+              "precision": "tf32",
+              "rounding": true
+            },
+            "filter_spec": {
+              "block": 16,
+              "rows": 32,
+              "precision": "tf32",
+              "rounding": true
+            }
+          },
+          "uses_tensor_core": true,
+          "cublas_tf32_allowed": false,
+          "max_observed_mv": 0.000457763671875,
+          "reset_mismatch_bins": 0,
+          "forward_device_speed_ratio": 2.185110362052466,
+          "forward_wall_speed_ratio": 1.1214508856861158
+        },
+        "500:6001:1": {
+          "enabled": true,
+          "name": "combined_tf32",
+          "spec": {
+            "drive_spec": {
+              "kind": "tensor",
+              "backend": "pair",
+              "config": 4,
+              "triangle": true,
+              "precision": "tf32",
+              "rounding": true
+            },
+            "filter_spec": {
+              "block": 32,
+              "rows": 32,
+              "precision": "tf32",
+              "rounding": true
+            }
+          },
+          "uses_tensor_core": true,
+          "cublas_tf32_allowed": false,
+          "max_observed_mv": 0.00113677978515625,
+          "reset_mismatch_bins": 0,
+          "forward_device_speed_ratio": 1.536414292518546,
+          "forward_wall_speed_ratio": 1.1461316760269284
+        },
+        "32:6001:8": {
+          "enabled": true,
+          "name": "combined_tf32",
+          "spec": {
+            "drive_spec": {
+              "kind": "tensor",
+              "backend": "tile",
+              "config": 1,
+              "triangle": false,
+              "precision": "tf32",
+              "rounding": true
+            },
+            "filter_spec": {
+              "block": 16,
+              "rows": 32,
+              "precision": "tf32",
+              "rounding": true
+            }
+          },
+          "uses_tensor_core": true,
+          "cublas_tf32_allowed": false,
+          "max_observed_mv": 0.000244140625,
+          "reset_mismatch_bins": 0,
+          "forward_device_speed_ratio": 2.154078172088586,
+          "forward_wall_speed_ratio": 1.1216192025820035
+        },
+        "128:6001:8": {
+          "enabled": true,
+          "name": "combined_tf32",
+          "spec": {
+            "drive_spec": {
+              "kind": "tensor",
+              "backend": "tile",
+              "config": 6,
+              "triangle": true,
+              "precision": "tf32",
+              "rounding": true
+            },
+            "filter_spec": {
+              "block": 32,
+              "rows": 32,
+              "precision": "tf32",
+              "rounding": true
+            }
+          },
+          "uses_tensor_core": true,
+          "cublas_tf32_allowed": false,
+          "max_observed_mv": 0.0004730224609375,
+          "reset_mismatch_bins": 0,
+          "forward_device_speed_ratio": 1.7398949922859104,
+          "forward_wall_speed_ratio": 1.2114641195620641
+        },
+        "500:6001:8": {
+          "enabled": true,
+          "name": "combined_tf32",
+          "spec": {
+            "drive_spec": {
+              "kind": "tensor",
+              "backend": "tile",
+              "config": 6,
+              "triangle": true,
+              "precision": "tf32",
+              "rounding": true
+            },
+            "filter_spec": {
+              "block": 64,
+              "rows": 16,
+              "precision": "tf32",
+              "rounding": true
+            }
+          },
+          "uses_tensor_core": true,
+          "cublas_tf32_allowed": false,
+          "max_observed_mv": 0.001132965087890625,
+          "reset_mismatch_bins": 0,
+          "forward_device_speed_ratio": 1.3025231995769693,
+          "forward_wall_speed_ratio": 1.18612432558786
+        },
+        "1024:1001:1": {
+          "enabled": true,
+          "name": "combined_tf32",
+          "spec": {
+            "drive_spec": {
+              "kind": "tensor",
+              "backend": "pair",
+              "config": 4,
+              "triangle": true,
+              "precision": "tf32",
+              "rounding": true
+            },
+            "filter_spec": {
+              "block": 32,
+              "rows": 32,
+              "precision": "tf32",
+              "rounding": true
+            }
+          },
+          "uses_tensor_core": true,
+          "cublas_tf32_allowed": false,
+          "max_observed_mv": 0.00466156005859375,
+          "reset_mismatch_bins": 0,
+          "forward_device_speed_ratio": 1.3156056419289621,
+          "forward_wall_speed_ratio": 1.053957631834602
+        },
+        "2048:1001:1": {
+          "enabled": true,
+          "name": "filter_tf32x3",
+          "spec": {
+            "drive_spec": {
+              "kind": "ieee",
+              "backend": "triton",
+              "config": 3,
+              "triangle": true,
+              "precision": "ieee"
+            },
+            "filter_spec": {
+              "block": 16,
+              "rows": 32,
+              "precision": "tf32x3",
+              "rounding": false
+            }
+          },
+          "uses_tensor_core": true,
+          "cublas_tf32_allowed": false,
+          "max_observed_mv": 6.103515625e-05,
+          "reset_mismatch_bins": 0,
+          "forward_device_speed_ratio": 1.1013166780072614,
+          "forward_wall_speed_ratio": 1.0238422684143444
+        },
+        "2048:6001:1": {
+          "enabled": true,
+          "name": "filter_tf32x3",
+          "spec": {
+            "drive_spec": {
+              "kind": "ieee",
+              "backend": "triton",
+              "config": 6,
+              "triangle": true,
+              "precision": "ieee"
+            },
+            "filter_spec": {
+              "block": 32,
+              "rows": 32,
+              "precision": "tf32x3",
+              "rounding": false
+            }
+          },
+          "uses_tensor_core": true,
+          "cublas_tf32_allowed": false,
+          "max_observed_mv": 6.103515625e-05,
+          "reset_mismatch_bins": 0,
+          "forward_device_speed_ratio": 1.0537509028789767,
+          "forward_wall_speed_ratio": 1.0628212676241455
+        },
+        "500:6001:2": {
+          "enabled": true,
+          "name": "combined_tf32",
+          "spec": {
+            "drive_spec": {
+              "kind": "tensor",
+              "backend": "tile",
+              "config": 6,
+              "triangle": true,
+              "precision": "tf32",
+              "rounding": true
+            },
+            "filter_spec": {
+              "block": 32,
+              "rows": 32,
+              "precision": "tf32",
+              "rounding": true
+            }
+          },
+          "uses_tensor_core": true,
+          "cublas_tf32_allowed": false,
+          "max_observed_mv": 0.001125335693359375,
+          "reset_mismatch_bins": 0,
+          "forward_device_speed_ratio": 1.6100958701807224,
+          "forward_wall_speed_ratio": 1.2144718505140712
+        },
+        "500:6001:4": {
+          "enabled": true,
+          "name": "quad_tf32_filter_x3",
+          "spec": {
+            "drive_spec": {
+              "kind": "tensor",
+              "backend": "tile",
+              "config": 6,
+              "triangle": true,
+              "precision": "tf32",
+              "rounding": true
+            },
+            "filter_spec": {
+              "block": 32,
+              "rows": 32,
+              "precision": "tf32x3",
+              "rounding": false
+            }
+          },
+          "uses_tensor_core": true,
+          "cublas_tf32_allowed": false,
+          "max_observed_mv": 0.00107574462890625,
+          "reset_mismatch_bins": 0,
+          "forward_device_speed_ratio": 1.5583420750757988,
+          "forward_wall_speed_ratio": 1.242144815100221
+        },
+        "8:1001:1": {
+          "enabled": true,
+          "name": "quad_tf32_strict",
+          "spec": {
+            "drive_spec": {
+              "kind": "tensor",
+              "backend": "tile",
+              "config": 0,
+              "triangle": false,
+              "precision": "tf32",
+              "rounding": true
+            },
+            "scan_block": 512
+          },
+          "uses_tensor_core": true,
+          "cublas_tf32_allowed": false,
+          "max_observed_mv": 7.62939453125e-06,
+          "reset_mismatch_bins": 0,
+          "forward_device_speed_ratio": 1.4808873851401918,
+          "forward_wall_speed_ratio": 1.0146362002811005
+        },
+        "128:301:1": {
+          "enabled": true,
+          "name": "quad_tf32",
+          "spec": {
+            "drive_spec": {
+              "kind": "tensor",
+              "backend": "pair",
+              "config": 1,
+              "triangle": true,
+              "precision": "tf32",
+              "rounding": true
+            },
+            "scan_block": 512
+          },
+          "uses_tensor_core": true,
+          "cublas_tf32_allowed": false,
+          "max_observed_mv": 0.0001068115234375,
+          "reset_mismatch_bins": 0,
+          "forward_device_speed_ratio": 1.1463326800747125,
+          "forward_wall_speed_ratio": 1.0068494174557001
+        }
+      }
+    }
+  }
+}

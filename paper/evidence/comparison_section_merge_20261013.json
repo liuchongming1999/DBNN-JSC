@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-13",
+  "request": "Combine metric definitions and main results, and state the runtime advantage.",
+  "structure": {
+    "5.2": "Accuracy and computation time",
+    "5.3": "Event prediction and input-family dependence",
+    "5.4": "Runtime dependence on simulation duration",
+    "5.5": "Cell-specific extensions"
+  },
+  "changes": [
+    {
+      "section": "appendices.tex",
+      "before_sha256": "637047e7551a5750b10ecb315e311f63dad2421dcca3e984c56f69d6f67bb903",
+      "after_sha256": "10d3578146035b5c96de00f2775fa495bebaf3c0f282f618ebb37f7e44a924e6"
+    },
+    {
+      "section": "experiments.tex",
+      "before_sha256": "592c8cb73d4c4ce72969fa25570aa8c675067ac17a145bbff367a08d0731c2c5",
+      "after_sha256": "3fab3bc12e2b48a16433ef4d9e7ab43a360e27e25f19e1ebbb707d2f1657a1bd"
+    }
+  ],
+  "timing_source": "evidence/main379_results.json",
+  "runtime_ratios": {
+    "neuron8": 16041.589195781009,
+    "core1": 18806.740485318285,
+    "lstm": 47.41306126948676
+  },
+  "reported_ratios": {
+    "neuron8_over_gpu": "1.60e4",
+    "lstm_over_gpu": "47"
+  },
+  "ratio_scope": "Sum of per-input median prepared complete computation times over the 379-input panel; learned sampling 1 ms, solver integration 0.5 ms, common 1 ms observation grid.",
+  "checks": {
+    "all_existing_display_equations_preserved": true,
+    "scientific_figures_tables_and_result_records_unchanged": true,
+    "event_metric_next_to_event_results": true,
+    "obsolete_section_label_removed": true,
+    "compiled": true,
+    "no_overfull_boxes": true,
+    "references_resolved": true,
+    "new_subsection_numbers_confirmed_in_pdf": true
+  },
+  "compiled_pages": 36,
+  "pdf_sha256": "e89b289317fa24e5b6dbf62f5845a051cce91ef85579efc0135a0ff8f5a85c77"
+}

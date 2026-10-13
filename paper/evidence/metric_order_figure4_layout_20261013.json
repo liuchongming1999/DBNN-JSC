@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-13",
+  "request": "Define F1 before Table 1, explicitly discuss voltage RMSE, revise Section 5.2 title, and move Fig. 4 to the preceding page.",
+  "section_title": "Voltage RMSE, spike F1, and computation time",
+  "changes": [
+    {
+      "path": "sections/experiments.tex",
+      "before_sha256": "3fab3bc12e2b48a16433ef4d9e7ab43a360e27e25f19e1ebbb707d2f1657a1bd",
+      "after_sha256": "1943d8423d768c8d4d7890653a1aa202e3a6054d897aca8d2ea5d5d99c6a7ea6"
+    },
+    {
+      "path": "sections/appendices.tex",
+      "before_sha256": "10d3578146035b5c96de00f2775fa495bebaf3c0f282f618ebb37f7e44a924e6",
+      "after_sha256": "d51c3e909de58b35d5bc488875f4c68a1f9d82dea56e03aa67c7249f944920bf"
+    },
+    {
+      "path": "scripts/build_figures.py",
+      "before_sha256": "8c93de153ac6083b8d8cc21d9b4285aba187a782064b012a4245dba33902e249",
+      "after_sha256": "259ccab10936371262e93a11a5da17172da4e0661c300d0d0beb1e3748cad363"
+    }
+  ],
+  "figure4": {
+    "layout": "two side-by-side cases; each retains input raster, voltage, and event alignment",
+    "old_size_pt": [
+      337.3228454589844,
+      450.0
+    ],
+    "new_size_pt": [
+      337.3228454589844,
+      216.0
+    ],
+    "pdf_page": 22,
+    "table1_same_page": true,
+    "examples": [
+      {
+        "case_id": "confirmatory_0630",
+        "sites": 500,
+        "reference_events": 0,
+        "all_events_matched": true
+      },
+      {
+        "case_id": "confirmatory_0541",
+        "sites": 500,
+        "reference_events": 3,
+        "all_events_matched": true
+      }
+    ]
+  },
+  "checks": {
+    "all_existing_display_equations_preserved": true,
+    "rmse_and_f1_defined_before_main_table": true,
+    "original_numeric_evidence_other_figures_and_tables_unchanged": true,
+    "references_resolved": true,
+    "no_overfull_boxes": true
+  },
+  "pages": 35,
+  "pdf_sha256": "aea38557dda29ca12914fa3af9af06e4ffb0c33e911eb2a9af54d98cb8b2b747"
+}

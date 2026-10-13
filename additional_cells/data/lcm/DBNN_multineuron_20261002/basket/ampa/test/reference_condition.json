@@ -1,0 +1,46 @@
+{
+  "model": "basket",
+  "modeldb": 2018018,
+  "profile": "ampa",
+  "operating_point": {
+    "model": "basket",
+    "spec": {
+      "modeldb": 2018018,
+      "variant": "",
+      "module": "basket",
+      "cls": "Basket",
+      "args": [],
+      "celsius": 32.0,
+      "article_label": "BC_2",
+      "author": "Masoli et al. (2025)"
+    },
+    "native_spikes_2s": 33,
+    "native_firing_hz": 16.5,
+    "holding_current_na": -0.005,
+    "holding_trials": [
+      {
+        "current_na": 0.0,
+        "spikes_last_1000ms": 16,
+        "rest_mv": -60.84223717430346,
+        "std_mv": 5.906746954176179
+      },
+      {
+        "current_na": -0.005,
+        "spikes_last_1000ms": 0,
+        "rest_mv": -66.94931869903746,
+        "std_mv": 0.001639947236702347
+      }
+    ],
+    "rest_mv": -66.94931869903746,
+    "weight_us": 2.0875266812983585e-06,
+    "inhibition_ratio": 0.5,
+    "condition": "Original active channels and morphology retained. Fixed somatic holding current selects a stable low-spike operating point; identical current and reference state used by all solver comparisons.",
+    "weight_selection": "Reference-only 250E 10Hz mean depolarization approximately 2.5mV, before fitting/testing.",
+    "reference_dt_ms": 0.025,
+    "reference_output_interval_ms": 0.25,
+    "warmup_ms": 2000.0
+  },
+  "reference_dt_ms": 0.025,
+  "warmup_ms": 2000.0,
+  "condition_sha256": "5dd67c353873b7f5a9b13d71cf586af3e3cc11221f8396f9f28965644e756ebe"
+}

@@ -1,0 +1,1578 @@
+{
+  "finished": true,
+  "smoke": false,
+  "protocol": {
+    "created": "2026-10-09T14:05:25.630097",
+    "name": "dbnn_w500_dt1ms_burn150_full_diag",
+    "smoke": false,
+    "dt_ms": 1.0,
+    "source_trajectory_ms": 6000,
+    "training_window_samples": 500,
+    "training_window_ms": 500,
+    "loss_burn_in_ms": 150,
+    "fit_cases": 117,
+    "validation_cases": 32,
+    "batch_size": 8,
+    "primary_epochs": 2000,
+    "refinement_epochs": 400,
+    "learning_rate": 0.003,
+    "seed": 291049,
+    "kernels_per_site": 1,
+    "architecture": "One double-exponential filter per site, dense quadratic, linear sum, bias, event reset",
+    "diagonal_constraint": "trainable (initialized to zero)",
+    "allow_diagonal": true,
+    "pairing": "Only diagonal mask differs; same initial physical state and seeded crops; identical train/validation/test protocol",
+    "initialization": "Independent random weights; tau_rise=5ms, tau_decay=20ms, omega=.3, bias=-70mV, reset=(-55mV,15mV,10ms). No learned checkpoint.",
+    "initial_state_digest": "1b61d699f92650a2ff1b155aa41a910587d49db6ebc668f95a4db25eb91b6673",
+    "manifest": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/accuracy_frontier_20260929/balanced_1ms/training_manifest.json",
+    "manifest_sha256": "e7d178de1671cbb656d5b6ae32d79248b832cdcc7a501f4ed0f99328c67f4cf0",
+    "ordered_input_digest": "d88788ffead8f3f6252bf04a7f17910081aebf7166a33480aa833a06c228d77a",
+    "fit_case_ids": [
+      "original_train_000",
+      "original_train_001",
+      "original_train_003",
+      "original_train_004",
+      "original_train_006",
+      "original_train_007",
+      "original_train_008",
+      "original_train_010",
+      "original_train_011",
+      "original_train_012",
+      "original_train_013",
+      "original_train_015",
+      "original_train_017",
+      "original_train_018",
+      "original_train_019",
+      "original_train_020",
+      "original_train_021",
+      "original_train_022",
+      "original_train_024",
+      "original_train_025",
+      "original_train_026",
+      "original_train_028",
+      "original_train_029",
+      "original_train_030",
+      "original_train_032",
+      "original_train_033",
+      "original_train_034",
+      "original_train_035",
+      "original_train_036",
+      "original_train_037",
+      "original_train_038",
+      "original_train_040",
+      "original_train_041",
+      "original_train_043",
+      "original_train_045",
+      "original_train_046",
+      "original_train_047",
+      "original_train_048",
+      "original_train_049",
+      "original_train_052",
+      "original_train_053",
+      "original_train_054",
+      "original_train_055",
+      "original_train_056",
+      "original_train_057",
+      "original_train_058",
+      "original_train_059",
+      "original_train_060",
+      "original_train_061",
+      "original_train_064",
+      "original_train_065",
+      "original_train_066",
+      "original_train_067",
+      "original_train_068",
+      "original_train_070",
+      "original_train_071",
+      "original_train_072",
+      "original_train_073",
+      "original_train_074",
+      "original_train_075",
+      "original_train_076",
+      "original_train_078",
+      "original_train_079",
+      "original_train_080",
+      "original_train_082",
+      "original_train_083",
+      "original_train_084",
+      "original_train_085",
+      "original_train_086",
+      "original_train_087",
+      "original_train_088",
+      "original_train_089",
+      "original_train_090",
+      "original_train_091",
+      "original_train_092",
+      "original_train_093",
+      "original_train_094",
+      "original_train_095",
+      "original_train_096",
+      "original_train_099",
+      "new_A64_hz10_r0",
+      "new_A64_hz10_r1",
+      "new_A64_hz10_r2",
+      "new_A64_hz25_r0",
+      "new_A64_hz25_r1",
+      "new_A64_hz25_r2",
+      "new_A64_hz50_r0",
+      "new_A64_hz50_r1",
+      "new_A64_hz50_r2",
+      "new_A128_hz10_r0",
+      "new_A128_hz10_r1",
+      "new_A128_hz10_r2",
+      "new_A128_hz25_r0",
+      "new_A128_hz25_r1",
+      "new_A128_hz25_r2",
+      "new_A128_hz50_r0",
+      "new_A128_hz50_r1",
+      "new_A128_hz50_r2",
+      "new_A256_hz10_r0",
+      "new_A256_hz10_r1",
+      "new_A256_hz10_r2",
+      "new_A256_hz25_r0",
+      "new_A256_hz25_r1",
+      "new_A256_hz25_r2",
+      "new_A256_hz50_r0",
+      "new_A256_hz50_r1",
+      "new_A256_hz50_r2",
+      "new_A500_hz10_r0",
+      "new_A500_hz10_r1",
+      "new_A500_hz10_r2",
+      "new_A500_hz25_r0",
+      "new_A500_hz25_r1",
+      "new_A500_hz25_r2",
+      "new_A500_hz50_r0",
+      "new_A500_hz50_r1",
+      "new_A500_hz50_r2",
+      "zero_fit"
+    ],
+    "validation_case_ids": [
+      "original_train_002",
+      "original_train_005",
+      "original_train_009",
+      "original_train_014",
+      "original_train_016",
+      "original_train_023",
+      "original_train_027",
+      "original_train_031",
+      "original_train_039",
+      "original_train_042",
+      "original_train_044",
+      "original_train_050",
+      "original_train_051",
+      "original_train_062",
+      "original_train_063",
+      "original_train_069",
+      "original_train_077",
+      "original_train_081",
+      "original_train_097",
+      "original_train_098",
+      "new_A64_hz10_r3",
+      "new_A64_hz25_r3",
+      "new_A64_hz50_r3",
+      "new_A128_hz10_r3",
+      "new_A128_hz25_r3",
+      "new_A128_hz50_r3",
+      "new_A256_hz10_r3",
+      "new_A256_hz25_r3",
+      "new_A256_hz50_r3",
+      "new_A500_hz10_r3",
+      "new_A500_hz25_r3",
+      "new_A500_hz50_r3"
+    ],
+    "window_sampling": "Same seeded fit-case permutation, one crop per case/epoch; crop end uniformly sampled after500ms on native grid. 400/500ms arms share ends within each resolution. Each resolution uses exactly its external-baseline source panel.",
+    "initial_window_state": "Zero local filter and reset states; no unobserved input or inherited teacher-reset state before the crop.",
+    "loss": "Same balanced B2 loss: mean case-weighted masked voltage MSE + .1 first-difference MSE. Weights .3+.7/max(full-reference variance,.04), normalized over fit. Reference AP +/-10ms excluded. Burn applied equally to voltage and derivative terms.",
+    "optimizer": "AdamW lr 0.003 / 0.0006000000000000001 refinement, wd 1e-6; cosine to .02 initial lr; clip1; EMA .995; FP32 IEEE",
+    "budget": "Same case presentations / optimizer updates for the400/500ms arms within each resolution; corresponding resolution-specific fit panel sizes differ. Supervised physical time per update differs with window length.",
+    "selection": "Full continuous 6s validation: pooled masked MSE + .02 mean normalized MSE with .04 variance floor + .05*(1-event F1 at +/-5ms). Best joint, best voltage and EMA candidates, reset grid calibrated on validation only.",
+    "reset_training": "Fixed teacher reset during primary; validation-only reset calibration then refine using rebuilt teachers.",
+    "tests_used_for_training_or_selection": false,
+    "physical_gpu": "1",
+    "validation_forward_max_gap_mv": 0.0,
+    "sequential_reset_max_gap_mv": 2.842170943040401e-14,
+    "script_sha256": "320b881108539a92ad99b77f0b59c67239e198e3cca9a5199824fe108b91a5c8",
+    "supervised_grid": "Native1.0ms; held-out metrics on common1ms with reference AP +/-10ms excluded"
+  },
+  "selected": {
+    "name": "refine_ema",
+    "epoch": 400,
+    "checkpoint": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/diagonal_1ms_20261009/dbnn_w500_dt1ms_burn150_full_diag/candidates/refine_ema/checkpoint.pt",
+    "checkpoint_sha256": "fcac10dacaa74a20c4add37d9fd5b31713d7a4de397aca027f220b144c940c47",
+    "reset": {
+      "v_th": -58.0,
+      "reset_amp": 4.0,
+      "tau_reset": 40.0
+    },
+    "validation": {
+      "cases": [
+        {
+          "case_id": "original_train_002",
+          "voltage": {
+            "n": 6001,
+            "sse": 513.6889858536597,
+            "error_ss": 489.95725174847604,
+            "reference_ss": 9782.629625210833,
+            "rmse_mv": 0.2925757409883934,
+            "ve": 0.9499155880862742,
+            "bias_mv": -0.06288584826926633
+          },
+          "events": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "matched_errors_ms": []
+          }
+        },
+        {
+          "case_id": "original_train_005",
+          "voltage": {
+            "n": 5961,
+            "sse": 555.8522123665194,
+            "error_ss": 555.5085451167148,
+            "reference_ss": 9149.714060933642,
+            "rmse_mv": 0.3053655978638586,
+            "ve": 0.9392867862954801,
+            "bias_mv": 0.007592932040903802
+          },
+          "events": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 1,
+            "matched_errors_ms": [
+              -2.3999999997915893
+            ]
+          }
+        },
+        {
+          "case_id": "original_train_009",
+          "voltage": {
+            "n": 5981,
+            "sse": 516.5952171864709,
+            "error_ss": 513.9697773255712,
+            "reference_ss": 9087.238974504293,
+            "rmse_mv": 0.29389235523666807,
+            "ve": 0.9434404906960634,
+            "bias_mv": -0.02095145247452957
+          },
+          "events": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "matched_errors_ms": [
+              -2.0000000004292815
+            ]
+          }
+        },
+        {
+          "case_id": "original_train_014",
+          "voltage": {
+            "n": 5981,
+            "sse": 884.9663188032056,
+            "error_ss": 867.1820308989081,
+            "reference_ss": 10266.705408741978,
+            "rmse_mv": 0.38465950626987794,
+            "ve": 0.9155345365066662,
+            "bias_mv": -0.05452947783754042
+          },
+          "events": {
+            "tp": 0,
+            "fp": 2,
+            "fn": 1,
+            "matched_errors_ms": []
+          }
+        },
+        {
+          "case_id": "original_train_016",
+          "voltage": {
+            "n": 6001,
+            "sse": 673.8730865527747,
+            "error_ss": 651.5321743672894,
+            "reference_ss": 8423.010207344454,
+            "rmse_mv": 0.33510217175444174,
+            "ve": 0.9226485355794553,
+            "bias_mv": -0.06101528404233168
+          },
+          "events": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 0,
+            "matched_errors_ms": []
+          }
+        },
+        {
+          "case_id": "original_train_023",
+          "voltage": {
+            "n": 5941,
+            "sse": 705.6066962623547,
+            "error_ss": 672.1249923244925,
+            "reference_ss": 10147.502191823474,
+            "rmse_mv": 0.3446288022230915,
+            "ve": 0.9337644890714023,
+            "bias_mv": 0.075071310920056
+          },
+          "events": {
+            "tp": 2,
+            "fp": 1,
+            "fn": 1,
+            "matched_errors_ms": [
+              -3.400000000718137,
+              -4.600000010606891
+            ]
+          }
+        },
+        {
+          "case_id": "original_train_027",
+          "voltage": {
+            "n": 6001,
+            "sse": 511.40840034333814,
+            "error_ss": 492.4668243467628,
+            "reference_ss": 9904.059215488245,
+            "rmse_mv": 0.29192555552553956,
+            "ve": 0.9502762641426226,
+            "bias_mv": -0.056181876664558185
+          },
+          "events": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "matched_errors_ms": []
+          }
+        },
+        {
+          "case_id": "original_train_031",
+          "voltage": {
+            "n": 6001,
+            "sse": 502.80173335885047,
+            "error_ss": 474.097621270566,
+            "reference_ss": 8976.72619805882,
+            "rmse_mv": 0.2894586749533068,
+            "ve": 0.9471859104521771,
+            "bias_mv": -0.06916083774652466
+          },
+          "events": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "matched_errors_ms": []
+          }
+        },
+        {
+          "case_id": "original_train_039",
+          "voltage": {
+            "n": 6001,
+            "sse": 1028.2200232903,
+            "error_ss": 1004.6959966937768,
+            "reference_ss": 9962.69419208044,
+            "rmse_mv": 0.4139341094593289,
+            "ve": 0.8991541868772374,
+            "bias_mv": -0.06261004522540038
+          },
+          "events": {
+            "tp": 0,
+            "fp": 2,
+            "fn": 0,
+            "matched_errors_ms": []
+          }
+        },
+        {
+          "case_id": "original_train_042",
+          "voltage": {
+            "n": 5941,
+            "sse": 1047.4857951292117,
+            "error_ss": 971.7601053378862,
+            "reference_ss": 9416.91406021814,
+            "rmse_mv": 0.41989847265783475,
+            "ve": 0.8968069476769361,
+            "bias_mv": 0.11289945431788483
+          },
+          "events": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 2,
+            "matched_errors_ms": [
+              -4.30000000921973
+            ]
+          }
+        },
+        {
+          "case_id": "original_train_044",
+          "voltage": {
+            "n": 5981,
+            "sse": 536.492322853828,
+            "error_ss": 536.3811104083168,
+            "reference_ss": 9497.974335908668,
+            "rmse_mv": 0.2994986399873292,
+            "ve": 0.9435267888248088,
+            "bias_mv": 0.004312109634732651
+          },
+          "events": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "matched_errors_ms": [
+              -2.5000000133168214
+            ]
+          }
+        },
+        {
+          "case_id": "original_train_050",
+          "voltage": {
+            "n": 6001,
+            "sse": 465.3540868361306,
+            "error_ss": 450.0159909982213,
+            "reference_ss": 9420.649684880169,
+            "rmse_mv": 0.2784709861445791,
+            "ve": 0.9522308963764482,
+            "bias_mv": -0.050556140270973715
+          },
+          "events": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "matched_errors_ms": []
+          }
+        },
+        {
+          "case_id": "original_train_051",
+          "voltage": {
+            "n": 5981,
+            "sse": 493.22733633971114,
+            "error_ss": 482.7127732611167,
+            "reference_ss": 9129.58440854797,
+            "rmse_mv": 0.28716841301198026,
+            "ve": 0.947126533732559,
+            "bias_mv": -0.04192844095928733
+          },
+          "events": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "matched_errors_ms": [
+              -4.8000000131251
+            ]
+          }
+        },
+        {
+          "case_id": "original_train_062",
+          "voltage": {
+            "n": 5981,
+            "sse": 534.8987117316856,
+            "error_ss": 524.3554415962403,
+            "reference_ss": 9449.113958133317,
+            "rmse_mv": 0.29905348979099955,
+            "ve": 0.9445074486433829,
+            "bias_mv": -0.04198563885221543
+          },
+          "events": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "matched_errors_ms": [
+              -3.800000003808236
+            ]
+          }
+        },
+        {
+          "case_id": "original_train_063",
+          "voltage": {
+            "n": 6001,
+            "sse": 480.7887653386424,
+            "error_ss": 457.5603535204841,
+            "reference_ss": 9883.831264738,
+            "rmse_mv": 0.283051422663436,
+            "ve": 0.9537061751395032,
+            "bias_mv": -0.062215406802113384
+          },
+          "events": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "matched_errors_ms": []
+          }
+        },
+        {
+          "case_id": "original_train_069",
+          "voltage": {
+            "n": 5969,
+            "sse": 801.6268557797699,
+            "error_ss": 795.4244203619253,
+            "reference_ss": 9652.995529432153,
+            "rmse_mv": 0.3664673938778671,
+            "ve": 0.9175981778985951,
+            "bias_mv": -0.0322351975450967
+          },
+          "events": {
+            "tp": 1,
+            "fp": 2,
+            "fn": 1,
+            "matched_errors_ms": [
+              -3.300000014975012
+            ]
+          }
+        },
+        {
+          "case_id": "original_train_077",
+          "voltage": {
+            "n": 5981,
+            "sse": 872.8459807991148,
+            "error_ss": 872.0958859969641,
+            "reference_ss": 9680.079954501478,
+            "rmse_mv": 0.382016311515212,
+            "ve": 0.9099081939306278,
+            "bias_mv": 0.011198791958928665
+          },
+          "events": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 1,
+            "matched_errors_ms": []
+          }
+        },
+        {
+          "case_id": "original_train_081",
+          "voltage": {
+            "n": 5961,
+            "sse": 688.679519079325,
+            "error_ss": 685.7550595597162,
+            "reference_ss": 9137.821564381375,
+            "rmse_mv": 0.33989832377467766,
+            "ve": 0.92495420766009,
+            "bias_mv": 0.022149465280547953
+          },
+          "events": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 2,
+            "matched_errors_ms": []
+          }
+        },
+        {
+          "case_id": "original_train_097",
+          "voltage": {
+            "n": 6001,
+            "sse": 465.3826855452353,
+            "error_ss": 450.13879419271575,
+            "reference_ss": 9843.55704709016,
+            "rmse_mv": 0.278479542842155,
+            "ve": 0.9542707181926903,
+            "bias_mv": -0.050400646701095064
+          },
+          "events": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "matched_errors_ms": []
+          }
+        },
+        {
+          "case_id": "original_train_098",
+          "voltage": {
+            "n": 5961,
+            "sse": 862.2755897233008,
+            "error_ss": 807.8359495865186,
+            "reference_ss": 9154.229120442575,
+            "rmse_mv": 0.3803325410198922,
+            "ve": 0.9117527058851392,
+            "bias_mv": 0.09556482348016208
+          },
+          "events": {
+            "tp": 1,
+            "fp": 0,
+            "fn": 1,
+            "matched_errors_ms": [
+              0.8999999998643489
+            ]
+          }
+        },
+        {
+          "case_id": "new_A64_hz10_r3",
+          "voltage": {
+            "n": 6001,
+            "sse": 95.03110772726359,
+            "error_ss": 94.88574790834728,
+            "reference_ss": 456.6606165912801,
+            "rmse_mv": 0.12584068754356448,
+            "ve": 0.7922182372182276,
+            "bias_mv": -0.004921646003742215
+          },
+          "events": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "matched_errors_ms": []
+          }
+        },
+        {
+          "case_id": "new_A64_hz25_r3",
+          "voltage": {
+            "n": 6001,
+            "sse": 139.1007487087627,
+            "error_ss": 123.2233920517373,
+            "reference_ss": 1352.3396549727795,
+            "rmse_mv": 0.1522484642034802,
+            "ve": 0.9088813290369588,
+            "bias_mv": 0.051437196126085105
+          },
+          "events": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "matched_errors_ms": []
+          }
+        },
+        {
+          "case_id": "new_A64_hz50_r3",
+          "voltage": {
+            "n": 6001,
+            "sse": 362.7878259575227,
+            "error_ss": 351.5903724040976,
+            "reference_ss": 2569.069751398472,
+            "rmse_mv": 0.24587509410119313,
+            "ve": 0.8631448709352054,
+            "bias_mv": 0.043196426592475475
+          },
+          "events": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "matched_errors_ms": []
+          }
+        },
+        {
+          "case_id": "new_A128_hz10_r3",
+          "voltage": {
+            "n": 6001,
+            "sse": 210.8277504753787,
+            "error_ss": 163.909371775061,
+            "reference_ss": 998.1021646003869,
+            "rmse_mv": 0.187435597104853,
+            "ve": 0.8357789637289427,
+            "bias_mv": 0.08842186783973505
+          },
+          "events": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "matched_errors_ms": []
+          }
+        },
+        {
+          "case_id": "new_A128_hz25_r3",
+          "voltage": {
+            "n": 6001,
+            "sse": 411.1242871839786,
+            "error_ss": 384.2548474501383,
+            "reference_ss": 2334.95249650965,
+            "rmse_mv": 0.26174280565969843,
+            "ve": 0.8354335482094248,
+            "bias_mv": -0.06691407704428819
+          },
+          "events": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "matched_errors_ms": []
+          }
+        },
+        {
+          "case_id": "new_A128_hz50_r3",
+          "voltage": {
+            "n": 6001,
+            "sse": 650.041616918752,
+            "error_ss": 649.5034661558714,
+            "reference_ss": 3292.942666351815,
+            "rmse_mv": 0.32912340509879884,
+            "ve": 0.8027589508943855,
+            "bias_mv": -0.009469786041519122
+          },
+          "events": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "matched_errors_ms": []
+          }
+        },
+        {
+          "case_id": "new_A256_hz10_r3",
+          "voltage": {
+            "n": 6001,
+            "sse": 370.5592951818835,
+            "error_ss": 308.54448766778523,
+            "reference_ss": 1731.8150919881164,
+            "rmse_mv": 0.248494649704627,
+            "ve": 0.8218375107739837,
+            "bias_mv": -0.10165667172333256
+          },
+          "events": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "matched_errors_ms": []
+          }
+        },
+        {
+          "case_id": "new_A256_hz25_r3",
+          "voltage": {
+            "n": 6001,
+            "sse": 368.10092987987446,
+            "error_ss": 367.65645601967395,
+            "reference_ss": 4089.8694108599416,
+            "rmse_mv": 0.24766899615825164,
+            "ve": 0.9101055757322163,
+            "bias_mv": 0.008606197317130087
+          },
+          "events": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "matched_errors_ms": []
+          }
+        },
+        {
+          "case_id": "new_A256_hz50_r3",
+          "voltage": {
+            "n": 6001,
+            "sse": 432.77151672402397,
+            "error_ss": 423.3681944440058,
+            "reference_ss": 5277.620733037822,
+            "rmse_mv": 0.26854527866430367,
+            "ve": 0.9197804814215376,
+            "bias_mv": -0.03958483573457158
+          },
+          "events": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "matched_errors_ms": []
+          }
+        },
+        {
+          "case_id": "new_A500_hz10_r3",
+          "voltage": {
+            "n": 6001,
+            "sse": 547.2742369925836,
+            "error_ss": 405.7575075766903,
+            "reference_ss": 3280.9636920789358,
+            "rmse_mv": 0.30198869731036854,
+            "ve": 0.8763297781818525,
+            "bias_mv": -0.15356494132488335
+          },
+          "events": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "matched_errors_ms": []
+          }
+        },
+        {
+          "case_id": "new_A500_hz25_r3",
+          "voltage": {
+            "n": 6001,
+            "sse": 368.75484109669924,
+            "error_ss": 349.07216694237536,
+            "reference_ss": 6606.226715280329,
+            "rmse_mv": 0.24788888377590995,
+            "ve": 0.9471601290741408,
+            "bias_mv": -0.05727040284952508
+          },
+          "events": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "matched_errors_ms": []
+          }
+        },
+        {
+          "case_id": "new_A500_hz50_r3",
+          "voltage": {
+            "n": 5941,
+            "sse": 1059.9786810654045,
+            "error_ss": 1059.635386852371,
+            "reference_ss": 8781.652357736004,
+            "rmse_mv": 0.42239501983321626,
+            "ve": 0.8793353068777645,
+            "bias_mv": 0.007601572904783574
+          },
+          "events": {
+            "tp": 2,
+            "fp": 1,
+            "fn": 1,
+            "matched_errors_ms": [
+              -2.5999999995522103,
+              1.1823431123048067e-09
+            ]
+          }
+        }
+      ],
+      "pooled_rmse_mv": 0.30786759695671323,
+      "mean_case_ve": 0.907823758242275,
+      "within_trace_weighted_ve": 0.9244299668491628,
+      "events": {
+        "tp": 12,
+        "fp": 12,
+        "fn": 11,
+        "precision": 0.5,
+        "recall": 0.5217391304347826,
+        "f1": 0.5106382978723404,
+        "median_abs_error_ms": 2.9500000072636112
+      },
+      "normalized_mse_floor_0p04": 0.09841652728929748,
+      "score": 0.12121887290807015
+    }
+  },
+  "checkpoint": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/diagonal_1ms_20261009/dbnn_w500_dt1ms_burn150_full_diag/best_checkpoint.pt",
+  "checkpoint_sha256": "737efcff1e6686bfb153fca8590a8b28a605fbdb08f9a68ff44e68af8867686d",
+  "locked_before_test_at": "2026-10-09T14:07:23.179088",
+  "summary": {
+    "cases": 31,
+    "pooled_rmse_mv": 0.254923229278574,
+    "mean_case_ve": 0.8779713931691355,
+    "within_trace_weighted_ve": 0.995891288676327,
+    "events": {
+      "tp": 8,
+      "fp": 6,
+      "fn": 2,
+      "precision": 0.5714285714285714,
+      "recall": 0.8,
+      "f1": 0.6666666666666666,
+      "median_abs_error_ms": 2.5000000034724508
+    }
+  },
+  "records": [
+    {
+      "case_id": "case_0005",
+      "duration_ms": 1000,
+      "input_sha256": "a0ee21b1fce74405e6193f53538eed3f671ba37d13b7b8f0eb24238faf485fcb",
+      "voltage": {
+        "n": 1001,
+        "sse": 22.025162232865114,
+        "error_ss": 21.948303232065538,
+        "reference_ss": 580.9371321221538,
+        "rmse_mv": 0.1483346185952265,
+        "ve": 0.9622191421094246,
+        "bias_mv": -0.008762546352573208
+      },
+      "events": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matched_errors_ms": []
+      },
+      "reference_events_ms": [],
+      "predicted_events_ms": []
+    },
+    {
+      "case_id": "case_0011",
+      "duration_ms": 1000,
+      "input_sha256": "2c42dad9c63550b079c04bed6b4a353bfe477d1f662533438033ebab4edf6f34",
+      "voltage": {
+        "n": 1001,
+        "sse": 75.27371204574592,
+        "error_ss": 68.46082377566754,
+        "reference_ss": 1233.7900812060407,
+        "rmse_mv": 0.2742234737075105,
+        "ve": 0.9445117732598834,
+        "bias_mv": -0.0824989829506431
+      },
+      "events": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matched_errors_ms": []
+      },
+      "reference_events_ms": [],
+      "predicted_events_ms": []
+    },
+    {
+      "case_id": "case_0017",
+      "duration_ms": 1000,
+      "input_sha256": "a450840064cc81dbf37675b8a1258408048d18f47eb09168405a40f6893189f5",
+      "voltage": {
+        "n": 1001,
+        "sse": 62.9837641173508,
+        "error_ss": 54.31324748153921,
+        "reference_ss": 2651.9013833546182,
+        "rmse_mv": 0.2508402744259317,
+        "ve": 0.9795191300014204,
+        "bias_mv": -0.09306908606530188
+      },
+      "events": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matched_errors_ms": []
+      },
+      "reference_events_ms": [],
+      "predicted_events_ms": []
+    },
+    {
+      "case_id": "case_0018",
+      "duration_ms": 1000,
+      "input_sha256": "aa72ba5733173607eba0177c4d56b2b78b2cb2ac8a040856a722cc837c17b1ae",
+      "voltage": {
+        "n": 1001,
+        "sse": 158.92312140250579,
+        "error_ss": 125.74036288628872,
+        "reference_ss": 928.9736758623442,
+        "rmse_mv": 0.3984524526784348,
+        "ve": 0.8646459354517587,
+        "bias_mv": -0.18207034054812374
+      },
+      "events": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matched_errors_ms": []
+      },
+      "reference_events_ms": [],
+      "predicted_events_ms": []
+    },
+    {
+      "case_id": "case_0020",
+      "duration_ms": 1000,
+      "input_sha256": "4cb378f2cebfb594b90f38433b31a156e9caa9f05eaed1615269830b4f3050cd",
+      "voltage": {
+        "n": 1001,
+        "sse": 134.44349633998354,
+        "error_ss": 105.96948537787816,
+        "reference_ss": 5247.254642837015,
+        "rmse_mv": 0.366482178492803,
+        "ve": 0.97980477552723,
+        "bias_mv": -0.1686581317242328
+      },
+      "events": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matched_errors_ms": []
+      },
+      "reference_events_ms": [],
+      "predicted_events_ms": []
+    },
+    {
+      "case_id": "case_0026",
+      "duration_ms": 2000,
+      "input_sha256": "8ce2a2365d97ff4d247bbb05d676fef9cf672123f08a60ef0462f3a36a86dc90",
+      "voltage": {
+        "n": 2001,
+        "sse": 46.29851520003285,
+        "error_ss": 46.037935783149734,
+        "reference_ss": 946.0917159207893,
+        "rmse_mv": 0.15211077790754543,
+        "ve": 0.9513388237013121,
+        "bias_mv": -0.011411599193079242
+      },
+      "events": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matched_errors_ms": []
+      },
+      "reference_events_ms": [],
+      "predicted_events_ms": []
+    },
+    {
+      "case_id": "case_0032",
+      "duration_ms": 2000,
+      "input_sha256": "137882405a9b102890c1c921ae6f7b138f897a20e114ea6b8be764b3c525356f",
+      "voltage": {
+        "n": 2001,
+        "sse": 89.19333683187142,
+        "error_ss": 89.16387775884141,
+        "reference_ss": 1923.3124471601616,
+        "rmse_mv": 0.21112645789981663,
+        "ve": 0.9536404613350811,
+        "bias_mv": 0.003836948713143428
+      },
+      "events": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matched_errors_ms": []
+      },
+      "reference_events_ms": [],
+      "predicted_events_ms": []
+    },
+    {
+      "case_id": "case_0038",
+      "duration_ms": 2000,
+      "input_sha256": "0e46b6904a824e4225ece7ee46d88781e9a28bf281b9c95228f272d007ad5317",
+      "voltage": {
+        "n": 2001,
+        "sse": 120.09947265998926,
+        "error_ss": 118.80251520250914,
+        "reference_ss": 3936.8330862638854,
+        "rmse_mv": 0.24498923745087509,
+        "ve": 0.9698228213898561,
+        "bias_mv": 0.02545888158215814
+      },
+      "events": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matched_errors_ms": []
+      },
+      "reference_events_ms": [],
+      "predicted_events_ms": []
+    },
+    {
+      "case_id": "case_0039",
+      "duration_ms": 2000,
+      "input_sha256": "788785a4243c3c4a1b7e80bcf53a0bbeb7e14c4d08ea2d80bafba52be4023668",
+      "voltage": {
+        "n": 2001,
+        "sse": 257.7235792533029,
+        "error_ss": 189.234697332097,
+        "reference_ss": 1306.7965473469594,
+        "rmse_mv": 0.3588835339371059,
+        "ve": 0.8551919212548589,
+        "bias_mv": -0.18500628988484275
+      },
+      "events": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matched_errors_ms": []
+      },
+      "reference_events_ms": [],
+      "predicted_events_ms": []
+    },
+    {
+      "case_id": "case_0041",
+      "duration_ms": 2000,
+      "input_sha256": "114c1521278322177118a265126ce387f8b18cbae35bd143675bd18ce4c47846",
+      "voltage": {
+        "n": 2001,
+        "sse": 193.1170611421985,
+        "error_ss": 157.21735110625931,
+        "reference_ss": 5544.65644200522,
+        "rmse_mv": 0.31066102979514915,
+        "ve": 0.9716452493043191,
+        "bias_mv": -0.13394358728838707
+      },
+      "events": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matched_errors_ms": []
+      },
+      "reference_events_ms": [],
+      "predicted_events_ms": []
+    },
+    {
+      "case_id": "case_0047",
+      "duration_ms": 4000,
+      "input_sha256": "a68eb9d5e66929b7f987d57692fee8fd3844b4596792b76dba7384ad0f41c08f",
+      "voltage": {
+        "n": 4001,
+        "sse": 91.35959040699527,
+        "error_ss": 91.20347612317968,
+        "reference_ss": 1738.365590105403,
+        "rmse_mv": 0.15110985756887338,
+        "ve": 0.9475349278412433,
+        "bias_mv": 0.006246504322405727
+      },
+      "events": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matched_errors_ms": []
+      },
+      "reference_events_ms": [],
+      "predicted_events_ms": []
+    },
+    {
+      "case_id": "case_0053",
+      "duration_ms": 4000,
+      "input_sha256": "2195dcb7fa655eb078f59550203a3fd4b606c7145d6534e6ee6763e57b4a5e78",
+      "voltage": {
+        "n": 4001,
+        "sse": 162.02340954344254,
+        "error_ss": 161.68567444592497,
+        "reference_ss": 3244.7239157635613,
+        "rmse_mv": 0.20123550495314488,
+        "ve": 0.9501696666208113,
+        "bias_mv": -0.009187636867638559
+      },
+      "events": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matched_errors_ms": []
+      },
+      "reference_events_ms": [],
+      "predicted_events_ms": []
+    },
+    {
+      "case_id": "case_0059",
+      "duration_ms": 4000,
+      "input_sha256": "a4f267132ea62a352e49744a0d3afa6c32aca016ec68d84d6ecfcd8514ab65e2",
+      "voltage": {
+        "n": 4001,
+        "sse": 225.85906370164594,
+        "error_ss": 222.59201391335432,
+        "reference_ss": 5369.539411698086,
+        "rmse_mv": 0.23759346216193736,
+        "ve": 0.9585454176146999,
+        "bias_mv": 0.028575484379027315
+      },
+      "events": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matched_errors_ms": []
+      },
+      "reference_events_ms": [],
+      "predicted_events_ms": []
+    },
+    {
+      "case_id": "case_0060",
+      "duration_ms": 4000,
+      "input_sha256": "6169185fc88c30bae850fa6d8da992f40d2da5b2d7e29b0e8c3b81b376c1fe18",
+      "voltage": {
+        "n": 4001,
+        "sse": 410.6405220545712,
+        "error_ss": 304.60290584104814,
+        "reference_ss": 2447.326492583757,
+        "rmse_mv": 0.3203661528558672,
+        "ve": 0.8755364652962733,
+        "bias_mv": -0.1627967393985244
+      },
+      "events": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matched_errors_ms": []
+      },
+      "reference_events_ms": [],
+      "predicted_events_ms": []
+    },
+    {
+      "case_id": "target_002",
+      "duration_ms": 4000,
+      "input_sha256": "bd4aefecd5d0514bea4863117584de9a9b88d88938a082c3c67c71645d657f26",
+      "voltage": {
+        "n": 4001,
+        "sse": 275.546022015842,
+        "error_ss": 272.90335001673,
+        "reference_ss": 7305.353421231023,
+        "rmse_mv": 0.26242958709321446,
+        "ve": 0.9626433747580767,
+        "bias_mv": -0.025700250466863264
+      },
+      "events": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matched_errors_ms": []
+      },
+      "reference_events_ms": [],
+      "predicted_events_ms": []
+    },
+    {
+      "case_id": "target_001",
+      "duration_ms": 4000,
+      "input_sha256": "e811269f5e7617588348539c071648ac933a1c469664d7bfce43ed9dc48ea624",
+      "voltage": {
+        "n": 3981,
+        "sse": 353.4858295504239,
+        "error_ss": 353.1815271651665,
+        "reference_ss": 7516.287712606479,
+        "rmse_mv": 0.29798192094041687,
+        "ve": 0.953011175108052,
+        "bias_mv": -0.008742921710992788
+      },
+      "events": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "matched_errors_ms": [
+          -2.000000003910827
+        ]
+      },
+      "reference_events_ms": [
+        2957.000000003911
+      ],
+      "predicted_events_ms": [
+        2955.0
+      ]
+    },
+    {
+      "case_id": "case_0062",
+      "duration_ms": 4000,
+      "input_sha256": "a7a9b5bc60ec5d9a781ade821ddc618a24e2a33475d6d40844ce6b6c4b119c62",
+      "voltage": {
+        "n": 3961,
+        "sse": 652.6502831935953,
+        "error_ss": 649.0173502173616,
+        "reference_ss": 7042.611099851203,
+        "rmse_mv": 0.4059175645661644,
+        "ve": 0.907844215587728,
+        "bias_mv": 0.030284908902020544
+      },
+      "events": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "matched_errors_ms": [
+          -4.099999999207284
+        ]
+      },
+      "reference_events_ms": [
+        42.40000000015448,
+        1664.0999999992073
+      ],
+      "predicted_events_ms": [
+        1660.0
+      ]
+    },
+    {
+      "case_id": "target_009",
+      "duration_ms": 8000,
+      "input_sha256": "b3c0284da3a39eb23127be9ee9a8b456a4d3e8bc29e2bb4af3550685b1b94468",
+      "voltage": {
+        "n": 8001,
+        "sse": 332.51739221665775,
+        "error_ss": 332.2500836596544,
+        "reference_ss": 21863.39238006784,
+        "rmse_mv": 0.20386142129445603,
+        "ve": 0.98480336089277,
+        "bias_mv": 0.0057800859380492476
+      },
+      "events": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matched_errors_ms": []
+      },
+      "reference_events_ms": [],
+      "predicted_events_ms": []
+    },
+    {
+      "case_id": "target_010",
+      "duration_ms": 8000,
+      "input_sha256": "65d2ef71c191473b4b4854ccbebc81f8494a15ea0d60cdfb039f8effa2696cb7",
+      "voltage": {
+        "n": 8001,
+        "sse": 276.4469159722212,
+        "error_ss": 268.59645373924604,
+        "reference_ss": 83285.95170967348,
+        "rmse_mv": 0.18588046038605963,
+        "ve": 0.9967750088913488,
+        "bias_mv": 0.031323874775967944
+      },
+      "events": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matched_errors_ms": []
+      },
+      "reference_events_ms": [],
+      "predicted_events_ms": []
+    },
+    {
+      "case_id": "target_016",
+      "duration_ms": 8000,
+      "input_sha256": "9390fecd485ac7d8dbeeac932206713008a0c75e6e343e06a53104bfa1050684",
+      "voltage": {
+        "n": 8001,
+        "sse": 16.257027100247797,
+        "error_ss": 0.7643934637639136,
+        "reference_ss": 0.7643934637639136,
+        "rmse_mv": 0.045076317542924585,
+        "ve": 0.0,
+        "bias_mv": 0.044003831224283
+      },
+      "events": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matched_errors_ms": []
+      },
+      "reference_events_ms": [],
+      "predicted_events_ms": []
+    },
+    {
+      "case_id": "case_0075",
+      "duration_ms": 8000,
+      "input_sha256": "68e4a1245d708a7248f4b693906205bdc9158db1ffac195bfcbd32d098f34f07",
+      "voltage": {
+        "n": 8001,
+        "sse": 655.0600359037053,
+        "error_ss": 470.58341813779487,
+        "reference_ss": 4397.560638254492,
+        "rmse_mv": 0.286133308886184,
+        "ve": 0.8929898967067837,
+        "bias_mv": -0.1518443121550724
+      },
+      "events": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matched_errors_ms": []
+      },
+      "reference_events_ms": [],
+      "predicted_events_ms": []
+    },
+    {
+      "case_id": "target_005",
+      "duration_ms": 8000,
+      "input_sha256": "1e0dd03978bf507af53df54bcc0c54efd5cdb06f83b9449787f12158c9c19ad7",
+      "voltage": {
+        "n": 8001,
+        "sse": 721.5334077175066,
+        "error_ss": 717.6998542921581,
+        "reference_ss": 608468.1074351755,
+        "rmse_mv": 0.3003005218348139,
+        "ve": 0.9988204807359298,
+        "bias_mv": 0.021889136263972864
+      },
+      "events": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matched_errors_ms": []
+      },
+      "reference_events_ms": [],
+      "predicted_events_ms": []
+    },
+    {
+      "case_id": "target_004",
+      "duration_ms": 8000,
+      "input_sha256": "6c3f32378a29dfbcecf07be6a5230d9d209e0962394f83cf821aaa4f38c1d259",
+      "voltage": {
+        "n": 7981,
+        "sse": 1138.610644137103,
+        "error_ss": 1138.0081247290038,
+        "reference_ss": 610490.3292428488,
+        "rmse_mv": 0.3777104185388401,
+        "ve": 0.9981359112991349,
+        "bias_mv": 0.008688741266506435
+      },
+      "events": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "matched_errors_ms": [
+          -2.000000003910827
+        ]
+      },
+      "reference_events_ms": [
+        2957.000000003911
+      ],
+      "predicted_events_ms": [
+        2955.0,
+        4513.0
+      ]
+    },
+    {
+      "case_id": "case_0077",
+      "duration_ms": 8000,
+      "input_sha256": "080d68d0785732f4aa8f1bbbfa33b7a27774df930adffe444444107d188619a1",
+      "voltage": {
+        "n": 7961,
+        "sse": 1336.558174539738,
+        "error_ss": 1247.5754577690805,
+        "reference_ss": 12094.816980303553,
+        "rmse_mv": 0.4097416587603955,
+        "ve": 0.8968504062690026,
+        "bias_mv": -0.10572288813485779
+      },
+      "events": {
+        "tp": 1,
+        "fp": 3,
+        "fn": 1,
+        "matched_errors_ms": [
+          -3.2999999994524387
+        ]
+      },
+      "reference_events_ms": [
+        814.2999999994524,
+        4395.500000009144
+      ],
+      "predicted_events_ms": [
+        811.0,
+        3194.0,
+        4389.0,
+        6744.0
+      ]
+    },
+    {
+      "case_id": "target_018",
+      "duration_ms": 8000,
+      "input_sha256": "300bd0e5c5eac462f405ac9385c4a6db4925b24200db85f25c233efc5bf3429f",
+      "voltage": {
+        "n": 7941,
+        "sse": 1078.6600439114022,
+        "error_ss": 1062.4156650684276,
+        "reference_ss": 12028.840863554273,
+        "rmse_mv": 0.3685570285973024,
+        "ve": 0.9116776356824704,
+        "bias_mv": -0.04522868454227148
+      },
+      "events": {
+        "tp": 3,
+        "fp": 1,
+        "fn": 0,
+        "matched_errors_ms": [
+          -0.6999999989909611,
+          -3.0000000030340743,
+          -4.300000005676338
+        ]
+      },
+      "reference_events_ms": [
+        1321.699999998991,
+        2716.000000003034,
+        3442.3000000056763
+      ],
+      "predicted_events_ms": [
+        1321.0,
+        2713.0,
+        3438.0,
+        3663.0
+      ]
+    },
+    {
+      "case_id": "case_0081",
+      "duration_ms": 16000,
+      "input_sha256": "fcea6a9e88a4fac46eb2ef8e54fc5d0fcee91711aef3b0c19a7a7a092800f910",
+      "voltage": {
+        "n": 16001,
+        "sse": 451.3294676547521,
+        "error_ss": 431.6073718954793,
+        "reference_ss": 2943.2725956478675,
+        "rmse_mv": 0.1679473990059684,
+        "ve": 0.8533580027437198,
+        "bias_mv": -0.03510774772514828
+      },
+      "events": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matched_errors_ms": []
+      },
+      "reference_events_ms": [],
+      "predicted_events_ms": []
+    },
+    {
+      "case_id": "case_0085",
+      "duration_ms": 16000,
+      "input_sha256": "d0d256f813fa8920d05f396c6b0e6397e07198b384e3fab5c87c602c98246365",
+      "voltage": {
+        "n": 16001,
+        "sse": 613.6200974705862,
+        "error_ss": 593.089537741644,
+        "reference_ss": 5474.207724955784,
+        "rmse_mv": 0.19582864777199,
+        "ve": 0.8916574657848896,
+        "bias_mv": -0.03582010316249765
+      },
+      "events": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matched_errors_ms": []
+      },
+      "reference_events_ms": [],
+      "predicted_events_ms": []
+    },
+    {
+      "case_id": "case_0089",
+      "duration_ms": 16000,
+      "input_sha256": "ed996bfde0b5422a308a76c61bd2d1b625cb9d4f4b07bc7f976a61e4f848a96e",
+      "voltage": {
+        "n": 16001,
+        "sse": 739.3891046795761,
+        "error_ss": 710.5109343240009,
+        "reference_ss": 10236.494791797206,
+        "rmse_mv": 0.214962626947772,
+        "ve": 0.9305904072853772,
+        "bias_mv": -0.042482618197568704
+      },
+      "events": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matched_errors_ms": []
+      },
+      "reference_events_ms": [],
+      "predicted_events_ms": []
+    },
+    {
+      "case_id": "case_0090",
+      "duration_ms": 16000,
+      "input_sha256": "4104c0e5603d9a62eeb7edfaa70c100010362d898ac9b4b8a8a0433938248441",
+      "voltage": {
+        "n": 16001,
+        "sse": 1299.5501257964643,
+        "error_ss": 1010.138760576949,
+        "reference_ss": 8054.12774277933,
+        "rmse_mv": 0.28498562562321156,
+        "ve": 0.8745812342643117,
+        "bias_mv": -0.1344882146648061
+      },
+      "events": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matched_errors_ms": []
+      },
+      "reference_events_ms": [],
+      "predicted_events_ms": []
+    },
+    {
+      "case_id": "target_017",
+      "duration_ms": 16000,
+      "input_sha256": "0bb2a173458cba8bed57cc6431e48581d012c7f253ce094d38660043dd73a503",
+      "voltage": {
+        "n": 16001,
+        "sse": 33.80655351228779,
+        "error_ss": 0.7964995202881193,
+        "reference_ss": 0.7964995202881195,
+        "rmse_mv": 0.0459649599795471,
+        "ve": 2.220446049250313e-16,
+        "bias_mv": 0.04542025359941493
+      },
+      "events": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "matched_errors_ms": []
+      },
+      "reference_events_ms": [],
+      "predicted_events_ms": []
+    },
+    {
+      "case_id": "target_007",
+      "duration_ms": 16000,
+      "input_sha256": "62a733b45354d1a1065e236b637c8249ebcaa5d0a69e7be4d21991c347ae0f5a",
+      "voltage": {
+        "n": 15981,
+        "sse": 1156.1605822085585,
+        "error_ss": 1143.8225005867737,
+        "reference_ss": 1521245.9384953813,
+        "rmse_mv": 0.26897201936323284,
+        "ve": 0.999248101525439,
+        "bias_mv": 0.027785732077159595
+      },
+      "events": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 0,
+        "matched_errors_ms": [
+          -2.000000003910827
+        ]
+      },
+      "reference_events_ms": [
+        2957.000000003911
+      ],
+      "predicted_events_ms": [
+        2955.0,
+        4513.0
+      ]
+    }
+  ],
+  "updates": 36000,
+  "elapsed_s": 118.20226113125682
+}

@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-13",
+  "source": "evidence/main379_results.json",
+  "source_sha256": "a4f86e7d4f17b62cf8b3b75ed20ae7a6f77bbc62d06f53b2a07668439cbe1185",
+  "panel": {
+    "inputs": 379,
+    "reference_spikes": 637
+  },
+  "dbnn_rmse_mv": 0.4373965617816741,
+  "dbnn_f1": 0.4775481111903065,
+  "rmse_reduction_vs_lstm_percent": 41.57998083475138,
+  "neuron8_over_dbnn_gpu_time": 16041.589195781009,
+  "lstm_over_dbnn_gpu_time": 47.41306126948676,
+  "rounded_prose_values": {
+    "rmse_mv": 0.437,
+    "f1": 0.478,
+    "rmse_reduction_percent": 41.6,
+    "neuron_speed_ratio": 16000,
+    "lstm_speed_ratio": 47
+  },
+  "future_work_preserved": true,
+  "timing_scope": "Prepared complete computation and numerical intervals of the primary comparison; shared server.",
+  "before_paragraph": "On the independent mouse panel, GPU DBNN achieves the shortest prepared computation time among the tested methods, together with lower voltage error than the compared learned surrogates and the highest observed event F1. CPU and GPU implementations preserve DBNN's spike predictions. These comparisons support efficient repeated simulation of a fixed cell under the common input and timing protocol.",
+  "after_paragraph": "On 379 independent mouse inputs containing 637 reference spikes, DBNN achieves pooled subthreshold RMSE $0.437\\mV$ and event F1 0.478. Its RMSE is 41.6\\% lower than LSTM's, and its observed F1 is the highest among the tested methods. Under the prepared-computation protocol and numerical intervals of Table~\\ref{tab:main}, GPU DBNN is approximately $1.60\\times10^4$ times faster than eight-core NEURON multisplit and 47 times faster than LSTM, the fastest compared learned baseline. CPU and GPU implementations preserve DBNN's spike predictions. These results support efficient repeated simulation of a fixed cell."
+}

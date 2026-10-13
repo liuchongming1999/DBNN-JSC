@@ -1,0 +1,182 @@
+{
+  "date": "2026-10-13",
+  "scope": "All six figure and seven table captions; Algorithm 1 already concise and retained.",
+  "updated_files": [
+    "sections/appendices.tex",
+    "sections/experiments.tex",
+    "sections/introduction.tex",
+    "sections/theory.tex"
+  ],
+  "changes": [
+    {
+      "file": "sections/appendices.tex",
+      "label": "tab:profiles",
+      "before": "Passive finite-strength profiles. The observation duration $T$ and excitatory/inhibitory conductance decay times $\\beta_E^{-1}$ and $\\beta_I^{-1}$ are in ms. Event times are specified relative to the start of the recorded interval.",
+      "after": "Passive finite-strength input profiles. $T$ is the observation duration; $\\beta_E^{-1}$ and $\\beta_I^{-1}$ are E/I conductance decay times (all in ms). Event times are relative to the recording start.",
+      "before_words": 30,
+      "after_words": 28
+    },
+    {
+      "file": "sections/appendices.tex",
+      "label": "tab:panel",
+      "before": "Composition of the primary panel. Categories in different rows describe the same 379 inputs.",
+      "after": "Composition of the 379-input primary panel; each dimension categorizes the same inputs.",
+      "before_words": 14,
+      "after_words": 12
+    },
+    {
+      "file": "sections/appendices.tex",
+      "label": "tab:familydetails",
+      "before": "DBNN accuracy by input family on the independent mouse panel. RMSE uses the reference-spike mask; events use one-to-one $\\pm5\\ms$ matching. A dash denotes an undefined event score when both event lists are empty.",
+      "after": "DBNN voltage and event accuracy by input family. RMSE uses the reference-spike mask; events use one-to-one $\\pm5\\ms$ matching. A dash denotes undefined F1 when both event lists are empty.",
+      "before_words": 33,
+      "after_words": 29
+    },
+    {
+      "file": "sections/appendices.tex",
+      "label": "tab:cells",
+      "before": "Latest selected supporting cell-specific fits. E denotes AMPA-like excitation; E+N adds the campaign's voltage-dependent NMDA component. Each row contains 31 trajectories. The reference spike count is TP+FN.",
+      "after": "Cell-specific DBNN fits on 31 inputs per row. E denotes AMPA-like excitation; E+N adds voltage-dependent NMDA.",
+      "before_words": 27,
+      "after_words": 16
+    },
+    {
+      "file": "sections/experiments.tex",
+      "label": "tab:main",
+      "before": "Voltage RMSE, spike F1, and prepared computation time on 379 inputs. Learned models sample at $1\\ms$; solvers integrate at $0.5\\ms$. Time sums per-input medians of three complete calls, in ms. Citations identify source algorithms; measurements use the common neuron and independent input panel.",
+      "after": "Voltage RMSE, spike F1, and prepared computation time on 379 independent inputs. Learned models sample at $1\\ms$; solvers integrate at $0.5\\ms$. Time (ms) sums per-input medians of three complete calls; citations identify source methods.",
+      "before_words": 43,
+      "after_words": 34
+    },
+    {
+      "file": "sections/experiments.tex",
+      "label": "fig:examples",
+      "before": "Two $8$~s trajectories with (a) zero and (b) three reference spikes. Each column shows the 500-site input raster (excitation red, inhibition blue), somatic voltage, and event alignment. Solver curves retain native recordings at the intervals shown in the legend. Both displayed predictions match the reference event lists within $\\pm5\\ms$, with no extra or missed events.",
+      "after": "Input rasters (excitation red, inhibition blue), somatic voltage, and event alignment for $8$~s inputs at all 500 sites: (a) zero reference spikes; (b) three. Solver voltages retain the native recording intervals shown in the legend. NEURON and DBNN match all reference events within $\\pm5\\ms$, without extra detections.",
+      "before_words": 55,
+      "after_words": 47
+    },
+    {
+      "file": "sections/experiments.tex",
+      "label": "tab:events",
+      "before": "Event counts, precision, recall, and trajectory-bootstrap 95\\% confidence intervals for F1. CoreNEURON has the same event counts as NEURON at the common integration step.",
+      "after": "Event counts, precision $P$, recall $R$, and 95\\% trajectory-bootstrap F1 intervals on 379 inputs. CoreNEURON shares NEURON's counts.",
+      "before_words": 24,
+      "after_words": 18
+    },
+    {
+      "file": "sections/experiments.tex",
+      "label": "fig:events",
+      "before": "Event accuracy with 95\\% confidence intervals from complete-trajectory bootstrap resampling. (a) All 637 reference events in the primary panel. (b) DBNN stratified by the three stochastic input families. Deterministic zero-input controls produce no DBNN events and are reported as a separate control.",
+      "after": "Spike F1 with 95\\% trajectory-bootstrap confidence intervals: (a) method comparison on 379 inputs with 637 reference events; (b) DBNN by stochastic input family.",
+      "before_words": 42,
+      "after_words": 23
+    },
+    {
+      "file": "sections/experiments.tex",
+      "label": "fig:duration",
+      "before": "Prepared single-trajectory computation time separated by simulated duration. Lines show medians across inputs of the corresponding duration; shading shows the interquartile range. The annotated ratio compares the $16$~s NEURON eight-core and DBNN GPU medians. All points use the numerical intervals and timing boundary of Table~\\ref{tab:main}.",
+      "after": "Prepared computation time by simulated duration. Lines show per-duration medians; shading shows the interquartile range. The annotation gives the NEURON eight-core/DBNN GPU median ratio at $16$~s. Numerical intervals and timing follow Table~\\ref{tab:main}.",
+      "before_words": 45,
+      "after_words": 32
+    },
+    {
+      "file": "sections/experiments.tex",
+      "label": "tab:duration",
+      "before": "Duration-specific computation times and NEURON/DBNN GPU ratios. Values are medians across the inputs within each duration, in ms.",
+      "after": "Median prepared computation time (ms) within each duration group and the NEURON eight-core/DBNN GPU ratio.",
+      "before_words": 18,
+      "after_words": 15
+    },
+    {
+      "file": "sections/introduction.tex",
+      "label": "fig:frontier",
+      "before": "Accuracy and computation time on 379 independent input trajectories. Voltage RMSE is pooled over a common $1\\ms$ observation grid after excluding reference spikes within $\\pm10\\ms$. DBNN, TCN, Branch-ELM, and LSTM use $1\\ms$ input/output sampling. NEURON, CoreNEURON, and Neuron\\_Reduce use a $0.5\\ms$ integration step. Time is the sum of the median of three prepared, complete, single-trajectory computation calls per input. Measurements use a shared server with declared CPU affinity and GPU synchronization. The indicated ratio compares the displayed NEURON and DBNN GPU operating points.",
+      "after": "Voltage RMSE and prepared computation time on 379 independent inputs. RMSE pools $1\\ms$ samples outside $\\pm10\\ms$ of reference spikes. Learned models sample at $1\\ms$; numerical solvers integrate at $0.5\\ms$. Time sums per-input medians of three complete single-trajectory calls on a shared server (Section~\\ref{sec:metrics}).",
+      "before_words": 83,
+      "after_words": 43
+    },
+    {
+      "file": "sections/theory.tex",
+      "label": "fig:order",
+      "before": "Interaction coefficients and error orders for two E--I input cases. Blue denotes dynamic inputs and green denotes constant inputs throughout. (a) Exponential capacitance-scaled E/I conductances with peaks $0.02\\,\\mathrm{ms}^{-1}$ and decay times $2/5\\ms$: the blue curve $\\widehat\\kappa_{EI}(t)$ is fitted across nine small-strength combinations. The gray dashed line is this dynamic case's best fixed coefficient $c^*_{EI}=0.0897712\\,\\mathrm{mV}^{-1}$ over $300\\ms$; only the first $60\\ms$ is displayed. (b) The capacitance-scaled conductances are held at $\\gamma_E=\\gamma_I=0.005\\,\\mathrm{ms}^{-1}$ and voltage is observed at equilibrium. The analytical second-order coefficient $\\kappa_{EI}=0.0857143\\,\\mathrm{mV}^{-1}$ equals the exact fixed coefficient, so both coincide on the green line. (c) Pair-interaction RMSE for the same two cases. Fitted slopes over the shaded range $\\varepsilon\\in[10^{-3},10^{-2}]$ are 1.99975 and 2.99912, respectively.",
+      "after": "Interaction coefficients and pairwise approximation errors for dynamic (blue) and constant (green) E--I inputs. (a) Regression-fitted $\\widehat\\kappa_{EI}(t)$ for exponential conductances and the best fixed coefficient $c^*_{EI}$ over $300\\ms$; only the first $60\\ms$ is shown. (b) Equilibrium for constant $\\gamma_E=\\gamma_I=0.005\\,\\mathrm{ms}^{-1}$, where $\\kappa_{EI}=c^*_{EI}$. (c) Pair-interaction RMSE versus the common strength $\\varepsilon$; shading marks the slope-fitting interval $[10^{-3},10^{-2}]$.",
+      "before_words": 113,
+      "after_words": 55
+    },
+    {
+      "file": "sections/theory.tex",
+      "label": "fig:finite",
+      "before": "Quadratic corrections at biologically motivated response scales. Shading marks the EPSP band $0.2$--$6\\mV$, motivated by \\cite{li2014,li2019}; all displayed IPSP magnitudes are at most $3\\mV$. Horizontal dotted lines mark the 5\\% relative RMS tolerance on the joint above-background response. (a)--(b) Passive controls with fixed first-order kernels and quadratic readouts, fitted to second-order targets and held fixed over the strength sweep. (c) Mouse L5PC with its original active channels: 28 held-out subthreshold responses from proximal and distributed inputs. Dashed curves sum complete isolated E/I responses; solid curves add a fixed bilinear correction. Shapes identify spatial groups. Appendix~\\ref{app:finite} gives the input parameters and integration-step controls.",
+      "after": "Relative RMS error at biologically motivated response amplitudes. Shading marks the $0.2$--$6\\mV$ EPSP band \\cite{li2014,li2019}; horizontal dotted lines mark 5\\% error relative to the joint above-background response. (a)--(b) Passive synchronous and tonic inputs with fixed quadratic readouts fitted to second-order responses. (c) Active mouse L5PC: 28 held-out proximal and distributed inputs. Dashed curves sum complete isolated E/I responses; solid curves add a fixed bilinear correction.",
+      "before_words": 102,
+      "after_words": 65
+    }
+  ],
+  "before_words": 629,
+  "after_words": 417,
+  "unchanged_scientific_file_hashes": {
+    "figures/pair_order.png": "3943bf3a18f4421d562cabb656ef989dabed9b1726f1fbd5b76a81dba666823f",
+    "figures/pair_order.pdf": "68139678d11ab6454b28c0bc0f3f63b1fbe8c8edf55d0023e4970014cfd1274c",
+    "figures/finite_strength.png": "6ff64abb6cd15c904daf7e003b0ba277824af93af1fd306c1f7379896babd03d",
+    "figures/events.png": "a8eede22a203b0b6bb2d5452b9835fd5ebc444265010c1f10684d03bfbe932ee",
+    "figures/frontier.pdf": "ab0eaad2e7c82f853f02e040e988da79e6e54e324982d92649a4a3f0983a2ce2",
+    "figures/frontier.png": "8f20b23a8b586c1e72179275f6c8184f574fef3a5d2b6617b69fa207e1799e0c",
+    "figures/finite_strength.pdf": "9f9c8a15e3a3c79ea6eceb2e3a6a2e553a877ca0795d7f074b5632b20a8e63d3",
+    "figures/events.pdf": "3910bf398ccdda40bc92040a2b3c22e89c9875cea8ba179d94502c84a2907e8f",
+    "figures/duration.pdf": "5e2cb1c187f713a2294721b3c5901521934c1b7e94f0a58289fda4c63fa830dd",
+    "figures/voltage_examples.pdf": "adba7e32a01448875f7aae9e599f4ebc75543a350974182a528b5aac2ac33493",
+    "figures/voltage_examples.png": "a35b1f2004329107f65043284066a88180c7da23262bb093375d7c349c222d5c",
+    "figures/duration.png": "d596dc139aa7620ab7d41dd52029c94f9e56bf02e0371437fd458759399d85c4",
+    "evidence/figure4_input_raster_20261011.json": "c5dd9d872e218cdd8fc877d3cebf0e5cf9ae2882866ee5ea2794e1c38b96c093",
+    "evidence/l5pc_strength_extension.json": "43fadf2ed8705b1b51213c37a8f88c76eac2ea2527835bf5e0113a9573c4fbea",
+    "evidence/section45_relocation_20261013.json": "4507c45b02677f81d89b1ff153eff0cc434e82afc31f8897831c42fcead18ee2",
+    "evidence/crossref_metadata.json": "af38fe69c7feceee19285e928c7c933d1fc4bea7a7b5e31dd02ddbf52bc3ebf8",
+    "evidence/theory_citation_revision_20261010.json": "95d4aa31f6f04b23a594c1e5488925bdcce7fa99f1d422705e0de8eb23fde6b6",
+    "evidence/selected_examples.json": "66083f313d462f0153777f63ca1a7fd7a69b667a11c3f55fbe3cca284f90f169",
+    "evidence/source_manifest.json": "6fd8bf757f8f1f0aeaf95fddeaf384dc98031aeb13909bea08d528d1e9121d09",
+    "evidence/l5pc_half_step_validation.json": "b74a2c4ee044e49a974d7d76bfa415e006b3ffa6a263351cb05885ecf46dc62a",
+    "evidence/prose_revision_20261012.json": "8c3b591243c06d099fa3b9b862c0969d6fb131d7728e605bc6ee5674983e1ac9",
+    "evidence/l5pc_finite_strength.json": "0994e0d68023617d57277e87fd48a71f8cf7dc2d9be40dd370a33faab2b0d8e6",
+    "evidence/pair_order_checks.json": "a067af52d67174dfcbe3003f239538b3d89ced325ca80f6eda4f8aa1d6f6aa3a",
+    "evidence/metric_order_figure4_layout_20261013.json": "c7e99cd31383e09830aec785a90afa840b9ae3287155de04f91ed6c037822957",
+    "evidence/initialization_protocol.json": "c044809848e3d97db5d9a31fbab583112646a43b41645238e23475636e839fb3",
+    "evidence/paper_metric_audit.json": "2e19b49b5b32f5b546253d941f55912a5e1594e2e5c55576578d52e041b51252",
+    "evidence/numerical_verification.json": "e2b6817e2c81a4c6263f81549bbe088029c0d0593bef85a01256d68673c6c71f",
+    "evidence/crosscell_models.json": "3c22b0e8c5311abcdcb3a8ecee021379e7058a14e6777fdd1f9ea31ba8ffaee1",
+    "evidence/author_metadata_20261011.json": "a4f19150d2be67fc910d692b3d93f80e710677153ff2e2913e67003d8372c901",
+    "evidence/biological_band_revision_20261011.json": "c7889df590d2490bc880f10982f73f63343273eb487bb551d8851556bc57637b",
+    "evidence/crosscell_events.json": "e178525888f7cf128917d631a0fbbc75bcc01c227f1ab92ca7e9656c149175e2",
+    "evidence/main379_results.json": "a4f86e7d4f17b62cf8b3b75ed20ae7a6f77bbc62d06f53b2a07668439cbe1185",
+    "evidence/baseline_reproduction_and_training.json": "f5e44d555a8b1fee2ed4625b257e204f5078e5431e17bcdbe8d7fe75107c95b7",
+    "evidence/checkpoint_training_summary.json": "e61da2059bbfefc4193c4dd6e2f036fa4dc9bebbc3512e89299ed6dbafd571e5",
+    "evidence/passive_finite_strength.json": "c934657ea061650da66bc7b48c16f829121db411c55fe926ce7f4be3e390115e",
+    "evidence/comparison_section_merge_20261013.json": "c5c804ce997d157e99f2657441514b965bbe397f7806008e5f04cc6b4c6b5143",
+    "evidence/l5pc_strength_extension.npz": "9d1ff30fdb7f3a70d5e49b75e0976e891f642775b72bc53f19ca87b9639126ce",
+    "evidence/prose_fulltext_revision_20261012.json": "c2831fead1059a188c6c641bc1d90b085b3c6a03e461dd50b4b986faa02b9b54",
+    "evidence/training_protocol_clarification_20261012.json": "58cfec797c45db6f057cda5392452b5ae15a9087ef1e75330fb498c84a97a9e2",
+    "evidence/active_strength_extension_validation.json": "49e3da40c575b6b64fc563bb116709c31dea71470453420aff676a724d4d6ab4",
+    "evidence/examples/confirmatory_0630_native0.5.npz": "38263c9510cf408f4edaef849aa22aead7f1167ee9a29568c4b6c459f5b95ea1",
+    "evidence/examples/confirmatory_0630_native0.1.npz": "b151271024478f9ee75eb23f4830492e18c447c007c81b7062d686d40e272bdc",
+    "evidence/examples/confirmatory_0541.npz": "070e2570a67b6636c0d9ef2a74701ba5ca4127717ccd747ebb565a4b80f3106a",
+    "evidence/examples/confirmatory_0541_native0.5.npz": "591fe6be9fa02eac5586c6d5f3810e0ed3d797e466f08ee01c5d0474c04c34f9",
+    "evidence/examples/confirmatory_0630.npz": "97205d7456d04e54b82741437b68866da0f90b7b58de89495eff31723f4ea76b",
+    "evidence/examples/confirmatory_0541_native0.1.npz": "298c86344d04f0bf615aa8201324a60dbc321da76d99c94beaa553886339a35f",
+    "evidence/examples/confirmatory_0630_input.npz": "a24fc9e8e4937d010bbb869beadfb07da65d081dcbee2e6fa0ed06c3bf9d7f17",
+    "evidence/examples/confirmatory_0541_input.npz": "5d2f19e67a9f5fe18cd3603f1f6d660cd791a2aeae3f133abe108bf41a921449",
+    "sections/main_table.tex": "31426ac4b9785a33284e91233e08c66a7540a35d827ad762aa25a164228f3fea",
+    "sections/event_table.tex": "3f1da09d6c0d3201053e6d1503e468dde2695c5920951d6d80f27ae7d4d70b0c",
+    "sections/duration_table.tex": "792a2e0775a9d09ecd446490c16291c5578f565152131424004ea08631e1f29d",
+    "sections/family_table.tex": "8c1a69b635a47d1dae286dfc8bede0ef6af3b37b55b3dcb848f162113e44db93"
+  },
+  "retained_information": [
+    "Comparison sampling and solver intervals",
+    "Voltage mask and time aggregation in the introductory comparison",
+    "E--I dynamic and equilibrium case distinction",
+    "Slope-fitting range and coefficient-regression scope",
+    "Relative-error denominator, biological band, and fixed held-out correction",
+    "Example colors, native recording intervals, and event-match tolerance",
+    "Confidence intervals, panel scope, IQR shading, and ratio denominators",
+    "Table units, E/E+N notation, and undefined-F1 dash"
+  ]
+}

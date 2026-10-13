@@ -1,0 +1,44 @@
+{
+  "gpu": {
+    "case": "confirmatory_0532",
+    "backend": "gpu",
+    "threads": 1,
+    "wall_median_ms": 0.09788759052753448,
+    "runs_ms": [
+      0.09986013174057007,
+      0.09788759052753448,
+      0.09750016033649445
+    ],
+    "max_difference_mv": 1.52587890625e-05,
+    "events_identical": true,
+    "output": "build/smoke_gpu.npz"
+  },
+  "cpu1": {
+    "case": "confirmatory_0532",
+    "backend": "cpu",
+    "threads": 1,
+    "wall_median_ms": 43.34176704287529,
+    "runs_ms": [
+      43.30382123589516,
+      43.371524661779404,
+      43.34176704287529
+    ],
+    "max_difference_mv": 3.814697265625e-05,
+    "events_identical": true,
+    "output": "build/smoke_cpu1.npz"
+  },
+  "cpu8": {
+    "case": "confirmatory_0532",
+    "backend": "cpu",
+    "threads": 8,
+    "wall_median_ms": 7.535628974437714,
+    "runs_ms": [
+      7.585572078824043,
+      7.404100149869919,
+      7.535628974437714
+    ],
+    "max_difference_mv": 3.814697265625e-05,
+    "events_identical": true,
+    "output": "build/smoke_cpu8.npz"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "case_id": "confirmatory_0556",
+  "panel": "confirmatory",
+  "duration_s": 16,
+  "duration_ms": 16000,
+  "A": 500,
+  "site_mode": "all",
+  "family": "gated_excitation",
+  "replicate": 12,
+  "seed": 910090556,
+  "input_interval_ms": 1.0,
+  "input_file": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/spike_panel_20261009/confirmatory/inputs/confirmatory_0556.npz",
+  "input_sha256": "059f8d95b3588de724e3167fa2d24a70d9564a27c5cea3cea3af85104bf79284",
+  "ids_sha256": "2253930180b5ae89248437a25b4c5ffeef3028bc8b3afb41da441cdbed841c56",
+  "input_events": 199358,
+  "rate_hz": 50.0,
+  "exc_hz": 50.0,
+  "inh_hz": 10.0,
+  "background_hz": 25.0,
+  "gate_width_ms": 40,
+  "gate_epochs": [
+    {
+      "start_ms": 980,
+      "end_ms": 1020,
+      "exc_hz": 50.0,
+      "inh_hz": 10.0
+    },
+    {
+      "start_ms": 7980,
+      "end_ms": 8020,
+      "exc_hz": 50.0,
+      "inh_hz": 10.0
+    },
+    {
+      "start_ms": 14980,
+      "end_ms": 15020,
+      "exc_hz": 50.0,
+      "inh_hz": 10.0
+    }
+  ],
+  "soma_path_distance_range_um": [
+    7.887612501978204,
+    1277.6358290325768
+  ],
+  "reference_spikes": 3,
+  "minimum_isi_ms": 6989.100000017173,
+  "low_density": true,
+  "voltage": {
+    "n": 15941,
+    "sse": 1094.4235171658622,
+    "error_ss": 1087.1474831030355,
+    "reference_ss": 18310.92770843758,
+    "rmse_mv": 0.2620202926968604,
+    "ve": 0.9406284869661692,
+    "bias_mv": -0.02136434491978376
+  },
+  "events": {
+    "tp": 2,
+    "fp": 1,
+    "fn": 1,
+    "matched_errors_ms": [
+      -2.200000016433478,
+      -3.1999999145264155
+    ]
+  },
+  "reference_events_ms": [
+    1026.0999999992598,
+    8015.2000000164335,
+    15018.199999914526
+  ],
+  "predicted_events_ms": [
+    1021.0,
+    8013.0,
+    15015.0
+  ],
+  "checkpoint_sha256": "737efcff1e6686bfb153fca8590a8b28a605fbdb08f9a68ff44e68af8867686d"
+}

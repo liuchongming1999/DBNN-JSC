@@ -1,0 +1,118 @@
+{
+  "version": 1,
+  "precision": "ieee",
+  "mode": "frozen-checkpoint inference",
+  "hardware": "RTX 5090",
+  "unknown_shape": "cuBLAS",
+  "selection": "screen candidates, freeze config, independently retest twice; conservative speed gates",
+  "shapes": {
+    "32:6001:1": {
+      "enabled": true,
+      "spec": {
+        "backend": "triton",
+        "config": 3,
+        "triangle": false,
+        "precision": "ieee"
+      },
+      "module_speed_ratio": 2.650392989610956,
+      "forward_device_ratio": 1.134396112609818,
+      "forward_wall_ratio": 1.0232580059253145
+    },
+    "128:6001:1": {
+      "enabled": true,
+      "spec": {
+        "backend": "pair",
+        "config": 0,
+        "triangle": true,
+        "precision": "ieee"
+      },
+      "module_speed_ratio": 1.5521204629475978,
+      "forward_device_ratio": 1.1188368475905348,
+      "forward_wall_ratio": 1.021119593505397
+    },
+    "500:6001:1": {
+      "enabled": true,
+      "spec": {
+        "backend": "triton",
+        "config": 3,
+        "triangle": true,
+        "precision": "ieee"
+      },
+      "module_speed_ratio": 1.5654802705464084,
+      "forward_device_ratio": 1.318876628869629,
+      "forward_wall_ratio": 1.1301090983506863
+    },
+    "32:6001:8": {
+      "enabled": true,
+      "spec": {
+        "backend": "pair",
+        "config": 0,
+        "triangle": true,
+        "precision": "ieee"
+      },
+      "module_speed_ratio": 4.837593727878104,
+      "forward_device_ratio": 1.608864619301986,
+      "forward_wall_ratio": 1.1301749955247204
+    },
+    "128:6001:8": {
+      "enabled": true,
+      "spec": {
+        "backend": "triton",
+        "config": 3,
+        "triangle": true,
+        "precision": "ieee"
+      },
+      "module_speed_ratio": 2.0459840024682645,
+      "forward_device_ratio": 1.310195759297977,
+      "forward_wall_ratio": 1.1280159109681347
+    },
+    "500:6001:8": {
+      "enabled": true,
+      "spec": {
+        "backend": "triton",
+        "config": 9,
+        "triangle": true,
+        "precision": "ieee"
+      },
+      "module_speed_ratio": 1.9626732810931853,
+      "forward_device_ratio": 1.5142303704916245,
+      "forward_wall_ratio": 1.3892676412473621
+    },
+    "1024:1001:1": {
+      "enabled": true,
+      "spec": {
+        "backend": "pair",
+        "config": 1,
+        "triangle": true,
+        "precision": "ieee"
+      },
+      "module_speed_ratio": 1.4928825084150459,
+      "forward_device_ratio": 1.3273971199261885,
+      "forward_wall_ratio": 1.0975554315241756
+    },
+    "2048:1001:1": {
+      "enabled": true,
+      "spec": {
+        "backend": "triton",
+        "config": 3,
+        "triangle": true,
+        "precision": "ieee"
+      },
+      "module_speed_ratio": 1.3633989742033608,
+      "forward_device_ratio": 1.2777727870671227,
+      "forward_wall_ratio": 1.1370301723594458
+    },
+    "2048:6001:1": {
+      "enabled": true,
+      "spec": {
+        "backend": "triton",
+        "config": 6,
+        "triangle": true,
+        "precision": "ieee"
+      },
+      "module_speed_ratio": 1.5375745102486358,
+      "forward_device_ratio": 1.421146074533596,
+      "forward_wall_ratio": 1.3053480948847753
+    }
+  }
+}

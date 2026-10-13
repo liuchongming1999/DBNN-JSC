@@ -1,0 +1,70 @@
+{
+  "finished": true,
+  "default_budget_completed": true,
+  "epochs": 30,
+  "updates": 342000,
+  "total_updates": 342000,
+  "selected_epoch": 3,
+  "checkpoint": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/baselines_20260930/aligned/lstm_1ms/best.pt",
+  "checkpoint_sha256": "1313e363aa781886bf7a0a199ce34dad715e7ab1b33432c8cac189cd8d1d74fa",
+  "validation": {
+    "raw_rmse_mv": 0.2234248678292599,
+    "aligned_rmse_mv": 0.2187237124872712,
+    "calibration": {
+      "scale": 0.997063732592025,
+      "bias_mv": -0.2314763718318602,
+      "source": "Complete validation set, clipped voltage after initial 500ms; never main31"
+    }
+  },
+  "config": {
+    "method": "lstm",
+    "dt_ms": 1.0,
+    "batch_size": 8,
+    "precision": "FP32 IEEE",
+    "input_channels": 500,
+    "seed": 930291,
+    "training_process_optimized": false,
+    "epochs": 30,
+    "batches_per_epoch": 11400,
+    "window_ms": 500,
+    "burn_in_loss_ms": 150,
+    "overlap_ms": 150,
+    "lr": 0.0005,
+    "optimizer": "Adam + per-update cosine",
+    "loss": "0.5 BCE + 0.5 MSE, voltage scaled by 0.1",
+    "recipe": "ICLR-2024 Appendix B / Table S10 LSTM-50. No public LSTM checkpoint provided; paper recipe, not a separately verified checkpoint replay.",
+    "model": {
+      "input": 500,
+      "hidden_size": 50,
+      "layers": 1,
+      "outputs": 2
+    },
+    "adaptations": [
+      "500 fixed E/I input IDs instead of NeuronIO 1278 inputs; exact event multiplicity retained",
+      "Physical 400/500ms windows and 150/154ms overlaps retained; ELM delta_t adjusted; TCN kernels discretized to retain 152ms physical context",
+      "Corresponding DBNN fit/validation events; no main31 data in training, PCA or selection",
+      "Original output moment alignment replaced by one validation-fitted affine map, locked before held-out evaluation; raw results retained"
+    ],
+    "manifest": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/accuracy_frontier_20260929/balanced_1ms/training_manifest.json",
+    "manifest_sha256": "e7d178de1671cbb656d5b6ae32d79248b832cdcc7a501f4ed0f99328c67f4cf0",
+    "fit_cases": 117,
+    "validation_cases": 32,
+    "trainable_parameters": 110302,
+    "source_versions": {
+      "elmneuron": {
+        "url": "https://github.com/AaronSpieler/elmneuron.git",
+        "commit": "52e68a6d39523ac6613a586699b116e8e606dda3"
+      },
+      "neuron_as_deep_net": {
+        "url": "https://github.com/SelfishGene/neuron_as_deep_net.git",
+        "commit": "074c4666300a8ad246601dab179a97a6942f0f29"
+      },
+      "neuron_reduce": {
+        "url": "https://github.com/orena1/neuron_reduce.git",
+        "commit": "94b1850607f9c62a205ad8fb695f2fd91d84d87d"
+      }
+    }
+  },
+  "locked_at": "2026-10-01T01:11:15+0800",
+  "elapsed_s": 1485.5062890052795
+}

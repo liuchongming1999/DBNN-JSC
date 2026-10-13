@@ -1,0 +1,433 @@
+{
+  "scope": "Passive isopotential single compartment with distinct E and I inputs; no channels or reset",
+  "output_definition": "All voltages above rest; SC=v_EI-v_E-v_I; quadratic SC_DB=epsilon^2*c*y_E*y_I",
+  "dynamic": {
+    "lambda_per_ms": 0.05,
+    "reversals_mv": [
+      70.0,
+      -10.0
+    ],
+    "peak_conductance_over_c_per_ms": [
+      0.02,
+      0.02
+    ],
+    "decay_ms": [
+      2.0,
+      5.0
+    ],
+    "onsets_ms": [
+      0.0,
+      0.0
+    ],
+    "horizon_ms": 300.0,
+    "best_cross_coefficient_per_mv": 0.08977121801101393,
+    "symmetric_W_EI_per_mv": 0.04488560900550696,
+    "product_rms_mv2": 0.25423610204564573,
+    "weighted_kappa_std_per_mv": 0.03684583775752199,
+    "second_pair_rmse_mv": 0.009367542168078665,
+    "pair_slope_fit": {
+      "epsilon_range": [
+        0.001,
+        0.01
+      ],
+      "points": 15,
+      "exponent": 1.9997513871834922,
+      "r_squared": 0.9999999984916853
+    },
+    "full_voltage_slope_fit": {
+      "epsilon_range": [
+        0.001,
+        0.01
+      ],
+      "points": 15,
+      "exponent": 1.9997978665899558,
+      "r_squared": 0.999999999008973
+    },
+    "full_voltage_joint_coefficients": [
+      -0.08312520160377766,
+      -0.5773803423824425,
+      -1.268702602112456
+    ],
+    "full_voltage_leading_second_rmse_mv": 0.005354768857072929
+  },
+  "kappa_fitting": {
+    "strength_levels": [
+      0.003,
+      0.006,
+      0.01
+    ],
+    "combinations": 9,
+    "method": "Fixed-time zero-intercept least squares of SC against isolated VE*VI",
+    "display_feature_threshold_relative": 1e-06,
+    "max_gap_first_60ms_per_mv": 2.189092808968507e-05,
+    "bivariate_monomials": [
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "bivariate_design_condition": 117.0303317679085,
+    "recovered_second_order_max_gap_mv": 1.646016656309257e-12,
+    "recovered_ratio_free_fit": {
+      "coefficient_per_mv": 0.08977121800964549,
+      "weighted_std_per_mv": 0.0368458377565902,
+      "best_second_rmse_mv": 0.009367542167841773,
+      "relative_weighted_std": 0.41044154878940475,
+      "product_energy_mv4_ms": 19.3907986750092
+    }
+  },
+  "steady": {
+    "input": "Both conductances held at 0.005 ms^-1; equilibrium observation only",
+    "lambda_per_ms": 0.05,
+    "reversals_mv": [
+      70.0,
+      -10.0
+    ],
+    "horizon_ms": 300.0,
+    "kappa_per_mv": 0.08571428571428572,
+    "leading_pair_second_mv": -0.6,
+    "pair_second_error_mv": 0.0,
+    "cubic_leading_coefficient_mv": 0.17999999999999997,
+    "slope_fit": {
+      "epsilon_range": [
+        0.001,
+        0.01
+      ],
+      "points": 15,
+      "exponent": 2.999121949055007,
+      "r_squared": 0.9999999916304079
+    }
+  },
+  "rows": [
+    {
+      "epsilon": 0.001,
+      "dynamic_pair_rmse_mv": 9.366923167212447e-09,
+      "dynamic_rmse_over_epsilon_squared_mv": 0.009366923167212448,
+      "steady_pair_rmse_mv": 1.7995800899814037e-10,
+      "steady_rmse_over_epsilon_cubed_mv": 0.17995800899814035,
+      "full_two_input_voltage_rmse_mv": 5.354480207870289e-09
+    },
+    {
+      "epsilon": 0.001258925412,
+      "dynamic_pair_rmse_mv": 1.4845318801739381e-08,
+      "dynamic_rmse_over_epsilon_squared_mv": 0.009366762926044455,
+      "steady_pair_rmse_mv": 3.590417460934623e-10,
+      "steady_rmse_over_epsilon_cubed_mv": 0.17994713939302442,
+      "full_two_input_voltage_rmse_mv": 8.486160861236562e-09
+    },
+    {
+      "epsilon": 0.001584893192,
+      "dynamic_pair_rmse_mv": 2.3527738010128347e-08,
+      "dynamic_rmse_over_epsilon_squared_mv": 0.009366561214186435,
+      "steady_pair_rmse_mv": 7.163279942569892e-10,
+      "steady_rmse_over_epsilon_cubed_mv": 0.17993345708551142,
+      "full_two_input_voltage_rmse_mv": 1.3449422459545864e-08
+    },
+    {
+      "epsilon": 0.001995262315,
+      "dynamic_pair_rmse_mv": 3.728794100008884e-08,
+      "dynamic_rmse_over_epsilon_squared_mv": 0.009366307305413117,
+      "steady_pair_rmse_mv": 1.4291254519174125e-09,
+      "steady_rmse_over_epsilon_cubed_mv": 0.1799162347976469,
+      "full_two_input_voltage_rmse_mv": 2.1315427204127502e-08
+    },
+    {
+      "epsilon": 0.002,
+      "dynamic_pair_rmse_mv": 3.746521749702871e-08,
+      "dynamic_rmse_over_epsilon_squared_mv": 0.009366304374257178,
+      "steady_pair_rmse_mv": 1.4393282878810086e-09,
+      "steady_rmse_over_epsilon_cubed_mv": 0.17991603598512607,
+      "full_two_input_voltage_rmse_mv": 2.1416767489107305e-08
+    },
+    {
+      "epsilon": 0.002511886432,
+      "dynamic_pair_rmse_mv": 5.9095387318204307e-08,
+      "dynamic_rmse_over_epsilon_squared_mv": 0.009365987702990257,
+      "steady_pair_rmse_mv": 2.8511365975163454e-09,
+      "steady_rmse_over_epsilon_cubed_mv": 0.179894557526553,
+      "full_two_input_voltage_rmse_mv": 3.37817363738574e-08
+    },
+    {
+      "epsilon": 0.003,
+      "dynamic_pair_rmse_mv": 8.42911721028715e-08,
+      "dynamic_rmse_over_epsilon_squared_mv": 0.009365685789207944,
+      "steady_pair_rmse_mv": 4.856600185644887e-09,
+      "steady_rmse_over_epsilon_cubed_mv": 0.1798740809498106,
+      "full_two_input_voltage_rmse_mv": 4.8185134653489334e-08
+    },
+    {
+      "epsilon": 0.00316227766,
+      "dynamic_pair_rmse_mv": 9.365585425282705e-08,
+      "dynamic_rmse_over_epsilon_squared_mv": 0.009365585426280068,
+      "steady_pair_rmse_mv": 5.687902631585819e-09,
+      "steady_rmse_over_epsilon_cubed_mv": 0.17986727427949942,
+      "full_two_input_voltage_rmse_mv": 5.353857139845693e-08
+    },
+    {
+      "epsilon": 0.003981071706,
+      "dynamic_pair_rmse_mv": 1.4842650139617748e-07,
+      "dynamic_rmse_over_epsilon_squared_mv": 0.009365079114953921,
+      "steady_pair_rmse_mv": 1.1346691274207306e-08,
+      "steady_rmse_over_epsilon_cubed_mv": 0.1798329375114721,
+      "full_two_input_voltage_rmse_mv": 8.484918407562945e-08
+    },
+    {
+      "epsilon": 0.004,
+      "dynamic_pair_rmse_mv": 1.49841078592956e-07,
+      "dynamic_rmse_over_epsilon_squared_mv": 0.00936506741205975,
+      "steady_pair_rmse_mv": 1.1509257208387628e-08,
+      "steady_rmse_over_epsilon_cubed_mv": 0.17983214388105667,
+      "full_two_input_voltage_rmse_mv": 8.565785827755513e-08
+    },
+    {
+      "epsilon": 0.005011872336,
+      "dynamic_pair_rmse_mv": 2.352241455712655e-07,
+      "dynamic_rmse_over_epsilon_squared_mv": 0.009364441904943184,
+      "steady_pair_rmse_mv": 2.2634185631183262e-08,
+      "steady_rmse_over_epsilon_cubed_mv": 0.17978972719774494,
+      "full_two_input_voltage_rmse_mv": 1.3446945277874143e-07
+    },
+    {
+      "epsilon": 0.006309573445,
+      "dynamic_pair_rmse_mv": 3.7277322343425697e-07,
+      "dynamic_rmse_over_epsilon_squared_mv": 0.009363640019158112,
+      "steady_pair_rmse_mv": 4.514748014013097e-08,
+      "steady_rmse_over_epsilon_cubed_mv": 0.17973535574515095,
+      "full_two_input_voltage_rmse_mv": 2.1310489164934438e-07
+    },
+    {
+      "epsilon": 0.007943282347,
+      "dynamic_pair_rmse_mv": 5.907420794356554e-07,
+      "dynamic_rmse_over_epsilon_squared_mv": 0.009362631002551332,
+      "steady_pair_rmse_mv": 9.004678117155535e-08,
+      "steady_rmse_over_epsilon_cubed_mv": 0.1796669490723302,
+      "full_two_input_voltage_rmse_mv": 3.377189522684394e-07
+    },
+    {
+      "epsilon": 0.008,
+      "dynamic_pair_rmse_mv": 5.992061428720231e-07,
+      "dynamic_rmse_over_epsilon_squared_mv": 0.009362595982375361,
+      "steady_pair_rmse_mv": 9.198826242520362e-08,
+      "steady_rmse_over_epsilon_cubed_mv": 0.1796645750492258,
+      "full_two_input_voltage_rmse_mv": 3.425579805349565e-07
+    },
+    {
+      "epsilon": 0.01,
+      "dynamic_pair_rmse_mv": 9.361361514807404e-07,
+      "dynamic_rmse_over_epsilon_squared_mv": 0.009361361514807404,
+      "steady_pair_rmse_mv": 1.795808981437724e-07,
+      "steady_rmse_over_epsilon_cubed_mv": 0.17958089814377237,
+      "full_two_input_voltage_rmse_mv": 5.351896479138919e-07
+    },
+    {
+      "epsilon": 0.012589254118,
+      "dynamic_pair_rmse_mv": 1.483422715760299e-06,
+      "dynamic_rmse_over_epsilon_squared_mv": 0.009359764574690418,
+      "steady_pair_rmse_mv": 3.580950630621344e-07,
+      "steady_rmse_over_epsilon_cubed_mv": 0.1794726740292002,
+      "full_two_input_voltage_rmse_mv": 8.481013661508042e-07
+    },
+    {
+      "epsilon": 0.015848931925,
+      "dynamic_pair_rmse_mv": 2.3505620647452183e-06,
+      "dynamic_rmse_over_epsilon_squared_mv": 0.009357756127601854,
+      "steady_pair_rmse_mv": 7.139518568175991e-07,
+      "steady_rmse_over_epsilon_cubed_mv": 0.17933659817591927,
+      "full_two_input_voltage_rmse_mv": 1.3439172600385484e-06
+    },
+    {
+      "epsilon": 0.01995262315,
+      "dynamic_pair_rmse_mv": 3.724384456845454e-06,
+      "dynamic_rmse_over_epsilon_squared_mv": 0.009355230782583442,
+      "steady_pair_rmse_mv": 1.4231626147767022e-06,
+      "steady_rmse_over_epsilon_cubed_mv": 0.1791655580773989,
+      "full_two_input_voltage_rmse_mv": 2.129502661465316e-06
+    },
+    {
+      "epsilon": 0.025118864315,
+      "dynamic_pair_rmse_mv": 5.900748758416052e-06,
+      "dynamic_rmse_over_epsilon_squared_mv": 0.009352056537708304,
+      "steady_pair_rmse_mv": 2.836176780396496e-06,
+      "steady_rmse_over_epsilon_cubed_mv": 0.17895065698558324,
+      "full_two_input_voltage_rmse_mv": 3.374115887578511e-06
+    },
+    {
+      "epsilon": 0.03,
+      "dynamic_pair_rmse_mv": 8.414156306463569e-06,
+      "dynamic_rmse_over_epsilon_squared_mv": 0.0093490625627373,
+      "steady_pair_rmse_mv": 4.826197352277165e-06,
+      "steady_rmse_over_epsilon_cubed_mv": 0.17874805008433947,
+      "full_two_input_voltage_rmse_mv": 4.811621192097002e-06
+    },
+    {
+      "epsilon": 0.031622776602,
+      "dynamic_pair_rmse_mv": 9.348068285973816e-06,
+      "dynamic_rmse_over_epsilon_squared_mv": 0.009348068285786867,
+      "steady_pair_rmse_mv": 5.650382545339272e-06,
+      "steady_rmse_over_epsilon_cubed_mv": 0.17868078493995723,
+      "full_two_input_voltage_rmse_mv": 5.345792774111869e-06
+    },
+    {
+      "epsilon": 0.039810717055,
+      "dynamic_pair_rmse_mv": 1.4807751984245749e-05,
+      "dynamic_rmse_over_epsilon_squared_mv": 0.009343059869865162,
+      "steady_pair_rmse_mv": 1.1252625624863047e-05,
+      "steady_rmse_over_epsilon_cubed_mv": 0.17834209750628932,
+      "full_two_input_voltage_rmse_mv": 8.468908002359596e-06
+    },
+    {
+      "epsilon": 0.050118723363,
+      "dynamic_pair_rmse_mv": 2.345291705034696e-05,
+      "dynamic_rmse_over_epsilon_squared_mv": 0.00933677444803787,
+      "steady_pair_rmse_mv": 2.2398472196111125e-05,
+      "steady_rmse_over_epsilon_cubed_mv": 0.17791738879767352,
+      "full_two_input_voltage_rmse_mv": 1.34152015221461e-05
+    },
+    {
+      "epsilon": 0.063095734448,
+      "dynamic_pair_rmse_mv": 3.713899174148792e-05,
+      "dynamic_rmse_over_epsilon_squared_mv": 0.0093288929435447,
+      "steady_pair_rmse_mv": 4.455718475417595e-05,
+      "steady_rmse_over_epsilon_cubed_mv": 0.17738534750330712,
+      "full_two_input_voltage_rmse_mv": 2.1247657213126434e-05
+    },
+    {
+      "epsilon": 0.079432823472,
+      "dynamic_pair_rmse_mv": 5.8799043788577084e-05,
+      "dynamic_rmse_over_epsilon_squared_mv": 0.009319020422474336,
+      "steady_pair_rmse_mv": 8.856965264644473e-05,
+      "steady_rmse_over_epsilon_cubed_mv": 0.17671969017819253,
+      "full_two_input_voltage_rmse_mv": 3.364779725433747e-05
+    },
+    {
+      "epsilon": 0.1,
+      "dynamic_pair_rmse_mv": 9.306670397121034e-05,
+      "dynamic_rmse_over_epsilon_squared_mv": 0.009306670397121032,
+      "steady_pair_rmse_mv": 0.00017588817705299943,
+      "steady_rmse_over_epsilon_cubed_mv": 0.1758881770529994,
+      "full_two_input_voltage_rmse_mv": 5.327454023249839e-05
+    },
+    {
+      "epsilon": 0.125892541179,
+      "dynamic_pair_rmse_mv": 0.00014725634694288074,
+      "dynamic_rmse_over_epsilon_squared_mv": 0.009291247362554916,
+      "steady_pair_rmse_mv": 0.00034887467863409043,
+      "steady_rmse_over_epsilon_cubed_mv": 0.17485153506895973,
+      "full_two_input_voltage_rmse_mv": 8.433043458263588e-05
+    },
+    {
+      "epsilon": 0.158489319246,
+      "dynamic_pair_rmse_mv": 0.00023290282436010562,
+      "dynamic_rmse_over_epsilon_squared_mv": 0.009272028442005007,
+      "steady_pair_rmse_mv": 0.0006909641396062602,
+      "steady_rmse_over_epsilon_cubed_mv": 0.17356234469403148,
+      "full_two_input_voltage_rmse_mv": 0.0001334546377212644
+    },
+    {
+      "epsilon": 0.199526231497,
+      "dynamic_pair_rmse_mv": 0.00036817532412600614,
+      "dynamic_rmse_over_epsilon_squared_mv": 0.00924814601087718,
+      "steady_pair_rmse_mv": 0.0013659585749563362,
+      "steady_rmse_over_epsilon_cubed_mv": 0.17196399614677826,
+      "full_two_input_voltage_rmse_mv": 0.0002111307928928588
+    },
+    {
+      "epsilon": 0.251188643151,
+      "dynamic_pair_rmse_mv": 0.0005816527510524609,
+      "dynamic_rmse_over_epsilon_squared_mv": 0.00921857485519016,
+      "steady_pair_rmse_mv": 0.002694158224412807,
+      "steady_rmse_over_epsilon_cubed_mv": 0.16998989188841251,
+      "full_two_input_voltage_rmse_mv": 0.00033390723992856783
+    },
+    {
+      "epsilon": 0.3,
+      "dynamic_pair_rmse_mv": 0.0008272027611211503,
+      "dynamic_rmse_over_epsilon_squared_mv": 0.009191141790235004,
+      "steady_pair_rmse_mv": 0.004540392013189227,
+      "steady_rmse_over_epsilon_cubed_mv": 0.1681626671551566,
+      "full_two_input_voltage_rmse_mv": 0.00047539440980138973
+    },
+    {
+      "epsilon": 0.316227766017,
+      "dynamic_pair_rmse_mv": 0.00091821302129052,
+      "dynamic_rmse_over_epsilon_squared_mv": 0.00918213021289579,
+      "steady_pair_rmse_mv": 0.005298812656342086,
+      "steady_rmse_over_epsilon_cubed_mv": 0.16756316888542286,
+      "full_two_input_voltage_rmse_mv": 0.0005279026667300789
+    },
+    {
+      "epsilon": 0.398107170553,
+      "dynamic_pair_rmse_mv": 0.0014481941864935624,
+      "dynamic_rmse_over_epsilon_squared_mv": 0.009137487582039146,
+      "steady_pair_rmse_mv": 0.010385389675895544,
+      "steady_rmse_over_epsilon_cubed_mv": 0.16459733398444457,
+      "full_two_input_voltage_rmse_mv": 0.0008343583508670831
+    },
+    {
+      "epsilon": 0.501187233627,
+      "dynamic_pair_rmse_mv": 0.0022816073353476005,
+      "dynamic_rmse_over_epsilon_squared_mv": 0.009083242405903243,
+      "steady_pair_rmse_mv": 0.020268489485647505,
+      "steady_rmse_over_epsilon_cubed_mv": 0.1609983347368828,
+      "full_two_input_voltage_rmse_mv": 0.0013184851906095306
+    },
+    {
+      "epsilon": 0.63095734448,
+      "dynamic_pair_rmse_mv": 0.0035901459930115292,
+      "dynamic_rmse_over_epsilon_squared_mv": 0.009018039006989673,
+      "steady_pair_rmse_mv": 0.039353395953634136,
+      "steady_rmse_over_epsilon_cubed_mv": 0.15666869114787133,
+      "full_two_input_voltage_rmse_mv": 0.0020837132787644417
+    },
+    {
+      "epsilon": 0.794328234724,
+      "dynamic_pair_rmse_mv": 0.005641272998616919,
+      "dynamic_rmse_over_epsilon_squared_mv": 0.008940815172328984,
+      "steady_pair_rmse_mv": 0.07593704556177117,
+      "steady_rmse_over_epsilon_cubed_mv": 0.15151432531963788,
+      "full_two_input_voltage_rmse_mv": 0.0032950495812314874
+    },
+    {
+      "epsilon": 1.0,
+      "dynamic_pair_rmse_mv": 0.008851233349489259,
+      "dynamic_rmse_over_epsilon_squared_mv": 0.008851233349489259,
+      "steady_pair_rmse_mv": 0.14545454545454545,
+      "steady_rmse_over_epsilon_cubed_mv": 0.14545454545454545,
+      "full_two_input_voltage_rmse_mv": 0.005218380640083772
+    }
+  ],
+  "checks": {
+    "reference_step_ms": 0.005,
+    "control_step_ms": 0.01,
+    "output_step_ms": 0.01,
+    "full_voltage_half_step_max_gap_mv": 2.788880237858393e-13,
+    "sc_vs_three_voltage_subtraction_max_gap_mv": 8.174017018802715e-15,
+    "pair_rmse_half_step_max_relative_gap": 3.210620592489845e-13,
+    "ratio_free_coefficient_gap_per_mv": 0.0,
+    "ratio_free_rmse_gap_mv": 1.734723475976807e-18
+  },
+  "source_hashes": {
+    "epsilon_order_checks.json": "cf126824810c80e83b4718896429baaea3c4f90ad04b8827226d187977bd11b5",
+    "pair_coefficient_checks.json": "d6df1a175d7e0c71d2d6c9ecbc6be2b6a0874f4ca68dde7bdcdcbadc4ea95d04"
+  }
+}

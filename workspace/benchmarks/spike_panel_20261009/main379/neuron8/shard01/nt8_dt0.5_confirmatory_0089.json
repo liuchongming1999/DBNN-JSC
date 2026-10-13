@@ -1,0 +1,298 @@
+{
+  "finished": true,
+  "created": "2026-10-09T17:38:20+0800",
+  "case_id": "confirmatory_0089",
+  "engine": "multisplit",
+  "threads": 8,
+  "dt_ms": 0.5,
+  "A": 500,
+  "duration_ms": 4000.0,
+  "site_mode": "all",
+  "rate_hz": 50.0,
+  "input_events": 99906,
+  "input_sha256": "6231bd1e8710666090c83ad7e20cfa4fdbe90f32056e522aa537f429eb15be36",
+  "ids_sha256": "2253930180b5ae89248437a25b4c5ffeef3028bc8b3afb41da441cdbed841c56",
+  "spike_count": 2,
+  "spike_times_ms": [
+    1377.5000000001,
+    2684.0000000001
+  ],
+  "timing": {
+    "warmup_ms": {
+      "median_ms": 133.7889228016138,
+      "mean_ms": 133.8454249004523,
+      "std_ms": 0.4429111441713215,
+      "runs_ms": [
+        134.31387580931187,
+        133.4334760904312,
+        133.7889228016138
+      ],
+      "n": 3
+    },
+    "schedule_ms": {
+      "median_ms": 114.6318931132555,
+      "mean_ms": 115.52975326776505,
+      "std_ms": 1.9642865450900835,
+      "runs_ms": [
+        117.78251454234123,
+        114.6318931132555,
+        114.1748521476984
+      ],
+      "n": 3
+    },
+    "solver_ms": {
+      "median_ms": 834.0376894921064,
+      "mean_ms": 833.6380297938982,
+      "std_ms": 0.8170088691008225,
+      "runs_ms": [
+        832.6981272548437,
+        834.0376894921064,
+        834.1782726347446
+      ],
+      "n": 3
+    },
+    "output_ms": {
+      "median_ms": 0.24407915771007538,
+      "mean_ms": 0.24478634198506674,
+      "std_ms": 0.001894518286908195,
+      "runs_ms": [
+        0.2433471381664276,
+        0.24407915771007538,
+        0.2469327300786972
+      ],
+      "n": 3
+    },
+    "steady_ms": {
+      "median_ms": 834.2817686498165,
+      "mean_ms": 833.8828161358833,
+      "std_ms": 0.8183744439189443,
+      "runs_ms": [
+        832.9414743930101,
+        834.2817686498165,
+        834.4252053648233
+      ],
+      "n": 3
+    },
+    "full_ms": {
+      "median_ms": 1082.3982544243336,
+      "mean_ms": 1083.2672485460837,
+      "std_ms": 1.5415547177651188,
+      "runs_ms": [
+        1085.0471183657646,
+        1082.3563728481531,
+        1082.3982544243336
+      ],
+      "n": 3
+    },
+    "solver_cpu_ms": {
+      "median_ms": 4154.392212999994,
+      "mean_ms": 4155.288027666671,
+      "std_ms": 3.224968512710862,
+      "runs_ms": [
+        4158.866200000006,
+        4154.392212999994,
+        4152.605670000014
+      ],
+      "n": 3
+    }
+  },
+  "repeats": [
+    {
+      "warmup_ms": 134.31387580931187,
+      "schedule_ms": 117.78251454234123,
+      "solver_ms": 832.6981272548437,
+      "output_ms": 0.2433471381664276,
+      "steady_ms": 832.9414743930101,
+      "full_ms": 1085.0471183657646,
+      "solver_cpu_ms": 4158.866200000006,
+      "spike_times_ms": [
+        1377.5000000001,
+        2684.0000000001
+      ],
+      "loadavg": [
+        25.99,
+        16.52,
+        14.54
+      ],
+      "thread_integration_seconds": [
+        0.40544819831848145,
+        0.46921563148498535,
+        0.5127935409545898,
+        0.5197501182556152,
+        0.5247671604156494,
+        0.519106388092041,
+        0.5421168804168701,
+        0.5325639247894287
+      ]
+    },
+    {
+      "warmup_ms": 133.4334760904312,
+      "schedule_ms": 114.6318931132555,
+      "solver_ms": 834.0376894921064,
+      "output_ms": 0.24407915771007538,
+      "steady_ms": 834.2817686498165,
+      "full_ms": 1082.3563728481531,
+      "solver_cpu_ms": 4154.392212999994,
+      "spike_times_ms": [
+        1377.5000000001,
+        2684.0000000001
+      ],
+      "loadavg": [
+        25.99,
+        16.52,
+        14.54
+      ],
+      "thread_integration_seconds": [
+        0.4110751152038574,
+        0.4736297130584717,
+        0.5225541591644287,
+        0.516373872756958,
+        0.5221519470214844,
+        0.5240082740783691,
+        0.5488207340240479,
+        0.522702693939209
+      ]
+    },
+    {
+      "warmup_ms": 133.7889228016138,
+      "schedule_ms": 114.1748521476984,
+      "solver_ms": 834.1782726347446,
+      "output_ms": 0.2469327300786972,
+      "steady_ms": 834.4252053648233,
+      "full_ms": 1082.3982544243336,
+      "solver_cpu_ms": 4152.605670000014,
+      "spike_times_ms": [
+        1377.5000000001,
+        2684.0000000001
+      ],
+      "loadavg": [
+        25.99,
+        16.52,
+        14.54
+      ],
+      "thread_integration_seconds": [
+        0.4095125198364258,
+        0.467012882232666,
+        0.5252499580383301,
+        0.5150279998779297,
+        0.5298910140991211,
+        0.5151402950286865,
+        0.5419507026672363,
+        0.5292160511016846
+      ]
+    }
+  ],
+  "validation": {
+    "against": "original expanded NEURON single-thread at identical dt",
+    "voltage_rmse_mv": 0.0,
+    "voltage_max_abs_mv": 0.0,
+    "event_times_equal_at_1e_5_ms": true,
+    "previous_spike_times_ms": [
+      1377.5000000001,
+      2684.0000000001
+    ],
+    "repeat_voltage_max_abs_mv": 0.0,
+    "passed": true
+  },
+  "runtime": {
+    "neuron": "9.0.2",
+    "neuron_build": "cmake option default differences: 'NRN_ENABLE_CORENEURON=ON' 'NRN_ENABLE_PYTHON_DYNAMIC=ON' 'NRN_LINK_AGAINST_PYTHON=OFF' 'NRN_ENABLE_MPI_DYNAMIC=ON' 'NRN_MPI_DYNAMIC=/usr/include/openmpi-x86_64;/usr/include/mpich-x86_64' 'NRN_RX3D_OPT_LEVEL=1' 'CMAKE_BUILD_TYPE=Release' 'CMAKE_INSTALL_PREFIX=/tmp/tmpot7w3zjj/wheel/platlib' 'CMAKE_C_COMPILER=/opt/rh/gcc-toolset-10/root/usr/bin/gcc' 'CMAKE_CXX_COMPILER=/opt/rh/gcc-toolset-10/root/usr/bin/g++' 'PYTHON_EXECUTABLE=/tmp/build-env-ciooowse/bin/python' 'CORENRN_ENABLE_GPU=OFF' 'CORENRN_ENABLE_SHARED=ON'",
+    "model": {
+      "root": "/home/lcm/DBNN_L5PC_surrogate_20260928/source/ShaiEtAl2015",
+      "biophys_file": "L5PCbiophys5.hoc",
+      "morphology_file": "cell1.asc",
+      "num_synapses": 500,
+      "duration_ms": 16000.0,
+      "warmup_ms": 500.0,
+      "dt": 0.5,
+      "sample_interval_ms": 1.0,
+      "input_rate_hz": 50.0,
+      "exc_weight": 0.000188,
+      "inh_weight": 8e-05,
+      "exc_tau1_ms": 0.5,
+      "exc_tau2_ms": 5.0,
+      "inh_tau1_ms": 1.0,
+      "inh_tau2_ms": 10.0,
+      "inh_reversal_mv": -80.0,
+      "v_init": -75.0,
+      "spike_threshold": -20.0,
+      "seed": 20260425
+    },
+    "sections": 196,
+    "compartments": 642,
+    "actual_threads": 8,
+    "thread_busywait": 0,
+    "event_detector_metadata_delay_ms": 10.0,
+    "affinity": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47
+    ],
+    "physical_cores": [
+      {
+        "cpu": 40,
+        "core": 56,
+        "socket": 0,
+        "siblings": "40,168"
+      },
+      {
+        "cpu": 41,
+        "core": 57,
+        "socket": 0,
+        "siblings": "41,169"
+      },
+      {
+        "cpu": 42,
+        "core": 58,
+        "socket": 0,
+        "siblings": "42,170"
+      },
+      {
+        "cpu": 43,
+        "core": 59,
+        "socket": 0,
+        "siblings": "43,171"
+      },
+      {
+        "cpu": 44,
+        "core": 60,
+        "socket": 0,
+        "siblings": "44,172"
+      },
+      {
+        "cpu": 45,
+        "core": 61,
+        "socket": 0,
+        "siblings": "45,173"
+      },
+      {
+        "cpu": 46,
+        "core": 62,
+        "socket": 0,
+        "siblings": "46,174"
+      },
+      {
+        "cpu": 47,
+        "core": 63,
+        "socket": 0,
+        "siblings": "47,175"
+      }
+    ],
+    "model_preparation_ms": 277.63434313237667,
+    "source_script_sha256": "a228f4f59e59e1ebc269c0428848bea4f1c5c74e4b3e2f578282f68186d79efa",
+    "input_protocol": "only manifest events; dormant zero-weight NetStims removed",
+    "resources": "shared server; disjoint physical cores, no exclusive reservation",
+    "multisplit": {
+      "pieces": 46.0,
+      "estimated_load_balance": 1.0114942528735633
+    }
+  },
+  "source_script_sha256": "a228f4f59e59e1ebc269c0428848bea4f1c5c74e4b3e2f578282f68186d79efa",
+  "voltage_file": "nt8_dt0.5_confirmatory_0089.npz",
+  "timer_scope": "steady_ms=solver+recording+1ms-grid interpolation; initialization, 500ms warmup, scheduling and model build separate"
+}

@@ -1,0 +1,57 @@
+{
+  "case_id": "confirmatory_0090",
+  "panel": "confirmatory",
+  "duration_s": 4,
+  "duration_ms": 4000,
+  "A": 500,
+  "site_mode": "all",
+  "family": "stationary",
+  "replicate": 26,
+  "seed": 910090090,
+  "input_interval_ms": 1.0,
+  "input_file": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/spike_panel_20261009/confirmatory/inputs/confirmatory_0090.npz",
+  "input_sha256": "e9057d34085d5dafd041a0f71e10683ec1fa556087f85657208f52560e143283",
+  "ids_sha256": "2253930180b5ae89248437a25b4c5ffeef3028bc8b3afb41da441cdbed841c56",
+  "input_events": 100063,
+  "rate_hz": 50.0,
+  "exc_hz": 50.0,
+  "inh_hz": 50.0,
+  "background_hz": null,
+  "gate_width_ms": null,
+  "gate_epochs": [],
+  "soma_path_distance_range_um": [
+    7.887612501978204,
+    1277.6358290325768
+  ],
+  "reference_spikes": 2,
+  "minimum_isi_ms": 1435.1000000052209,
+  "low_density": true,
+  "voltage": {
+    "n": 3961,
+    "sse": 798.4905898291404,
+    "error_ss": 744.6525066828921,
+    "reference_ss": 7882.371307602974,
+    "rmse_mv": 0.4489856698623769,
+    "ve": 0.9055293797229985,
+    "bias_mv": -0.11658491844075942
+  },
+  "events": {
+    "tp": 2,
+    "fp": 1,
+    "fn": 0,
+    "matched_errors_ms": [
+      -3.7000000024036126,
+      -1.800000007624476
+    ]
+  },
+  "reference_events_ms": [
+    2542.7000000024036,
+    3977.8000000076245
+  ],
+  "predicted_events_ms": [
+    2539.0,
+    3277.0,
+    3976.0
+  ],
+  "checkpoint_sha256": "737efcff1e6686bfb153fca8590a8b28a605fbdb08f9a68ff44e68af8867686d"
+}

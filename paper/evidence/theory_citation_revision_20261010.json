@@ -1,0 +1,96 @@
+{
+  "revision_date": "2026-10-10",
+  "journal_guidelines": {
+    "url": "https://link.springer.com/journal/10915/submission-guidelines",
+    "mathematical_proof_placement_rule": "No explicit body-versus-appendix requirement found in Text, Scientific style, Supplementary Information, or the remainder of the page. After-acceptance proof correction refers to production proofs.",
+    "decision": "Core theorem statements and short proofs in Section 4; detailed projection and uniform remainder bounds in Appendix A.",
+    "bibliography_style": "Numeric square-bracket citations; all entries cited; DOI links and accessed dates for online documents."
+  },
+  "attribution": {
+    "lemma_1": "Compartmental reformulation of the conductance response hierarchy in Li et al. (2014), Eqs. (9)–(13).",
+    "theorem_1": "DBNN kernel/bias construction derived in this manuscript under the stated passive/exponential-input assumptions.",
+    "theorem_2": "Fixed-full-matrix least-squares error and weighted coefficient variance derived in this manuscript; not attributed to Li et al.",
+    "corollary_1": "Exact product-span matching implies the stated cubic bound; positive optimal residual implies quadratic asymptotic order."
+  },
+  "new_sources": [
+    {
+      "key": "koch1983",
+      "primary_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC393916/",
+      "doi": "10.1073/pnas.80.9.2799",
+      "use": "Spatial and temporal shunting interactions"
+    },
+    {
+      "key": "poirazi2003",
+      "primary_url": "https://www.sciencedirect.com/science/article/pii/S0896627303001491",
+      "doi": "10.1016/S0896-6273(03)00149-1",
+      "use": "Dendritic subunit model"
+    },
+    {
+      "key": "hines1984",
+      "primary_url": "https://doi.org/10.1016/0020-7101(84)90008-4",
+      "doi": "10.1016/0020-7101(84)90008-4",
+      "use": "Implicit branched cable computation"
+    },
+    {
+      "key": "modeldb2004",
+      "primary_url": "https://link.springer.com/article/10.1023/B:JCNS.0000023869.22017.2e",
+      "doi": "10.1023/B:JCNS.0000023869.22017.2e",
+      "use": "Model database provenance"
+    },
+    {
+      "key": "blelloch1990",
+      "primary_url": "https://www.cs.cmu.edu/afs/cs.cmu.edu/project/scandal/public/papers/CMU-CS-90-190.html",
+      "use": "Associative all-prefix-sums"
+    },
+    {
+      "key": "harris2007",
+      "primary_url": "https://developer.nvidia.com/gpugems/gpugems3/part-vi-gpu-computing/chapter-39-parallel-prefix-sum-scan-cuda",
+      "use": "GPU hierarchical scan"
+    },
+    {
+      "key": "tillet2019",
+      "primary_url": "https://www.eecs.harvard.edu/~htk/publication/2019-mapl-tillet-kung-cox.pdf",
+      "doi": "10.1145/3315508.3329973",
+      "use": "Tiled custom GPU kernels"
+    },
+    {
+      "key": "gray2019",
+      "primary_url": "https://developer.nvidia.com/blog/cuda-graphs/",
+      "additional_official_documentation": "https://docs.nvidia.com/cuda/cuda-programming-guide/04-special-topics/cuda-graphs.html",
+      "use": "Capture, instantiate, and replay a computation graph"
+    },
+    {
+      "key": "openmp2021",
+      "primary_url": "https://www.openmp.org/spec-html/5.2/openmp.html",
+      "use": "CPU shared-memory workers"
+    },
+    {
+      "key": "dongarra1990",
+      "primary_url": "https://impact.ornl.gov/en/publications/a-set-of-level-3-basic-linear-algebra-subprograms/",
+      "doi": "10.1145/77626.79170",
+      "use": "Level 3 BLAS matrix contraction"
+    },
+    {
+      "key": "loshchilov2019",
+      "primary_url": "https://arxiv.org/abs/1711.05101",
+      "publication": "ICLR 2019",
+      "use": "AdamW optimizer"
+    },
+    {
+      "key": "masoli2025basket",
+      "primary_url": "https://www.nature.com/articles/s41598-025-09964-2",
+      "modeldb": "2018018",
+      "doi": "10.1038/s41598-025-09964-2",
+      "use": "Basket-cell model provenance"
+    },
+    {
+      "key": "migliore2005",
+      "primary_url": "https://journals.physiology.org/doi/full/10.1152/jn.00521.2005",
+      "modeldb": "55035",
+      "doi": "10.1152/jn.00521.2005",
+      "use": "CA1 model provenance"
+    }
+  ],
+  "frozen_primary_evidence": "main379_results.json; 379 inputs; 637 reference spikes; unchanged",
+  "unchanged_frontier": true
+}

@@ -1,0 +1,92 @@
+{
+  "finished": true,
+  "default_budget_completed": true,
+  "epochs": 2500,
+  "updates": 720000,
+  "total_updates": 720000,
+  "selected_epoch": 40,
+  "checkpoint": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/baselines_20260930/aligned/tcn_1ms/best.pt",
+  "checkpoint_sha256": "62bba4c6797f4fad76298b3944aad659df29ede74f74798b230d859d1366d80b",
+  "validation": {
+    "raw_rmse_mv": 0.6673847085479674,
+    "aligned_rmse_mv": 0.3079428569829911,
+    "calibration": {
+      "scale": 1.0889008662491233,
+      "bias_mv": 5.88451793676694,
+      "source": "Complete validation set, clipped voltage after initial 500ms; never main31"
+    }
+  },
+  "config": {
+    "method": "tcn",
+    "dt_ms": 1.0,
+    "batch_size": 8,
+    "precision": "FP32 IEEE",
+    "input_channels": 500,
+    "seed": 930291,
+    "training_process_optimized": false,
+    "epochs": 2500,
+    "stages": 250,
+    "epochs_per_stage": 10,
+    "batches_per_epoch": 288,
+    "validation_batches": 144,
+    "window_ms": 400,
+    "burn_in_loss_ms": 0,
+    "overlap_ms": 154,
+    "lr": 0.0001,
+    "optimizer": "NAdam, epsilon 1e-7, momentum_decay .004; reset each stage",
+    "loss": "BCE + soma MSE + whitened dendritic-PCA MSE, default five-stage weight schedule + kernel L2 1e-8",
+    "recipe": "Author fit_CNN.py schedule, generator length 6*int(.2*128*6000/(8*400))=288 batches/epoch. Published seven-layer NMDA TCN architecture; no capacity search.",
+    "model": {
+      "kernels": [
+        45,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19
+      ],
+      "widths": [
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128
+      ],
+      "dendritic_outputs": 20,
+      "context_support_ms": 152,
+      "initializer_stddev": 0.002,
+      "BN_epsilon": 0.001,
+      "BN_momentum": 0.99
+    },
+    "adaptations": [
+      "500 fixed E/I input IDs instead of NeuronIO 1278 inputs; exact event multiplicity retained",
+      "Physical 400/500ms windows and 150/154ms overlaps retained; ELM delta_t adjusted; TCN kernels discretized to retain 152ms physical context",
+      "Corresponding DBNN fit/validation events; no main31 data in training, PCA or selection",
+      "Original output moment alignment replaced by one validation-fitted affine map, locked before held-out evaluation; raw results retained"
+    ],
+    "manifest": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/accuracy_frontier_20260929/balanced_1ms/training_manifest.json",
+    "manifest_sha256": "e7d178de1671cbb656d5b6ae32d79248b832cdcc7a501f4ed0f99328c67f4cf0",
+    "fit_cases": 117,
+    "validation_cases": 32,
+    "trainable_parameters": 4753302,
+    "source_versions": {
+      "elmneuron": {
+        "url": "https://github.com/AaronSpieler/elmneuron.git",
+        "commit": "52e68a6d39523ac6613a586699b116e8e606dda3"
+      },
+      "neuron_as_deep_net": {
+        "url": "https://github.com/SelfishGene/neuron_as_deep_net.git",
+        "commit": "074c4666300a8ad246601dab179a97a6942f0f29"
+      },
+      "neuron_reduce": {
+        "url": "https://github.com/orena1/neuron_reduce.git",
+        "commit": "94b1850607f9c62a205ad8fb695f2fd91d84d87d"
+      }
+    }
+  },
+  "locked_at": "2026-09-30T22:12:17+0800",
+  "elapsed_s": 29060.869236946106
+}

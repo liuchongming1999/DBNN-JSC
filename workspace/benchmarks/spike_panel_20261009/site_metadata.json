@@ -1,0 +1,3525 @@
+{
+  "model": {
+    "root": "/home/lcm/DBNN_L5PC_surrogate_20260928/source/ShaiEtAl2015",
+    "biophys_file": "L5PCbiophys5.hoc",
+    "morphology_file": "cell1.asc",
+    "num_synapses": 500,
+    "duration_ms": 16000.0,
+    "warmup_ms": 500.0,
+    "dt": 0.1,
+    "sample_interval_ms": 1.0,
+    "input_rate_hz": 50.0,
+    "exc_weight": 0.000188,
+    "inh_weight": 8e-05,
+    "exc_tau1_ms": 0.5,
+    "exc_tau2_ms": 5.0,
+    "inh_tau1_ms": 1.0,
+    "inh_tau2_ms": 10.0,
+    "inh_reversal_mv": -80.0,
+    "v_init": -75.0,
+    "spike_threshold": -20.0,
+    "seed": 20260425
+  },
+  "sites": [
+    {
+      "id": 0,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[38]",
+      "section_position": 0.3,
+      "soma_path_distance_um": 929.2542428935708
+    },
+    {
+      "id": 1,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[69]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 155.08087074690138
+    },
+    {
+      "id": 2,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[51]",
+      "section_position": 0.7727272727272727,
+      "soma_path_distance_um": 855.2221980289141
+    },
+    {
+      "id": 3,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[14]",
+      "section_position": 0.7857142857142857,
+      "soma_path_distance_um": 166.78606196673942
+    },
+    {
+      "id": 4,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[8]",
+      "section_position": 0.8333333333333334,
+      "soma_path_distance_um": 277.56266703556594
+    },
+    {
+      "id": 5,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[103]",
+      "section_position": 0.7,
+      "soma_path_distance_um": 202.2228039337794
+    },
+    {
+      "id": 6,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[40]",
+      "section_position": 0.3181818181818182,
+      "soma_path_distance_um": 1055.4967091537803
+    },
+    {
+      "id": 7,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[36]",
+      "section_position": 0.4230769230769231,
+      "soma_path_distance_um": 485.2884473856197
+    },
+    {
+      "id": 8,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[105]",
+      "section_position": 0.9,
+      "soma_path_distance_um": 153.79079279100125
+    },
+    {
+      "id": 9,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[79]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 7.887612501978204
+    },
+    {
+      "id": 10,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[5]",
+      "section_position": 0.2777777777777778,
+      "soma_path_distance_um": 100.48972784888049
+    },
+    {
+      "id": 11,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[4]",
+      "section_position": 0.3,
+      "soma_path_distance_um": 74.61145620828351
+    },
+    {
+      "id": 12,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[23]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 371.8791591875238
+    },
+    {
+      "id": 13,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[4]",
+      "section_position": 0.1,
+      "soma_path_distance_um": 56.0962909842321
+    },
+    {
+      "id": 14,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[82]",
+      "section_position": 0.6428571428571429,
+      "soma_path_distance_um": 129.1311119728694
+    },
+    {
+      "id": 15,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[18]",
+      "section_position": 0.3,
+      "soma_path_distance_um": 316.780576530712
+    },
+    {
+      "id": 16,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[63]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 1162.642684363218
+    },
+    {
+      "id": 17,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[25]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 31.969928975225947
+    },
+    {
+      "id": 18,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[18]",
+      "section_position": 0.1,
+      "soma_path_distance_um": 294.79711945283026
+    },
+    {
+      "id": 19,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[37]",
+      "section_position": 0.8076923076923077,
+      "soma_path_distance_um": 850.0134158767279
+    },
+    {
+      "id": 20,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[76]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 113.0472009689077
+    },
+    {
+      "id": 21,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[61]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 950.7711877220763
+    },
+    {
+      "id": 22,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[5]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 143.41054343021978
+    },
+    {
+      "id": 23,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[83]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 246.3769556974712
+    },
+    {
+      "id": 24,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[27]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 89.84034878738578
+    },
+    {
+      "id": 25,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[74]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 1039.2178944740972
+    },
+    {
+      "id": 26,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[86]",
+      "section_position": 0.9,
+      "soma_path_distance_um": 285.4544595630963
+    },
+    {
+      "id": 27,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[82]",
+      "section_position": 0.35714285714285715,
+      "soma_path_distance_um": 90.40219026402741
+    },
+    {
+      "id": 28,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[59]",
+      "section_position": 0.21428571428571427,
+      "soma_path_distance_um": 102.30172579777407
+    },
+    {
+      "id": 29,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[71]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 1191.139127209115
+    },
+    {
+      "id": 30,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[19]",
+      "section_position": 0.6111111111111112,
+      "soma_path_distance_um": 370.843278111122
+    },
+    {
+      "id": 31,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[35]",
+      "section_position": 0.21428571428571427,
+      "soma_path_distance_um": 63.301119270232086
+    },
+    {
+      "id": 32,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[38]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 113.51169473570297
+    },
+    {
+      "id": 33,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[32]",
+      "section_position": 0.3,
+      "soma_path_distance_um": 121.96263895423468
+    },
+    {
+      "id": 34,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[30]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 348.1837080398582
+    },
+    {
+      "id": 35,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[77]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 89.2792598131422
+    },
+    {
+      "id": 36,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[83]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 50.62015957879467
+    },
+    {
+      "id": 37,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[19]",
+      "section_position": 0.7222222222222222,
+      "soma_path_distance_um": 389.2894549159483
+    },
+    {
+      "id": 38,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[77]",
+      "section_position": 0.21428571428571427,
+      "soma_path_distance_um": 1160.1898406833636
+    },
+    {
+      "id": 39,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[51]",
+      "section_position": 0.5909090909090909,
+      "soma_path_distance_um": 816.0439286066644
+    },
+    {
+      "id": 40,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[46]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 989.5767566056796
+    },
+    {
+      "id": 41,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[2]",
+      "section_position": 0.21428571428571427,
+      "soma_path_distance_um": 71.87972849295411
+    },
+    {
+      "id": 42,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[59]",
+      "section_position": 0.07142857142857142,
+      "soma_path_distance_um": 80.37693276859449
+    },
+    {
+      "id": 43,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[63]",
+      "section_position": 0.8333333333333334,
+      "soma_path_distance_um": 1272.9553381826406
+    },
+    {
+      "id": 44,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[38]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 91.1891722914988
+    },
+    {
+      "id": 45,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[77]",
+      "section_position": 0.21428571428571427,
+      "soma_path_distance_um": 1160.1898406833636
+    },
+    {
+      "id": 46,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[83]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 246.3769556974712
+    },
+    {
+      "id": 47,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[10]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 55.32631133749281
+    },
+    {
+      "id": 48,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[44]",
+      "section_position": 0.7,
+      "soma_path_distance_um": 1254.4805532083114
+    },
+    {
+      "id": 49,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[58]",
+      "section_position": 0.21428571428571427,
+      "soma_path_distance_um": 96.17391353811506
+    },
+    {
+      "id": 50,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[82]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 191.54068173122118
+    },
+    {
+      "id": 51,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[71]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 31.84690210988164
+    },
+    {
+      "id": 52,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[4]",
+      "section_position": 0.3,
+      "soma_path_distance_um": 74.61145620828351
+    },
+    {
+      "id": 53,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[78]",
+      "section_position": 0.7,
+      "soma_path_distance_um": 1142.309456045548
+    },
+    {
+      "id": 54,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[57]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 1102.1564599679584
+    },
+    {
+      "id": 55,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[72]",
+      "section_position": 0.3888888888888889,
+      "soma_path_distance_um": 120.55640714255415
+    },
+    {
+      "id": 56,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[20]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 276.4059137702009
+    },
+    {
+      "id": 57,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[58]",
+      "section_position": 0.35714285714285715,
+      "soma_path_distance_um": 114.01349839418866
+    },
+    {
+      "id": 58,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[69]",
+      "section_position": 0.21428571428571427,
+      "soma_path_distance_um": 1050.3529242391248
+    },
+    {
+      "id": 59,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[49]",
+      "section_position": 0.21428571428571427,
+      "soma_path_distance_um": 1005.7539099274884
+    },
+    {
+      "id": 60,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[2]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 125.67107819383484
+    },
+    {
+      "id": 61,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[57]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 1102.1564599679584
+    },
+    {
+      "id": 62,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[33]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 379.6206850084887
+    },
+    {
+      "id": 63,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[37]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 93.323621337641
+    },
+    {
+      "id": 64,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[5]",
+      "section_position": 0.8333333333333334,
+      "soma_path_distance_um": 207.79176680222872
+    },
+    {
+      "id": 65,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[33]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 379.6206850084887
+    },
+    {
+      "id": 66,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[85]",
+      "section_position": 0.3,
+      "soma_path_distance_um": 308.50042402949515
+    },
+    {
+      "id": 67,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[83]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 246.3769556974712
+    },
+    {
+      "id": 68,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[96]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 225.32479007165313
+    },
+    {
+      "id": 69,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[34]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 348.05826227590484
+    },
+    {
+      "id": 70,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[36]",
+      "section_position": 0.7307692307692307,
+      "soma_path_distance_um": 560.7546374613048
+    },
+    {
+      "id": 71,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[66]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 1249.4061499971995
+    },
+    {
+      "id": 72,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[85]",
+      "section_position": 0.3,
+      "soma_path_distance_um": 308.50042402949515
+    },
+    {
+      "id": 73,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[63]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 10.413233377793917
+    },
+    {
+      "id": 74,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[29]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 348.82934079531805
+    },
+    {
+      "id": 75,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[54]",
+      "section_position": 0.7,
+      "soma_path_distance_um": 124.24559346468165
+    },
+    {
+      "id": 76,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[19]",
+      "section_position": 0.2777777777777778,
+      "soma_path_distance_um": 315.504747696643
+    },
+    {
+      "id": 77,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[12]",
+      "section_position": 0.1,
+      "soma_path_distance_um": 214.09181391526516
+    },
+    {
+      "id": 78,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[66]",
+      "section_position": 0.35714285714285715,
+      "soma_path_distance_um": 118.44894564184422
+    },
+    {
+      "id": 79,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[40]",
+      "section_position": 0.13636363636363635,
+      "soma_path_distance_um": 1018.1472399801819
+    },
+    {
+      "id": 80,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[85]",
+      "section_position": 0.1,
+      "soma_path_distance_um": 292.2696335244743
+    },
+    {
+      "id": 81,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[31]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 139.5579343973581
+    },
+    {
+      "id": 82,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[85]",
+      "section_position": 0.3,
+      "soma_path_distance_um": 308.50042402949515
+    },
+    {
+      "id": 83,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[14]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 129.08955063514776
+    },
+    {
+      "id": 84,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[102]",
+      "section_position": 0.3888888888888889,
+      "soma_path_distance_um": 219.2205526807773
+    },
+    {
+      "id": 85,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[31]",
+      "section_position": 0.3,
+      "soma_path_distance_um": 120.88388002615125
+    },
+    {
+      "id": 86,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[53]",
+      "section_position": 0.8333333333333334,
+      "soma_path_distance_um": 1062.7689250760204
+    },
+    {
+      "id": 87,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[72]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 142.7532841935195
+    },
+    {
+      "id": 88,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[77]",
+      "section_position": 0.9285714285714286,
+      "soma_path_distance_um": 1260.4866067113692
+    },
+    {
+      "id": 89,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[13]",
+      "section_position": 0.6428571428571429,
+      "soma_path_distance_um": 157.91618163420813
+    },
+    {
+      "id": 90,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[102]",
+      "section_position": 0.7222222222222222,
+      "soma_path_distance_um": 279.0524779059387
+    },
+    {
+      "id": 91,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[102]",
+      "section_position": 0.6111111111111112,
+      "soma_path_distance_um": 259.1085028308849
+    },
+    {
+      "id": 92,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[63]",
+      "section_position": 0.2777777777777778,
+      "soma_path_distance_um": 1181.0281266664551
+    },
+    {
+      "id": 93,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[38]",
+      "section_position": 0.7,
+      "soma_path_distance_um": 964.0433258686635
+    },
+    {
+      "id": 94,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[2]",
+      "section_position": 0.35714285714285715,
+      "soma_path_distance_um": 93.5441645114897
+    },
+    {
+      "id": 95,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[45]",
+      "section_position": 0.8333333333333334,
+      "soma_path_distance_um": 966.6944351227979
+    },
+    {
+      "id": 96,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[35]",
+      "section_position": 0.6428571428571429,
+      "soma_path_distance_um": 131.83800618209295
+    },
+    {
+      "id": 97,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[34]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 325.7488131054729
+    },
+    {
+      "id": 98,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[61]",
+      "section_position": 0.8333333333333334,
+      "soma_path_distance_um": 1066.463439190578
+    },
+    {
+      "id": 99,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[76]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 91.84036588835127
+    },
+    {
+      "id": 100,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[72]",
+      "section_position": 0.2777777777777778,
+      "soma_path_distance_um": 98.35953009158881
+    },
+    {
+      "id": 101,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[17]",
+      "section_position": 0.6111111111111112,
+      "soma_path_distance_um": 391.2159584847124
+    },
+    {
+      "id": 102,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[17]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 371.6867643809264
+    },
+    {
+      "id": 103,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[5]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 79.02932005821084
+    },
+    {
+      "id": 104,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[40]",
+      "section_position": 0.4090909090909091,
+      "soma_path_distance_um": 1074.1714437405794
+    },
+    {
+      "id": 105,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[7]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 228.62456483452667
+    },
+    {
+      "id": 106,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[24]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 371.9475017633403
+    },
+    {
+      "id": 107,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[67]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 1127.514438316098
+    },
+    {
+      "id": 108,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[6]",
+      "section_position": 0.6428571428571429,
+      "soma_path_distance_um": 109.88871146406075
+    },
+    {
+      "id": 109,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[28]",
+      "section_position": 0.7222222222222222,
+      "soma_path_distance_um": 204.97577545754106
+    },
+    {
+      "id": 110,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[12]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 49.16902792838451
+    },
+    {
+      "id": 111,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[69]",
+      "section_position": 0.7857142857142857,
+      "soma_path_distance_um": 1131.7457236091727
+    },
+    {
+      "id": 112,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[61]",
+      "section_position": 0.3888888888888889,
+      "soma_path_distance_um": 989.3352715449103
+    },
+    {
+      "id": 113,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[74]",
+      "section_position": 0.3,
+      "soma_path_distance_um": 89.38482071228987
+    },
+    {
+      "id": 114,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[67]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 1191.7703108328874
+    },
+    {
+      "id": 115,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[61]",
+      "section_position": 0.7,
+      "soma_path_distance_um": 171.83904321420079
+    },
+    {
+      "id": 116,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[19]",
+      "section_position": 0.3888888888888889,
+      "soma_path_distance_um": 333.9509245014693
+    },
+    {
+      "id": 117,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[28]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 107.61363674633458
+    },
+    {
+      "id": 118,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[53]",
+      "section_position": 0.2777777777777778,
+      "soma_path_distance_um": 957.0529982298244
+    },
+    {
+      "id": 119,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[33]",
+      "section_position": 0.35714285714285715,
+      "soma_path_distance_um": 361.6404649747942
+    },
+    {
+      "id": 120,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[36]",
+      "section_position": 0.8076923076923077,
+      "soma_path_distance_um": 579.6211849802261
+    },
+    {
+      "id": 121,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[13]",
+      "section_position": 0.21428571428571427,
+      "soma_path_distance_um": 235.32065851253515
+    },
+    {
+      "id": 122,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[74]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 1039.2178944740972
+    },
+    {
+      "id": 123,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[69]",
+      "section_position": 0.7,
+      "soma_path_distance_um": 175.73531834187935
+    },
+    {
+      "id": 124,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[31]",
+      "section_position": 0.7,
+      "soma_path_distance_um": 158.23198876856495
+    },
+    {
+      "id": 125,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[69]",
+      "section_position": 0.6428571428571429,
+      "soma_path_distance_um": 1111.3975237666607
+    },
+    {
+      "id": 126,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[61]",
+      "section_position": 0.6111111111111112,
+      "soma_path_distance_um": 1027.899355367744
+    },
+    {
+      "id": 127,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[35]",
+      "section_position": 0.3,
+      "soma_path_distance_um": 413.90625176268173
+    },
+    {
+      "id": 128,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[9]",
+      "section_position": 0.6428571428571429,
+      "soma_path_distance_um": 345.3432287580049
+    },
+    {
+      "id": 129,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[81]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 168.02681472739755
+    },
+    {
+      "id": 130,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[72]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 1237.7036091752939
+    },
+    {
+      "id": 131,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[19]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 72.50044089859955
+    },
+    {
+      "id": 132,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[74]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 111.484162352645
+    },
+    {
+      "id": 133,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[62]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 160.99568346764488
+    },
+    {
+      "id": 134,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[60]",
+      "section_position": 0.4090909090909091,
+      "soma_path_distance_um": 784.0873778405064
+    },
+    {
+      "id": 135,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[3]",
+      "section_position": 0.8333333333333334,
+      "soma_path_distance_um": 174.51198550036827
+    },
+    {
+      "id": 136,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[63]",
+      "section_position": 0.3888888888888889,
+      "soma_path_distance_um": 1199.4135689696923
+    },
+    {
+      "id": 137,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[40]",
+      "section_position": 0.22727272727272727,
+      "soma_path_distance_um": 1036.821974566981
+    },
+    {
+      "id": 138,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[53]",
+      "section_position": 0.6111111111111112,
+      "soma_path_distance_um": 1020.482554337542
+    },
+    {
+      "id": 139,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[14]",
+      "section_position": 0.8333333333333334,
+      "soma_path_distance_um": 242.662758466112
+    },
+    {
+      "id": 140,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[32]",
+      "section_position": 0.3,
+      "soma_path_distance_um": 121.96263895423468
+    },
+    {
+      "id": 141,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[40]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 142.37851480703435
+    },
+    {
+      "id": 142,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[60]",
+      "section_position": 0.3,
+      "soma_path_distance_um": 52.790303224443775
+    },
+    {
+      "id": 143,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[102]",
+      "section_position": 0.6111111111111112,
+      "soma_path_distance_um": 259.1085028308849
+    },
+    {
+      "id": 144,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[86]",
+      "section_position": 0.1,
+      "soma_path_distance_um": 217.13909383854718
+    },
+    {
+      "id": 145,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[89]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 192.458045511328
+    },
+    {
+      "id": 146,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[96]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 225.32479007165313
+    },
+    {
+      "id": 147,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[101]",
+      "section_position": 0.6428571428571429,
+      "soma_path_distance_um": 251.88318641152654
+    },
+    {
+      "id": 148,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[28]",
+      "section_position": 0.05555555555555555,
+      "soma_path_distance_um": 88.1412090040933
+    },
+    {
+      "id": 149,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[68]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 970.8393746651541
+    },
+    {
+      "id": 150,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[21]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 312.6528179400382
+    },
+    {
+      "id": 151,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[13]",
+      "section_position": 0.7857142857142857,
+      "soma_path_distance_um": 178.98185404072942
+    },
+    {
+      "id": 152,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[70]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 133.22497822403795
+    },
+    {
+      "id": 153,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[60]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 805.2813389196517
+    },
+    {
+      "id": 154,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[3]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 160.74993135526256
+    },
+    {
+      "id": 155,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[32]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 414.14632608169813
+    },
+    {
+      "id": 156,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[67]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 122.84779028589553
+    },
+    {
+      "id": 157,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[76]",
+      "section_position": 0.6428571428571429,
+      "soma_path_distance_um": 1218.140083184599
+    },
+    {
+      "id": 158,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[9]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 322.6863695025031
+    },
+    {
+      "id": 159,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[10]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 78.77698750020264
+    },
+    {
+      "id": 160,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[68]",
+      "section_position": 0.3,
+      "soma_path_distance_um": 951.2428747410728
+    },
+    {
+      "id": 161,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[33]",
+      "section_position": 0.9,
+      "soma_path_distance_um": 140.86298173117274
+    },
+    {
+      "id": 162,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[13]",
+      "section_position": 0.6428571428571429,
+      "soma_path_distance_um": 301.4545407597295
+    },
+    {
+      "id": 163,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[52]",
+      "section_position": 0.3,
+      "soma_path_distance_um": 938.3698984242012
+    },
+    {
+      "id": 164,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[35]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 435.4954622501011
+    },
+    {
+      "id": 165,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[62]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 1115.2255114830327
+    },
+    {
+      "id": 166,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[42]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 1224.674962500683
+    },
+    {
+      "id": 167,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[37]",
+      "section_position": 0.19230769230769232,
+      "soma_path_distance_um": 679.9365685630527
+    },
+    {
+      "id": 168,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[37]",
+      "section_position": 0.7307692307692307,
+      "soma_path_distance_um": 828.7538099625184
+    },
+    {
+      "id": 169,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[60]",
+      "section_position": 0.5909090909090909,
+      "soma_path_distance_um": 826.475299998797
+    },
+    {
+      "id": 170,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[61]",
+      "section_position": 0.6111111111111112,
+      "soma_path_distance_um": 1027.899355367744
+    },
+    {
+      "id": 171,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[44]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 83.0684993569543
+    },
+    {
+      "id": 172,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[96]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 225.32479007165313
+    },
+    {
+      "id": 173,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[37]",
+      "section_position": 0.2692307692307692,
+      "soma_path_distance_um": 701.196174477262
+    },
+    {
+      "id": 174,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[36]",
+      "section_position": 0.19230769230769232,
+      "soma_path_distance_um": 428.6888048288559
+    },
+    {
+      "id": 175,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[69]",
+      "section_position": 0.1,
+      "soma_path_distance_um": 113.77197555694545
+    },
+    {
+      "id": 176,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[12]",
+      "section_position": 0.7,
+      "soma_path_distance_um": 285.1203930732282
+    },
+    {
+      "id": 177,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[44]",
+      "section_position": 0.7,
+      "soma_path_distance_um": 1254.4805532083114
+    },
+    {
+      "id": 178,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[49]",
+      "section_position": 0.21428571428571427,
+      "soma_path_distance_um": 1005.7539099274884
+    },
+    {
+      "id": 179,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[35]",
+      "section_position": 0.7,
+      "soma_path_distance_um": 457.08467273752046
+    },
+    {
+      "id": 180,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[31]",
+      "section_position": 0.7,
+      "soma_path_distance_um": 158.23198876856495
+    },
+    {
+      "id": 181,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[62]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 1115.2255114830327
+    },
+    {
+      "id": 182,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[80]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 49.07462675905946
+    },
+    {
+      "id": 183,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[14]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 199.59568829830448
+    },
+    {
+      "id": 184,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[36]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 504.154994904541
+    },
+    {
+      "id": 185,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[35]",
+      "section_position": 0.7857142857142857,
+      "soma_path_distance_um": 154.68363515271324
+    },
+    {
+      "id": 186,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[67]",
+      "section_position": 0.7,
+      "soma_path_distance_um": 144.28244000797076
+    },
+    {
+      "id": 187,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[85]",
+      "section_position": 0.3,
+      "soma_path_distance_um": 308.50042402949515
+    },
+    {
+      "id": 188,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[61]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 950.7711877220763
+    },
+    {
+      "id": 189,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[60]",
+      "section_position": 0.22727272727272727,
+      "soma_path_distance_um": 741.6994556822158
+    },
+    {
+      "id": 190,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[36]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 37.53188169015083
+    },
+    {
+      "id": 191,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[53]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 999.3393689683028
+    },
+    {
+      "id": 192,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[77]",
+      "section_position": 0.21428571428571427,
+      "soma_path_distance_um": 1160.1898406833636
+    },
+    {
+      "id": 193,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[39]",
+      "section_position": 0.3,
+      "soma_path_distance_um": 28.839062261457613
+    },
+    {
+      "id": 194,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[68]",
+      "section_position": 0.1,
+      "soma_path_distance_um": 931.6463748169915
+    },
+    {
+      "id": 195,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[14]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 129.08955063514776
+    },
+    {
+      "id": 196,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[49]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 1040.89134181093
+    },
+    {
+      "id": 197,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[40]",
+      "section_position": 0.3,
+      "soma_path_distance_um": 123.87919189949743
+    },
+    {
+      "id": 198,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[63]",
+      "section_position": 0.6111111111111112,
+      "soma_path_distance_um": 1236.1844535761663
+    },
+    {
+      "id": 199,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[40]",
+      "section_position": 0.7,
+      "soma_path_distance_um": 160.87783771457129
+    },
+    {
+      "id": 200,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[43]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 1214.5095852798288
+    },
+    {
+      "id": 201,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[101]",
+      "section_position": 0.7857142857142857,
+      "soma_path_distance_um": 274.65353007673485
+    },
+    {
+      "id": 202,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[86]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 251.29677670082174
+    },
+    {
+      "id": 203,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[30]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 348.1837080398582
+    },
+    {
+      "id": 204,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[97]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 247.22509032366764
+    },
+    {
+      "id": 205,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[41]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 115.10920627478443
+    },
+    {
+      "id": 206,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[53]",
+      "section_position": 0.2777777777777778,
+      "soma_path_distance_um": 957.0529982298244
+    },
+    {
+      "id": 207,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[75]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 1070.5211055398584
+    },
+    {
+      "id": 208,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[64]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 32.20871487493368
+    },
+    {
+      "id": 209,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[9]",
+      "section_position": 0.21428571428571427,
+      "soma_path_distance_um": 277.37265099149954
+    },
+    {
+      "id": 210,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[44]",
+      "section_position": 0.7,
+      "soma_path_distance_um": 100.21407223177435
+    },
+    {
+      "id": 211,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[14]",
+      "section_position": 0.35714285714285715,
+      "soma_path_distance_um": 110.24129496935191
+    },
+    {
+      "id": 212,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[51]",
+      "section_position": 0.7727272727272727,
+      "soma_path_distance_um": 855.2221980289141
+    },
+    {
+      "id": 213,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[29]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 57.362804460875445
+    },
+    {
+      "id": 214,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[28]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 107.61363674633458
+    },
+    {
+      "id": 215,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[37]",
+      "section_position": 0.8333333333333334,
+      "soma_path_distance_um": 146.5064624106181
+    },
+    {
+      "id": 216,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[18]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 37.90005797272839
+    },
+    {
+      "id": 217,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[60]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 805.2813389196517
+    },
+    {
+      "id": 218,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[67]",
+      "section_position": 0.7,
+      "soma_path_distance_um": 144.28244000797076
+    },
+    {
+      "id": 219,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[59]",
+      "section_position": 0.21428571428571427,
+      "soma_path_distance_um": 102.30172579777407
+    },
+    {
+      "id": 220,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[72]",
+      "section_position": 0.3888888888888889,
+      "soma_path_distance_um": 120.55640714255415
+    },
+    {
+      "id": 221,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[99]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 127.53474321407802
+    },
+    {
+      "id": 222,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[40]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 142.37851480703435
+    },
+    {
+      "id": 223,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[2]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 125.67107819383484
+    },
+    {
+      "id": 224,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[21]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 312.6528179400382
+    },
+    {
+      "id": 225,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[36]",
+      "section_position": 0.8333333333333334,
+      "soma_path_distance_um": 71.52870519354755
+    },
+    {
+      "id": 226,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[37]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 93.323621337641
+    },
+    {
+      "id": 227,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[49]",
+      "section_position": 0.6428571428571429,
+      "soma_path_distance_um": 1058.4600577526508
+    },
+    {
+      "id": 228,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[45]",
+      "section_position": 0.7857142857142857,
+      "soma_path_distance_um": 155.79666242468707
+    },
+    {
+      "id": 229,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[21]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 71.73283671693486
+    },
+    {
+      "id": 230,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[12]",
+      "section_position": 0.3,
+      "soma_path_distance_um": 237.76800696791952
+    },
+    {
+      "id": 231,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[70]",
+      "section_position": 0.3888888888888889,
+      "soma_path_distance_um": 172.93194684347995
+    },
+    {
+      "id": 232,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[33]",
+      "section_position": 0.21428571428571427,
+      "soma_path_distance_um": 343.6602449410998
+    },
+    {
+      "id": 233,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[6]",
+      "section_position": 0.35714285714285715,
+      "soma_path_distance_um": 71.80523002674852
+    },
+    {
+      "id": 234,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[6]",
+      "section_position": 0.21428571428571427,
+      "soma_path_distance_um": 52.76348930809242
+    },
+    {
+      "id": 235,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[37]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 93.323621337641
+    },
+    {
+      "id": 236,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[37]",
+      "section_position": 0.8333333333333334,
+      "soma_path_distance_um": 146.5064624106181
+    },
+    {
+      "id": 237,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[79]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 194.37240902339306
+    },
+    {
+      "id": 238,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[0]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 23.067805184264195
+    },
+    {
+      "id": 239,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[108]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 106.6023932971325
+    },
+    {
+      "id": 240,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[64]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 32.20871487493368
+    },
+    {
+      "id": 241,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[69]",
+      "section_position": 0.3,
+      "soma_path_distance_um": 134.42642315192342
+    },
+    {
+      "id": 242,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[5]",
+      "section_position": 0.6111111111111112,
+      "soma_path_distance_um": 164.87095122088942
+    },
+    {
+      "id": 243,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[2]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 125.67107819383484
+    },
+    {
+      "id": 244,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[38]",
+      "section_position": 0.1,
+      "soma_path_distance_um": 911.8597014060244
+    },
+    {
+      "id": 245,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[37]",
+      "section_position": 0.8076923076923077,
+      "soma_path_distance_um": 850.0134158767279
+    },
+    {
+      "id": 246,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[47]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 28.926547520489446
+    },
+    {
+      "id": 247,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[60]",
+      "section_position": 0.7727272727272727,
+      "soma_path_distance_um": 868.8632221570878
+    },
+    {
+      "id": 248,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].dend[55]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 50.974716559112046
+    },
+    {
+      "id": 249,
+      "kind": "exc",
+      "section": "L5PCtemplate[0].apic[13]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 279.409913343998
+    },
+    {
+      "id": 250,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[2]",
+      "section_position": 0.21428571428571427,
+      "soma_path_distance_um": 71.87972849295411
+    },
+    {
+      "id": 251,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[2]",
+      "section_position": 0.07142857142857142,
+      "soma_path_distance_um": 50.21529247441853
+    },
+    {
+      "id": 252,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[67]",
+      "section_position": 0.2777777777777778,
+      "soma_path_distance_um": 1148.9330624883612
+    },
+    {
+      "id": 253,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[70]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 1186.137439028567
+    },
+    {
+      "id": 254,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[100]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 146.62541004808963
+    },
+    {
+      "id": 255,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[105]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 116.31927652747255
+    },
+    {
+      "id": 256,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[58]",
+      "section_position": 0.9285714285714286,
+      "soma_path_distance_um": 185.37183781848302
+    },
+    {
+      "id": 257,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[48]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 1005.567413599093
+    },
+    {
+      "id": 258,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[35]",
+      "section_position": 0.7857142857142857,
+      "soma_path_distance_um": 154.68363515271324
+    },
+    {
+      "id": 259,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[51]",
+      "section_position": 0.7727272727272727,
+      "soma_path_distance_um": 855.2221980289141
+    },
+    {
+      "id": 260,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[33]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 108.80400748193654
+    },
+    {
+      "id": 261,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[36]",
+      "section_position": 0.2692307692307692,
+      "soma_path_distance_um": 447.55535234777716
+    },
+    {
+      "id": 262,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[84]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 292.2619395995019
+    },
+    {
+      "id": 263,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[48]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 58.80000945049108
+    },
+    {
+      "id": 264,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[12]",
+      "section_position": 0.9,
+      "soma_path_distance_um": 308.7965861258825
+    },
+    {
+      "id": 265,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[42]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 1209.7518142895697
+    },
+    {
+      "id": 266,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[58]",
+      "section_position": 0.6428571428571429,
+      "soma_path_distance_um": 149.69266810633582
+    },
+    {
+      "id": 267,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[95]",
+      "section_position": 0.8333333333333334,
+      "soma_path_distance_um": 252.43792876159188
+    },
+    {
+      "id": 268,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[73]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 1231.5353506427466
+    },
+    {
+      "id": 269,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[82]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 191.54068173122118
+    },
+    {
+      "id": 270,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[78]",
+      "section_position": 0.7,
+      "soma_path_distance_um": 1142.309456045548
+    },
+    {
+      "id": 271,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[70]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 133.22497822403795
+    },
+    {
+      "id": 272,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[36]",
+      "section_position": 0.5769230769230769,
+      "soma_path_distance_um": 523.0215424234623
+    },
+    {
+      "id": 273,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[72]",
+      "section_position": 0.7222222222222222,
+      "soma_path_distance_um": 187.1470382954502
+    },
+    {
+      "id": 274,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[14]",
+      "section_position": 0.7857142857142857,
+      "soma_path_distance_um": 166.78606196673942
+    },
+    {
+      "id": 275,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[19]",
+      "section_position": 0.7222222222222222,
+      "soma_path_distance_um": 389.2894549159483
+    },
+    {
+      "id": 276,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[37]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 93.323621337641
+    },
+    {
+      "id": 277,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[74]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 111.484162352645
+    },
+    {
+      "id": 278,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[74]",
+      "section_position": 0.1,
+      "soma_path_distance_um": 67.28547907193476
+    },
+    {
+      "id": 279,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[40]",
+      "section_position": 0.7727272727272727,
+      "soma_path_distance_um": 1148.8703820877765
+    },
+    {
+      "id": 280,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[61]",
+      "section_position": 0.1,
+      "soma_path_distance_um": 118.57516345842417
+    },
+    {
+      "id": 281,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[37]",
+      "section_position": 0.4230769230769231,
+      "soma_path_distance_um": 743.7153863056809
+    },
+    {
+      "id": 282,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[82]",
+      "section_position": 0.35714285714285715,
+      "soma_path_distance_um": 90.40219026402741
+    },
+    {
+      "id": 283,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[6]",
+      "section_position": 0.6428571428571429,
+      "soma_path_distance_um": 109.88871146406075
+    },
+    {
+      "id": 284,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[44]",
+      "section_position": 0.7,
+      "soma_path_distance_um": 100.21407223177435
+    },
+    {
+      "id": 285,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[51]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 62.72694017855532
+    },
+    {
+      "id": 286,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[17]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 371.6867643809264
+    },
+    {
+      "id": 287,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[105]",
+      "section_position": 0.7,
+      "soma_path_distance_um": 135.0550346592369
+    },
+    {
+      "id": 288,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[28]",
+      "section_position": 0.6111111111111112,
+      "soma_path_distance_um": 185.50334771529975
+    },
+    {
+      "id": 289,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[17]",
+      "section_position": 0.2777777777777778,
+      "soma_path_distance_um": 332.62837617335435
+    },
+    {
+      "id": 290,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[10]",
+      "section_position": 0.8333333333333334,
+      "soma_path_distance_um": 102.22766366291245
+    },
+    {
+      "id": 291,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[31]",
+      "section_position": 0.1,
+      "soma_path_distance_um": 102.20982565494441
+    },
+    {
+      "id": 292,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[68]",
+      "section_position": 0.3,
+      "soma_path_distance_um": 951.2428747410728
+    },
+    {
+      "id": 293,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[59]",
+      "section_position": 0.35714285714285715,
+      "soma_path_distance_um": 124.22651882695367
+    },
+    {
+      "id": 294,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[36]",
+      "section_position": 0.34615384615384615,
+      "soma_path_distance_um": 466.4218998666984
+    },
+    {
+      "id": 295,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[56]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 79.64309539342642
+    },
+    {
+      "id": 296,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[5]",
+      "section_position": 0.2777777777777778,
+      "soma_path_distance_um": 100.48972784888049
+    },
+    {
+      "id": 297,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[42]",
+      "section_position": 0.8333333333333334,
+      "soma_path_distance_um": 1239.5981107117964
+    },
+    {
+      "id": 298,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[33]",
+      "section_position": 0.21428571428571427,
+      "soma_path_distance_um": 343.6602449410998
+    },
+    {
+      "id": 299,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[18]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 338.7640336085937
+    },
+    {
+      "id": 300,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[49]",
+      "section_position": 0.6428571428571429,
+      "soma_path_distance_um": 1058.4600577526508
+    },
+    {
+      "id": 301,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[59]",
+      "section_position": 0.6428571428571429,
+      "soma_path_distance_um": 168.07610488531287
+    },
+    {
+      "id": 302,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[68]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 53.56659445514235
+    },
+    {
+      "id": 303,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[82]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 109.76665111844841
+    },
+    {
+      "id": 304,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[44]",
+      "section_position": 0.7,
+      "soma_path_distance_um": 100.21407223177435
+    },
+    {
+      "id": 305,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[67]",
+      "section_position": 0.7222222222222222,
+      "soma_path_distance_um": 1234.6075591774136
+    },
+    {
+      "id": 306,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[22]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 342.67522499125874
+    },
+    {
+      "id": 307,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[69]",
+      "section_position": 0.7857142857142857,
+      "soma_path_distance_um": 1131.7457236091727
+    },
+    {
+      "id": 308,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[82]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 191.54068173122118
+    },
+    {
+      "id": 309,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[52]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 961.1531408358512
+    },
+    {
+      "id": 310,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[60]",
+      "section_position": 0.13636363636363635,
+      "soma_path_distance_um": 720.5054946030705
+    },
+    {
+      "id": 311,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[14]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 221.12922338220824
+    },
+    {
+      "id": 312,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[61]",
+      "section_position": 0.7222222222222222,
+      "soma_path_distance_um": 1047.181397279161
+    },
+    {
+      "id": 313,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[19]",
+      "section_position": 0.2777777777777778,
+      "soma_path_distance_um": 315.504747696643
+    },
+    {
+      "id": 314,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[51]",
+      "section_position": 0.8333333333333334,
+      "soma_path_distance_um": 82.61164628632835
+    },
+    {
+      "id": 315,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[52]",
+      "section_position": 0.7,
+      "soma_path_distance_um": 983.936383247501
+    },
+    {
+      "id": 316,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[6]",
+      "section_position": 0.35714285714285715,
+      "soma_path_distance_um": 71.80523002674852
+    },
+    {
+      "id": 317,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[36]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 504.154994904541
+    },
+    {
+      "id": 318,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[101]",
+      "section_position": 0.35714285714285715,
+      "soma_path_distance_um": 206.34249908110985
+    },
+    {
+      "id": 319,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[53]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 999.3393689683028
+    },
+    {
+      "id": 320,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[105]",
+      "section_position": 0.7,
+      "soma_path_distance_um": 135.0550346592369
+    },
+    {
+      "id": 321,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[96]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 225.32479007165313
+    },
+    {
+      "id": 322,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[5]",
+      "section_position": 0.8333333333333334,
+      "soma_path_distance_um": 207.79176680222872
+    },
+    {
+      "id": 323,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[44]",
+      "section_position": 0.1,
+      "soma_path_distance_um": 1203.9748377909941
+    },
+    {
+      "id": 324,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[2]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 115.20860053002528
+    },
+    {
+      "id": 325,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[63]",
+      "section_position": 0.2777777777777778,
+      "soma_path_distance_um": 1181.0281266664551
+    },
+    {
+      "id": 326,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[68]",
+      "section_position": 0.8333333333333334,
+      "soma_path_distance_um": 93.46912029859365
+    },
+    {
+      "id": 327,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[42]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 1224.674962500683
+    },
+    {
+      "id": 328,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[65]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 1244.5424593266582
+    },
+    {
+      "id": 329,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[2]",
+      "section_position": 0.6428571428571429,
+      "soma_path_distance_um": 136.87303654856086
+    },
+    {
+      "id": 330,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[37]",
+      "section_position": 0.34615384615384615,
+      "soma_path_distance_um": 722.4557803914715
+    },
+    {
+      "id": 331,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[82]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 109.76665111844841
+    },
+    {
+      "id": 332,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[35]",
+      "section_position": 0.3,
+      "soma_path_distance_um": 413.90625176268173
+    },
+    {
+      "id": 333,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[14]",
+      "section_position": 0.8333333333333334,
+      "soma_path_distance_um": 242.662758466112
+    },
+    {
+      "id": 334,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[40]",
+      "section_position": 0.5909090909090909,
+      "soma_path_distance_um": 1111.5209129141779
+    },
+    {
+      "id": 335,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[2]",
+      "section_position": 0.9285714285714286,
+      "soma_path_distance_um": 180.201908585632
+    },
+    {
+      "id": 336,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[40]",
+      "section_position": 0.3,
+      "soma_path_distance_um": 123.87919189949743
+    },
+    {
+      "id": 337,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[37]",
+      "section_position": 0.8846153846153846,
+      "soma_path_distance_um": 871.2730217909373
+    },
+    {
+      "id": 338,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[105]",
+      "section_position": 0.9,
+      "soma_path_distance_um": 153.79079279100125
+    },
+    {
+      "id": 339,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[19]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 352.3971013062956
+    },
+    {
+      "id": 340,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[86]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 251.29677670082174
+    },
+    {
+      "id": 341,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[49]",
+      "section_position": 0.7857142857142857,
+      "soma_path_distance_um": 1076.0287736943717
+    },
+    {
+      "id": 342,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[62]",
+      "section_position": 0.1,
+      "soma_path_distance_um": 119.95741682616477
+    },
+    {
+      "id": 343,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[93]",
+      "section_position": 0.1,
+      "soma_path_distance_um": 198.87706606116615
+    },
+    {
+      "id": 344,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[10]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 55.32631133749281
+    },
+    {
+      "id": 345,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[61]",
+      "section_position": 0.7222222222222222,
+      "soma_path_distance_um": 1047.181397279161
+    },
+    {
+      "id": 346,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[31]",
+      "section_position": 0.9,
+      "soma_path_distance_um": 176.90604313977178
+    },
+    {
+      "id": 347,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[61]",
+      "section_position": 0.7,
+      "soma_path_distance_um": 171.83904321420079
+    },
+    {
+      "id": 348,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[0]",
+      "section_position": 0.8333333333333334,
+      "soma_path_distance_um": 38.44634197377366
+    },
+    {
+      "id": 349,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[72]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 76.16265304062347
+    },
+    {
+      "id": 350,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[51]",
+      "section_position": 0.13636363636363635,
+      "soma_path_distance_um": 718.0982550510398
+    },
+    {
+      "id": 351,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[39]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 1014.6047444290225
+    },
+    {
+      "id": 352,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[19]",
+      "section_position": 0.8333333333333334,
+      "soma_path_distance_um": 407.7356317207746
+    },
+    {
+      "id": 353,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[9]",
+      "section_position": 0.6428571428571429,
+      "soma_path_distance_um": 345.3432287580049
+    },
+    {
+      "id": 354,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[67]",
+      "section_position": 0.7222222222222222,
+      "soma_path_distance_um": 1234.6075591774136
+    },
+    {
+      "id": 355,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[54]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 102.86625428968013
+    },
+    {
+      "id": 356,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[103]",
+      "section_position": 0.3,
+      "soma_path_distance_um": 168.85787607338563
+    },
+    {
+      "id": 357,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[101]",
+      "section_position": 0.7857142857142857,
+      "soma_path_distance_um": 274.65353007673485
+    },
+    {
+      "id": 358,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[73]",
+      "section_position": 0.8333333333333334,
+      "soma_path_distance_um": 1277.6358290325768
+    },
+    {
+      "id": 359,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[28]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 107.61363674633458
+    },
+    {
+      "id": 360,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[79]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 194.37240902339306
+    },
+    {
+      "id": 361,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[5]",
+      "section_position": 0.7222222222222222,
+      "soma_path_distance_um": 186.33135901155904
+    },
+    {
+      "id": 362,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[17]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 371.6867643809264
+    },
+    {
+      "id": 363,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[63]",
+      "section_position": 0.7222222222222222,
+      "soma_path_distance_um": 1254.5698958794035
+    },
+    {
+      "id": 364,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[20]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 276.4059137702009
+    },
+    {
+      "id": 365,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[60]",
+      "section_position": 0.4090909090909091,
+      "soma_path_distance_um": 784.0873778405064
+    },
+    {
+      "id": 366,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[40]",
+      "section_position": 0.5909090909090909,
+      "soma_path_distance_um": 1111.5209129141779
+    },
+    {
+      "id": 367,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[90]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 221.0116992456999
+    },
+    {
+      "id": 368,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[43]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 27.65218399499961
+    },
+    {
+      "id": 369,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[102]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 179.3326025306697
+    },
+    {
+      "id": 370,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[60]",
+      "section_position": 0.3181818181818182,
+      "soma_path_distance_um": 762.8934167613611
+    },
+    {
+      "id": 371,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[72]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 1237.7036091752939
+    },
+    {
+      "id": 372,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[26]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 62.20015719216611
+    },
+    {
+      "id": 373,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[67]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 1191.7703108328874
+    },
+    {
+      "id": 374,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[76]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 1198.5758004491242
+    },
+    {
+      "id": 375,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[75]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 1070.5211055398584
+    },
+    {
+      "id": 376,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[105]",
+      "section_position": 0.7,
+      "soma_path_distance_um": 135.0550346592369
+    },
+    {
+      "id": 377,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[25]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 344.75225176959987
+    },
+    {
+      "id": 378,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[69]",
+      "section_position": 0.6428571428571429,
+      "soma_path_distance_um": 1111.3975237666607
+    },
+    {
+      "id": 379,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[59]",
+      "section_position": 0.7857142857142857,
+      "soma_path_distance_um": 190.00089791449244
+    },
+    {
+      "id": 380,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[93]",
+      "section_position": 0.7,
+      "soma_path_distance_um": 261.90228906755715
+    },
+    {
+      "id": 381,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[63]",
+      "section_position": 0.8333333333333334,
+      "soma_path_distance_um": 1272.9553381826406
+    },
+    {
+      "id": 382,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[87]",
+      "section_position": 0.7857142857142857,
+      "soma_path_distance_um": 293.72511049654685
+    },
+    {
+      "id": 383,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[5]",
+      "section_position": 0.05555555555555555,
+      "soma_path_distance_um": 57.56891226754121
+    },
+    {
+      "id": 384,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[53]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 999.3393689683028
+    },
+    {
+      "id": 385,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[2]",
+      "section_position": 0.21428571428571427,
+      "soma_path_distance_um": 71.87972849295411
+    },
+    {
+      "id": 386,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[102]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 239.1645277558311
+    },
+    {
+      "id": 387,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[40]",
+      "section_position": 0.8636363636363636,
+      "soma_path_distance_um": 1167.5451166745759
+    },
+    {
+      "id": 388,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[52]",
+      "section_position": 0.9,
+      "soma_path_distance_um": 1006.719625659151
+    },
+    {
+      "id": 389,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[29]",
+      "section_position": 0.8333333333333334,
+      "soma_path_distance_um": 401.37191514036016
+    },
+    {
+      "id": 390,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[73]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 1231.5353506427466
+    },
+    {
+      "id": 391,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[66]",
+      "section_position": 0.7857142857142857,
+      "soma_path_distance_um": 177.47428123520834
+    },
+    {
+      "id": 392,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[91]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 222.80277498993877
+    },
+    {
+      "id": 393,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[31]",
+      "section_position": 0.3,
+      "soma_path_distance_um": 120.88388002615125
+    },
+    {
+      "id": 394,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[68]",
+      "section_position": 0.8333333333333334,
+      "soma_path_distance_um": 93.46912029859365
+    },
+    {
+      "id": 395,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[78]",
+      "section_position": 0.7,
+      "soma_path_distance_um": 1142.309456045548
+    },
+    {
+      "id": 396,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[2]",
+      "section_position": 0.9285714285714286,
+      "soma_path_distance_um": 180.201908585632
+    },
+    {
+      "id": 397,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[68]",
+      "section_position": 0.9,
+      "soma_path_distance_um": 1010.0323745133164
+    },
+    {
+      "id": 398,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[19]",
+      "section_position": 0.8333333333333334,
+      "soma_path_distance_um": 407.7356317207746
+    },
+    {
+      "id": 399,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[58]",
+      "section_position": 0.6428571428571429,
+      "soma_path_distance_um": 149.69266810633582
+    },
+    {
+      "id": 400,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[57]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 1102.1564599679584
+    },
+    {
+      "id": 401,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[19]",
+      "section_position": 0.3888888888888889,
+      "soma_path_distance_um": 333.9509245014693
+    },
+    {
+      "id": 402,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[95]",
+      "section_position": 0.8333333333333334,
+      "soma_path_distance_um": 252.43792876159188
+    },
+    {
+      "id": 403,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[103]",
+      "section_position": 0.9,
+      "soma_path_distance_um": 218.9052678639763
+    },
+    {
+      "id": 404,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[17]",
+      "section_position": 0.7222222222222222,
+      "soma_path_distance_um": 410.74515258849834
+    },
+    {
+      "id": 405,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[27]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 112.71105609621208
+    },
+    {
+      "id": 406,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[51]",
+      "section_position": 0.8636363636363636,
+      "soma_path_distance_um": 874.811332740039
+    },
+    {
+      "id": 407,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[31]",
+      "section_position": 0.9,
+      "soma_path_distance_um": 176.90604313977178
+    },
+    {
+      "id": 408,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[64]",
+      "section_position": 0.7,
+      "soma_path_distance_um": 1205.969060569248
+    },
+    {
+      "id": 409,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[30]",
+      "section_position": 0.8333333333333334,
+      "soma_path_distance_um": 398.14375136306074
+    },
+    {
+      "id": 410,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[48]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 1005.567413599093
+    },
+    {
+      "id": 411,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[61]",
+      "section_position": 0.7222222222222222,
+      "soma_path_distance_um": 1047.181397279161
+    },
+    {
+      "id": 412,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[12]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 49.16902792838451
+    },
+    {
+      "id": 413,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[74]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 1039.2178944740972
+    },
+    {
+      "id": 414,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[37]",
+      "section_position": 0.6538461538461539,
+      "soma_path_distance_um": 807.494204048309
+    },
+    {
+      "id": 415,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[86]",
+      "section_position": 0.7,
+      "soma_path_distance_um": 268.375618131959
+    },
+    {
+      "id": 416,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[19]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 72.50044089859955
+    },
+    {
+      "id": 417,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[6]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 206.28415185852083
+    },
+    {
+      "id": 418,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[1]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 31.7919763476295
+    },
+    {
+      "id": 419,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[64]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 1185.7106206661379
+    },
+    {
+      "id": 420,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[84]",
+      "section_position": 0.8333333333333334,
+      "soma_path_distance_um": 324.692744909654
+    },
+    {
+      "id": 421,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[44]",
+      "section_position": 0.9,
+      "soma_path_distance_um": 1271.3157916807506
+    },
+    {
+      "id": 422,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[96]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 225.32479007165313
+    },
+    {
+      "id": 423,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[2]",
+      "section_position": 0.35714285714285715,
+      "soma_path_distance_um": 93.5441645114897
+    },
+    {
+      "id": 424,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[17]",
+      "section_position": 0.6111111111111112,
+      "soma_path_distance_um": 391.2159584847124
+    },
+    {
+      "id": 425,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[44]",
+      "section_position": 0.7,
+      "soma_path_distance_um": 100.21407223177435
+    },
+    {
+      "id": 426,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[73]",
+      "section_position": 0.8333333333333334,
+      "soma_path_distance_um": 1277.6358290325768
+    },
+    {
+      "id": 427,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[76]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 1198.5758004491242
+    },
+    {
+      "id": 428,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[63]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 1217.7990112729292
+    },
+    {
+      "id": 429,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[79]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 220.33120192433705
+    },
+    {
+      "id": 430,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[10]",
+      "section_position": 0.7,
+      "soma_path_distance_um": 271.36262574141193
+    },
+    {
+      "id": 431,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[52]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 961.1531408358512
+    },
+    {
+      "id": 432,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[19]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 352.3971013062956
+    },
+    {
+      "id": 433,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[64]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 32.20871487493368
+    },
+    {
+      "id": 434,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[64]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 1185.7106206661379
+    },
+    {
+      "id": 435,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[64]",
+      "section_position": 0.3,
+      "soma_path_distance_um": 1165.4521807630276
+    },
+    {
+      "id": 436,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[21]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 312.6528179400382
+    },
+    {
+      "id": 437,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[45]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 941.2816333385792
+    },
+    {
+      "id": 438,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[60]",
+      "section_position": 0.7727272727272727,
+      "soma_path_distance_um": 868.8632221570878
+    },
+    {
+      "id": 439,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[105]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 116.31927652747255
+    },
+    {
+      "id": 440,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[38]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 91.1891722914988
+    },
+    {
+      "id": 441,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[66]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 1249.4061499971995
+    },
+    {
+      "id": 442,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[25]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 31.969928975225947
+    },
+    {
+      "id": 443,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[76]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 1198.5758004491242
+    },
+    {
+      "id": 444,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[80]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 49.07462675905946
+    },
+    {
+      "id": 445,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[49]",
+      "section_position": 0.35714285714285715,
+      "soma_path_distance_um": 1023.3226258692093
+    },
+    {
+      "id": 446,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[102]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 239.1645277558311
+    },
+    {
+      "id": 447,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[61]",
+      "section_position": 0.2777777777777778,
+      "soma_path_distance_um": 970.0532296334934
+    },
+    {
+      "id": 448,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[59]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 146.15131185613325
+    },
+    {
+      "id": 449,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[69]",
+      "section_position": 0.6428571428571429,
+      "soma_path_distance_um": 1111.3975237666607
+    },
+    {
+      "id": 450,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[18]",
+      "section_position": 0.9,
+      "soma_path_distance_um": 382.7309477643572
+    },
+    {
+      "id": 451,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[40]",
+      "section_position": 0.8636363636363636,
+      "soma_path_distance_um": 1167.5451166745759
+    },
+    {
+      "id": 452,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[40]",
+      "section_position": 0.4090909090909091,
+      "soma_path_distance_um": 1074.1714437405794
+    },
+    {
+      "id": 453,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[105]",
+      "section_position": 0.7,
+      "soma_path_distance_um": 135.0550346592369
+    },
+    {
+      "id": 454,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[2]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 125.67107819383484
+    },
+    {
+      "id": 455,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[25]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 31.969928975225947
+    },
+    {
+      "id": 456,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[1]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 78.68545830929705
+    },
+    {
+      "id": 457,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[8]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 263.8925450646383
+    },
+    {
+      "id": 458,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[70]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 133.22497822403795
+    },
+    {
+      "id": 459,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[5]",
+      "section_position": 0.6111111111111112,
+      "soma_path_distance_um": 164.87095122088942
+    },
+    {
+      "id": 460,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[17]",
+      "section_position": 0.7222222222222222,
+      "soma_path_distance_um": 410.74515258849834
+    },
+    {
+      "id": 461,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[108]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 106.6023932971325
+    },
+    {
+      "id": 462,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[75]",
+      "section_position": 0.8333333333333334,
+      "soma_path_distance_um": 1118.1848698079411
+    },
+    {
+      "id": 463,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[63]",
+      "section_position": 0.6111111111111112,
+      "soma_path_distance_um": 1236.1844535761663
+    },
+    {
+      "id": 464,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[5]",
+      "section_position": 0.7222222222222222,
+      "soma_path_distance_um": 186.33135901155904
+    },
+    {
+      "id": 465,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[70]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 133.22497822403795
+    },
+    {
+      "id": 466,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[35]",
+      "section_position": 0.7,
+      "soma_path_distance_um": 457.08467273752046
+    },
+    {
+      "id": 467,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[9]",
+      "section_position": 0.21428571428571427,
+      "soma_path_distance_um": 277.37265099149954
+    },
+    {
+      "id": 468,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[78]",
+      "section_position": 0.9,
+      "soma_path_distance_um": 1166.224967923465
+    },
+    {
+      "id": 469,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[19]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 352.3971013062956
+    },
+    {
+      "id": 470,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[53]",
+      "section_position": 0.3888888888888889,
+      "soma_path_distance_um": 978.1961835990635
+    },
+    {
+      "id": 471,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[8]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 250.2224230937107
+    },
+    {
+      "id": 472,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[10]",
+      "section_position": 0.7,
+      "soma_path_distance_um": 271.36262574141193
+    },
+    {
+      "id": 473,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[6]",
+      "section_position": 0.35714285714285715,
+      "soma_path_distance_um": 71.80523002674852
+    },
+    {
+      "id": 474,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[18]",
+      "section_position": 0.1,
+      "soma_path_distance_um": 294.79711945283026
+    },
+    {
+      "id": 475,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[53]",
+      "section_position": 0.3888888888888889,
+      "soma_path_distance_um": 978.1961835990635
+    },
+    {
+      "id": 476,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[70]",
+      "section_position": 0.7222222222222222,
+      "soma_path_distance_um": 232.4923997726429
+    },
+    {
+      "id": 477,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[44]",
+      "section_position": 0.9,
+      "soma_path_distance_um": 117.3596451065944
+    },
+    {
+      "id": 478,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[101]",
+      "section_position": 0.6428571428571429,
+      "soma_path_distance_um": 251.88318641152654
+    },
+    {
+      "id": 479,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[1]",
+      "section_position": 0.8333333333333334,
+      "soma_path_distance_um": 100.38535693647617
+    },
+    {
+      "id": 480,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[93]",
+      "section_position": 0.3,
+      "soma_path_distance_um": 219.88547372996317
+    },
+    {
+      "id": 481,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[2]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 125.67107819383484
+    },
+    {
+      "id": 482,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[43]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 27.65218399499961
+    },
+    {
+      "id": 483,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[60]",
+      "section_position": 0.5909090909090909,
+      "soma_path_distance_um": 826.475299998797
+    },
+    {
+      "id": 484,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[73]",
+      "section_position": 0.8333333333333334,
+      "soma_path_distance_um": 1277.6358290325768
+    },
+    {
+      "id": 485,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[7]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 228.62456483452667
+    },
+    {
+      "id": 486,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[51]",
+      "section_position": 0.8333333333333334,
+      "soma_path_distance_um": 82.61164628632835
+    },
+    {
+      "id": 487,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[80]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 150.8393946264676
+    },
+    {
+      "id": 488,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[68]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 53.56659445514235
+    },
+    {
+      "id": 489,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[76]",
+      "section_position": 0.16666666666666666,
+      "soma_path_distance_um": 91.84036588835127
+    },
+    {
+      "id": 490,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[66]",
+      "section_position": 0.7857142857142857,
+      "soma_path_distance_um": 177.47428123520834
+    },
+    {
+      "id": 491,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[62]",
+      "section_position": 0.3,
+      "soma_path_distance_um": 140.47655014690483
+    },
+    {
+      "id": 492,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[82]",
+      "section_position": 0.35714285714285715,
+      "soma_path_distance_um": 90.40219026402741
+    },
+    {
+      "id": 493,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[66]",
+      "section_position": 0.07142857142857142,
+      "soma_path_distance_um": 79.0987219129348
+    },
+    {
+      "id": 494,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[93]",
+      "section_position": 0.7,
+      "soma_path_distance_um": 261.90228906755715
+    },
+    {
+      "id": 495,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[2]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 125.67107819383484
+    },
+    {
+      "id": 496,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].dend[36]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 54.53029344184919
+    },
+    {
+      "id": 497,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[60]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 805.2813389196517
+    },
+    {
+      "id": 498,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[36]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 504.154994904541
+    },
+    {
+      "id": 499,
+      "kind": "inh",
+      "section": "L5PCtemplate[0].apic[23]",
+      "section_position": 0.5,
+      "soma_path_distance_um": 371.8791591875238
+    }
+  ]
+}

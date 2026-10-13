@@ -1,0 +1,293 @@
+{
+  "finished": true,
+  "created": "2026-10-09T17:38:56+0800",
+  "case_id": "confirmatory_0143",
+  "engine": "multisplit",
+  "threads": 8,
+  "dt_ms": 0.5,
+  "A": 500,
+  "duration_ms": 8000.0,
+  "site_mode": "all",
+  "rate_hz": 50.0,
+  "input_events": 199730,
+  "input_sha256": "8870f4a9b5c2ad57e026dc01cab430e5155db5e0334f1b84a3c1d702a261ee06",
+  "ids_sha256": "2253930180b5ae89248437a25b4c5ffeef3028bc8b3afb41da441cdbed841c56",
+  "spike_count": 1,
+  "spike_times_ms": [
+    2265.0000000001
+  ],
+  "timing": {
+    "warmup_ms": {
+      "median_ms": 135.30191779136658,
+      "mean_ms": 136.0160211722056,
+      "std_ms": 1.7998060100978084,
+      "runs_ms": [
+        138.06329295039177,
+        135.30191779136658,
+        134.68285277485847
+      ],
+      "n": 3
+    },
+    "schedule_ms": {
+      "median_ms": 225.63235089182854,
+      "mean_ms": 227.0804519454638,
+      "std_ms": 2.7118787146094836,
+      "runs_ms": [
+        230.20898550748825,
+        225.40001943707466,
+        225.63235089182854
+      ],
+      "n": 3
+    },
+    "solver_ms": {
+      "median_ms": 1677.4876490235329,
+      "mean_ms": 1674.277185772856,
+      "std_ms": 15.372539928008475,
+      "runs_ms": [
+        1677.4876490235329,
+        1657.5529370456934,
+        1687.790971249342
+      ],
+      "n": 3
+    },
+    "output_ms": {
+      "median_ms": 0.39923377335071564,
+      "mean_ms": 0.5462920914093653,
+      "std_ms": 0.2555727418670209,
+      "runs_ms": [
+        0.8414015173912048,
+        0.39923377335071564,
+        0.39824098348617554
+      ],
+      "n": 3
+    },
+    "steady_ms": {
+      "median_ms": 1678.329050540924,
+      "mean_ms": 1674.8234778642654,
+      "std_ms": 15.420325813945187,
+      "runs_ms": [
+        1678.329050540924,
+        1657.952170819044,
+        1688.1892122328281
+      ],
+      "n": 3
+    },
+    "full_ms": {
+      "median_ms": 2046.609591692686,
+      "mean_ms": 2037.9286967217922,
+      "std_ms": 16.711548019825766,
+      "runs_ms": [
+        2046.609591692686,
+        2018.663190305233,
+        2048.5133081674576
+      ],
+      "n": 3
+    },
+    "solver_cpu_ms": {
+      "median_ms": 8334.38376600003,
+      "mean_ms": 8323.918708666688,
+      "std_ms": 107.15083342466924,
+      "runs_ms": [
+        8334.38376600003,
+        8211.919317000025,
+        8425.453043000005
+      ],
+      "n": 3
+    }
+  },
+  "repeats": [
+    {
+      "warmup_ms": 138.06329295039177,
+      "schedule_ms": 230.20898550748825,
+      "solver_ms": 1677.4876490235329,
+      "output_ms": 0.8414015173912048,
+      "steady_ms": 1678.329050540924,
+      "full_ms": 2046.609591692686,
+      "solver_cpu_ms": 8334.38376600003,
+      "spike_times_ms": [
+        2265.0000000001
+      ],
+      "loadavg": [
+        31.56,
+        18.96,
+        15.43
+      ],
+      "thread_integration_seconds": [
+        0.7609443664550781,
+        0.8864238262176514,
+        0.96494460105896,
+        0.9719738960266113,
+        0.9823880195617676,
+        1.0001213550567627,
+        1.0272645950317383,
+        1.0017387866973877
+      ]
+    },
+    {
+      "warmup_ms": 135.30191779136658,
+      "schedule_ms": 225.40001943707466,
+      "solver_ms": 1657.5529370456934,
+      "output_ms": 0.39923377335071564,
+      "steady_ms": 1657.952170819044,
+      "full_ms": 2018.663190305233,
+      "solver_cpu_ms": 8211.919317000025,
+      "spike_times_ms": [
+        2265.0000000001
+      ],
+      "loadavg": [
+        31.56,
+        18.96,
+        15.43
+      ],
+      "thread_integration_seconds": [
+        0.7698986530303955,
+        0.8793797492980957,
+        0.9544601440429688,
+        0.9422252178192139,
+        0.9760801792144775,
+        0.9665958881378174,
+        1.0085294246673584,
+        0.9653480052947998
+      ]
+    },
+    {
+      "warmup_ms": 134.68285277485847,
+      "schedule_ms": 225.63235089182854,
+      "solver_ms": 1687.790971249342,
+      "output_ms": 0.39824098348617554,
+      "steady_ms": 1688.1892122328281,
+      "full_ms": 2048.5133081674576,
+      "solver_cpu_ms": 8425.453043000005,
+      "spike_times_ms": [
+        2265.0000000001
+      ],
+      "loadavg": [
+        31.56,
+        18.96,
+        15.43
+      ],
+      "thread_integration_seconds": [
+        0.775399923324585,
+        0.8874070644378662,
+        0.979403018951416,
+        0.9810278415679932,
+        1.0032157897949219,
+        0.9878008365631104,
+        1.0465502738952637,
+        1.0124878883361816
+      ]
+    }
+  ],
+  "validation": {
+    "against": "original expanded NEURON single-thread at identical dt",
+    "voltage_rmse_mv": 0.0,
+    "voltage_max_abs_mv": 0.0,
+    "event_times_equal_at_1e_5_ms": true,
+    "previous_spike_times_ms": [
+      2265.0000000001
+    ],
+    "repeat_voltage_max_abs_mv": 0.0,
+    "passed": true
+  },
+  "runtime": {
+    "neuron": "9.0.2",
+    "neuron_build": "cmake option default differences: 'NRN_ENABLE_CORENEURON=ON' 'NRN_ENABLE_PYTHON_DYNAMIC=ON' 'NRN_LINK_AGAINST_PYTHON=OFF' 'NRN_ENABLE_MPI_DYNAMIC=ON' 'NRN_MPI_DYNAMIC=/usr/include/openmpi-x86_64;/usr/include/mpich-x86_64' 'NRN_RX3D_OPT_LEVEL=1' 'CMAKE_BUILD_TYPE=Release' 'CMAKE_INSTALL_PREFIX=/tmp/tmpot7w3zjj/wheel/platlib' 'CMAKE_C_COMPILER=/opt/rh/gcc-toolset-10/root/usr/bin/gcc' 'CMAKE_CXX_COMPILER=/opt/rh/gcc-toolset-10/root/usr/bin/g++' 'PYTHON_EXECUTABLE=/tmp/build-env-ciooowse/bin/python' 'CORENRN_ENABLE_GPU=OFF' 'CORENRN_ENABLE_SHARED=ON'",
+    "model": {
+      "root": "/home/lcm/DBNN_L5PC_surrogate_20260928/source/ShaiEtAl2015",
+      "biophys_file": "L5PCbiophys5.hoc",
+      "morphology_file": "cell1.asc",
+      "num_synapses": 500,
+      "duration_ms": 16000.0,
+      "warmup_ms": 500.0,
+      "dt": 0.5,
+      "sample_interval_ms": 1.0,
+      "input_rate_hz": 50.0,
+      "exc_weight": 0.000188,
+      "inh_weight": 8e-05,
+      "exc_tau1_ms": 0.5,
+      "exc_tau2_ms": 5.0,
+      "inh_tau1_ms": 1.0,
+      "inh_tau2_ms": 10.0,
+      "inh_reversal_mv": -80.0,
+      "v_init": -75.0,
+      "spike_threshold": -20.0,
+      "seed": 20260425
+    },
+    "sections": 196,
+    "compartments": 642,
+    "actual_threads": 8,
+    "thread_busywait": 0,
+    "event_detector_metadata_delay_ms": 10.0,
+    "affinity": [
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39
+    ],
+    "physical_cores": [
+      {
+        "cpu": 32,
+        "core": 24,
+        "socket": 0,
+        "siblings": "32,160"
+      },
+      {
+        "cpu": 33,
+        "core": 25,
+        "socket": 0,
+        "siblings": "33,161"
+      },
+      {
+        "cpu": 34,
+        "core": 26,
+        "socket": 0,
+        "siblings": "34,162"
+      },
+      {
+        "cpu": 35,
+        "core": 27,
+        "socket": 0,
+        "siblings": "35,163"
+      },
+      {
+        "cpu": 36,
+        "core": 28,
+        "socket": 0,
+        "siblings": "36,164"
+      },
+      {
+        "cpu": 37,
+        "core": 29,
+        "socket": 0,
+        "siblings": "37,165"
+      },
+      {
+        "cpu": 38,
+        "core": 30,
+        "socket": 0,
+        "siblings": "38,166"
+      },
+      {
+        "cpu": 39,
+        "core": 31,
+        "socket": 0,
+        "siblings": "39,167"
+      }
+    ],
+    "model_preparation_ms": 277.71448343992233,
+    "source_script_sha256": "a228f4f59e59e1ebc269c0428848bea4f1c5c74e4b3e2f578282f68186d79efa",
+    "input_protocol": "only manifest events; dormant zero-weight NetStims removed",
+    "resources": "shared server; disjoint physical cores, no exclusive reservation",
+    "multisplit": {
+      "pieces": 46.0,
+      "estimated_load_balance": 1.0114942528735633
+    }
+  },
+  "source_script_sha256": "a228f4f59e59e1ebc269c0428848bea4f1c5c74e4b3e2f578282f68186d79efa",
+  "voltage_file": "nt8_dt0.5_confirmatory_0143.npz",
+  "timer_scope": "steady_ms=solver+recording+1ms-grid interpolation; initialization, 500ms warmup, scheduling and model build separate"
+}
