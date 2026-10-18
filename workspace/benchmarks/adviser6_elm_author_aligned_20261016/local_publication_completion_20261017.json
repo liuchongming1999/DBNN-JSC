@@ -1,0 +1,42 @@
+{
+  "status": "manuscript_and_html_updated_and_verified",
+  "finished": true,
+  "completion": {
+    "finished": true,
+    "completed_at": "2026-10-17T21:51:18.767450+08:00",
+    "pdf": "/Users/lcmsjtu/Desktop/\u535a\u58eb\u6bd5\u4e1a/DBNN/JSC_\u6295\u7a3f\u51c6\u5907/manuscript_draft_v1_20261010/main.pdf",
+    "pdf_sha256": "cbc75eec5d5ceb67483d48ff9093d2edbfc08a2e49f1dfa0130cdafbb684430d",
+    "source_archive": "/Users/lcmsjtu/Desktop/\u535a\u58eb\u6bd5\u4e1a/DBNN/JSC_\u6295\u7a3f\u51c6\u5907/DBNN_JSC_\u521d\u7a3f_v1_20261010_\u6e90\u7801.zip",
+    "source_archive_sha256": "90c63f85a9995d74cfc96cf627cdf6a1e839654ffb8400c6cb71a0e885c5cafa",
+    "html": "/Users/lcmsjtu/Desktop/\u535a\u58eb\u6bd5\u4e1a/DBNN/DBNN_L5PC_surrogate_report_20260928.html",
+    "independent_report": "/Users/lcmsjtu/Desktop/\u535a\u58eb\u6bd5\u4e1a/DBNN/DBNN_\u5bf9\u7167\u4fee\u6b63\u6267\u884c\u8bb0\u5f55_20261016/ready_evidence_20261017/DBNN_\u5bf9\u7167\u4fee\u6b63\u6700\u7ec8\u7ed3\u679c_20261017.html",
+    "primary_inputs": 379,
+    "reference_events": 680,
+    "elm_updates": 350000,
+    "models": {
+      "gpu": {
+        "rmse_mv": 0.4403635862353741,
+        "f1": 0.5352697095435685,
+        "time_s": 0.032121311873197556
+      },
+      "tcn": {
+        "rmse_mv": 0.8651425968923876,
+        "f1": 0.21259387637203928,
+        "time_s": 1.026231912896037
+      },
+      "elm": {
+        "rmse_mv": 0.7551339231862721,
+        "f1": 0.41589779985805536,
+        "time_s": 36.01010570116341
+      },
+      "lstm": {
+        "rmse_mv": 0.7501206356656066,
+        "f1": 0.27466666666666667,
+        "time_s": 1.5670961886644363
+      }
+    },
+    "checks": "Full379input parity and hashes; monitored pairedGPU7reps; bootstrap10000; main0.5ms arrow; currentPDFrender; fullLaTeX and portable source compile; ZIP/PDF identity; HTML same source",
+    "main_dbnn_model_and_thresholds_unchanged": true,
+    "all_recent_editorial_revisions_preserved": true
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "case_id": "confirmatory_0078",
+  "duration_ms": 4000,
+  "A": 500,
+  "parity": {
+    "elm_corrected": {
+      "max_voltage_gap_mv": 0.0,
+      "max_probability_gap": 0.0,
+      "events_equal": true,
+      "passed": true
+    },
+    "dbnn_frozen": {
+      "max_voltage_gap_mv": 9.484289996919415e-06,
+      "max_probability_gap": 0,
+      "events_equal": true,
+      "passed": true
+    },
+    "tcn_whole": {
+      "max_voltage_gap_mv": 1.52587890625e-05,
+      "max_probability_gap": 9.74978320300579e-10,
+      "events_equal": true,
+      "passed": true
+    },
+    "lstm_unchanged": {
+      "max_voltage_gap_mv": 0.0,
+      "max_probability_gap": 0.0,
+      "events_equal": true,
+      "passed": true
+    }
+  },
+  "timing": {
+    "elm_corrected": {
+      "median_ms": 70.73190063238144,
+      "runs_ms": [
+        70.75406424701214,
+        70.73133997619152,
+        70.73844037950039,
+        70.73190063238144,
+        70.7471240311861,
+        70.7313809543848,
+        70.72571106255054
+      ]
+    },
+    "dbnn_frozen": {
+      "median_ms": 0.060772523283958435,
+      "runs_ms": [
+        0.06179511547088623,
+        0.06099045276641846,
+        0.06053224205970764,
+        0.060772523283958435,
+        0.06017275154590607,
+        0.06063282489776611,
+        0.060793012380599976
+      ]
+    },
+    "tcn_whole": {
+      "median_ms": 1.7210915684700012,
+      "runs_ms": [
+        1.7220601439476013,
+        1.720178872346878,
+        1.7221719026565552,
+        1.722823828458786,
+        1.7206612974405289,
+        1.7210915684700012,
+        1.719847321510315
+      ]
+    },
+    "lstm_unchanged": {
+      "median_ms": 2.6144590228796005,
+      "runs_ms": [
+        2.6144590228796005,
+        2.618206664919853,
+        2.6134178042411804,
+        2.6148315519094467,
+        2.613147720694542,
+        2.6093125343322754,
+        2.620067447423935
+      ]
+    }
+  },
+  "metrics": {
+    "elm_corrected": {
+      "sse": 4250.66716036413,
+      "n": 3961,
+      "events": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 2,
+        "matched_errors_ms": []
+      }
+    },
+    "dbnn_frozen": {
+      "sse": 452.7302348937519,
+      "n": 3961,
+      "events": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "matched_errors_ms": [
+          -4.4750000021383585,
+          -2.7624999946131084
+        ]
+      }
+    },
+    "tcn_whole": {
+      "sse": 4417.8248945365485,
+      "n": 3961,
+      "events": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 2,
+        "matched_errors_ms": []
+      }
+    },
+    "lstm_unchanged": {
+      "sse": 3711.7290886770643,
+      "n": 3961,
+      "events": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "matched_errors_ms": []
+      }
+    }
+  },
+  "input_sha256": "7add42b1f303b1c0720526ef38aa5a7feb73e42cdeba870068a7580772a56bfe"
+}

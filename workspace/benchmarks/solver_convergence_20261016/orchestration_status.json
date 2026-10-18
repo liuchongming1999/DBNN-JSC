@@ -1,0 +1,102 @@
+{
+  "finished": true,
+  "phase": "complete",
+  "timing_returncode": 0,
+  "reference_history": [
+    {
+      "coarse_dt_ms": 0.05,
+      "fine_dt_ms": 0.025,
+      "pooled_masked_rmse_mv": 0.041328874298742435,
+      "identical_counts_per_input": false,
+      "max_event_time_difference_ms": null,
+      "finer_reference_events": 53,
+      "material_event_differences": [
+        {
+          "case_id": "confirmatory_0396",
+          "coarse_events": [
+            4395.149999998989,
+            5575.999999981806,
+            11196.099999900023
+          ],
+          "fine_events": [
+            4394.949999963931,
+            4557.599999961564,
+            5575.9999999467445,
+            11195.925000119907
+          ],
+          "max_time_gap_ms": null
+        },
+        {
+          "case_id": "confirmatory_0534",
+          "coarse_events": [
+            1011.7000000012167,
+            7017.949999960822
+          ],
+          "fine_events": [
+            1011.5250000034075,
+            4027.1249999692836,
+            7017.799999925764
+          ],
+          "max_time_gap_ms": null
+        },
+        {
+          "case_id": "confirmatory_0377",
+          "coarse_events": [
+            287.149999999658,
+            4111.8000000031125,
+            4660.649999995126,
+            7654.349999951562
+          ],
+          "fine_events": [
+            286.90000000077134,
+            4111.424999968057,
+            4660.374999960069,
+            7653.67499991651
+          ],
+          "max_time_gap_ms": 0.6750000350511982
+        }
+      ],
+      "passed": false
+    },
+    {
+      "coarse_dt_ms": 0.025,
+      "fine_dt_ms": 0.0125,
+      "pooled_masked_rmse_mv": 0.006922676350287078,
+      "identical_counts_per_input": true,
+      "max_event_time_difference_ms": 0.9374999476203811,
+      "finer_reference_events": 53,
+      "material_event_differences": [
+        {
+          "case_id": "confirmatory_0396",
+          "coarse_events": [
+            4394.949999963931,
+            4557.599999961564,
+            5575.9999999467445,
+            11195.925000119907
+          ],
+          "fine_events": [
+            4394.850000004525,
+            4556.662500013944,
+            5575.87500007327,
+            11195.812500400392
+          ],
+          "max_time_gap_ms": 0.9374999476203811
+        }
+      ],
+      "passed": false
+    },
+    {
+      "coarse_dt_ms": 0.0125,
+      "fine_dt_ms": 0.00625,
+      "pooled_masked_rmse_mv": 0.003798564180875232,
+      "identical_counts_per_input": true,
+      "max_event_time_difference_ms": 0.2562498597690137,
+      "finer_reference_events": 53,
+      "material_event_differences": [],
+      "passed": true
+    }
+  ],
+  "finest_dt_ms": 0.00625,
+  "reference_stability_criterion_met": true,
+  "updated": "2026-10-16T13:24:07.171158"
+}

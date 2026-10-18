@@ -1,0 +1,153 @@
+{
+  "passed": true,
+  "main_checkpoint_unchanged": true,
+  "fit_inputs": 64,
+  "test_inputs": 32,
+  "test_rasters_unique_and_disjoint_from_fit": true,
+  "candidate_sites": 500,
+  "selected_sites": 16,
+  "strengths": [
+    0.01,
+    0.02,
+    0.04,
+    0.08,
+    0.16,
+    0.32,
+    0.5,
+    0.64,
+    1.0,
+    2.0,
+    4.0,
+    8.0
+  ],
+  "sweep": [
+    {
+      "epsilon": 0.01,
+      "passive_first_rmse_mv": 0.00011985009757638495,
+      "passive_bilinear_rmse_mv": 0.00011970858640110999,
+      "active_first_rmse_mv": 0.0008221817652935125,
+      "active_main_rmse_mv": 0.000821936781992492,
+      "active_V2_projection_rmse_mv": 0.0008229976281122352,
+      "active_voltage_fit_rmse_mv": 0.0008186160795272695
+    },
+    {
+      "epsilon": 0.16,
+      "passive_first_rmse_mv": 0.002011628066041408,
+      "passive_bilinear_rmse_mv": 0.0018974676627434542,
+      "active_first_rmse_mv": 0.012961570471675331,
+      "active_main_rmse_mv": 0.012899981764770104,
+      "active_V2_projection_rmse_mv": 0.013169702365807131,
+      "active_voltage_fit_rmse_mv": 0.012082522222601961
+    },
+    {
+      "epsilon": 0.5,
+      "passive_first_rmse_mv": 0.00836242433572232,
+      "passive_bilinear_rmse_mv": 0.006092076109566816,
+      "active_first_rmse_mv": 0.03920118585730744,
+      "active_main_rmse_mv": 0.03862690707151952,
+      "active_V2_projection_rmse_mv": 0.04121910440465082,
+      "active_voltage_fit_rmse_mv": 0.031605201258410036
+    },
+    {
+      "epsilon": 1.0,
+      "passive_first_rmse_mv": 0.025523637615358082,
+      "passive_bilinear_rmse_mv": 0.014175984931867728,
+      "active_first_rmse_mv": 0.07487654206833938,
+      "active_main_rmse_mv": 0.07276233079743218,
+      "active_V2_projection_rmse_mv": 0.0828761744583941,
+      "active_voltage_fit_rmse_mv": 0.05352430636913702
+    },
+    {
+      "epsilon": 2.0,
+      "passive_first_rmse_mv": 0.08768455936997274,
+      "passive_bilinear_rmse_mv": 0.044681716018118385,
+      "active_first_rmse_mv": 0.13760988945359623,
+      "active_main_rmse_mv": 0.13095645276802165,
+      "active_V2_projection_rmse_mv": 0.16919544724614066,
+      "active_voltage_fit_rmse_mv": 0.14695340555421876
+    },
+    {
+      "epsilon": 4.0,
+      "passive_first_rmse_mv": 0.30405062625241647,
+      "passive_bilinear_rmse_mv": 0.18952801288431842,
+      "active_first_rmse_mv": 0.23980822420186496,
+      "active_main_rmse_mv": 0.23260365585277884,
+      "active_V2_projection_rmse_mv": 0.3645027018451674,
+      "active_voltage_fit_rmse_mv": 0.6799676598951825
+    },
+    {
+      "epsilon": 8.0,
+      "passive_first_rmse_mv": 1.0000378145003297,
+      "passive_bilinear_rmse_mv": 0.9131309682641648,
+      "active_first_rmse_mv": 0.4198544404919331,
+      "active_main_rmse_mv": 0.5576398196159231,
+      "active_V2_projection_rmse_mv": 0.9132747340574867,
+      "active_voltage_fit_rmse_mv": 3.0548266993830158
+    }
+  ],
+  "controls": [
+    {
+      "cell": "Passive",
+      "control": "half_extraction",
+      "cases": 12,
+      "max_V1_rms_gap_mv": 3.472134700199003e-11,
+      "max_V2_rms_gap_mv": 6.4019015580444655e-09,
+      "max_V2_relative_gap": 0.000109337187324171
+    },
+    {
+      "cell": "Passive",
+      "control": "degree4",
+      "cases": 12,
+      "max_V1_rms_gap_mv": 3.604207905568208e-10,
+      "max_V2_rms_gap_mv": 4.368865789262118e-08,
+      "max_V2_relative_gap": 1.3072507924746257e-05
+    },
+    {
+      "cell": "Passive",
+      "control": "half_step",
+      "cases": 12,
+      "max_V1_rms_gap_mv": 0.00044181140836452835,
+      "max_V2_rms_gap_mv": 3.0235201177152307e-05,
+      "max_V2_relative_gap": 0.0020466929299020457
+    },
+    {
+      "cell": "Active",
+      "control": "half_extraction",
+      "cases": 8,
+      "max_V1_rms_gap_mv": 3.877758055145111e-12,
+      "max_V2_rms_gap_mv": 7.963288637421766e-10,
+      "max_V2_relative_gap": 2.2309764002567632e-07
+    },
+    {
+      "cell": "Active",
+      "control": "degree4",
+      "cases": 8,
+      "max_V1_rms_gap_mv": 2.157999945956185e-10,
+      "max_V2_rms_gap_mv": 2.6158333387528372e-08,
+      "max_V2_relative_gap": 1.0246617744269844e-06
+    },
+    {
+      "cell": "Active",
+      "control": "half_step",
+      "cases": 8,
+      "max_V1_rms_gap_mv": 0.00050681168504357,
+      "max_V2_rms_gap_mv": 3.1828513954186285e-05,
+      "max_V2_relative_gap": 0.0015397977996867104
+    }
+  ],
+  "small_strength_slopes": {
+    "passive_total": 0.9971874042048299,
+    "passive_remainder": 2.9963538292081786,
+    "active_response": 0.9957221701490353
+  },
+  "active_signed_first_second_correlation_mv2": {
+    "main_readout": -0.0008763267016491426,
+    "second_projection_readout": -2.85400896027048e-06
+  },
+  "projection_is_fitting_set_only": true,
+  "source_sha256": {
+    "trained_passive_diagnostic.json": "1223e0a1f919bc09a7d65f213dd03888fe7241c937927c6375b0e701367218c5",
+    "trained_active_diagnostic.json": "fc561fda8d629db741342caeab75bebc738672e330cd643940eb1b861e76d722",
+    "trained_active_arrays.npz": "ba813f9421f1cc2c8d93bbba4cb453945ba9292131ca10ac56d5705d8062728f"
+  }
+}

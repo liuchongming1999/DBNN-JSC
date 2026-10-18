@@ -1,0 +1,43 @@
+{
+  "model": "granule",
+  "modeldb": 265584,
+  "profile": "ampa",
+  "operating_point": {
+    "model": "granule",
+    "spec": {
+      "modeldb": 265584,
+      "variant": "01_GrC_2020_regular",
+      "module": "Cereb_GrC_regular",
+      "cls": "Grc_regular",
+      "args": [
+        0
+      ],
+      "celsius": 32.0,
+      "v_init": -70.0,
+      "article_label": "GrC_1",
+      "author": "Masoli et al. (2020)"
+    },
+    "native_spikes_2s": 0,
+    "native_firing_hz": 0.0,
+    "holding_current_na": 0.0,
+    "holding_trials": [
+      {
+        "current_na": 0.0,
+        "spikes_last_1000ms": 0,
+        "rest_mv": -63.74986993871875,
+        "std_mv": 0.00014884565557615636
+      }
+    ],
+    "rest_mv": -63.74986993871875,
+    "weight_us": 2.3026057233130226e-06,
+    "inhibition_ratio": 0.5,
+    "condition": "Original active channels and morphology retained. Fixed somatic holding current selects a stable low-spike operating point; identical current and reference state used by all solver comparisons.",
+    "weight_selection": "Reference-only 250E 10Hz mean depolarization approximately 2.5mV, before fitting/testing.",
+    "reference_dt_ms": 0.025,
+    "reference_output_interval_ms": 0.25,
+    "warmup_ms": 2000.0
+  },
+  "reference_dt_ms": 0.025,
+  "warmup_ms": 2000.0,
+  "condition_sha256": "d09bf07ca8dd42f277a2d07c20821e5be94c9e89bd21aca3326f7c0e73888e6c"
+}

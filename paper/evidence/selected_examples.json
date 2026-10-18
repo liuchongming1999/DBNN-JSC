@@ -3,6 +3,7 @@
     "case_id": "confirmatory_0630",
     "reference_spikes": 0,
     "eligible_candidates": 20,
+    "solver_dt_ms": 0.25,
     "dbnn_record": {
       "case_id": "confirmatory_0630",
       "panel": "confirmatory",
@@ -29,16 +30,16 @@
         1277.6358290325768
       ],
       "reference_spikes": 0,
-      "minimum_isi_ms": 8000.0,
+      "minimum_isi_ms": 8000,
       "low_density": true,
       "voltage": {
         "n": 8001,
-        "sse": 466.38971069059335,
-        "error_ss": 432.57755232113306,
-        "reference_ss": 8561.915684803076,
-        "rmse_mv": 0.2414361766759451,
-        "ve": 0.9494765461088417,
-        "bias_mv": -0.06500762683900352
+        "sse": 468.84022055909736,
+        "error_ss": 431.5571527870876,
+        "reference_ss": 8570.562116304945,
+        "rmse_mv": 0.24206962398663331,
+        "ve": 0.9496465754601933,
+        "bias_mv": -0.06826273504904905
       },
       "events": {
         "tp": 0,
@@ -48,7 +49,8 @@
       },
       "reference_events_ms": [],
       "predicted_events_ms": [],
-      "checkpoint_sha256": "737efcff1e6686bfb153fca8590a8b28a605fbdb08f9a68ff44e68af8867686d"
+      "checkpoint_sha256": "737efcff1e6686bfb153fca8590a8b28a605fbdb08f9a68ff44e68af8867686d",
+      "qualification_reference_spikes": 0
     },
     "neuron_record": {
       "case_id": "confirmatory_0630",
@@ -76,16 +78,16 @@
         1277.6358290325768
       ],
       "reference_spikes": 0,
-      "minimum_isi_ms": 8000.0,
+      "minimum_isi_ms": 8000,
       "low_density": true,
       "voltage": {
         "n": 8001,
-        "sse": 65.88742165756412,
-        "error_ss": 8.87424184961207,
-        "reference_ss": 8561.915684803076,
-        "rmse_mv": 0.09074634066948596,
-        "ve": 0.9989635214622163,
-        "bias_mv": -0.08441419759968968
+        "sse": 6.3837159863323905,
+        "error_ss": 2.646388471195582,
+        "reference_ss": 8570.562116304945,
+        "rmse_mv": 0.02824650005214627,
+        "ve": 0.9996912234652426,
+        "bias_mv": -0.021612671073891643
       },
       "events": {
         "tp": 0,
@@ -94,28 +96,30 @@
         "matched_errors_ms": []
       },
       "predicted_events_ms": [],
-      "reference_events_ms": []
+      "reference_events_ms": [],
+      "qualification_reference_spikes": 0
     }
   },
   {
-    "case_id": "confirmatory_0541",
+    "case_id": "confirmatory_0535",
     "reference_spikes": 3,
-    "eligible_candidates": 1,
+    "eligible_candidates": 5,
+    "solver_dt_ms": 0.25,
     "dbnn_record": {
-      "case_id": "confirmatory_0541",
+      "case_id": "confirmatory_0535",
       "panel": "confirmatory",
       "duration_s": 8,
       "duration_ms": 8000,
       "A": 500,
       "site_mode": "all",
       "family": "gated_excitation",
-      "replicate": 13,
-      "seed": 910090541,
+      "replicate": 7,
+      "seed": 910090535,
       "input_interval_ms": 1.0,
-      "input_file": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/spike_panel_20261009/confirmatory/inputs/confirmatory_0541.npz",
-      "input_sha256": "26374a838af84da08e92d89e728e1f71a028251327dee015f4d5d9c42a84014c",
+      "input_file": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/spike_panel_20261009/confirmatory/inputs/confirmatory_0535.npz",
+      "input_sha256": "5d3d22018e75f13dbd4a4028091c40b31d1acd702b9abd525356ca98e360fad2",
       "ids_sha256": "2253930180b5ae89248437a25b4c5ffeef3028bc8b3afb41da441cdbed841c56",
-      "input_events": 99733,
+      "input_events": 100631,
       "rate_hz": 50.0,
       "exc_hz": 50.0,
       "inh_hz": 10.0,
@@ -146,54 +150,55 @@
         1277.6358290325768
       ],
       "reference_spikes": 3,
-      "minimum_isi_ms": 3001.800000008472,
+      "minimum_isi_ms": 2987.9875001739238,
       "low_density": true,
       "voltage": {
         "n": 7941,
-        "sse": 681.8866023270725,
-        "error_ss": 681.8709565875192,
-        "reference_ss": 10710.743665849348,
-        "rmse_mv": 0.29303431535737273,
-        "ve": 0.9363376645114168,
-        "bias_mv": -0.001403655236629499
+        "sse": 677.1000240357789,
+        "error_ss": 676.8342579174403,
+        "reference_ss": 11425.133220426265,
+        "rmse_mv": 0.29200401072378845,
+        "ve": 0.9407591802336824,
+        "bias_mv": -0.005785117825570307
       },
       "events": {
         "tp": 3,
         "fp": 0,
         "fn": 0,
         "matched_errors_ms": [
-          -1.5999999992748144,
-          -3.400000007746712,
-          -3.4000000186679245
+          -3.362499995477492,
+          -4.737499982632471,
+          -1.7250001565562343
         ]
       },
       "reference_events_ms": [
-        1009.5999999992748,
-        4011.4000000077467,
-        7013.400000018668
+        1022.3624999954775,
+        4018.7374999826325,
+        7006.725000156556
       ],
       "predicted_events_ms": [
-        1008.0,
-        4008.0,
-        7010.0
+        1019.0,
+        4014.0,
+        7005.0
       ],
-      "checkpoint_sha256": "737efcff1e6686bfb153fca8590a8b28a605fbdb08f9a68ff44e68af8867686d"
+      "checkpoint_sha256": "737efcff1e6686bfb153fca8590a8b28a605fbdb08f9a68ff44e68af8867686d",
+      "qualification_reference_spikes": 3
     },
     "neuron_record": {
-      "case_id": "confirmatory_0541",
+      "case_id": "confirmatory_0535",
       "panel": "confirmatory",
       "duration_s": 8,
       "duration_ms": 8000,
       "A": 500,
       "site_mode": "all",
       "family": "gated_excitation",
-      "replicate": 13,
-      "seed": 910090541,
+      "replicate": 7,
+      "seed": 910090535,
       "input_interval_ms": 1.0,
-      "input_file": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/spike_panel_20261009/confirmatory/inputs/confirmatory_0541.npz",
-      "input_sha256": "26374a838af84da08e92d89e728e1f71a028251327dee015f4d5d9c42a84014c",
+      "input_file": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/spike_panel_20261009/confirmatory/inputs/confirmatory_0535.npz",
+      "input_sha256": "5d3d22018e75f13dbd4a4028091c40b31d1acd702b9abd525356ca98e360fad2",
       "ids_sha256": "2253930180b5ae89248437a25b4c5ffeef3028bc8b3afb41da441cdbed841c56",
-      "input_events": 99733,
+      "input_events": 100631,
       "rate_hz": 50.0,
       "exc_hz": 50.0,
       "inh_hz": 10.0,
@@ -224,37 +229,38 @@
         1277.6358290325768
       ],
       "reference_spikes": 3,
-      "minimum_isi_ms": 3001.800000008472,
+      "minimum_isi_ms": 2987.9875001739238,
       "low_density": true,
       "voltage": {
         "n": 7941,
-        "sse": 168.88476951154007,
-        "error_ss": 60.315894261914636,
-        "reference_ss": 10710.743665849348,
-        "rmse_mv": 0.14583361610199727,
-        "ve": 0.9943686548624789,
-        "bias_mv": -0.11692707113168234
+        "sse": 79.32943962152058,
+        "error_ss": 73.0658365979257,
+        "reference_ss": 11425.133220426265,
+        "rmse_mv": 0.09994926280021067,
+        "ve": 0.9936048153497855,
+        "bias_mv": -0.028085005582092
       },
       "events": {
         "tp": 3,
         "fp": 0,
         "fn": 0,
         "matched_errors_ms": [
-          4.40000000082523,
-          4.099999992353332,
-          4.09999998143212
+          2.3875000046225523,
+          3.0125000174675733,
+          2.27499984354381
         ]
       },
       "predicted_events_ms": [
-        1014.0000000001,
-        4015.5000000001,
-        7017.5000000001
+        1024.7500000001,
+        4021.7500000001,
+        7009.0000000001
       ],
       "reference_events_ms": [
-        1009.5999999992748,
-        4011.4000000077467,
-        7013.400000018668
-      ]
+        1022.3624999954775,
+        4018.7374999826325,
+        7006.725000156556
+      ],
+      "qualification_reference_spikes": 3
     }
   }
 ]

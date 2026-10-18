@@ -1,0 +1,68 @@
+{
+  "case_id": "new_granule_0136",
+  "duration_ms": 8000,
+  "A": 500,
+  "family": "excitatory_gates",
+  "site_mode": "distal",
+  "rate_hz": 10,
+  "input_sha256": "64f31a7ba954eb60d9573f7dc8a51d06ad72fca9587f2ff0cb31b4ed25ec9d8c",
+  "checkpoint_sha256": "e94e649268dcc5ee2ac58800236cbe22b014be6489885cfda9ae8493a41ef4b6",
+  "reference_sha256": "b4b19c4f2ba254553f2518c16332eac8ee7beefed62f5d06bb583120959bef13",
+  "test_manifest_sha256": "4a6001fedbae299b14c4365bb8068e3cf61a9a0e7a6687e4b6529ecca7486704",
+  "input_seed": 202610170136,
+  "ids_sha256": "2253930180b5ae89248437a25b4c5ffeef3028bc8b3afb41da441cdbed841c56",
+  "reference_events_ms": [
+    1609.8999999826306,
+    1624.1499999824232,
+    1639.349999982202,
+    4012.4499999476693,
+    4030.324999947409,
+    4046.699999947171,
+    6412.699999928798,
+    6427.924999929684,
+    6443.47499993059
+  ],
+  "predicted_events_ms": [
+    1608.0,
+    1618.0,
+    1630.0,
+    1646.0,
+    4009.0,
+    4023.0,
+    4037.0,
+    4052.0,
+    6410.0,
+    6422.0,
+    6434.0,
+    6449.0
+  ],
+  "voltage": {
+    "n": 7846,
+    "sse": 1842.82203775183,
+    "reference_ss": 1452.648578438761,
+    "error_ss": 1833.8327913629132
+  },
+  "events": {
+    "tp": 3,
+    "fp": 9,
+    "fn": 6,
+    "matched_errors_ms": [
+      -1.8999999826305611,
+      -3.449999947669312,
+      -2.6999999287982064
+    ]
+  },
+  "prepared_wall_ms": 0.10739266872406006,
+  "runs_ms": [
+    0.12933649122714996,
+    0.10739266872406006,
+    0.10572932660579681
+  ],
+  "backend": "hier_store_512",
+  "numerical": {
+    "max_abs_mv": 3.053301557542909e-05,
+    "events_equal": true,
+    "captured_graph_max_abs_mv": 3.053301557542909e-05,
+    "captured_graph_events_equal": true
+  }
+}

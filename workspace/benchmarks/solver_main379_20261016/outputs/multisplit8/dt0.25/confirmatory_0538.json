@@ -1,0 +1,160 @@
+{
+  "finished": true,
+  "engine": "multisplit8",
+  "dt_ms": 0.25,
+  "case_id": "confirmatory_0538",
+  "input_sha256": "86d6e6797ed78b7bce20b2c27669f9e28283e3bbd781799ea7373dadac5806f6",
+  "ids_sha256": "2253930180b5ae89248437a25b4c5ffeef3028bc8b3afb41da441cdbed841c56",
+  "duration_s": 8,
+  "reference_spikes_original": 3,
+  "spike_times_ms": [
+    1021.2500000001,
+    4010.7500000001,
+    7010.7500000001
+  ],
+  "timing": [
+    {
+      "solver_ms": 3301.2222051620483,
+      "cpu_ms": 16241.854095999997,
+      "warmup_ms": 274.8383395373821,
+      "event_schedule_ms": 121.33909203112125,
+      "output_ms": 0.42924657464027405,
+      "loadavg": [
+        53.96,
+        53.53,
+        47.02
+      ]
+    },
+    {
+      "solver_ms": 3288.9667842537165,
+      "cpu_ms": 16304.259107999997,
+      "warmup_ms": 265.5858676880598,
+      "event_schedule_ms": 122.5356012582779,
+      "output_ms": 0.33971481025218964,
+      "loadavg": [
+        53.96,
+        53.53,
+        47.02
+      ]
+    },
+    {
+      "solver_ms": 3385.8054131269455,
+      "cpu_ms": 16821.018835999894,
+      "warmup_ms": 267.66899414360523,
+      "event_schedule_ms": 125.98623521625996,
+      "output_ms": 0.6441548466682434,
+      "loadavg": [
+        54.76,
+        53.71,
+        47.11
+      ]
+    }
+  ],
+  "median_solver_ms": 3301.2222051620483,
+  "timing_repeats": 3,
+  "discarded_warmup_calls": 1,
+  "validation": {
+    "same_dt_single_thread_max_voltage_gap_mv": 0.0,
+    "same_dt_events_equal": true
+  },
+  "runtime": {
+    "neuron": "9.0.2",
+    "neuron_build": "cmake option default differences: 'NRN_ENABLE_CORENEURON=ON' 'NRN_ENABLE_PYTHON_DYNAMIC=ON' 'NRN_LINK_AGAINST_PYTHON=OFF' 'NRN_ENABLE_MPI_DYNAMIC=ON' 'NRN_MPI_DYNAMIC=/usr/include/openmpi-x86_64;/usr/include/mpich-x86_64' 'NRN_RX3D_OPT_LEVEL=1' 'CMAKE_BUILD_TYPE=Release' 'CMAKE_INSTALL_PREFIX=/tmp/tmpot7w3zjj/wheel/platlib' 'CMAKE_C_COMPILER=/opt/rh/gcc-toolset-10/root/usr/bin/gcc' 'CMAKE_CXX_COMPILER=/opt/rh/gcc-toolset-10/root/usr/bin/g++' 'PYTHON_EXECUTABLE=/tmp/build-env-ciooowse/bin/python' 'CORENRN_ENABLE_GPU=OFF' 'CORENRN_ENABLE_SHARED=ON'",
+    "model": {
+      "root": "/home/lcm/DBNN_L5PC_surrogate_20260928/source/ShaiEtAl2015",
+      "biophys_file": "L5PCbiophys5.hoc",
+      "morphology_file": "cell1.asc",
+      "num_synapses": 500,
+      "duration_ms": 16000.0,
+      "warmup_ms": 500.0,
+      "dt": 0.25,
+      "sample_interval_ms": 1.0,
+      "input_rate_hz": 50.0,
+      "exc_weight": 0.000188,
+      "inh_weight": 8e-05,
+      "exc_tau1_ms": 0.5,
+      "exc_tau2_ms": 5.0,
+      "inh_tau1_ms": 1.0,
+      "inh_tau2_ms": 10.0,
+      "inh_reversal_mv": -80.0,
+      "v_init": -75.0,
+      "spike_threshold": -20.0,
+      "seed": 20260425
+    },
+    "sections": 196,
+    "compartments": 642,
+    "actual_threads": 8,
+    "thread_busywait": 0,
+    "event_detector_metadata_delay_ms": 10.0,
+    "affinity": [
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47
+    ],
+    "physical_cores": [
+      {
+        "cpu": 40,
+        "core": 56,
+        "socket": 0,
+        "siblings": "40,168"
+      },
+      {
+        "cpu": 41,
+        "core": 57,
+        "socket": 0,
+        "siblings": "41,169"
+      },
+      {
+        "cpu": 42,
+        "core": 58,
+        "socket": 0,
+        "siblings": "42,170"
+      },
+      {
+        "cpu": 43,
+        "core": 59,
+        "socket": 0,
+        "siblings": "43,171"
+      },
+      {
+        "cpu": 44,
+        "core": 60,
+        "socket": 0,
+        "siblings": "44,172"
+      },
+      {
+        "cpu": 45,
+        "core": 61,
+        "socket": 0,
+        "siblings": "45,173"
+      },
+      {
+        "cpu": 46,
+        "core": 62,
+        "socket": 0,
+        "siblings": "46,174"
+      },
+      {
+        "cpu": 47,
+        "core": 63,
+        "socket": 0,
+        "siblings": "47,175"
+      }
+    ],
+    "model_preparation_ms": 276.64253301918507,
+    "source_script_sha256": "a228f4f59e59e1ebc269c0428848bea4f1c5c74e4b3e2f578282f68186d79efa",
+    "input_protocol": "only manifest events; dormant zero-weight NetStims removed",
+    "resources": "shared server; disjoint physical cores, no exclusive reservation",
+    "multisplit": {
+      "pieces": 46.0,
+      "estimated_load_balance": 1.0114942528735633
+    }
+  },
+  "script_sha256": "091a3a0a5959a7889972f788e2ae24cba591419f37a732c6b5b96043b8496873",
+  "manifest_sha256": "a5a5a72e9012519214609e89ef8b2e43c3cd8305990502710123804115f9606f"
+}

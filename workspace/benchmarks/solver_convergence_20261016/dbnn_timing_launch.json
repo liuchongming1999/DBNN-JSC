@@ -1,0 +1,80 @@
+[
+  {
+    "method": "gpu",
+    "pid": 2437934,
+    "command": [
+      "/home/lcm/DBNN_L5PC_surrogate_20260928/.venv/bin/python",
+      "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/solver_convergence_20261016/benchmark_frozen_subset.py",
+      "--root",
+      "/home/lcm/DBNN_L5PC_surrogate_20260928",
+      "--work",
+      "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/solver_convergence_20261016",
+      "--method",
+      "gpu",
+      "--checkpoint",
+      "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/diagonal_1ms_20261009/dbnn_w500_dt1ms_burn150_full_diag/best_checkpoint.pt",
+      "--checkpoint-sha256",
+      "737efcff1e6686bfb153fca8590a8b28a605fbdb08f9a68ff44e68af8867686d",
+      "--predictions",
+      "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/random_init_main379_20261012/predictions",
+      "--output",
+      "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/solver_convergence_20261016/dbnn/gpu",
+      "--cpus",
+      "72",
+      "--repeats",
+      "11"
+    ]
+  },
+  {
+    "method": "cpu1",
+    "pid": 2437935,
+    "command": [
+      "/home/lcm/DBNN_L5PC_surrogate_20260928/.venv/bin/python",
+      "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/solver_convergence_20261016/benchmark_frozen_subset.py",
+      "--root",
+      "/home/lcm/DBNN_L5PC_surrogate_20260928",
+      "--work",
+      "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/solver_convergence_20261016",
+      "--method",
+      "cpu1",
+      "--checkpoint",
+      "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/diagonal_1ms_20261009/dbnn_w500_dt1ms_burn150_full_diag/best_checkpoint.pt",
+      "--checkpoint-sha256",
+      "737efcff1e6686bfb153fca8590a8b28a605fbdb08f9a68ff44e68af8867686d",
+      "--predictions",
+      "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/random_init_main379_20261012/predictions",
+      "--output",
+      "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/solver_convergence_20261016/dbnn/cpu1",
+      "--cpus",
+      "80",
+      "--repeats",
+      "11"
+    ]
+  },
+  {
+    "method": "cpu8",
+    "pid": 2437936,
+    "command": [
+      "/home/lcm/DBNN_L5PC_surrogate_20260928/.venv/bin/python",
+      "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/solver_convergence_20261016/benchmark_frozen_subset.py",
+      "--root",
+      "/home/lcm/DBNN_L5PC_surrogate_20260928",
+      "--work",
+      "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/solver_convergence_20261016",
+      "--method",
+      "cpu8",
+      "--checkpoint",
+      "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/diagonal_1ms_20261009/dbnn_w500_dt1ms_burn150_full_diag/best_checkpoint.pt",
+      "--checkpoint-sha256",
+      "737efcff1e6686bfb153fca8590a8b28a605fbdb08f9a68ff44e68af8867686d",
+      "--predictions",
+      "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/random_init_main379_20261012/predictions",
+      "--output",
+      "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/solver_convergence_20261016/dbnn/cpu8",
+      "--cpus",
+      "88,89,90,91,92,93,94,95",
+      "--repeats",
+      "11"
+    ]
+  }
+]

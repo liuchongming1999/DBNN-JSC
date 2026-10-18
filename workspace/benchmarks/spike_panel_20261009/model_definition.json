@@ -1,0 +1,12 @@
+{
+  "adopted_on": "2026-10-09",
+  "user_decision": "DBNN以后定义为全二次矩阵，不再限制对角为零。后续研究不再新增零对角实验。",
+  "drive_formula": "u[n] = b + sum_i y_i[n] + sum_ij W_ij y_i[n] y_j[n]",
+  "quadratic_W": "Full 500x500 trainable matrix including the diagonal",
+  "kernels_per_site": 1,
+  "reset": "Keep existing event reset architecture",
+  "historical_zero_diagonal_runs": "Preserve as historical evidence; not the current DBNN definition",
+  "current_1ms_checkpoint": "JSC_投稿准备/非零对角_1ms_调参结果_20261009/DBNN_full_diagonal_best_1ms.pt",
+  "checkpoint_sha256": "922feb23de163c898d32116b4cdd949d06c74060d80a3cc68bfe0e4fa353b26c",
+  "coarser_or_finer_sampling": "Future training also allows nonzero diagonal; historical checkpoints remain unchanged"
+}

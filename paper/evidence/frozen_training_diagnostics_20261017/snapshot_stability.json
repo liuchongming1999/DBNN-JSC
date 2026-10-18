@@ -1,0 +1,168 @@
+{
+  "passed": true,
+  "replicates": 10000,
+  "candidates": [
+    {
+      "name": "primary_joint",
+      "checkpoint_sha256": "fec1fa2065b1584c586d0843737b495c5279020e24bc1b4dad4ba61103538445",
+      "physical_state_digest": "ad7cbca8eb6c2f3c4ebce1ca3ae73ad3de0e5999284de2deceb93628ec7ebe1a",
+      "reset": {
+        "v_th": -57.75,
+        "reset_amp": 4.0,
+        "tau_reset": 40.0
+      },
+      "full_validation_J": 0.12843948441669284,
+      "pooled_rmse_mv": 0.31309356321397624,
+      "events": {
+        "tp": 8,
+        "fp": 6,
+        "fn": 15,
+        "precision": 0.5714285714285714,
+        "recall": 0.34782608695652173,
+        "f1": 0.43243243243243246,
+        "median_abs_error_ms": 2.3500000064947244
+      },
+      "selection_fraction": 0.1603
+    },
+    {
+      "name": "primary_voltage",
+      "checkpoint_sha256": "fec1fa2065b1584c586d0843737b495c5279020e24bc1b4dad4ba61103538445",
+      "physical_state_digest": "ad7cbca8eb6c2f3c4ebce1ca3ae73ad3de0e5999284de2deceb93628ec7ebe1a",
+      "reset": {
+        "v_th": -57.75,
+        "reset_amp": 4.0,
+        "tau_reset": 40.0
+      },
+      "full_validation_J": 0.12843948441669284,
+      "pooled_rmse_mv": 0.31309356321397624,
+      "events": {
+        "tp": 8,
+        "fp": 6,
+        "fn": 15,
+        "precision": 0.5714285714285714,
+        "recall": 0.34782608695652173,
+        "f1": 0.43243243243243246,
+        "median_abs_error_ms": 2.3500000064947244
+      },
+      "selection_fraction": 0.0
+    },
+    {
+      "name": "primary_ema",
+      "checkpoint_sha256": "e669016b454bd33f4f60b00fd0f76565b3ff16c3707818cf2c937bc547b2cc32",
+      "physical_state_digest": "ef0d35fe6d6ec48d3cbdc044557c168338c39f9c37d013ab440458d3be0f1840",
+      "reset": {
+        "v_th": -58.0,
+        "reset_amp": 4.0,
+        "tau_reset": 40.0
+      },
+      "full_validation_J": 0.12667628434209685,
+      "pooled_rmse_mv": 0.31311568435760284,
+      "events": {
+        "tp": 11,
+        "fp": 13,
+        "fn": 12,
+        "precision": 0.4583333333333333,
+        "recall": 0.4782608695652174,
+        "f1": 0.46808510638297873,
+        "median_abs_error_ms": 3.0000000004292815
+      },
+      "selection_fraction": 0.0
+    },
+    {
+      "name": "refine_joint",
+      "checkpoint_sha256": "b49930990d4f84478666e0f87d26d2d312a3df0c00e61977505095ec96055fdb",
+      "physical_state_digest": "8e5e4f053e4e61f353abe4f3de86749eaab70dba87c108b85a3ee7646ed10643",
+      "reset": {
+        "v_th": -58.0,
+        "reset_amp": 4.0,
+        "tau_reset": 40.0
+      },
+      "full_validation_J": 0.12125501037943215,
+      "pooled_rmse_mv": 0.306172674470549,
+      "events": {
+        "tp": 11,
+        "fp": 11,
+        "fn": 12,
+        "precision": 0.5,
+        "recall": 0.4782608695652174,
+        "f1": 0.4888888888888889,
+        "median_abs_error_ms": 2.5999999995522103
+      },
+      "selection_fraction": 0.3253
+    },
+    {
+      "name": "refine_voltage",
+      "checkpoint_sha256": "b49930990d4f84478666e0f87d26d2d312a3df0c00e61977505095ec96055fdb",
+      "physical_state_digest": "8e5e4f053e4e61f353abe4f3de86749eaab70dba87c108b85a3ee7646ed10643",
+      "reset": {
+        "v_th": -58.0,
+        "reset_amp": 4.0,
+        "tau_reset": 40.0
+      },
+      "full_validation_J": 0.12125501037943215,
+      "pooled_rmse_mv": 0.306172674470549,
+      "events": {
+        "tp": 11,
+        "fp": 11,
+        "fn": 12,
+        "precision": 0.5,
+        "recall": 0.4782608695652174,
+        "f1": 0.4888888888888889,
+        "median_abs_error_ms": 2.5999999995522103
+      },
+      "selection_fraction": 0.0
+    },
+    {
+      "name": "refine_ema",
+      "checkpoint_sha256": "fcac10dacaa74a20c4add37d9fd5b31713d7a4de397aca027f220b144c940c47",
+      "physical_state_digest": "49fb19e79c8da7e239088b67363812f7b1ab66035647b786d6228c7ccc098114",
+      "reset": {
+        "v_th": -58.0,
+        "reset_amp": 4.0,
+        "tau_reset": 40.0
+      },
+      "full_validation_J": 0.12121887363947113,
+      "pooled_rmse_mv": 0.3078675981203329,
+      "events": {
+        "tp": 12,
+        "fp": 12,
+        "fn": 11,
+        "precision": 0.5,
+        "recall": 0.5217391304347826,
+        "f1": 0.5106382978723404,
+        "median_abs_error_ms": 2.9500000072636112
+      },
+      "selection_fraction": 0.5144
+    }
+  ],
+  "equivalent_snapshot_groups": [
+    {
+      "names": [
+        "primary_joint",
+        "primary_voltage"
+      ],
+      "selection_fraction": 0.1603
+    },
+    {
+      "names": [
+        "primary_ema"
+      ],
+      "selection_fraction": 0.0
+    },
+    {
+      "names": [
+        "refine_joint",
+        "refine_voltage"
+      ],
+      "selection_fraction": 0.3253
+    },
+    {
+      "names": [
+        "refine_ema"
+      ],
+      "selection_fraction": 0.5144
+    }
+  ],
+  "final_checkpoint_and_reset_unchanged": true,
+  "scope": "All six archived candidates keep their own original validation-calibrated reset. Resampling changes only the counterfactual ranking, not any model. Duplicate physical states are grouped; exact ties choose the first archived candidate."
+}

@@ -1,0 +1,63 @@
+{
+  "case_id": "new_hay_l5_0139",
+  "duration_ms": 8000,
+  "A": 500,
+  "family": "excitatory_gates",
+  "site_mode": "random",
+  "rate_hz": 25,
+  "input_sha256": "4ce50de05594563faea7c7cdf135e1884b26852ca0e5914e595f26b91c4f05b2",
+  "checkpoint_sha256": "45418bd5baa0ddafa27bc1ce33717adf7d33fcbdc9e4a1945a25448778b05861",
+  "reference_sha256": "975dadea13509607c6ae5f1904bd2c545b9a6cb94966fb6de578c120f387e2d4",
+  "test_manifest_sha256": "4de6ef3ba8422689f1d7dcd88d26aebcfadcaff12456790e442e79ec5b74a1af",
+  "input_seed": 202610200139,
+  "ids_sha256": "2253930180b5ae89248437a25b4c5ffeef3028bc8b3afb41da441cdbed841c56",
+  "reference_events_ms": [
+    1619.6499999824887,
+    1629.7499999823417,
+    1641.3749999821725,
+    4019.7999999475624,
+    4030.2999999474096,
+    4041.3749999472484,
+    4054.6249999470556,
+    6420.174999929233,
+    6431.074999929868,
+    6442.724999930546
+  ],
+  "predicted_events_ms": [
+    1626.0,
+    1649.0,
+    4022.0,
+    4038.0,
+    6423.0
+  ],
+  "voltage": {
+    "n": 7862,
+    "sse": 8260.852688378378,
+    "reference_ss": 15087.998561786942,
+    "error_ss": 7076.267822991197
+  },
+  "events": {
+    "tp": 4,
+    "fp": 1,
+    "fn": 6,
+    "matched_errors_ms": [
+      -3.7499999823417056,
+      2.2000000524376446,
+      -3.374999947248398,
+      2.8250000707666914
+    ]
+  },
+  "prepared_wall_ms": 0.1018419861793518,
+  "runs_ms": [
+    0.11881813406944275,
+    0.1018419861793518,
+    0.098448246717453
+  ],
+  "backend": "hier_store_512",
+  "numerical": {
+    "max_abs_mv": 1.1214239194146103e-05,
+    "events_equal": true,
+    "captured_graph_max_abs_mv": 1.1214239194146103e-05,
+    "captured_graph_events_equal": true
+  }
+}

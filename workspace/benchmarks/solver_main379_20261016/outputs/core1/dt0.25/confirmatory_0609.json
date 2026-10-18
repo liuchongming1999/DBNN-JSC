@@ -1,0 +1,113 @@
+{
+  "finished": true,
+  "engine": "core1",
+  "dt_ms": 0.25,
+  "case_id": "confirmatory_0609",
+  "input_sha256": "1936febcd189a77c6ce2aa00905660e3febfb2a7989b173a7f982d6f6ff4e103",
+  "ids_sha256": "16d63dd7953f00135420044cf9907edf105b781d8ef48b17f020c53db4f7fc96",
+  "duration_s": 8,
+  "reference_spikes_original": 0,
+  "spike_times_ms": [],
+  "timing": [
+    {
+      "solver_ms": 3827.9537074267864,
+      "cpu_ms": 3826.3567280000075,
+      "warmup_ms": 325.854878872633,
+      "event_schedule_ms": 112.05368116497993,
+      "output_ms": 0.3065839409828186,
+      "loadavg": [
+        56.13,
+        53.85,
+        46.54
+      ]
+    },
+    {
+      "solver_ms": 3861.5806102752686,
+      "cpu_ms": 3860.029830999963,
+      "warmup_ms": 325.6443999707699,
+      "event_schedule_ms": 113.8028334826231,
+      "output_ms": 0.30196644365787506,
+      "loadavg": [
+        55.56,
+        53.77,
+        46.55
+      ]
+    },
+    {
+      "solver_ms": 3836.4870324730873,
+      "cpu_ms": 3834.9886080000033,
+      "warmup_ms": 325.39820112288,
+      "event_schedule_ms": 113.65047097206116,
+      "output_ms": 0.30498020350933075,
+      "loadavg": [
+        54.63,
+        53.61,
+        46.54
+      ]
+    }
+  ],
+  "median_solver_ms": 3836.4870324730873,
+  "timing_repeats": 3,
+  "discarded_warmup_calls": 1,
+  "validation": {
+    "same_dt_single_thread_max_voltage_gap_mv": 0.0,
+    "same_dt_events_equal": true
+  },
+  "runtime": {
+    "neuron": "9.0.2",
+    "neuron_build": "cmake option default differences: 'NRN_ENABLE_CORENEURON=ON' 'NRN_ENABLE_PYTHON_DYNAMIC=ON' 'NRN_LINK_AGAINST_PYTHON=OFF' 'NRN_ENABLE_MPI_DYNAMIC=ON' 'NRN_MPI_DYNAMIC=/usr/include/openmpi-x86_64;/usr/include/mpich-x86_64' 'NRN_RX3D_OPT_LEVEL=1' 'CMAKE_BUILD_TYPE=Release' 'CMAKE_INSTALL_PREFIX=/tmp/tmpot7w3zjj/wheel/platlib' 'CMAKE_C_COMPILER=/opt/rh/gcc-toolset-10/root/usr/bin/gcc' 'CMAKE_CXX_COMPILER=/opt/rh/gcc-toolset-10/root/usr/bin/g++' 'PYTHON_EXECUTABLE=/tmp/build-env-ciooowse/bin/python' 'CORENRN_ENABLE_GPU=OFF' 'CORENRN_ENABLE_SHARED=ON'",
+    "model": {
+      "root": "/home/lcm/DBNN_L5PC_surrogate_20260928/source/ShaiEtAl2015",
+      "biophys_file": "L5PCbiophys5.hoc",
+      "morphology_file": "cell1.asc",
+      "num_synapses": 500,
+      "duration_ms": 16000.0,
+      "warmup_ms": 500.0,
+      "dt": 0.25,
+      "sample_interval_ms": 1.0,
+      "input_rate_hz": 50.0,
+      "exc_weight": 0.000188,
+      "inh_weight": 8e-05,
+      "exc_tau1_ms": 0.5,
+      "exc_tau2_ms": 5.0,
+      "inh_tau1_ms": 1.0,
+      "inh_tau2_ms": 10.0,
+      "inh_reversal_mv": -80.0,
+      "v_init": -75.0,
+      "spike_threshold": -20.0,
+      "seed": 20260425
+    },
+    "engine": "CoreNEURON CPU",
+    "requested_threads": 1,
+    "actual_threads": 1,
+    "core_library": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/neuron_single_20260928/model/x86_64/libcorenrnmech.so",
+    "core_library_sha256": "eaafcf318e811c2d65d4146e6f0295402bb753e801507b8e7847a844758a4171",
+    "omp_num_threads": "1",
+    "omp_wait_policy": "PASSIVE",
+    "sections_by_thread": [
+      196
+    ],
+    "compartments_by_thread": [
+      642
+    ],
+    "nonempty_cell_threads": 1,
+    "thread_busywait": 0,
+    "affinity": [
+      79
+    ],
+    "physical_cores": [
+      {
+        "cpu": 79,
+        "core": 39,
+        "socket": 1,
+        "siblings": "79,207"
+      }
+    ],
+    "model_preparation_ms": 228.41032035648823,
+    "input_protocol": "only manifest events; dormant zero-weight NetStims removed",
+    "resources": "shared server; selected physical-core affinity; other jobs left running",
+    "multisplit_requested": false
+  },
+  "script_sha256": "091a3a0a5959a7889972f788e2ae24cba591419f37a732c6b5b96043b8496873",
+  "manifest_sha256": "a5a5a72e9012519214609e89ef8b2e43c3cd8305990502710123804115f9606f"
+}

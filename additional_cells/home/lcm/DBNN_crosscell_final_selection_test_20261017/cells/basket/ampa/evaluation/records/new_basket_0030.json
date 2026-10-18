@@ -1,0 +1,64 @@
+{
+  "case_id": "new_basket_0030",
+  "duration_ms": 1000,
+  "A": 500,
+  "family": "stationary",
+  "site_mode": "random",
+  "rate_hz": 25,
+  "input_sha256": "097363bbc78ceadefcd2f61c4e2ee321bd7dafb33881fa475291c55acfce3e7b",
+  "checkpoint_sha256": "4ca2f123a75014d0877690457b9794c726f9e4be6fb3f8f4bd409f4d31cf98c1",
+  "reference_sha256": "77f0c864710ed20389133f6cfddb7794d7ef67f79696b6f93ab9ba14f395a262",
+  "test_manifest_sha256": "af31ccb3c665a5ee89febd047343907978ff0483a438c6783b94b82eecb5e586",
+  "input_seed": 202610190030,
+  "ids_sha256": "2253930180b5ae89248437a25b4c5ffeef3028bc8b3afb41da441cdbed841c56",
+  "reference_events_ms": [
+    113.77500000440205,
+    173.30000000353584,
+    222.67500000281734,
+    277.4250000020206,
+    332.925000001213,
+    388.35000000040645,
+    446.7499999995566,
+    516.9499999985351,
+    570.7499999977522,
+    639.9999999967445,
+    702.224999995839,
+    757.474999995035,
+    815.9749999941837,
+    875.1749999933222,
+    923.499999992619,
+    985.8749999917113
+  ],
+  "predicted_events_ms": [
+    178.0,
+    441.0,
+    884.0
+  ],
+  "voltage": {
+    "n": 681,
+    "sse": 1183.1924597170437,
+    "reference_ss": 1054.6150001431545,
+    "error_ss": 676.3638684120995
+  },
+  "events": {
+    "tp": 1,
+    "fp": 2,
+    "fn": 15,
+    "matched_errors_ms": [
+      4.6999999964641574
+    ]
+  },
+  "prepared_wall_ms": 0.036446377635002136,
+  "runs_ms": [
+    0.05033612251281738,
+    0.036446377635002136,
+    0.03604777157306671
+  ],
+  "backend": "compact_256",
+  "numerical": {
+    "max_abs_mv": 7.62939453125e-06,
+    "events_equal": true,
+    "captured_graph_max_abs_mv": 7.62939453125e-06,
+    "captured_graph_events_equal": true
+  }
+}

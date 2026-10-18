@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "inputs": 379,
+  "stochastic": 374,
+  "fixed_controls": 5,
+  "replicates": 10000,
+  "seed": 20261016,
+  "source_sha256": "235caa3dde540d97ae0b7fa23317552584eafcbd65075f632e6710be890dc039",
+  "comparisons": {
+    "elm": {
+      "dbnn_minus_baseline_rmse_ci95_mv": [
+        -0.3488342025566081,
+        -0.2807517915944109
+      ],
+      "dbnn_minus_baseline_f1_ci95": [
+        0.07729710953016315,
+        0.16215340552193586
+      ]
+    },
+    "tcn": {
+      "dbnn_minus_baseline_rmse_ci95_mv": [
+        -0.4490768278396545,
+        -0.401072144179535
+      ],
+      "dbnn_minus_baseline_f1_ci95": [
+        0.2854615410362293,
+        0.36025856987049415
+      ]
+    },
+    "lstm": {
+      "dbnn_minus_baseline_rmse_ci95_mv": [
+        -0.3497084423666066,
+        -0.26766828235370815
+      ],
+      "dbnn_minus_baseline_f1_ci95": [
+        0.22658707946431922,
+        0.29452221995894623
+      ]
+    }
+  }
+}

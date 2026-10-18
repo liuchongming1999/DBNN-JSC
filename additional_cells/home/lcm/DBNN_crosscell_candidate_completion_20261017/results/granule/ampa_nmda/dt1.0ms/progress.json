@@ -1,0 +1,32 @@
+{
+  "trial": "event_lambda_1",
+  "stage": "refine",
+  "epoch": 400,
+  "fit_loss": 0.5859730893746018,
+  "event_positive_loss": 0.5224546395867946,
+  "event_negative_loss": 0.03892936408519745,
+  "validation": {
+    "cases": 15,
+    "pooled_rmse_mv": 0.34731333382461077,
+    "mean_case_ve": 0.7259205525636979,
+    "within_trace_weighted_ve": 0.7876841287255822,
+    "events": {
+      "tp": 6,
+      "fp": 4,
+      "fn": 5,
+      "precision": 0.6,
+      "recall": 0.5454545454545454,
+      "f1": 0.5714285714285714,
+      "median_abs_error_ms": 2.387500000016189
+    },
+    "normalized_mse_floor_0p04": 0.5175777325409266,
+    "score": 0.2381209636460412,
+    "voltage_eligible": false
+  },
+  "updates": 21000,
+  "learning_rates": [
+    1.2000000000000002e-06,
+    1.2000000000000002e-07
+  ],
+  "elapsed_s": 185.723138788715
+}

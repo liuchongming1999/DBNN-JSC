@@ -1,0 +1,35 @@
+{
+  "nadam_vs_keras224_numpy": {
+    "passed": true,
+    "max_parameter_abs": 2.027267242965536e-12,
+    "steps": 600,
+    "stage_resets": 3,
+    "gradient_scale_range": [
+      1e-08,
+      1.0
+    ],
+    "source": "keras-team/keras tag2.2.4 optimizers.py Nadam equations; currentPyTorchNAdam actual hyperparameters"
+  },
+  "training_batchnorm": {
+    "passed": true,
+    "forward_max": 2.220446049250313e-16,
+    "input_gradient_max": 3.0734970124512984e-11,
+    "moving_variance_max": 0.0,
+    "moving_mean_max": 0.0,
+    "scope": "Population-moment formula/gradient fixture; not an end-to-end originalTensorFlow training replay"
+  },
+  "lstm_internal_equations": {
+    "passed": true,
+    "max_abs": 9.992007221626409e-16,
+    "current_trainable_parameters": 110302,
+    "published1278input_parameter_count": 265902,
+    "scope": "Confirms current standardLSTM equations; does not establish author unpublished JAX initializer/gate implementation equivalence"
+  },
+  "elm_official_full_window_loss": {
+    "passed": true,
+    "max_abs": 0.0,
+    "scope": "AuthorPython code loss, not paper150ms-burn alternative"
+  },
+  "all_passed": true,
+  "script_sha256": "1125f42590969e1936ea3c26b306f00caf75910fea67de0fd68ee97b88c059e3"
+}

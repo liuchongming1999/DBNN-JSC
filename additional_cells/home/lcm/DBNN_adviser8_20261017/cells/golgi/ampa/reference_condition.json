@@ -1,0 +1,98 @@
+{
+  "model": "golgi",
+  "modeldb": 266806,
+  "profile": "ampa",
+  "operating_point": {
+    "model": "golgi",
+    "spec": {
+      "modeldb": 266806,
+      "variant": "Morphology_1",
+      "module": "Golgi2020_morpho_1",
+      "cls": "Golgi_morpho_1",
+      "args": [],
+      "celsius": 32.0,
+      "v_init": -65.0,
+      "article_label": "GoC_1",
+      "author": "Masoli et al. (2020)"
+    },
+    "native_spikes_2s": 18,
+    "native_firing_hz": 9.0,
+    "holding_current_na": -0.02,
+    "holding_trials": [
+      {
+        "current_na": 0.0,
+        "spikes_last_1000ms": 8,
+        "rest_mv": -64.69159097969737,
+        "std_mv": 4.484850940902928
+      },
+      {
+        "current_na": -0.005,
+        "spikes_last_1000ms": 8,
+        "rest_mv": -64.70734825443243,
+        "std_mv": 4.401674156356583
+      },
+      {
+        "current_na": -0.01,
+        "spikes_last_1000ms": 6,
+        "rest_mv": -64.84324340389617,
+        "std_mv": 3.947352872171144
+      },
+      {
+        "current_na": -0.02,
+        "spikes_last_1000ms": 0,
+        "rest_mv": -64.5595109576762,
+        "std_mv": 0.00016883732356353891
+      }
+    ],
+    "rest_mv": -64.5595109576762,
+    "weight_us": 2.5e-07,
+    "inhibition_ratio": 0.5,
+    "condition": "Original active channels and morphology retained. Fixed somatic holding current selects a stable low-spike operating point; identical current and reference state used by all solver comparisons.",
+    "weight_selection": "Independent 250E/10Hz 500ms weak probe, same warm state and matched no-input baseline; scale toward 2.5mV depolarization while retaining zero spikes. No fit/validation/test outcomes used.",
+    "reference_dt_ms": 0.025,
+    "reference_output_interval_ms": 0.25,
+    "warmup_ms": 2000.0,
+    "input_calibration": {
+      "reference_dt_ms": 0.025,
+      "engine": "core",
+      "source": "Numerically verified CoreNEURON implementation of the same neuron",
+      "duration_ms": 500.0,
+      "records": [
+        {
+          "weight_us": 1e-06,
+          "mean_depolarization_mv": -0.0681588911072366,
+          "spike_count": 1
+        },
+        {
+          "weight_us": 5e-07,
+          "mean_depolarization_mv": -0.6461447558447839,
+          "spike_count": 1
+        },
+        {
+          "weight_us": 2.5e-07,
+          "mean_depolarization_mv": 0.2801406007795429,
+          "spike_count": 0
+        },
+        {
+          "weight_us": 2.231022558889437e-06,
+          "mean_depolarization_mv": -0.1955460799937715,
+          "spike_count": 2
+        },
+        {
+          "weight_us": 1.1155112794447184e-06,
+          "mean_depolarization_mv": 0.14554863329823278,
+          "spike_count": 1
+        }
+      ],
+      "selected": {
+        "weight_us": 2.5e-07,
+        "mean_depolarization_mv": 0.2801406007795429,
+        "spike_count": 0
+      }
+    },
+    "calibrated_at": "2026-10-02T10:57:12+0800"
+  },
+  "reference_dt_ms": 0.025,
+  "warmup_ms": 2000.0,
+  "condition_sha256": "56c6302d792cd48c25e3852978829e693d50e398774f899a6fc352bdb846b7af"
+}

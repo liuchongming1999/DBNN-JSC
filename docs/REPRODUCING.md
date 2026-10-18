@@ -1,180 +1,233 @@
-# Reproducing the DBNN study
+# Reproducing the current DBNN study
 
-## 1. What is frozen
+## Frozen scope and software
 
-The main DBNN checkpoint was fitted from independent random initialization on
-117 training and 32 validation trajectories, each 6 s long. Training windows
-are 500 ms, with a 150 ms input-history prefix and a 350 ms loss interval.
-No input in the independent 379-case panel participates in fitting, reset
-calibration, or checkpoint selection. Run `scripts/verify_release.py` to check
-input disjointness and the raw-array primary DBNN statistics.
+The 18 October 2026 snapshot uses the existing trained full-matrix mouse DBNN,
+unchanged thresholds/reset, the original 379 inputs, and a common 0.0125 ms
+NEURON reference. It incorporates the already-completed corrected Branch-ELM
+training and whole-trajectory TCN inference. No training or tuning was performed
+to make this release. `docs/reference_environment.json` records the experiment
+software/hardware; optimized inference used PyTorch 2.8.0, CUDA 12.8, Triton 3.4.0,
+NEURON 9.0.2, an RTX 5090, and AMD EPYC 9554 CPUs.
 
-The original training source is
-`workspace/benchmarks/diagonal_1ms_20261009/train_dbnn_diagonal.py`.
-Its dated name reflects an earlier comparison; this release's main model uses
-a trainable full quadratic matrix. The frozen `protocol.json` beside the
-checkpoint gives the exact seed, initialization, losses, optimizer schedule,
-candidate selection and validation reset parameters. The selected reset is
-θ = −58 mV, a = 4 mV and τ = 40 ms.
+`docs/release_manifest_20261018.json` hashes the released files.
+`docs/current_asset_map_20261018.json` maps original paths to repository paths.
+Original absolute paths are retained in frozen provenance; `scripts/release_paths.py`
+resolves these inside a clone. Neither `/home/lcm` nor the author's server is
+needed for offline verification. The older `export_manifest.json` and
+`additional_artifacts.json` describe the 13 October export, not the current
+verification contract.
 
-## 2. Workspace and native builds
+## 1. Recompute published results from raw arrays
 
-The `workspace/` snapshot preserves original absolute paths in historical JSON
-and scripts so its hashes can be audited. Do not edit it in place.
+Only NumPy is required; no GPU, NEURON installation, training, or authentication:
 
 ```bash
+pip install numpy
+python scripts/verify_release.py
+```
+
+This checks every release-file hash, original 117/32 fitting/validation split,
+379-input disjointness, current common reference, all 13 primary method/solver
+rows, per-input voltage error and one-to-one events, timing medians and sums,
+complete ELM budget, all twelve frozen cross-cell checkpoints, and all 2,184
+fixed cross-cell input/reference/prediction pairs. Original recorded GPU/FFT
+and graph parity results are also checked. This command never fits anything.
+Output: `build/release_verification.json`. Use `--primary-only` if only the
+379-input comparison is needed. `--skip-hashes` skips only file-integrity reads,
+not numerical recomputation.
+
+The primary raw predictions are under
+`workspace/benchmarks/random_init_main379_20261012/predictions/`.
+The common reference and solver-step trajectories are under
+`workspace/benchmarks/solver_main379_20261016/outputs/reference1/dt*/`.
+NEURON/CoreNEURON parity and actual engine timings are archived under their
+respective engine directories. Error statistics use their checked equivalent
+same-step single-core trajectories. The copied manuscript aggregate is
+`paper/evidence/main379_results.json`.
+
+The TCN whole-trajectory implementation is checked against the unchanged frozen
+predictions; rounding can differ below the archived numerical-equivalence
+threshold, while event indices agree. The published voltage statistics use the
+frozen arrays and the timing uses the equivalent whole-trajectory implementation.
+Both sets are released. Corrected ELM predictions are under
+`workspace/benchmarks/adviser6_elm_author_aligned_20261016/elm_evaluation/`.
+The final seven-repeat paired GPU measurements are in that directory's sibling
+`final_gpu_recheck_20261017/` and `paper/evidence/baseline_final_20261017/paired_gpu.json`.
+
+## 2. Build and run the unchanged primary DBNN
+
+```bash
+pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cu128
+pip install -r requirements.txt
 python scripts/prepare_workspace.py
-```
-
-This creates `build/workspace` and records each path rewrite in
-`build/relocation.json`. All following commands use this working copy.
-
-CPU build (Linux x86-64 with AVX-512; PyTorch must export MKL):
-
-```bash
+# CPU build: Linux x86-64 with AVX-512 and MKL-enabled PyTorch.
 python scripts/build_native.py --workspace build/workspace --cpu-only
+# GPU build: compatible CUDA compiler and separately downloaded CUTLASS 3.9.2.
+python scripts/build_native.py --workspace build/workspace --cutlass /path/to/cutlass-3.9.2
+python scripts/predict.py --workspace build/workspace --backend gpu --case confirmatory_0532
+python scripts/predict.py --workspace build/workspace --backend cpu --threads 1 --case confirmatory_0532
+python scripts/predict.py --workspace build/workspace --backend cpu --threads 8 --case confirmatory_0532
 ```
 
-GPU build additionally requires the CUDA toolkit, a compiler compatible with
-that toolkit, and CUTLASS headers:
+`prepare_workspace.py` copies primary sources/data to a new `build/workspace`
+and rewrites the original primary-root prefix only in that working copy.
+It does not touch frozen inputs, models, or records. GPU defaults to `sm_120`;
+`build_native.py --cuda-arch` accepts another supported architecture. Main
+inference is FP32 IEEE with TF32 disabled. CPU/GPU roundoff can differ; the
+entry point verifies voltage agreement below 0.001 mV and identical event indices
+against the frozen prediction. Output NPZ and newly measured latency go to build/.
+New latency measurements do not replace the paper's recorded measurements.
 
-```bash
-git clone --depth 1 --branch v3.9.2 https://github.com/NVIDIA/cutlass.git build/cutlass-3.9.2
-python scripts/build_native.py --workspace build/workspace --cutlass build/cutlass-3.9.2
-```
+Rasters store event multiplicities and active IDs. The DBNN adapter uses +1 for
+an excitatory event (IDs 0–249), -1 for an inhibitory event (IDs 250–499), and
+0 for no event; event counts are retained when more than one event occupies a
+bin. Each complete call starts with zero filter/reset state. Surrogate time
+constants are expressed in ms; the primary sampling interval is 1 ms.
 
-Default CUDA architecture is `sm_120` (RTX 5090). Use `--cuda-arch` for another
-GPU supported by your installed toolkit. The recorded numerical policy uses
-FP32 IEEE with TF32 disabled. CPU FMA and GPU reductions may differ slightly
-in rounding, and the inference examples verify voltage agreement and identical
-event indices against the frozen prediction.
+## 3. Main DBNN training and validation
 
-## 3. A complete prediction and latency measurement
+The current selected checkpoint was randomly initialized and fitted on 117
+trajectories, with 32 separate complete trajectories for validation. All sources
+last 6 s. Random crops last 500 ms; the first 150 ms supplies filter history,
+and the remaining 350 ms supplies the masked loss. The loss combines
+trajectory-balanced voltage MSE and first differences. Reference events provide
+teacher reset corrections during fitting; autonomous output events are used
+in validation and inference. Validation calibration and subsequent fitting use
+rebuilt teacher targets before final validation-only checkpoint/reset selection.
+The selected reset is threshold -58 mV, amplitude 4 mV, recovery time 40 ms.
 
-```bash
-python scripts/predict.py --workspace build/workspace --case confirmatory_0532 --backend gpu
-python scripts/predict.py --workspace build/workspace --case confirmatory_0532 --backend cpu --threads 1
-python scripts/predict.py --workspace build/workspace --case confirmatory_0532 --backend cpu --threads 8
-```
-
-`--output` sets the NPZ path; `--repeats` changes timing repetitions. Input data
-contain `ids` (active site IDs) and `x` (unsigned binary event raster). The
-adapter assigns +1 to excitatory events (IDs 0–249), −1 to inhibitory events
-(IDs 250–499), and 0 when no event occurs. Time constants stay in milliseconds.
-Each whole-window call starts with zero filter/reset state.
-
-The recorded GPU path uses active-site packing, a parallel affine scan,
-fused quadratic/linear/bias calculation, event reset, cached workspaces and
-CUDA Graph replay. CPU uses site-parallel filtering, MKL or fused quadratic
-calculation, and event reset. The example selects from the paper's independent
-shape policy and checks equivalence against the saved oracle.
-
-The timing interval begins after input/model preparation. It includes the
-complete forward and GPU synchronization. CPU packing, upload, download,
-compilation and scoring are outside it. An additional NVIDIA-event measurement
-is retained in the original timing records where available.
-
-For all 379 inputs use the original portable working-copy runner:
-
-```bash
-ROOT="$PWD/build/workspace"
-PANEL="$ROOT/benchmarks/spike_panel_20261009"
-CP="$ROOT/benchmarks/diagonal_1ms_20261009/dbnn_w500_dt1ms_burn150_full_diag/best_checkpoint.pt"
-SHA=737efcff1e6686bfb153fca8590a8b28a605fbdb08f9a68ff44e68af8867686d
-python "$ROOT/benchmarks/random_init_main379_20261012/benchmark_direct.py" \
-  --root "$ROOT" --work "$PANEL" --method gpu --repeats 3 \
-  --checkpoint "$CP" --checkpoint-sha256 "$SHA" \
-  --predictions "$ROOT/benchmarks/random_init_main379_20261012/predictions" \
-  --output "$PWD/build/benchmark-gpu" --cpus 0
-```
-
-For CPU use `--method cpu1 --cpus 0` or `--method cpu8 --cpus 0,1,2,3,4,5,6,7`.
-Choose permitted physical cores from your machine's affinity mask. The command
-runs per-input numerical validation before accepting timing results.
-
-## 4. Train from scratch
-
-The frozen pipeline uses AdamW, cosine decay, clipping and EMA. Its voltage
-loss combines trajectory-balanced masked MSE and a first-difference term.
-Reference events define the teacher reset correction; full validation
-trajectories select checkpoints and reset. Primary optimization uses 2,000
-epochs, followed by 400 refinement epochs from its own fitted parameters.
-The initialization is random; no previously trained surrogate is required.
+The frozen `protocol.json`, `primary_history.json`, `refine_history.json`, and
+`final_selection.json` beside the primary checkpoint record exact choices.
+The source is `workspace/benchmarks/diagonal_1ms_20261009/train_dbnn_diagonal.py`;
+its historical filename does not mean this release fixes the diagonal to zero.
+Optional retraining, in a NEW output directory, uses the recorded budget:
 
 ```bash
 ROOT="$PWD/build/workspace"
 mkdir -p build/training
-# Build the small training reset routine into the new output directory.
-gcc -O3 -shared -fPIC "$ROOT/benchmarks/fair_window_20261005/seq_reset.c" -lm -o build/training/seq_reset.so
+cc -O3 -shared -fPIC "$ROOT/benchmarks/fair_window_20261005/seq_reset.c" -lm -o build/training/seq_reset.so
 CUDA_VISIBLE_DEVICES=0 python "$ROOT/benchmarks/diagonal_1ms_20261009/train_dbnn_diagonal.py" \
   --root "$ROOT" --work "$PWD/build/training" --dt 1 --window 500 --burn 150 \
   --seed 291049 --allow-diagonal --epochs 2000 --refine-epochs 400 --lr 0.003
 ```
 
-Use `--smoke --epochs 1 --refine-epochs 1` for a short execution check. Smoke
-models are not the published checkpoint. Seeded numerical results may still
-vary across GPU/library versions; evaluate any new checkpoint separately.
+The released models remain authoritative for reproducing the reported values;
+new independent fitting can differ by hardware/library nondeterminism and must
+be evaluated separately. Do not overwrite the locked release with a new model.
 
-## 5. Biological models and comparison methods
+## 4. Baseline implementations and fitting
 
-The main cell is ModelDB 180373, Shai et al. (2015), with `cell1.asc`,
-`L5PCbiophys5.hoc`, full active channels, 500 synaptic sites, and the frozen
-AMPA-like/ inhibitory Exp2Syn configuration. The model and site hashes are in
-`docs/model_source_hashes.json` and the panel's `site_metadata.json`.
-Download upstream models using `scripts/fetch_external.py`; install/compile
-NEURON and CoreNEURON as described by their upstream distributions before
-regenerating solver trajectories. The original run scripts and records are in
-`workspace/benchmarks/spike_panel_20261009` and
-`workspace/benchmarks/neuron_single_expanded_20260929`.
-
-TCN, Branch-ELM and LSTM 1 ms checkpoints and frozen prediction arrays are
-included. Their author-default fitting routines and pinned upstream commits
-are provided. TCN also uses dendritic PCA supervision; prepare the auxiliary
-arrays with the supplied `sample_tcn_aux.py` and `prepare_pca.py` before a full
-retraining run. The upstream original-dataset reproduction evidence is
-`paper/evidence/baseline_reproduction_and_training.json`.
-
-Additional-cell source scripts, referenced checkpoints, evaluation inputs and
-reference arrays are included in `additional_cells/`. The mapping from the
-original source paths to released paths is `docs/additional_artifacts.json`.
-
-Further-cell results are in `paper/evidence/crosscell_models.json` and
-`crosscell_events.json`. These are cell-specific fits and configurations;
-ModelDB accessions and their original sampling intervals are recorded in the
-files. The primary 379-case protocol is specific to the mouse cell.
-
-The input-design manifest records the historical checkpoint used when the
-inputs were generated. For the model reported in the current manuscript, use
-the checkpoint SHA in the repository README and the frozen random-init
-`protocol.json`; the input rasters themselves are unchanged.
-
-## 6. Numerical error analysis and figures
-
-Recorded numerical scripts live in `workspace/benchmarks/theory_20261005`.
-`run_passive.py --out <new-directory>` recomputes the passive finite-strength
-controls. Pair-interaction and perturbation-order checks use the companion
-Python scripts and saved NPZ trajectories. Keep newly generated output separate
-from the frozen archive.
+All primary learned methods use the same 117 fit/32 validation sources. Source
+versions and original-dataset replay records are retained. Retrieve pinned
+third-party code under its original license:
 
 ```bash
-python paper/scripts/build_figures.py
+python scripts/fetch_external.py --workspace build/workspace
 ```
 
-This reconstructs six scientific figures and numerical table exports from
-released evidence arrays. It needs no NEURON simulation or GPU training.
+- **Branch-ELM:** corrected geometry-only input routing covers all 45 virtual
+  branches. Each batch samples eight distinct trajectories; 500 ms windows
+  start no earlier than 500 ms. The fixed public Python defaults use seed
+  930291, 35 x 10,000 updates, and validation-only output calibration and event
+  threshold. The recorded complete checkpoint uses the full 350,000 budget.
+  The Python implementation differs from some paper/JAX descriptions; these
+  differences are disclosed in `resolved_args.json` and the manuscript.
+- **TCN:** the 1 ms checkpoint and event threshold are unchanged. The current
+  comparison times one complete trajectory forward, with archived voltage and
+  event parity against its original overlapping-window implementation.
+  The 20-component dendritic PCA fit uses fitting data only. The PCA transform
+  and all 149 projected training/validation arrays are included under
+  `additional_cells/data/lcm/DBNN_baselines_20260930/tcn_aux/pca_1ms/`.
+  `sample_tcn_aux.py` and `prepare_pca.py` can regenerate auxiliary recordings
+  using the upstream neuron model if raw dendritic traces are needed.
+- **LSTM:** the recorded LSTM-50 paper-recipe adaptation and overlapping-window
+  inference remain unchanged. It is not described as an independently replayed
+  public LSTM checkpoint. Its actual model, configuration, and validation event
+  threshold are supplied.
+- **NEURON/CoreNEURON:** the sweep covers 0.5, 0.25, and 0.1 ms solver steps,
+  with a 1 ms observation grid; the common accuracy reference uses 0.0125 ms.
+  CPU engine voltage/event parity is checked in the saved per-input records.
+  **Neuron_Reduce** retains its locked morphology adaptation and solver setup.
 
-## 7. Inspect input-level results
+The portable optional ELM training launcher preserves the archived defaults
+and requires a new output folder:
 
-- `workspace/benchmarks/spike_panel_20261009/main379/manifest.json`: selected
-  independent inputs and complete event-generating conditions.
-- `workspace/benchmarks/random_init_main379_20261012/records`: DBNN per-input
-  masked SSE/sample count, TP/FP/FN and matched timing errors.
-- `.../predictions`: predicted drive, voltage, and reference/model events.
-- `.../gpu`, `.../cpu1`, `.../cpu8`: repetition-level runtime and equivalence.
-- `workspace/benchmarks/spike_panel_20261009/main379/neuron8` and `core1`:
-  sharded 0.5 ms solver curves and timing records.
-- `paper/evidence/main379_results.json`: the frozen all-method aggregation,
-  input-family and duration strata, and trajectory-level confidence intervals.
+```bash
+python scripts/train_branch_elm.py --workspace build/workspace --output build/new_elm_training
+```
 
-Changing masks, tolerances or aggregation conventions constitutes a new
-analysis: preserve the frozen figures and report the new convention explicitly.
+For TCN/LSTM, the released `train_default.py`, exact `complete.json` configs,
+source versions, and original replay gates are under the primary baseline
+workspace. TCN uses `--method tcn --dt 1`; LSTM uses `--method lstm --dt 1`.
+Pass a fresh work/output directory, the relocated primary root, and the released
+PCA data directory (its parent must contain `tcn_aux`). Historical campaign
+scripts have completion guards and absolute-path provenance: copy them into
+a new work area before launching independent fitting. These training commands
+are not run by release verification.
+
+## 5. Separately fitted cells
+
+The authoritative final protocol and model lock are under
+`additional_cells/home/lcm/DBNN_crosscell_final_selection_test_20261017/`.
+All twelve selected weights/reset settings were fixed before this replay.
+Each condition keeps all 182 prelocked inputs without output-based screening.
+The panel had already been used to evaluate other fitting recipes; this is
+explicitly a fixed-panel reevaluation, not a newly unseen panel. A trainable
+diagonal permits a validation-selected zero-valued winner; no test performance
+is used to replace models or thresholds.
+
+Released files include all selected checkpoints, original test rasters and
+references, fitting/validation inputs and references, per-input predicted voltage
+and events, full timing and numerical-equivalence records, starting checkpoints,
+validation comparisons and histories, and the final candidate-selection code.
+The selected model mapping is in `models_locked.json`; job manifests and reset
+settings are preserved verbatim. Cross-cell training sources are under
+`additional_cells/home/lcm/DBNN_crosscell_candidate_completion_20261017/`
+and the parent legacy fitting directories. Cell/source accessions and model
+conditions remain in the original per-job `reference_condition.json` records.
+
+A portable reference forward for one locked model (Torch/NumPy only):
+
+```bash
+python scripts/replay_crosscell.py --cell granule --profile ampa --case new_granule_0000 --device cpu
+# Use --device cuda:0 for the original FP32 FFT arithmetic path.
+```
+
+This computes the same fixed DBNN with FFT filtering and sequential FP64 reset,
+checks against the saved prediction, and writes to build/. It is a reference
+replay, not the optimized timing implementation. The actual optimized evaluator,
+including its predeclared FP64-reset equivalence fallback, is preserved in the
+final evaluation directory. All biological models are independently fitted;
+this is not transfer of the primary mouse checkpoint to another cell.
+
+## 6. Figures, uncertainty, and diagnostics
+
+```bash
+pip install matplotlib
+python scripts/reproduce_paper.py
+```
+
+This creates a fresh `build/paper_reproduction/`, recalculates current event
+statistics and paired bootstrap comparisons, rebuilds cross-cell tables and
+figures, and reproduces the frozen validation/reset diagnostics. Original
+release assets stay unchanged. Figures use Matplotlib and embedded vector fonts.
+The copied manuscript source itself is not published by this code/data update.
+
+Primary input bootstrap uses 10,000 resamples of the 374 stochastic complete
+trajectories, retaining five deterministic controls; this measures input
+variability for the fixed models, not variability across retraining seeds.
+Cross-cell uncertainty uses the stored 10,000 trajectory-resample rule.
+Subthreshold masks and spike matching are different: voltage excludes ±10 ms
+of reference events, whereas F1 uses inclusive ±5 ms one-to-one event matching
+with 1e-6 ms floating-point allowance at the boundary. No test thresholds are
+recalibrated by any regeneration entry point.
+
+Finite-strength analysis, isolated-response controls, and fitted-network error
+budgets are in paper/evidence and theory_data with their source scripts. Practical
+call boundaries and one-time costs are archived separately from prepared
+computation. Raw timing is hardware-specific; the paper's primary GPU comparison
+uses seven paired repetitions on a monitored device, while CPU/solver records
+use three. Graph capture, packing, upload/download, initialization, and training
+are outside the headline prepared interval. Cost tables make those boundaries
+explicit and estimate amortization separately.

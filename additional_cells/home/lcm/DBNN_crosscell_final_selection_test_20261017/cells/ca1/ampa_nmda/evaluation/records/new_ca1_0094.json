@@ -1,0 +1,60 @@
+{
+  "case_id": "new_ca1_0094",
+  "duration_ms": 4000,
+  "A": 256,
+  "family": "excitatory_gates",
+  "site_mode": "proximal",
+  "rate_hz": 25,
+  "input_sha256": "39ec67f0ceee23615103e3f240bec946acde5646fcb358393f581d650e97c99a",
+  "checkpoint_sha256": "a05712c1df1a49a712a191a53468536e88e4307c885b3379beeb007883b14a43",
+  "reference_sha256": "3c6fc8ee91c3fb694f84d706ae1885f2e8e5dc1af9a02551fd44f8cf4daaa8b1",
+  "test_manifest_sha256": "c456dab3cf1ef8b9d597207629d5c44806642d022ca91073445844a1957dd1c9",
+  "input_seed": 202610220094,
+  "ids_sha256": "3ad052bd4984fa3f023625a4a1c854f54bea7d4763b670be2e6a1f346c06b567",
+  "reference_events_ms": [
+    826.5499999940298,
+    848.4999999937104,
+    2024.4749999765977,
+    2048.5999999762466,
+    3220.674999959191,
+    3246.674999958813
+  ],
+  "predicted_events_ms": [
+    821.0,
+    844.0,
+    2021.0,
+    2043.0,
+    3218.0,
+    3244.0
+  ],
+  "voltage": {
+    "n": 3881,
+    "sse": 68.04096427554032,
+    "reference_ss": 1246.7886501830199,
+    "error_ss": 56.492725719026545
+  },
+  "events": {
+    "tp": 4,
+    "fp": 2,
+    "fn": 2,
+    "matched_errors_ms": [
+      -4.499999993710389,
+      -3.474999976597701,
+      -2.6749999591911546,
+      -2.674999958812805
+    ]
+  },
+  "prepared_wall_ms": 0.03892742097377777,
+  "runs_ms": [
+    0.051276758313179016,
+    0.03892742097377777,
+    0.03801658749580383
+  ],
+  "backend": "hier_store_1024",
+  "numerical": {
+    "max_abs_mv": 9.020931031500368e-06,
+    "events_equal": true,
+    "captured_graph_max_abs_mv": 9.020931031500368e-06,
+    "captured_graph_events_equal": true
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "device": "NVIDIA GeForce RTX 5090",
+  "compute_capability": [
+    12,
+    0
+  ],
+  "multiprocessors": 170,
+  "scope": "compiler/static launch metadata; Nsight counters unavailable",
+  "kernels": [
+    {
+      "A": 500,
+      "M": 6001,
+      "config": 3,
+      "triangle": true,
+      "tile": [
+        64,
+        64,
+        32
+      ],
+      "warps_per_block": 4,
+      "blocks": 752,
+      "registers_per_thread": 96,
+      "spill_count": 0,
+      "shared_bytes": 16384
+    },
+    {
+      "A": 500,
+      "M": 48008,
+      "config": 9,
+      "triangle": true,
+      "tile": [
+        128,
+        64,
+        32
+      ],
+      "warps_per_block": 8,
+      "blocks": 3008,
+      "registers_per_thread": 128,
+      "spill_count": 0,
+      "shared_bytes": 49152
+    },
+    {
+      "A": 2048,
+      "M": 6001,
+      "config": 6,
+      "triangle": true,
+      "tile": [
+        64,
+        64,
+        64
+      ],
+      "warps_per_block": 4,
+      "blocks": 3008,
+      "registers_per_thread": 196,
+      "spill_count": 0,
+      "shared_bytes": 65536
+    },
+    {
+      "A": 500,
+      "M": 6001,
+      "config": 6,
+      "triangle": false,
+      "tile": [
+        64,
+        64,
+        64
+      ],
+      "warps_per_block": 4,
+      "blocks": 752,
+      "registers_per_thread": 255,
+      "spill_count": 252,
+      "shared_bytes": 65536
+    }
+  ],
+  "one_thread_per_timepoint_example": {
+    "M": 6001,
+    "threads_per_block": 128,
+    "blocks": 47
+  }
+}

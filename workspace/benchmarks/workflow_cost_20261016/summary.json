@@ -1,0 +1,752 @@
+{
+  "finished": true,
+  "inputs": 379,
+  "duration_s": 2497,
+  "reference_step_ms": 0.0125,
+  "frozen_checkpoint_sha256": "737efcff1e6686bfb153fca8590a8b28a605fbdb08f9a68ff44e68af8867686d",
+  "solver_dt_ms": 0.5,
+  "solver_total_s": {
+    "reset_and_biological_warmup_ms": 51.55416247807443,
+    "event_schedule_ms": 58.055289207957685,
+    "prepared_ms": 526.5047691715881,
+    "output_ms": 0.1018363693729043,
+    "resident_ms": 636.2814756231382
+  },
+  "solver_panel_aggregation": {
+    "round_totals_s": [
+      636.4648923352361,
+      636.2510698791593,
+      636.2053529974073,
+      635.9312226548791,
+      636.2720590345562,
+      636.437483817339,
+      636.587455868721,
+      636.2592719495296,
+      636.2013891488314,
+      636.6406270693988
+    ],
+    "median_panel_s": 636.2656654920429,
+    "definition": "Sum resident service times across all379 inputs at the same repetition index; first10 repetitions of every input; excludes input-file I/O and scoring, not a claim of one contiguous whole-program run"
+  },
+  "methods": {
+    "gpu": {
+      "boundaries": {
+        "prepared": {
+          "sum_input_medians_s": 0.03483916260302067,
+          "round_sums_s": [
+            0.03490854147821665,
+            0.03482792433351278,
+            0.03483978286385536
+          ],
+          "round_sum_range_s": [
+            0.03482792433351278,
+            0.03490854147821665
+          ],
+          "relative_iqr_median": 0.018886046219016062,
+          "ratio_vs_solver_resident": 18263.39751254442,
+          "by_duration": {
+            "1": {
+              "inputs": 33,
+              "dbnn_median_ms": 0.03619398921728134,
+              "neuron_median_ms": 376.2970417737961,
+              "ratio_sums": 10353.047215834938,
+              "dbnn_mean_input_ms": 0.036329482540939796,
+              "neuron_mean_input_ms": 376.12084807320076
+            },
+            "2": {
+              "inputs": 40,
+              "dbnn_median_ms": 0.05162833258509636,
+              "neuron_median_ms": 613.0599435418844,
+              "ratio_sums": 11844.234548266697,
+              "dbnn_mean_input_ms": 0.05166376940906048,
+              "neuron_mean_input_ms": 611.9178025284782
+            },
+            "4": {
+              "inputs": 80,
+              "dbnn_median_ms": 0.062197912484407425,
+              "neuron_median_ms": 1088.7564476579428,
+              "ratio_sums": 17350.058114640742,
+              "dbnn_mean_input_ms": 0.06217455957084894,
+              "neuron_mean_input_ms": 1078.7322218064219
+            },
+            "8": {
+              "inputs": 194,
+              "dbnn_median_ms": 0.11044694110751152,
+              "neuron_median_ms": 2045.8636246621609,
+              "ratio_sums": 19890.242799406395,
+              "dbnn_mean_input_ms": 0.10111663951394484,
+              "neuron_mean_input_ms": 2011.2345109924136
+            },
+            "16": {
+              "inputs": 32,
+              "dbnn_median_ms": 0.21880725398659706,
+              "neuron_median_ms": 3819.2144236527383,
+              "ratio_sums": 17601.6227358252,
+              "dbnn_mean_input_ms": 0.21822331473231316,
+              "neuron_mean_input_ms": 3841.084458079422
+            }
+          }
+        },
+        "resident_reuse_layout": {
+          "sum_input_medians_s": 1.0862713465467095,
+          "round_sums_s": [
+            1.0905876886099577,
+            1.0898841181769967,
+            1.0903191855177283
+          ],
+          "round_sum_range_s": [
+            1.0898841181769967,
+            1.0905876886099577
+          ],
+          "relative_iqr_median": 0.020525458498032067,
+          "ratio_vs_solver_resident": 585.7481904920874,
+          "by_duration": {
+            "1": {
+              "inputs": 33,
+              "dbnn_median_ms": 0.43809227645397186,
+              "neuron_median_ms": 376.2970417737961,
+              "ratio_sums": 832.2316205875197,
+              "dbnn_mean_input_ms": 0.45194251067710645,
+              "neuron_mean_input_ms": 376.12084807320076
+            },
+            "2": {
+              "inputs": 40,
+              "dbnn_median_ms": 0.8157361298799515,
+              "neuron_median_ms": 613.0599435418844,
+              "ratio_sums": 750.2089917797389,
+              "dbnn_mean_input_ms": 0.8156631141901016,
+              "neuron_mean_input_ms": 611.9178025284782
+            },
+            "4": {
+              "inputs": 80,
+              "dbnn_median_ms": 1.5381942503154278,
+              "neuron_median_ms": 1088.7564476579428,
+              "ratio_sums": 701.5926694620367,
+              "dbnn_mean_input_ms": 1.537547737825662,
+              "neuron_mean_input_ms": 1078.7322218064219
+            },
+            "8": {
+              "inputs": 194,
+              "dbnn_median_ms": 3.4970855340361595,
+              "neuron_median_ms": 2045.8636246621609,
+              "ratio_sums": 637.870551906114,
+              "dbnn_mean_input_ms": 3.153044932051418,
+              "neuron_mean_input_ms": 2011.2345109924136
+            },
+            "16": {
+              "inputs": 32,
+              "dbnn_median_ms": 9.494482539594173,
+              "neuron_median_ms": 3819.2144236527383,
+              "ratio_sums": 404.27656120205666,
+              "dbnn_mean_input_ms": 9.501130727585405,
+              "neuron_mean_input_ms": 3841.084458079422
+            }
+          }
+        },
+        "resident_new_layout": {
+          "sum_input_medians_s": 17.43557922169566,
+          "round_sums_s": [
+            17.899688059464097,
+            18.12932044453919,
+            17.995297705754638
+          ],
+          "round_sum_range_s": [
+            17.899688059464097,
+            18.12932044453919
+          ],
+          "relative_iqr_median": 0.06331920927100151,
+          "ratio_vs_solver_resident": 36.49328006444388,
+          "by_duration": {
+            "1": {
+              "inputs": 33,
+              "dbnn_median_ms": 34.17816944420338,
+              "neuron_median_ms": 376.2970417737961,
+              "ratio_sums": 10.833630051062405,
+              "dbnn_mean_input_ms": 34.717896614562385,
+              "neuron_mean_input_ms": 376.12084807320076
+            },
+            "2": {
+              "inputs": 40,
+              "dbnn_median_ms": 36.08950786292553,
+              "neuron_median_ms": 613.0599435418844,
+              "ratio_sums": 16.63257631051664,
+              "dbnn_mean_input_ms": 36.79031985811889,
+              "neuron_mean_input_ms": 611.9178025284782
+            },
+            "4": {
+              "inputs": 80,
+              "dbnn_median_ms": 41.837386786937714,
+              "neuron_median_ms": 1088.7564476579428,
+              "ratio_sums": 24.747389934316654,
+              "dbnn_mean_input_ms": 43.58973712660372,
+              "neuron_mean_input_ms": 1078.7322218064219
+            },
+            "8": {
+              "inputs": 194,
+              "dbnn_median_ms": 48.267148435115814,
+              "neuron_median_ms": 2045.8636246621609,
+              "ratio_sums": 41.930950196101236,
+              "dbnn_mean_input_ms": 47.96539314244826,
+              "neuron_mean_input_ms": 2011.2345109924136
+            },
+            "16": {
+              "inputs": 32,
+              "dbnn_median_ms": 60.56696455925703,
+              "neuron_median_ms": 3819.2144236527383,
+              "ratio_sums": 60.67433090703051,
+              "dbnn_mean_input_ms": 63.30658122897148,
+              "neuron_mean_input_ms": 3841.084458079422
+            }
+          }
+        }
+      }
+    },
+    "cpu8": {
+      "boundaries": {
+        "prepared": {
+          "sum_input_medians_s": 2.7987867975607514,
+          "round_sums_s": [
+            2.769043686799705,
+            2.7850574646145105,
+            2.7984830122441053
+          ],
+          "round_sum_range_s": [
+            2.769043686799705,
+            2.7984830122441053
+          ],
+          "relative_iqr_median": 0.08395251515927919,
+          "ratio_vs_solver_resident": 227.3418883416492,
+          "by_duration": {
+            "1": {
+              "inputs": 33,
+              "dbnn_median_ms": 1.0314928367733955,
+              "neuron_median_ms": 376.2970417737961,
+              "ratio_sums": 362.7331056546839,
+              "dbnn_mean_input_ms": 1.036907969550653,
+              "neuron_mean_input_ms": 376.12084807320076
+            },
+            "2": {
+              "inputs": 40,
+              "dbnn_median_ms": 2.4832068011164665,
+              "neuron_median_ms": 613.0599435418844,
+              "ratio_sums": 255.9691540629264,
+              "dbnn_mean_input_ms": 2.3905919631943107,
+              "neuron_mean_input_ms": 611.9178025284782
+            },
+            "4": {
+              "inputs": 80,
+              "dbnn_median_ms": 4.763795528560877,
+              "neuron_median_ms": 1088.7564476579428,
+              "ratio_sums": 226.40985990119086,
+              "dbnn_mean_input_ms": 4.764510795939714,
+              "neuron_mean_input_ms": 1078.7322218064219
+            },
+            "8": {
+              "inputs": 194,
+              "dbnn_median_ms": 9.900216944515705,
+              "neuron_median_ms": 2045.8636246621609,
+              "ratio_sums": 227.83057257310153,
+              "dbnn_mean_input_ms": 8.827763931230479,
+              "neuron_mean_input_ms": 2011.2345109924136
+            },
+            "16": {
+              "inputs": 32,
+              "dbnn_median_ms": 17.889199312776327,
+              "neuron_median_ms": 3819.2144236527383,
+              "ratio_sums": 213.6910828786161,
+              "dbnn_mean_input_ms": 17.974940303247422,
+              "neuron_mean_input_ms": 3841.084458079422
+            }
+          }
+        },
+        "resident_reuse_layout": {
+          "sum_input_medians_s": 4.597768093459308,
+          "round_sums_s": [
+            4.612960062921047,
+            4.62315218988806,
+            4.616093856282532
+          ],
+          "round_sum_range_s": [
+            4.612960062921047,
+            4.62315218988806
+          ],
+          "relative_iqr_median": 0.0994437707260512,
+          "ratio_vs_solver_resident": 138.3892059558853,
+          "by_duration": {
+            "1": {
+              "inputs": 33,
+              "dbnn_median_ms": 1.7874352633953094,
+              "neuron_median_ms": 376.2970417737961,
+              "ratio_sums": 218.29744618795485,
+              "dbnn_mean_input_ms": 1.7229741100560536,
+              "neuron_mean_input_ms": 376.12084807320076
+            },
+            "2": {
+              "inputs": 40,
+              "dbnn_median_ms": 3.482209984213114,
+              "neuron_median_ms": 613.0599435418844,
+              "ratio_sums": 173.39049167154064,
+              "dbnn_mean_input_ms": 3.529131249524653,
+              "neuron_mean_input_ms": 611.9178025284782
+            },
+            "4": {
+              "inputs": 80,
+              "dbnn_median_ms": 7.7147893607616425,
+              "neuron_median_ms": 1088.7564476579428,
+              "ratio_sums": 139.35827459503378,
+              "dbnn_mean_input_ms": 7.740711665246636,
+              "neuron_mean_input_ms": 1078.7322218064219
+            },
+            "8": {
+              "inputs": 194,
+              "dbnn_median_ms": 15.573301818221807,
+              "neuron_median_ms": 2045.8636246621609,
+              "ratio_sums": 141.3126433371263,
+              "dbnn_mean_input_ms": 14.23251637996933,
+              "neuron_mean_input_ms": 2011.2345109924136
+            },
+            "16": {
+              "inputs": 32,
+              "dbnn_median_ms": 31.829312909394503,
+              "neuron_median_ms": 3819.2144236527383,
+              "ratio_sums": 120.57795176260379,
+              "dbnn_mean_input_ms": 31.855612091021612,
+              "neuron_mean_input_ms": 3841.084458079422
+            }
+          }
+        },
+        "resident_new_layout": {
+          "sum_input_medians_s": 8.284435162320733,
+          "round_sums_s": [
+            8.313853925094008,
+            8.333063101395965,
+            8.264330219477415
+          ],
+          "round_sum_range_s": [
+            8.264330219477415,
+            8.333063101395965
+          ],
+          "relative_iqr_median": 0.05396856388662235,
+          "ratio_vs_solver_resident": 76.80444872295864,
+          "by_duration": {
+            "1": {
+              "inputs": 33,
+              "dbnn_median_ms": 3.7047192454338074,
+              "neuron_median_ms": 376.2970417737961,
+              "ratio_sums": 101.96067786935751,
+              "dbnn_mean_input_ms": 3.688881399505066,
+              "neuron_mean_input_ms": 376.12084807320076
+            },
+            "2": {
+              "inputs": 40,
+              "dbnn_median_ms": 6.752314046025276,
+              "neuron_median_ms": 613.0599435418844,
+              "ratio_sums": 91.24365258787847,
+              "dbnn_mean_input_ms": 6.706415023654699,
+              "neuron_mean_input_ms": 611.9178025284782
+            },
+            "4": {
+              "inputs": 80,
+              "dbnn_median_ms": 13.986797071993351,
+              "neuron_median_ms": 1088.7564476579428,
+              "ratio_sums": 76.67309867465141,
+              "dbnn_mean_input_ms": 14.069239934906363,
+              "neuron_mean_input_ms": 1078.7322218064219
+            },
+            "8": {
+              "inputs": 194,
+              "dbnn_median_ms": 25.106551125645638,
+              "neuron_median_ms": 2045.8636246621609,
+              "ratio_sums": 88.11050903893491,
+              "dbnn_mean_input_ms": 22.826272744647007,
+              "neuron_mean_input_ms": 2011.2345109924136
+            },
+            "16": {
+              "inputs": 32,
+              "dbnn_median_ms": 72.39255029708147,
+              "neuron_median_ms": 3819.2144236527383,
+              "ratio_sums": 52.51397535287391,
+              "dbnn_mean_input_ms": 73.14404274802655,
+              "neuron_mean_input_ms": 3841.084458079422
+            }
+          }
+        }
+      }
+    },
+    "cpu1": {
+      "boundaries": {
+        "prepared": {
+          "sum_input_medians_s": 12.45181443542242,
+          "round_sums_s": [
+            12.47715490590781,
+            12.447822918184102,
+            12.4765256755054
+          ],
+          "round_sum_range_s": [
+            12.447822918184102,
+            12.47715490590781
+          ],
+          "relative_iqr_median": 0.009116944398086019,
+          "ratio_vs_solver_resident": 51.09949870543126,
+          "by_duration": {
+            "1": {
+              "inputs": 33,
+              "dbnn_median_ms": 4.428337328135967,
+              "neuron_median_ms": 376.2970417737961,
+              "ratio_sums": 82.90133619473052,
+              "dbnn_mean_input_ms": 4.536969671872529,
+              "neuron_mean_input_ms": 376.12084807320076
+            },
+            "2": {
+              "inputs": 40,
+              "dbnn_median_ms": 8.898339234292507,
+              "neuron_median_ms": 613.0599435418844,
+              "ratio_sums": 66.51570306758605,
+              "dbnn_mean_input_ms": 9.199599106796086,
+              "neuron_mean_input_ms": 611.9178025284782
+            },
+            "4": {
+              "inputs": 80,
+              "dbnn_median_ms": 20.35744860768318,
+              "neuron_median_ms": 1088.7564476579428,
+              "ratio_sums": 52.984032487547296,
+              "dbnn_mean_input_ms": 20.359571953304112,
+              "neuron_mean_input_ms": 1078.7322218064219
+            },
+            "8": {
+              "inputs": 194,
+              "dbnn_median_ms": 42.23867179825902,
+              "neuron_median_ms": 2045.8636246621609,
+              "ratio_sums": 53.479289131240215,
+              "dbnn_mean_input_ms": 37.60772709705934,
+              "neuron_mean_input_ms": 2011.2345109924136
+            },
+            "16": {
+              "inputs": 32,
+              "dbnn_median_ms": 93.95889705047011,
+              "neuron_median_ms": 3819.2144236527383,
+              "ratio_sums": 40.84297129461502,
+              "dbnn_mean_input_ms": 94.04517684015445,
+              "neuron_mean_input_ms": 3841.084458079422
+            }
+          }
+        },
+        "resident_reuse_layout": {
+          "sum_input_medians_s": 14.028176944702864,
+          "round_sums_s": [
+            14.090385833755136,
+            14.006479074247181,
+            14.048247053287923
+          ],
+          "round_sum_range_s": [
+            14.006479074247181,
+            14.090385833755136
+          ],
+          "relative_iqr_median": 0.009945938506141684,
+          "ratio_vs_solver_resident": 45.35738878482015,
+          "by_duration": {
+            "1": {
+              "inputs": 33,
+              "dbnn_median_ms": 4.904110915958881,
+              "neuron_median_ms": 376.2970417737961,
+              "ratio_sums": 75.04100662524253,
+              "dbnn_mean_input_ms": 5.012204193256118,
+              "neuron_mean_input_ms": 376.12084807320076
+            },
+            "2": {
+              "inputs": 40,
+              "dbnn_median_ms": 9.861076716333628,
+              "neuron_median_ms": 613.0599435418844,
+              "ratio_sums": 60.182921783178145,
+              "dbnn_mean_input_ms": 10.167632019147277,
+              "neuron_mean_input_ms": 611.9178025284782
+            },
+            "4": {
+              "inputs": 80,
+              "dbnn_median_ms": 23.593684192746878,
+              "neuron_median_ms": 1088.7564476579428,
+              "ratio_sums": 45.79452200608306,
+              "dbnn_mean_input_ms": 23.555922729428858,
+              "neuron_mean_input_ms": 1078.7322218064219
+            },
+            "8": {
+              "inputs": 194,
+              "dbnn_median_ms": 47.253194730728865,
+              "neuron_median_ms": 2045.8636246621609,
+              "ratio_sums": 47.65287005141942,
+              "dbnn_mean_input_ms": 42.205947067242924,
+              "neuron_mean_input_ms": 2011.2345109924136
+            },
+            "16": {
+              "inputs": 32,
+              "dbnn_median_ms": 105.5335239507258,
+              "neuron_median_ms": 3819.2144236527383,
+              "ratio_sums": 36.32616137293807,
+              "dbnn_mean_input_ms": 105.73879300500266,
+              "neuron_mean_input_ms": 3841.084458079422
+            }
+          }
+        },
+        "resident_new_layout": {
+          "sum_input_medians_s": 17.06402931548655,
+          "round_sums_s": [
+            17.220599878579378,
+            17.033647807314992,
+            17.07214380800724
+          ],
+          "round_sum_range_s": [
+            17.033647807314992,
+            17.220599878579378
+          ],
+          "relative_iqr_median": 0.011747479259929493,
+          "ratio_vs_solver_resident": 37.28787989397543,
+          "by_duration": {
+            "1": {
+              "inputs": 33,
+              "dbnn_median_ms": 6.9121625274419785,
+              "neuron_median_ms": 376.2970417737961,
+              "ratio_sums": 52.98063559920156,
+              "dbnn_mean_input_ms": 7.099213586612181,
+              "neuron_mean_input_ms": 376.12084807320076
+            },
+            "2": {
+              "inputs": 40,
+              "dbnn_median_ms": 12.604213319718838,
+              "neuron_median_ms": 613.0599435418844,
+              "ratio_sums": 47.42744420557144,
+              "dbnn_mean_input_ms": 12.902188021689653,
+              "neuron_mean_input_ms": 611.9178025284782
+            },
+            "4": {
+              "inputs": 80,
+              "dbnn_median_ms": 27.874115854501724,
+              "neuron_median_ms": 1088.7564476579428,
+              "ratio_sums": 38.723448893357705,
+              "dbnn_mean_input_ms": 27.857338450849056,
+              "neuron_mean_input_ms": 1078.7322218064219
+            },
+            "8": {
+              "inputs": 194,
+              "dbnn_median_ms": 53.96088678389788,
+              "neuron_median_ms": 2045.8636246621609,
+              "ratio_sums": 41.52443853037168,
+              "dbnn_mean_input_ms": 48.43495980135559,
+              "neuron_mean_input_ms": 2011.2345109924136
+            },
+            "16": {
+              "inputs": 32,
+              "dbnn_median_ms": 146.5707290917635,
+              "neuron_median_ms": 3819.2144236527383,
+              "ratio_sums": 26.2151007317471,
+              "dbnn_mean_input_ms": 146.52182714780793,
+              "neuron_mean_input_ms": 3841.084458079422
+            }
+          }
+        }
+      }
+    }
+  },
+  "stream": {
+    "gpu": {
+      "rounds_s": [
+        2.8292173948138952,
+        2.720586959272623,
+        2.3044916838407516
+      ],
+      "median_panel_s": 2.720586959272623,
+      "cache_hits": [
+        350,
+        350,
+        350
+      ],
+      "cache_misses": [
+        29,
+        29,
+        29
+      ],
+      "ratio_vs_solver_resident": 233.8707326826837
+    },
+    "cpu8": {
+      "rounds_s": [
+        4.833882765844464,
+        4.941424367949367,
+        4.6495448760688305
+      ],
+      "median_panel_s": 4.833882765844464,
+      "cache_hits": [
+        350,
+        350,
+        350
+      ],
+      "cache_misses": [
+        29,
+        29,
+        29
+      ],
+      "ratio_vs_solver_resident": 131.62620947032613
+    }
+  },
+  "offline": {
+    "training_validation_calibration_historical_s": 117.54920323379338,
+    "preparation_new_measured_fresh_process_s": [
+      4.64240356720984,
+      4.194329200312495,
+      3.9088606517761946
+    ],
+    "reference_generation_16core_batch_s": 107.06159391626716,
+    "reference_generation_historical_sum_s": 1620.7024930985644,
+    "offline_parallel_generation_s": 228.80512635037303,
+    "offline_serial_accounting_s": 1742.4460255326703,
+    "missing": "Generation of unsigned training event rasters is not historically timed; both scenarios are conditional on those input arrays being available. Research exploration is not included.",
+    "training_replayed": false,
+    "checkpoint_sha256": "737efcff1e6686bfb153fca8590a8b28a605fbdb08f9a68ff44e68af8867686d"
+  },
+  "breakeven": {
+    "gpu": {
+      "offline_parallel_generation_s": {
+        "calls": 137,
+        "source_panel_equivalents": 0.36115050704878615,
+        "per_input_savings_s": 1.6716228985033517
+      },
+      "offline_serial_accounting_s": {
+        "calls": 1043,
+        "source_panel_equivalents": 2.7503110426932973,
+        "per_input_savings_s": 1.6716228985033517
+      }
+    },
+    "cpu8": {
+      "offline_parallel_generation_s": {
+        "calls": 138,
+        "source_panel_equivalents": 0.3623592169569132,
+        "per_input_savings_s": 1.6660469201218957
+      },
+      "offline_serial_accounting_s": {
+        "calls": 1046,
+        "source_panel_equivalents": 2.7595158704392144,
+        "per_input_savings_s": 1.6660469201218957
+      }
+    }
+  },
+  "breakeven_by_duration_fixed_layout": {
+    "gpu": {
+      "1": {
+        "offline_parallel_generation_calls": 610,
+        "scenario": "Fixed layout; the duration stratum retains its original input mix",
+        "mean_savings_s": 0.37566890556252364
+      },
+      "2": {
+        "offline_parallel_generation_calls": 375,
+        "scenario": "Fixed layout; the duration stratum retains its original input mix",
+        "mean_savings_s": 0.6111021394142881
+      },
+      "4": {
+        "offline_parallel_generation_calls": 213,
+        "scenario": "Fixed layout; the duration stratum retains its original input mix",
+        "mean_savings_s": 1.0771946740685963
+      },
+      "8": {
+        "offline_parallel_generation_calls": 114,
+        "scenario": "Fixed layout; the duration stratum retains its original input mix",
+        "mean_savings_s": 2.008081466060362
+      },
+      "16": {
+        "offline_parallel_generation_calls": 60,
+        "scenario": "Fixed layout; the duration stratum retains its original input mix",
+        "mean_savings_s": 3.8315833273518365
+      }
+    },
+    "cpu8": {
+      "1": {
+        "offline_parallel_generation_calls": 612,
+        "scenario": "Fixed layout; the duration stratum retains its original input mix",
+        "mean_savings_s": 0.3743978739631447
+      },
+      "2": {
+        "offline_parallel_generation_calls": 377,
+        "scenario": "Fixed layout; the duration stratum retains its original input mix",
+        "mean_savings_s": 0.6083886712789536
+      },
+      "4": {
+        "offline_parallel_generation_calls": 214,
+        "scenario": "Fixed layout; the duration stratum retains its original input mix",
+        "mean_savings_s": 1.0709915101411753
+      },
+      "8": {
+        "offline_parallel_generation_calls": 115,
+        "scenario": "Fixed layout; the duration stratum retains its original input mix",
+        "mean_savings_s": 1.9970019946124442
+      },
+      "16": {
+        "offline_parallel_generation_calls": 61,
+        "scenario": "Fixed layout; the duration stratum retains its original input mix",
+        "mean_savings_s": 3.8092288459884003
+      }
+    }
+  },
+  "cold": {
+    "gpu": {
+      "fresh_process_total_ms": {
+        "n": 24,
+        "median": 2743.012709543109,
+        "q1": 2648.8674143329263,
+        "q3": 2851.728623267263,
+        "min": 2475.985486060381,
+        "max": 2998.2859678566456
+      },
+      "runtime_call_ms": {
+        "n": 24,
+        "median": 1288.2105400785804,
+        "q1": 1231.4354903064668,
+        "q3": 1397.3921719007194,
+        "min": 1074.8146791011095,
+        "max": 1587.4758027493954
+      }
+    },
+    "cpu8": {
+      "fresh_process_total_ms": {
+        "n": 24,
+        "median": 1276.0413167998195,
+        "q1": 1263.6087811551988,
+        "q3": 1295.5783079378307,
+        "min": 1247.9041945189238,
+        "max": 1365.138467401266
+      },
+      "runtime_call_ms": {
+        "n": 24,
+        "median": 46.831656247377396,
+        "q1": 42.605284601449966,
+        "q3": 61.90253747627139,
+        "min": 30.394822359085083,
+        "max": 97.38809429109097
+      }
+    },
+    "neuron8": {
+      "fresh_process_total_ms": {
+        "n": 24,
+        "median": 2477.791840210557,
+        "q1": 1577.1453096531332,
+        "q3": 2588.209624402225,
+        "min": 975.8788272738457,
+        "max": 4342.1783577650785
+      },
+      "runtime_call_ms": {
+        "n": 24,
+        "median": 2319.3872161209583,
+        "q1": 1428.4822675399482,
+        "q3": 2419.8779887519777,
+        "min": 835.8905203640461,
+        "max": 4163.55069540441
+      }
+    }
+  },
+  "validated_output_records": 6064,
+  "measurement_notes": [
+    "All calls return CPU voltage on the common1ms grid and actual event times.",
+    "No input file I/O or accuracy scoring inside resident service timing.",
+    "Three full-panel DBNN rounds; 30 prepared/reuse and3 new-layout repetitions per input. NEURON10 per input,30 on preselected representatives.",
+    "Service stream uses frozen input order and a16-entry LRU cache for IDs, length and fixed backend. Empty cache at the start of each panel.",
+    "Data-generation batch16single-core workers is not16cores per trajectory; CPU affinity is disjoint from timed inference workers.",
+    "Fresh-process timing retains existing compiler caches; total process wall includes imports, disk-input loading and validation. Runtime-call column excludes these diagnostic operations.",
+    "One detailed solver setting is selected by voltage RMSE, not by joint spike accuracy. No model/threshold/reset/checkpoint changed."
+  ]
+}

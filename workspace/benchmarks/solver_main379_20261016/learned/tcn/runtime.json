@@ -1,0 +1,17 @@
+{
+  "method": "tcn",
+  "checkpoint": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/baselines_20260930/aligned/tcn_1ms/best.pt",
+  "checkpoint_sha256": "62bba4c6797f4fad76298b3944aad659df29ede74f74798b230d859d1366d80b",
+  "repeats": 3,
+  "cpus": [
+    80
+  ],
+  "shared_server": true,
+  "scope": "One prepared complete forward to voltage; learned baselines also output sigmoid spike scores. Includes synchronization. External raster packing, upload/download, model preparation, capture and scoring excluded.",
+  "precision": "FP32 IEEE (GPU); FP32/FMA and MKL (CPU)",
+  "gpu": "0",
+  "device": "NVIDIA GeForce RTX 5090",
+  "resources_start": "index, utilization.gpu [%], memory.used [MiB]\n0, 97 %, 5682 MiB\n1, 97 %, 5146 MiB\n2, 0 %, 1038 MiB\n3, 97 %, 5147 MiB\n4, 97 %, 5146 MiB\n5, 0 %, 532 MiB\n6, 98 %, 5146 MiB\n7, 97 %, 5190 MiB\n",
+  "policy": "Reuse the preceding synthetic shape policy; numerical fallback only, never accuracy-based checkpoint selection",
+  "script_sha256": "4e113d6c8d8c4ea6d65a07b551c2b890805bf6ae5fd38042cac3ea5c483a2c63"
+}

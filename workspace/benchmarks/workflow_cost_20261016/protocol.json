@@ -1,0 +1,50 @@
+{
+  "created": "2026-10-16T16:12:14.829946",
+  "checkpoint_sha256": "737efcff1e6686bfb153fca8590a8b28a605fbdb08f9a68ff44e68af8867686d",
+  "frozen_input_count": 379,
+  "selection": "One minimum-input-hash nonzero input per duration/site-count stratum; additional duration1/8 input-family coverage; one zero control. No errors or timing used.",
+  "representative_case_ids": [
+    "confirmatory_0008",
+    "confirmatory_0063",
+    "confirmatory_0115",
+    "confirmatory_0296",
+    "confirmatory_0537",
+    "confirmatory_0554",
+    "confirmatory_0576",
+    "confirmatory_0599",
+    "confirmatory_0607",
+    "confirmatory_0609",
+    "confirmatory_0632"
+  ],
+  "cold_case_ids": [
+    "confirmatory_0008",
+    "confirmatory_0063",
+    "confirmatory_0115",
+    "confirmatory_0599",
+    "confirmatory_0607",
+    "confirmatory_0609",
+    "confirmatory_0296",
+    "confirmatory_0554"
+  ],
+  "comparison_solver_dt_ms": 0.5,
+  "dbnn_interval_ms": 1,
+  "dbnn_rounds": 3,
+  "dbnn_repeats_per_round": 10,
+  "new_layout_repeats_per_round": 1,
+  "solver_repeats": 10,
+  "solver_representative_repeats": 30,
+  "boundaries": {
+    "prepared": "Existing compute-only boundary; GPU synchronization included",
+    "resident_reuse_layout": "CPU unsigned raster and site IDs in RAM -> signed encoding, device upload where needed, inference, CPU voltage and actual event times; weights, buffers, graph reusable for fixed IDs and length",
+    "resident_new_layout": "Same CPU input -> site-specific coefficient extraction, buffer allocation, graph construction/warmup where needed, inference, CPU outputs; model weights already loaded",
+    "solver_resident": "Same CPU raster and site IDs -> weight activation, state initialization and biological 500ms warmup, event scheduling, simulation, native recording, common-grid CPU voltage and event times",
+    "first_call": "Clean interpreter with existing compiler disk caches; checkpoint/model load, setup and first CPU result. Separately report total process time including imports and diagnostic/file overhead"
+  },
+  "caveats": [
+    "Shared server, no exclusive reservation",
+    "New-layout GPU capture includes existing Graph constructor warmups",
+    "Backend tags are frozen from earlier numerical equivalence-approved implementation, not retuned",
+    "Disk input loading and writing benchmark evidence are outside resident call timing",
+    "No training, model, reset or manuscript changes"
+  ]
+}

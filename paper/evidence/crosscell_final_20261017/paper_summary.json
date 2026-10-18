@@ -1,0 +1,345 @@
+{
+  "complete": true,
+  "conditions": 12,
+  "total_inputs": 2184,
+  "validation_selection_only": true,
+  "panel_previously_evaluated": true,
+  "rows": [
+    {
+      "cell": "granule",
+      "profile": "ampa",
+      "inputs": 182,
+      "rmse": 1.135096728133732,
+      "ve": -0.12095283048526784,
+      "f1": 0.4107089440622196,
+      "tp": 1373,
+      "fp": 2648,
+      "fn": 1292,
+      "n": 1083470,
+      "rmse_ci95_mv": [
+        0.7552398419588054,
+        1.4854829542431656
+      ],
+      "f1_ci95": [
+        0.33295148937622404,
+        0.5000057392102846
+      ],
+      "checkpoint_sha256": "e94e649268dcc5ee2ac58800236cbe22b014be6489885cfda9ae8493a41ef4b6",
+      "reset": {
+        "v_th": -55.99384307861328,
+        "reset_amp": 12.0,
+        "tau_reset": 16.0
+      },
+      "diagonal_nonzero": 500,
+      "selected_candidate": "event_lambda_0.2_refine_joint__diag_on"
+    },
+    {
+      "cell": "granule",
+      "profile": "ampa_nmda",
+      "inputs": 182,
+      "rmse": 1.2299630491975595,
+      "ve": 0.2079426162998088,
+      "f1": 0.48765399178710467,
+      "tp": 4572,
+      "fp": 5573,
+      "fn": 4034,
+      "n": 980517,
+      "rmse_ci95_mv": [
+        1.0143726698189952,
+        1.4440164331031324
+      ],
+      "f1_ci95": [
+        0.43894090861163565,
+        0.5246291416723052
+      ],
+      "checkpoint_sha256": "1f0b5cf9a73e8911d3d7037dbb73ab08667349ad6f239b687b717ed71cf60b07",
+      "reset": {
+        "v_th": -53.49787902832031,
+        "reset_amp": 12.0,
+        "tau_reset": 16.0
+      },
+      "diagonal_nonzero": 0,
+      "selected_candidate": "old_locked__diag_on"
+    },
+    {
+      "cell": "basket",
+      "profile": "ampa",
+      "inputs": 182,
+      "rmse": 0.8393155062737001,
+      "ve": 0.4833482536337186,
+      "f1": 0.3344011689990446,
+      "tp": 2975,
+      "fp": 8954,
+      "fn": 2889,
+      "n": 1017120,
+      "rmse_ci95_mv": [
+        0.7284935623012752,
+        0.9502167085393894
+      ],
+      "f1_ci95": [
+        0.3019550354075562,
+        0.35956973377056944
+      ],
+      "checkpoint_sha256": "4ca2f123a75014d0877690457b9794c726f9e4be6fb3f8f4bd409f4d31cf98c1",
+      "reset": {
+        "v_th": -59.55396270751953,
+        "reset_amp": 4.0,
+        "tau_reset": 40.0
+      },
+      "diagonal_nonzero": 500,
+      "selected_candidate": "event_lambda_0_refine_positive_joint__diag_on"
+    },
+    {
+      "cell": "basket",
+      "profile": "ampa_nmda",
+      "inputs": 182,
+      "rmse": 0.7730233343854337,
+      "ve": 0.5146469285885817,
+      "f1": 0.41555107280396114,
+      "tp": 5665,
+      "fp": 10847,
+      "fn": 5088,
+      "n": 923321,
+      "rmse_ci95_mv": [
+        0.6857754294673646,
+        0.8627046263208666
+      ],
+      "f1_ci95": [
+        0.36831405962655267,
+        0.4519952777808416
+      ],
+      "checkpoint_sha256": "931dad8b16ac03ea8106006de4ed07b056821ca314267e7b26465d58b27f333c",
+      "reset": {
+        "v_th": -60.61039733886719,
+        "reset_amp": 4.0,
+        "tau_reset": 40.0
+      },
+      "diagonal_nonzero": 0,
+      "selected_candidate": "event_lambda_0_refine_positive_joint__diag_off"
+    },
+    {
+      "cell": "golgi",
+      "profile": "ampa",
+      "inputs": 182,
+      "rmse": 0.3906278079483907,
+      "ve": -0.21293584445104807,
+      "f1": 0.010075566750629723,
+      "tp": 2,
+      "fp": 12,
+      "fn": 381,
+      "n": 1125536,
+      "rmse_ci95_mv": [
+        0.33438572750744927,
+        0.4495970524973464
+      ],
+      "f1_ci95": [
+        0.0,
+        0.024539877300613498
+      ],
+      "checkpoint_sha256": "965037cc5e55f67ce8ac8ae4ff94a29e23aa5fdf135bc9775e2b72fad668374f",
+      "reset": {
+        "v_th": -63.58263397216797,
+        "reset_amp": 4.0,
+        "tau_reset": 8.0
+      },
+      "diagonal_nonzero": 0,
+      "selected_candidate": "old_locked__diag_on"
+    },
+    {
+      "cell": "golgi",
+      "profile": "ampa_nmda",
+      "inputs": 182,
+      "rmse": 0.5127678864054326,
+      "ve": -0.27154131071731724,
+      "f1": 0.005934718100890208,
+      "tp": 2,
+      "fp": 9,
+      "fn": 661,
+      "n": 1119930,
+      "rmse_ci95_mv": [
+        0.42605939614917077,
+        0.608633384548019
+      ],
+      "f1_ci95": [
+        0.0,
+        0.02003338898163606
+      ],
+      "checkpoint_sha256": "d2daf1c9aafbf3b2cbf33448a3c676471bd0edcadecacdb0554c8fa7aa192947",
+      "reset": {
+        "v_th": -63.561553955078125,
+        "reset_amp": 4.0,
+        "tau_reset": 8.0
+      },
+      "diagonal_nonzero": 0,
+      "selected_candidate": "old_locked__diag_on"
+    },
+    {
+      "cell": "hay_l5",
+      "profile": "ampa",
+      "inputs": 182,
+      "rmse": 0.3984681676007262,
+      "ve": 0.9603337669847309,
+      "f1": 0.43859649122807015,
+      "tp": 50,
+      "fp": 35,
+      "fn": 93,
+      "n": 1130916,
+      "rmse_ci95_mv": [
+        0.303895864952733,
+        0.48921662504132996
+      ],
+      "f1_ci95": [
+        0.30475875118259227,
+        0.5547457754224577
+      ],
+      "checkpoint_sha256": "45418bd5baa0ddafa27bc1ce33717adf7d33fcbdc9e4a1945a25448778b05861",
+      "reset": {
+        "v_th": -58.94856643676758,
+        "reset_amp": 4.0,
+        "tau_reset": 16.0
+      },
+      "diagonal_nonzero": 0,
+      "selected_candidate": "event_lambda_0_primary_joint__diag_off"
+    },
+    {
+      "cell": "hay_l5",
+      "profile": "ampa_nmda",
+      "inputs": 182,
+      "rmse": 1.1291535610767276,
+      "ve": 0.815624248926679,
+      "f1": 0.10334555453712191,
+      "tp": 451,
+      "fp": 7741,
+      "fn": 85,
+      "n": 1124117,
+      "rmse_ci95_mv": [
+        0.8397005453562199,
+        1.4073695896388707
+      ],
+      "f1_ci95": [
+        0.07747025885918547,
+        0.19466869801209
+      ],
+      "checkpoint_sha256": "ef3460a4edf925fa111da8da3f3af9312c7d546db57ebf9a56c621a7882c3593",
+      "reset": {
+        "v_th": -55.998626708984375,
+        "reset_amp": 4.0,
+        "tau_reset": 8.0
+      },
+      "diagonal_nonzero": 0,
+      "selected_candidate": "event_lambda_0_primary_joint__diag_off"
+    },
+    {
+      "cell": "human_l23",
+      "profile": "ampa",
+      "inputs": 182,
+      "rmse": 0.26481004801584124,
+      "ve": 0.9818590710771673,
+      "f1": 0.4369747899159664,
+      "tp": 26,
+      "fp": 13,
+      "fn": 54,
+      "n": 1131619,
+      "rmse_ci95_mv": [
+        0.16646381319435238,
+        0.3639845353956394
+      ],
+      "f1_ci95": [
+        0.32142857142857145,
+        0.529421503700818
+      ],
+      "checkpoint_sha256": "6aac4ba26dc9fc6c8770a17736d214e3d1bc35112554b32a7841aedc39e88ce3",
+      "reset": {
+        "v_th": -67.80858612060547,
+        "reset_amp": 4.0,
+        "tau_reset": 40.0
+      },
+      "diagonal_nonzero": 0,
+      "selected_candidate": "event_lambda_1_refine_joint__diag_off"
+    },
+    {
+      "cell": "human_l23",
+      "profile": "ampa_nmda",
+      "inputs": 182,
+      "rmse": 0.260062577877,
+      "ve": 0.9771896739073082,
+      "f1": 0.48012718600953896,
+      "tp": 453,
+      "fp": 819,
+      "fn": 162,
+      "n": 1121058,
+      "rmse_ci95_mv": [
+        0.18556379097303913,
+        0.33653833947237743
+      ],
+      "f1_ci95": [
+        0.457446669629465,
+        0.5326235167731103
+      ],
+      "checkpoint_sha256": "fa78b5ce3e2fe31f5a61060a40e0c574f2d59b6942e1721bef5c2116597ddeaf",
+      "reset": {
+        "v_th": -69.44485473632812,
+        "reset_amp": 4.0,
+        "tau_reset": 16.0
+      },
+      "diagonal_nonzero": 500,
+      "selected_candidate": "event_lambda_0.2_refine_positive_joint__diag_on"
+    },
+    {
+      "cell": "ca1",
+      "profile": "ampa",
+      "inputs": 182,
+      "rmse": 0.05910854466445444,
+      "ve": 0.9871831698424295,
+      "f1": 0.7843137254901961,
+      "tp": 40,
+      "fp": 7,
+      "fn": 15,
+      "n": 1132089,
+      "rmse_ci95_mv": [
+        0.050974907063463804,
+        0.0679448708154257
+      ],
+      "f1_ci95": [
+        0.6268656716417911,
+        0.9161559139784943
+      ],
+      "checkpoint_sha256": "6941f2e85fa777f44a07113f19a77e0f8daf0100838e24a3a7e29907432c4c55",
+      "reset": {
+        "v_th": -55.784942626953125,
+        "reset_amp": 4.0,
+        "tau_reset": 16.0
+      },
+      "diagonal_nonzero": 500,
+      "selected_candidate": "event_lambda_0_refine_positive_joint__diag_on"
+    },
+    {
+      "cell": "ca1",
+      "profile": "ampa_nmda",
+      "inputs": 182,
+      "rmse": 0.2396512669855292,
+      "ve": 0.8993508398657007,
+      "f1": 0.496,
+      "tp": 217,
+      "fp": 174,
+      "fn": 267,
+      "n": 1123981,
+      "rmse_ci95_mv": [
+        0.12469410270217794,
+        0.34149646341769146
+      ],
+      "f1_ci95": [
+        0.42640119668075405,
+        0.7443192498291182
+      ],
+      "checkpoint_sha256": "a05712c1df1a49a712a191a53468536e88e4307c885b3379beeb007883b14a43",
+      "reset": {
+        "v_th": -56.485294342041016,
+        "reset_amp": 12.0,
+        "tau_reset": 8.0
+      },
+      "diagonal_nonzero": 0,
+      "selected_candidate": "event_lambda_0_refine_joint__diag_off"
+    }
+  ]
+}

@@ -1,0 +1,2825 @@
+{
+  "finished": true,
+  "event_strength": 0.0,
+  "candidates": [
+    {
+      "name": "event_lambda_0_primary_joint",
+      "checkpoint": "/home/lcm/DBNN_crosscell_candidate_completion_20261017/results/hay_l5/ampa/dt1.0ms/candidates/event_lambda_0_primary_joint/checkpoint.pt",
+      "checkpoint_sha256": "9d33cd2305dc9b59a8fde09a8857397b8ae19bbf247faf8956dd315ac2909fb7",
+      "reset": {
+        "v_th": -58.94856643676758,
+        "reset_amp": 4.0,
+        "tau_reset": 16.0
+      },
+      "validation": {
+        "cases": [
+          {
+            "case_id": "train_dt1.0_A64_hz10_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 30.79816699406365,
+              "error_ss": 19.311929601580005,
+              "reference_ss": 848.4180042513087,
+              "rmse_mv": 0.07163918250696029,
+              "ve": 0.9772377183124232,
+              "bias_mv": -0.04374990159721101
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A64_hz10_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 13.656534828129224,
+              "error_ss": 12.419491185065308,
+              "reference_ss": 26.628192017930672,
+              "rmse_mv": 0.047704400772319,
+              "ve": 0.533596153403792,
+              "bias_mv": -0.014357561906999876
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A64_hz25_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 60.07454176986357,
+              "error_ss": 40.41798000647155,
+              "reference_ss": 2277.5379260274776,
+              "rmse_mv": 0.10005376139414121,
+              "ve": 0.9822536522687157,
+              "bias_mv": -0.0572324008112092
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A64_hz25_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 40.558460213535,
+              "error_ss": 40.52953106419959,
+              "reference_ss": 97.58259508288468,
+              "rmse_mv": 0.08221080788294832,
+              "ve": 0.5846643448068314,
+              "bias_mv": 0.0021956141363320956
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A64_hz50_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 79.30244216753636,
+              "error_ss": 48.061294868072956,
+              "reference_ss": 2801.926502347523,
+              "rmse_mv": 0.11495595337368736,
+              "ve": 0.9828470536868807,
+              "bias_mv": -0.07215254824472614
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A64_hz50_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 48.950198543432634,
+              "error_ss": 46.66393836514456,
+              "reference_ss": 89.03032979252247,
+              "rmse_mv": 0.09031614984459671,
+              "ve": 0.47586470280531523,
+              "bias_mv": 0.019518705551434787
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A128_hz10_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 83.13065901235677,
+              "error_ss": 59.484398506788196,
+              "reference_ss": 2389.0490048938263,
+              "rmse_mv": 0.11769792281608142,
+              "ve": 0.9751012229615474,
+              "bias_mv": -0.0627724994442658
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A128_hz10_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 81.49183196993545,
+              "error_ss": 81.38316669524124,
+              "reference_ss": 286.8493889406342,
+              "rmse_mv": 0.11653200723494042,
+              "ve": 0.7162860726467012,
+              "bias_mv": -0.00425533325825904
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A128_hz25_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 198.51666399347596,
+              "error_ss": 145.89427745738783,
+              "reference_ss": 7802.297066630642,
+              "rmse_mv": 0.18188072254284457,
+              "ve": 0.981301112196643,
+              "bias_mv": -0.09364259856837012
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A128_hz25_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 262.3892274660757,
+              "error_ss": 260.60320928461965,
+              "reference_ss": 979.1445500640662,
+              "rmse_mv": 0.20910344458167898,
+              "ve": 0.7338460299170657,
+              "bias_mv": 0.017251669297792815
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A128_hz50_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 250.61055656259123,
+              "error_ss": 172.8855301283565,
+              "reference_ss": 7315.458883065894,
+              "rmse_mv": 0.2043562229281432,
+              "ve": 0.9763670970076042,
+              "bias_mv": -0.11380690841789226
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A128_hz50_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 337.7681001307792,
+              "error_ss": 337.7409906945238,
+              "reference_ss": 1058.0356982039727,
+              "rmse_mv": 0.2372452369835581,
+              "ve": 0.6807848815802313,
+              "bias_mv": 0.00212543794580786
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A256_hz10_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 184.08626470313175,
+              "error_ss": 167.17318837162802,
+              "reference_ss": 7454.770667823001,
+              "rmse_mv": 0.175145458011177,
+              "ve": 0.9775750058827165,
+              "bias_mv": -0.05308838221177004
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A256_hz10_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 378.667101624771,
+              "error_ss": 362.773380152014,
+              "reference_ss": 7927.081253015641,
+              "rmse_mv": 0.2511984610349437,
+              "ve": 0.954236197589875,
+              "bias_mv": 0.051463697497357214
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A256_hz25_r6",
+            "voltage": {
+              "n": 5961,
+              "sse": 490.76557093729207,
+              "error_ss": 487.1823760236855,
+              "reference_ss": 8390.180255137717,
+              "rmse_mv": 0.28693100728573245,
+              "ve": 0.941934218192111,
+              "bias_mv": 0.024517470169259366
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 2,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A256_hz25_r7__prefix_1000ms",
+            "voltage": {
+              "n": 1001,
+              "sse": 56.57957297551911,
+              "error_ss": 54.80050457442995,
+              "reference_ss": 271.56587718406945,
+              "rmse_mv": 0.23774576741888281,
+              "ve": 0.7982054846408935,
+              "bias_mv": -0.042157930570406156
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A256_hz50_r6__prefix_4000ms",
+            "voltage": {
+              "n": 3981,
+              "sse": 494.72701742110075,
+              "error_ss": 456.1563779242265,
+              "reference_ss": 5599.8553267437765,
+              "rmse_mv": 0.35252240577942506,
+              "ve": 0.9185413994990699,
+              "bias_mv": 0.09843109828447823
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 1,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A256_hz50_r7__prefix_1000ms",
+            "voltage": {
+              "n": 1001,
+              "sse": 242.48277328710537,
+              "error_ss": 194.6006878267546,
+              "reference_ss": 930.545413681677,
+              "rmse_mv": 0.492179370508711,
+              "ve": 0.7908745935818196,
+              "bias_mv": -0.2187104277558379
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A500_hz10_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 586.8973450542398,
+              "error_ss": 579.4100042636578,
+              "reference_ss": 12429.177067008783,
+              "rmse_mv": 0.3127297942127387,
+              "ve": 0.9533830758754248,
+              "bias_mv": -0.03532254499229783
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A500_hz10_r7__prefix_1000ms",
+            "voltage": {
+              "n": 1001,
+              "sse": 33.285577414615545,
+              "error_ss": 33.13941661849317,
+              "reference_ss": 682.4245918959683,
+              "rmse_mv": 0.182352200670916,
+              "ve": 0.9514387127720259,
+              "bias_mv": -0.012083657614358298
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A500_hz25_r6__prefix_1000ms",
+            "voltage": {
+              "n": 1001,
+              "sse": 35.93435523036169,
+              "error_ss": 30.134623475769843,
+              "reference_ss": 545.0666876974412,
+              "rmse_mv": 0.18946888075245522,
+              "ve": 0.944713877850306,
+              "bias_mv": -0.07611792047064264
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A500_hz25_r7__prefix_1000ms",
+            "voltage": {
+              "n": 1001,
+              "sse": 117.53477351512993,
+              "error_ss": 117.0552919897689,
+              "reference_ss": 1943.7483330435257,
+              "rmse_mv": 0.34266216038391367,
+              "ve": 0.9397785762694477,
+              "bias_mv": -0.021886126263872846
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A500_hz50_r6__prefix_1000ms",
+            "voltage": {
+              "n": 1001,
+              "sse": 71.26693333563162,
+              "error_ss": 67.65025812996933,
+              "reference_ss": 1699.6704529376455,
+              "rmse_mv": 0.2668252941496244,
+              "ve": 0.9601980148486754,
+              "bias_mv": -0.060108752636523634
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A500_hz50_r7__prefix_1000ms",
+            "voltage": {
+              "n": 961,
+              "sse": 1670.7956793321307,
+              "error_ss": 1462.5206046579174,
+              "reference_ss": 4698.505397689403,
+              "rmse_mv": 1.3185602463044195,
+              "ve": 0.6887264181122054,
+              "bias_mv": -0.4655399499832414
+            },
+            "events": {
+              "tp": 2,
+              "fp": 1,
+              "fn": 0,
+              "matched_errors_ms": [
+                -4.825000004866979,
+                -2.949999995581038
+              ]
+            }
+          }
+        ],
+        "pooled_rmse_mv": 0.23391085118336077,
+        "mean_case_ve": 0.8508231506961801,
+        "within_trace_weighted_ve": 0.9328025625227405,
+        "events": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 3,
+          "precision": 0.6666666666666666,
+          "recall": 0.4,
+          "f1": 0.5,
+          "median_abs_error_ms": 3.8875000002240085
+        },
+        "normalized_mse_floor_0p04": 0.11644677214967852,
+        "score": 0.18204322174431792,
+        "voltage_eligible": true
+      },
+      "source": {
+        "event_strength": 0.0,
+        "stage": "primary",
+        "epoch": 40,
+        "tag": "joint"
+      }
+    },
+    {
+      "name": "event_lambda_0_primary_voltage",
+      "checkpoint": "/home/lcm/DBNN_crosscell_candidate_completion_20261017/results/hay_l5/ampa/dt1.0ms/candidates/event_lambda_0_primary_voltage/checkpoint.pt",
+      "checkpoint_sha256": "474f44bd4a3964b74d6267549b13596ce5c2aa5193116cdd7ce0e859e4130fbe",
+      "reset": {
+        "v_th": -59.01106643676758,
+        "reset_amp": 4.0,
+        "tau_reset": 16.0
+      },
+      "validation": {
+        "cases": [
+          {
+            "case_id": "train_dt1.0_A64_hz10_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 29.5714500543545,
+              "error_ss": 19.404242341275214,
+              "reference_ss": 848.4180042513087,
+              "rmse_mv": 0.0701979609160619,
+              "ve": 0.9771289125831334,
+              "bias_mv": -0.04116129545425697
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A64_hz10_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 12.95673076249659,
+              "error_ss": 11.860047492290988,
+              "reference_ss": 26.628192017930672,
+              "rmse_mv": 0.04646606587467662,
+              "ve": 0.5546056043044616,
+              "bias_mv": -0.013518509040810906
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A64_hz25_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 59.39276280510239,
+              "error_ss": 41.13050296680177,
+              "reference_ss": 2277.5379260274776,
+              "rmse_mv": 0.0994843921266259,
+              "ve": 0.9819408043673976,
+              "bias_mv": -0.05516523155564567
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A64_hz25_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 38.12140546203591,
+              "error_ss": 38.075116428465165,
+              "reference_ss": 97.58259508288468,
+              "rmse_mv": 0.07970262746945712,
+              "ve": 0.6098165211109119,
+              "bias_mv": 0.0027773284530703216
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A64_hz50_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 79.7126133882557,
+              "error_ss": 48.667036448046076,
+              "reference_ss": 2801.926502347523,
+              "rmse_mv": 0.11525285981018814,
+              "ve": 0.9826308661532444,
+              "bias_mv": -0.07192635532220867
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A64_hz50_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 46.39389491354814,
+              "error_ss": 43.41166539691959,
+              "reference_ss": 89.03032979252247,
+              "rmse_mv": 0.08792626066410589,
+              "ve": 0.5123946468794764,
+              "bias_mv": 0.022292497098058528
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A128_hz10_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 79.9152369761141,
+              "error_ss": 58.740867450997186,
+              "reference_ss": 2389.0490048938263,
+              "rmse_mv": 0.11539924897896087,
+              "ve": 0.9754124476598555,
+              "bias_mv": -0.05940095545192338
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A128_hz10_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 76.03135788603686,
+              "error_ss": 75.78398818694701,
+              "reference_ss": 286.8493889406342,
+              "rmse_mv": 0.11256012327099243,
+              "ve": 0.7358056488569646,
+              "bias_mv": -0.006420390404496386
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A128_hz25_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 195.96424389223102,
+              "error_ss": 146.98354880229948,
+              "reference_ss": 7802.297066630642,
+              "rmse_mv": 0.18070767767652623,
+              "ve": 0.9811615031384888,
+              "bias_mv": -0.09034427947311516
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A128_hz25_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 231.2483480675728,
+              "error_ss": 229.28923655624726,
+              "reference_ss": 979.1445500640662,
+              "rmse_mv": 0.19630325735908502,
+              "ve": 0.7658269797434458,
+              "bias_mv": 0.01806831963756366
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A128_hz50_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 241.83806858460594,
+              "error_ss": 168.34848372045522,
+              "reference_ss": 7315.458883065894,
+              "rmse_mv": 0.2007476728617489,
+              "ve": 0.9769872968447468,
+              "bias_mv": -0.110662654526451
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A128_hz50_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 313.9458319268888,
+              "error_ss": 309.7576862946944,
+              "reference_ss": 1058.0356982039727,
+              "rmse_mv": 0.22872600651610506,
+              "ve": 0.7072332371955772,
+              "bias_mv": 0.02641794757433006
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A256_hz10_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 182.76945423177676,
+              "error_ss": 167.8495022633559,
+              "reference_ss": 7454.770667823001,
+              "rmse_mv": 0.17451790630770755,
+              "ve": 0.9774842835893203,
+              "bias_mv": -0.04986225313155815
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A256_hz10_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 365.8319624870783,
+              "error_ss": 350.8286626106943,
+              "reference_ss": 7927.081253015641,
+              "rmse_mv": 0.24690450267719435,
+              "ve": 0.9557430217487387,
+              "bias_mv": 0.050001332887389865
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A256_hz25_r6",
+            "voltage": {
+              "n": 5961,
+              "sse": 489.64159503039264,
+              "error_ss": 485.1439820513606,
+              "reference_ss": 8390.180255137717,
+              "rmse_mv": 0.28660224705535214,
+              "ve": 0.9421771681538924,
+              "bias_mv": 0.027468280891427416
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 2,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A256_hz25_r7__prefix_1000ms",
+            "voltage": {
+              "n": 1001,
+              "sse": 57.43511070916429,
+              "error_ss": 55.5643870779255,
+              "reference_ss": 271.56587718406945,
+              "rmse_mv": 0.23953649612572214,
+              "ve": 0.7953926036139528,
+              "bias_mv": -0.043230253023343844
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A256_hz50_r6__prefix_4000ms",
+            "voltage": {
+              "n": 3981,
+              "sse": 501.6875640570943,
+              "error_ss": 463.18778352422555,
+              "reference_ss": 5599.8553267437765,
+              "rmse_mv": 0.354993645483774,
+              "ve": 0.9172857589173538,
+              "bias_mv": 0.09834064176052068
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 1,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A256_hz50_r7__prefix_1000ms",
+            "voltage": {
+              "n": 1001,
+              "sse": 233.95543103606906,
+              "error_ss": 195.562647394369,
+              "reference_ss": 930.545413681677,
+              "rmse_mv": 0.48344773174226635,
+              "ve": 0.7898408347201124,
+              "bias_mv": -0.1958428686791724
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A500_hz10_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 582.1224720347527,
+              "error_ss": 575.0408676319112,
+              "reference_ss": 12429.177067008783,
+              "rmse_mv": 0.3114550443188982,
+              "ve": 0.9537345984748851,
+              "bias_mv": -0.03435215745800993
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A500_hz10_r7__prefix_1000ms",
+            "voltage": {
+              "n": 1001,
+              "sse": 32.815355743456166,
+              "error_ss": 32.66082437218297,
+              "reference_ss": 682.4245918959683,
+              "rmse_mv": 0.18105958458553328,
+              "ve": 0.952140024319109,
+              "bias_mv": -0.012424853893664928
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A500_hz25_r6__prefix_1000ms",
+            "voltage": {
+              "n": 1001,
+              "sse": 35.829792476492,
+              "error_ss": 30.06748187497582,
+              "reference_ss": 545.0666876974412,
+              "rmse_mv": 0.18919301910486547,
+              "ve": 0.9448370583753857,
+              "bias_mv": -0.07587195824195336
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A500_hz25_r7__prefix_1000ms",
+            "voltage": {
+              "n": 1001,
+              "sse": 115.95808008976746,
+              "error_ss": 115.67761247220076,
+              "reference_ss": 1943.7483330435257,
+              "rmse_mv": 0.34035604571083433,
+              "ve": 0.9404873509056224,
+              "bias_mv": -0.0167388001402894
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A500_hz50_r6__prefix_1000ms",
+            "voltage": {
+              "n": 1001,
+              "sse": 71.1603590050363,
+              "error_ss": 68.05957526229713,
+              "reference_ss": 1699.6704529376455,
+              "rmse_mv": 0.26662571094195137,
+              "ve": 0.9599571933814196,
+              "bias_mv": -0.05565685992474322
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A500_hz50_r7__prefix_1000ms",
+            "voltage": {
+              "n": 961,
+              "sse": 1847.6080923307509,
+              "error_ss": 1611.417111901105,
+              "reference_ss": 4698.505397689403,
+              "rmse_mv": 1.3865745799995346,
+              "ve": 0.6570362326935804,
+              "bias_mv": -0.49575826200807527
+            },
+            "events": {
+              "tp": 2,
+              "fp": 2,
+              "fn": 0,
+              "matched_errors_ms": [
+                -4.825000004866979,
+                -3.949999995581038
+              ]
+            }
+          }
+        ],
+        "pooled_rmse_mv": 0.23533861899411093,
+        "mean_case_ve": 0.8561275249054615,
+        "within_trace_weighted_ve": 0.9319811126691784,
+        "events": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 3,
+          "precision": 0.5,
+          "recall": 0.4,
+          "f1": 0.4444444444444444,
+          "median_abs_error_ms": 4.3875000002240085
+        },
+        "normalized_mse_floor_0p04": 0.11341544509820074,
+        "score": 0.19654146338090822,
+        "voltage_eligible": true
+      },
+      "source": {
+        "event_strength": 0.0,
+        "stage": "primary",
+        "epoch": 200,
+        "tag": "voltage"
+      }
+    },
+    {
+      "name": "event_lambda_0_primary_ema",
+      "checkpoint": "/home/lcm/DBNN_crosscell_candidate_completion_20261017/results/hay_l5/ampa/dt1.0ms/candidates/event_lambda_0_primary_ema/checkpoint.pt",
+      "checkpoint_sha256": "83c98ff12d0de5ec77261200339ae0615c4f575e555986e924041d39315235e3",
+      "reset": {
+        "v_th": -58.694210052490234,
+        "reset_amp": 4.0,
+        "tau_reset": 16.0
+      },
+      "validation": {
+        "cases": [
+          {
+            "case_id": "train_dt1.0_A64_hz10_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 27.61923729762202,
+              "error_ss": 18.95920331062905,
+              "reference_ss": 848.4180042513087,
+              "rmse_mv": 0.06784127904955672,
+              "ve": 0.9776534641937972,
+              "bias_mv": -0.03798813606138886
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A64_hz10_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 12.308545682462864,
+              "error_ss": 11.172675867288866,
+              "reference_ss": 26.628192017930672,
+              "rmse_mv": 0.04528887758973779,
+              "ve": 0.5804192842020404,
+              "bias_mv": -0.013757910058610023
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A64_hz25_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 55.82185833581025,
+              "error_ss": 40.58625355473445,
+              "reference_ss": 2277.5379260274776,
+              "rmse_mv": 0.0964473571809194,
+              "ve": 0.9821797682967565,
+              "bias_mv": -0.050386945956191545
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A64_hz25_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 34.93630140583264,
+              "error_ss": 34.905816399069224,
+              "reference_ss": 97.58259508288468,
+              "rmse_mv": 0.07630037096810514,
+              "ve": 0.6422946492720252,
+              "bias_mv": 0.00225388282657643
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A64_hz50_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 72.52701601112494,
+              "error_ss": 46.98278294331997,
+              "reference_ss": 2801.926502347523,
+              "rmse_mv": 0.1099355342836782,
+              "ve": 0.983231971679501,
+              "bias_mv": -0.06524310487843497
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A64_hz50_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 43.165952117939014,
+              "error_ss": 39.30265866239556,
+              "reference_ss": 89.03032979252247,
+              "rmse_mv": 0.08481230157573491,
+              "ve": 0.5585475337001781,
+              "bias_mv": 0.02537272052354881
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A128_hz10_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 74.7213430966367,
+              "error_ss": 56.63438439923855,
+              "reference_ss": 2389.0490048938263,
+              "rmse_mv": 0.11158620853754055,
+              "ve": 0.9762941721650639,
+              "bias_mv": -0.05489982499458098
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A128_hz10_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 69.30485822458286,
+              "error_ss": 68.85575766499679,
+              "reference_ss": 286.8493889406342,
+              "rmse_mv": 0.10746573821432027,
+              "ve": 0.7599584997573516,
+              "bias_mv": -0.008650873963226181
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A128_hz25_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 190.23078948364127,
+              "error_ss": 146.783053202686,
+              "reference_ss": 7802.297066630642,
+              "rmse_mv": 0.17804451205404073,
+              "ve": 0.9811872001348863,
+              "bias_mv": -0.0850886755080208
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A128_hz25_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 195.59130924544297,
+              "error_ss": 193.78162056747294,
+              "reference_ss": 979.1445500640662,
+              "rmse_mv": 0.1805356456613156,
+              "ve": 0.8020908960226621,
+              "bias_mv": 0.017365613116401172
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A128_hz50_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 226.19364261066949,
+              "error_ss": 161.65510312589132,
+              "reference_ss": 7315.458883065894,
+              "rmse_mv": 0.19414597169498699,
+              "ve": 0.9779022607180397,
+              "bias_mv": -0.10370453610616492
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A128_hz50_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 310.2894179445575,
+              "error_ss": 298.9267182981955,
+              "reference_ss": 1058.0356982039727,
+              "rmse_mv": 0.2273901609053189,
+              "ve": 0.7174701016179068,
+              "bias_mv": 0.04351399425982714
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A256_hz10_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 174.7619319514488,
+              "error_ss": 163.49390905790838,
+              "reference_ss": 7454.770667823001,
+              "rmse_mv": 0.17065208750382524,
+              "ve": 0.9780685528310621,
+              "bias_mv": -0.043332330506357666
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A256_hz10_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 345.47652975283563,
+              "error_ss": 332.5697219074376,
+              "reference_ss": 7927.081253015641,
+              "rmse_mv": 0.2399371306287619,
+              "ve": 0.958046384123927,
+              "bias_mv": 0.04637646146703414
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A256_hz25_r6",
+            "voltage": {
+              "n": 5961,
+              "sse": 491.1629156135459,
+              "error_ss": 482.64574096801704,
+              "reference_ss": 8390.180255137717,
+              "rmse_mv": 0.2870471395567654,
+              "ve": 0.9424749258906006,
+              "bias_mv": 0.03779968801830223
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 2,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A256_hz25_r7__prefix_1000ms",
+            "voltage": {
+              "n": 1001,
+              "sse": 58.87949519715039,
+              "error_ss": 57.111840142528514,
+              "reference_ss": 271.56587718406945,
+              "rmse_mv": 0.24252973946019024,
+              "ve": 0.7896943432851924,
+              "bias_mv": -0.042022484046715006
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A256_hz50_r6__prefix_4000ms",
+            "voltage": {
+              "n": 3981,
+              "sse": 528.7173439815961,
+              "error_ss": 478.35941003921414,
+              "reference_ss": 5599.8553267437765,
+              "rmse_mv": 0.3644313163974277,
+              "ve": 0.9145764699036658,
+              "bias_mv": 0.11247030247159114
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 1,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A256_hz50_r7__prefix_1000ms",
+            "voltage": {
+              "n": 1001,
+              "sse": 218.73586079396773,
+              "error_ss": 196.8834810072553,
+              "reference_ss": 930.545413681677,
+              "rmse_mv": 0.4674583868650954,
+              "ve": 0.7884214159647606,
+              "bias_mv": -0.1477516471565544
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A500_hz10_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 566.6911611167743,
+              "error_ss": 560.9301968281168,
+              "reference_ss": 12429.177067008783,
+              "rmse_mv": 0.3072991832966475,
+              "ve": 0.9548698844819732,
+              "bias_mv": -0.030983878302387427
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A500_hz10_r7__prefix_1000ms",
+            "voltage": {
+              "n": 1001,
+              "sse": 33.64800362527603,
+              "error_ss": 33.53586995294159,
+              "reference_ss": 682.4245918959683,
+              "rmse_mv": 0.18334227345606904,
+              "ve": 0.9508577645776665,
+              "bias_mv": -0.010584028093488542
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A500_hz25_r6__prefix_1000ms",
+            "voltage": {
+              "n": 1001,
+              "sse": 34.927917567663826,
+              "error_ss": 30.196021300319423,
+              "reference_ss": 545.0666876974412,
+              "rmse_mv": 0.18679674660743079,
+              "ve": 0.944601235074779,
+              "bias_mv": -0.06875441148207262
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A500_hz25_r7__prefix_1000ms",
+            "voltage": {
+              "n": 1001,
+              "sse": 116.55615030712215,
+              "error_ss": 116.53653366321738,
+              "reference_ss": 1943.7483330435257,
+              "rmse_mv": 0.34123263413179816,
+              "ve": 0.9400454618110236,
+              "bias_mv": 0.004426855188268762
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A500_hz50_r6__prefix_1000ms",
+            "voltage": {
+              "n": 1001,
+              "sse": 69.73460632615024,
+              "error_ss": 68.73697750976953,
+              "reference_ss": 1699.6704529376455,
+              "rmse_mv": 0.26394117031028996,
+              "ve": 0.9595586442119017,
+              "bias_mv": -0.03156948184871769
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A500_hz50_r7__prefix_1000ms",
+            "voltage": {
+              "n": 961,
+              "sse": 1653.064500403921,
+              "error_ss": 1564.3704428976305,
+              "reference_ss": 4698.505397689403,
+              "rmse_mv": 1.3115450295831506,
+              "ve": 0.6670493464438829,
+              "bias_mv": -0.3037984597868738
+            },
+            "events": {
+              "tp": 1,
+              "fp": 1,
+              "fn": 1,
+              "matched_errors_ms": [
+                -2.949999995581038
+              ]
+            }
+          }
+        ],
+        "pooled_rmse_mv": 0.22895640295754088,
+        "mean_case_ve": 0.8636455929316935,
+        "within_trace_weighted_ve": 0.9337456741593836,
+        "events": {
+          "tp": 1,
+          "fp": 1,
+          "fn": 4,
+          "precision": 0.5,
+          "recall": 0.2,
+          "f1": 0.2857142857142857,
+          "median_abs_error_ms": 2.949999995581038
+        },
+        "normalized_mse_floor_0p04": 0.10685282503951997,
+        "score": 0.23312951952747482,
+        "voltage_eligible": true
+      },
+      "source": {
+        "event_strength": 0.0,
+        "stage": "primary",
+        "epoch": 1000,
+        "tag": "ema"
+      }
+    },
+    {
+      "name": "event_lambda_0_refine_joint",
+      "checkpoint": "/home/lcm/DBNN_crosscell_candidate_completion_20261017/results/hay_l5/ampa/dt1.0ms/candidates/event_lambda_0_refine_joint/checkpoint.pt",
+      "checkpoint_sha256": "088a63924d328b97c0256142ec63b997560f3194124ca582cd06dfde861fac83",
+      "reset": {
+        "v_th": -58.94856643676758,
+        "reset_amp": 4.0,
+        "tau_reset": 16.0
+      },
+      "validation": {
+        "cases": [
+          {
+            "case_id": "train_dt1.0_A64_hz10_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 30.798167785746045,
+              "error_ss": 19.31192972569187,
+              "reference_ss": 848.4180042513087,
+              "rmse_mv": 0.07163918342772091,
+              "ve": 0.977237718166137,
+              "bias_mv": -0.04374990286856487
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A64_hz10_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 13.656534828129224,
+              "error_ss": 12.419491185065308,
+              "reference_ss": 26.628192017930672,
+              "rmse_mv": 0.047704400772319,
+              "ve": 0.533596153403792,
+              "bias_mv": -0.014357561906999876
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A64_hz25_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 60.07454176986357,
+              "error_ss": 40.41798000647155,
+              "reference_ss": 2277.5379260274776,
+              "rmse_mv": 0.10005376139414121,
+              "ve": 0.9822536522687157,
+              "bias_mv": -0.0572324008112092
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A64_hz25_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 40.558460613770876,
+              "error_ss": 40.529531464435465,
+              "reference_ss": 97.58259508288468,
+              "rmse_mv": 0.08221080828858152,
+              "ve": 0.5846643407053225,
+              "bias_mv": 0.0021956141363320956
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A64_hz50_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 79.30244216753636,
+              "error_ss": 48.061294868072956,
+              "reference_ss": 2801.926502347523,
+              "rmse_mv": 0.11495595337368736,
+              "ve": 0.9828470536868807,
+              "bias_mv": -0.07215254824472614
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A64_hz50_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 48.950196888821665,
+              "error_ss": 46.66393611486993,
+              "reference_ss": 89.03032979252247,
+              "rmse_mv": 0.09031614831816681,
+              "ve": 0.47586472808068647,
+              "bias_mv": 0.019518708094142512
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A128_hz10_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 83.1306578112999,
+              "error_ss": 59.48439730573132,
+              "reference_ss": 2389.0490048938263,
+              "rmse_mv": 0.11769792196584217,
+              "ve": 0.9751012234642819,
+              "bias_mv": -0.0627724994442658
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A128_hz10_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 81.49183105007978,
+              "error_ss": 81.38316571045434,
+              "reference_ss": 286.8493889406342,
+              "rmse_mv": 0.11653200657725102,
+              "ve": 0.7162860760798161,
+              "bias_mv": -0.004255334529612903
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A128_hz25_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 198.51667562191142,
+              "error_ss": 145.8942847992052,
+              "reference_ss": 7802.297066630642,
+              "rmse_mv": 0.1818807278698236,
+              "ve": 0.9813011112556614,
+              "bias_mv": -0.0936426023824317
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A128_hz25_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 262.3892230805359,
+              "error_ss": 260.6032046358403,
+              "reference_ss": 979.1445500640662,
+              "rmse_mv": 0.20910344283421495,
+              "ve": 0.7338460346648625,
+              "bias_mv": 0.017251670569146678
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A128_hz50_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 250.6106089551322,
+              "error_ss": 172.8855599456729,
+              "reference_ss": 7315.458883065894,
+              "rmse_mv": 0.20435624428945648,
+              "ve": 0.9763670929316717,
+              "bias_mv": -0.11380692494549248
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A128_hz50_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 337.76811875449494,
+              "error_ss": 337.741009285808,
+              "reference_ss": 1058.0356982039727,
+              "rmse_mv": 0.23724524352412213,
+              "ve": 0.680784864008722,
+              "bias_mv": 0.002125439217161723
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A256_hz10_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 184.08624782937113,
+              "error_ss": 167.17317068780292,
+              "reference_ss": 7454.770667823001,
+              "rmse_mv": 0.17514544998406373,
+              "ve": 0.9775750082548653,
+              "bias_mv": -0.053088383483123905
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A256_hz10_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 378.66709884331794,
+              "error_ss": 362.77337658528717,
+              "reference_ss": 7927.081253015641,
+              "rmse_mv": 0.25119846011236985,
+              "ve": 0.954236198039817,
+              "bias_mv": 0.051463698768711076
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A256_hz25_r6",
+            "voltage": {
+              "n": 5961,
+              "sse": 490.7655731506529,
+              "error_ss": 487.1823787982067,
+              "reference_ss": 8390.180255137717,
+              "rmse_mv": 0.2869310079327642,
+              "ve": 0.9419342178614243,
+              "bias_mv": 0.024517468249431854
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 2,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A256_hz25_r7__prefix_1000ms",
+            "voltage": {
+              "n": 1001,
+              "sse": 56.57957001484465,
+              "error_ss": 54.80050290031319,
+              "reference_ss": 271.56587718406945,
+              "rmse_mv": 0.23774576119854748,
+              "ve": 0.7982054908055736,
+              "bias_mv": -0.04215791532686064
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A256_hz50_r6__prefix_4000ms",
+            "voltage": {
+              "n": 3981,
+              "sse": 494.72703830344835,
+              "error_ss": 456.15637777942027,
+              "reference_ss": 5599.8553267437765,
+              "rmse_mv": 0.35252241321938194,
+              "ve": 0.9185413995249289,
+              "bias_mv": 0.09843112511480313
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 1,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A256_hz50_r7__prefix_1000ms",
+            "voltage": {
+              "n": 1001,
+              "sse": 242.4827505654539,
+              "error_ss": 194.6006751168715,
+              "reference_ss": 930.545413681677,
+              "rmse_mv": 0.49217934744907627,
+              "ve": 0.7908746072403502,
+              "bias_mv": -0.21871040489051963
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A500_hz10_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 586.8973832474294,
+              "error_ss": 579.4100408399095,
+              "reference_ss": 12429.177067008783,
+              "rmse_mv": 0.3127298043884093,
+              "ve": 0.9533830729326515,
+              "bias_mv": -0.03532254880635942
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A500_hz10_r7__prefix_1000ms",
+            "voltage": {
+              "n": 1001,
+              "sse": 33.28557039931184,
+              "error_ss": 33.139409971953185,
+              "reference_ss": 682.4245918959683,
+              "rmse_mv": 0.1823521814545431,
+              "ve": 0.9514387225116221,
+              "bias_mv": -0.01208364237081278
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A500_hz25_r6__prefix_1000ms",
+            "voltage": {
+              "n": 1001,
+              "sse": 35.934365596738644,
+              "error_ss": 30.134630357744395,
+              "reference_ss": 545.0666876974412,
+              "rmse_mv": 0.1894689080815347,
+              "ve": 0.9447138652243747,
+              "bias_mv": -0.07611794333596092
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A500_hz25_r7__prefix_1000ms",
+            "voltage": {
+              "n": 1001,
+              "sse": 117.53477712377207,
+              "error_ss": 117.05529559841105,
+              "reference_ss": 1943.7483330435257,
+              "rmse_mv": 0.34266216564425095,
+              "ve": 0.9397785744129099,
+              "bias_mv": -0.021886126263872846
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A500_hz50_r6__prefix_1000ms",
+            "voltage": {
+              "n": 1001,
+              "sse": 71.26693884696579,
+              "error_ss": 67.65026731004966,
+              "reference_ss": 1699.6704529376455,
+              "rmse_mv": 0.26682530446691505,
+              "ve": 0.9601980094475812,
+              "bias_mv": -0.0601087221494326
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A500_hz50_r7__prefix_1000ms",
+            "voltage": {
+              "n": 961,
+              "sse": 1670.7955764247242,
+              "error_ss": 1462.520526613026,
+              "reference_ss": 4698.505397689403,
+              "rmse_mv": 1.3185602056981325,
+              "ve": 0.6887264347227836,
+              "bias_mv": -0.46553992219668483
+            },
+            "events": {
+              "tp": 2,
+              "fp": 1,
+              "fn": 0,
+              "matched_errors_ms": [
+                -4.825000004866979,
+                -2.949999995581038
+              ]
+            }
+          }
+        ],
+        "pooled_rmse_mv": 0.23391085120716157,
+        "mean_case_ve": 0.850823152070643,
+        "within_trace_weighted_ve": 0.9328025627042866,
+        "events": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 3,
+          "precision": 0.6666666666666666,
+          "recall": 0.4,
+          "f1": 0.5,
+          "median_abs_error_ms": 3.8875000002240085
+        },
+        "normalized_mse_floor_0p04": 0.11644677110136947,
+        "score": 0.18204322173448628,
+        "voltage_eligible": true
+      },
+      "source": {
+        "event_strength": 0.0,
+        "stage": "refine",
+        "epoch": 0,
+        "tag": "joint"
+      }
+    },
+    {
+      "name": "event_lambda_0_refine_voltage",
+      "checkpoint": "/home/lcm/DBNN_crosscell_candidate_completion_20261017/results/hay_l5/ampa/dt1.0ms/candidates/event_lambda_0_refine_voltage/checkpoint.pt",
+      "checkpoint_sha256": "3722675f10ab42e6718c61e65c229383c66fdb04df1aeef4864b0382e7f4c515",
+      "reset": {
+        "v_th": -58.94856643676758,
+        "reset_amp": 4.0,
+        "tau_reset": 16.0
+      },
+      "validation": {
+        "cases": [
+          {
+            "case_id": "train_dt1.0_A64_hz10_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 30.798167785746045,
+              "error_ss": 19.31192972569187,
+              "reference_ss": 848.4180042513087,
+              "rmse_mv": 0.07163918342772091,
+              "ve": 0.977237718166137,
+              "bias_mv": -0.04374990286856487
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A64_hz10_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 13.656534828129224,
+              "error_ss": 12.419491185065308,
+              "reference_ss": 26.628192017930672,
+              "rmse_mv": 0.047704400772319,
+              "ve": 0.533596153403792,
+              "bias_mv": -0.014357561906999876
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A64_hz25_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 60.07454176986357,
+              "error_ss": 40.41798000647155,
+              "reference_ss": 2277.5379260274776,
+              "rmse_mv": 0.10005376139414121,
+              "ve": 0.9822536522687157,
+              "bias_mv": -0.0572324008112092
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A64_hz25_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 40.558460613770876,
+              "error_ss": 40.529531464435465,
+              "reference_ss": 97.58259508288468,
+              "rmse_mv": 0.08221080828858152,
+              "ve": 0.5846643407053225,
+              "bias_mv": 0.0021956141363320956
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A64_hz50_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 79.30244216753636,
+              "error_ss": 48.061294868072956,
+              "reference_ss": 2801.926502347523,
+              "rmse_mv": 0.11495595337368736,
+              "ve": 0.9828470536868807,
+              "bias_mv": -0.07215254824472614
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A64_hz50_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 48.950196888821665,
+              "error_ss": 46.66393611486993,
+              "reference_ss": 89.03032979252247,
+              "rmse_mv": 0.09031614831816681,
+              "ve": 0.47586472808068647,
+              "bias_mv": 0.019518708094142512
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A128_hz10_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 83.1306578112999,
+              "error_ss": 59.48439730573132,
+              "reference_ss": 2389.0490048938263,
+              "rmse_mv": 0.11769792196584217,
+              "ve": 0.9751012234642819,
+              "bias_mv": -0.0627724994442658
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A128_hz10_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 81.49183105007978,
+              "error_ss": 81.38316571045434,
+              "reference_ss": 286.8493889406342,
+              "rmse_mv": 0.11653200657725102,
+              "ve": 0.7162860760798161,
+              "bias_mv": -0.004255334529612903
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A128_hz25_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 198.51667562191142,
+              "error_ss": 145.8942847992052,
+              "reference_ss": 7802.297066630642,
+              "rmse_mv": 0.1818807278698236,
+              "ve": 0.9813011112556614,
+              "bias_mv": -0.0936426023824317
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A128_hz25_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 262.3892230805359,
+              "error_ss": 260.6032046358403,
+              "reference_ss": 979.1445500640662,
+              "rmse_mv": 0.20910344283421495,
+              "ve": 0.7338460346648625,
+              "bias_mv": 0.017251670569146678
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A128_hz50_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 250.6106089551322,
+              "error_ss": 172.8855599456729,
+              "reference_ss": 7315.458883065894,
+              "rmse_mv": 0.20435624428945648,
+              "ve": 0.9763670929316717,
+              "bias_mv": -0.11380692494549248
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A128_hz50_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 337.76811875449494,
+              "error_ss": 337.741009285808,
+              "reference_ss": 1058.0356982039727,
+              "rmse_mv": 0.23724524352412213,
+              "ve": 0.680784864008722,
+              "bias_mv": 0.002125439217161723
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A256_hz10_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 184.08624782937113,
+              "error_ss": 167.17317068780292,
+              "reference_ss": 7454.770667823001,
+              "rmse_mv": 0.17514544998406373,
+              "ve": 0.9775750082548653,
+              "bias_mv": -0.053088383483123905
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A256_hz10_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 378.66709884331794,
+              "error_ss": 362.77337658528717,
+              "reference_ss": 7927.081253015641,
+              "rmse_mv": 0.25119846011236985,
+              "ve": 0.954236198039817,
+              "bias_mv": 0.051463698768711076
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A256_hz25_r6",
+            "voltage": {
+              "n": 5961,
+              "sse": 490.7655731506529,
+              "error_ss": 487.1823787982067,
+              "reference_ss": 8390.180255137717,
+              "rmse_mv": 0.2869310079327642,
+              "ve": 0.9419342178614243,
+              "bias_mv": 0.024517468249431854
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 2,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A256_hz25_r7__prefix_1000ms",
+            "voltage": {
+              "n": 1001,
+              "sse": 56.57957001484465,
+              "error_ss": 54.80050290031319,
+              "reference_ss": 271.56587718406945,
+              "rmse_mv": 0.23774576119854748,
+              "ve": 0.7982054908055736,
+              "bias_mv": -0.04215791532686064
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A256_hz50_r6__prefix_4000ms",
+            "voltage": {
+              "n": 3981,
+              "sse": 494.72703830344835,
+              "error_ss": 456.15637777942027,
+              "reference_ss": 5599.8553267437765,
+              "rmse_mv": 0.35252241321938194,
+              "ve": 0.9185413995249289,
+              "bias_mv": 0.09843112511480313
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 1,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A256_hz50_r7__prefix_1000ms",
+            "voltage": {
+              "n": 1001,
+              "sse": 242.4827505654539,
+              "error_ss": 194.6006751168715,
+              "reference_ss": 930.545413681677,
+              "rmse_mv": 0.49217934744907627,
+              "ve": 0.7908746072403502,
+              "bias_mv": -0.21871040489051963
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A500_hz10_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 586.8973832474294,
+              "error_ss": 579.4100408399095,
+              "reference_ss": 12429.177067008783,
+              "rmse_mv": 0.3127298043884093,
+              "ve": 0.9533830729326515,
+              "bias_mv": -0.03532254880635942
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A500_hz10_r7__prefix_1000ms",
+            "voltage": {
+              "n": 1001,
+              "sse": 33.28557039931184,
+              "error_ss": 33.139409971953185,
+              "reference_ss": 682.4245918959683,
+              "rmse_mv": 0.1823521814545431,
+              "ve": 0.9514387225116221,
+              "bias_mv": -0.01208364237081278
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A500_hz25_r6__prefix_1000ms",
+            "voltage": {
+              "n": 1001,
+              "sse": 35.934365596738644,
+              "error_ss": 30.134630357744395,
+              "reference_ss": 545.0666876974412,
+              "rmse_mv": 0.1894689080815347,
+              "ve": 0.9447138652243747,
+              "bias_mv": -0.07611794333596092
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A500_hz25_r7__prefix_1000ms",
+            "voltage": {
+              "n": 1001,
+              "sse": 117.53477712377207,
+              "error_ss": 117.05529559841105,
+              "reference_ss": 1943.7483330435257,
+              "rmse_mv": 0.34266216564425095,
+              "ve": 0.9397785744129099,
+              "bias_mv": -0.021886126263872846
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A500_hz50_r6__prefix_1000ms",
+            "voltage": {
+              "n": 1001,
+              "sse": 71.26693884696579,
+              "error_ss": 67.65026731004966,
+              "reference_ss": 1699.6704529376455,
+              "rmse_mv": 0.26682530446691505,
+              "ve": 0.9601980094475812,
+              "bias_mv": -0.0601087221494326
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A500_hz50_r7__prefix_1000ms",
+            "voltage": {
+              "n": 961,
+              "sse": 1670.7955764247242,
+              "error_ss": 1462.520526613026,
+              "reference_ss": 4698.505397689403,
+              "rmse_mv": 1.3185602056981325,
+              "ve": 0.6887264347227836,
+              "bias_mv": -0.46553992219668483
+            },
+            "events": {
+              "tp": 2,
+              "fp": 1,
+              "fn": 0,
+              "matched_errors_ms": [
+                -4.825000004866979,
+                -2.949999995581038
+              ]
+            }
+          }
+        ],
+        "pooled_rmse_mv": 0.23391085120716157,
+        "mean_case_ve": 0.850823152070643,
+        "within_trace_weighted_ve": 0.9328025627042866,
+        "events": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 3,
+          "precision": 0.6666666666666666,
+          "recall": 0.4,
+          "f1": 0.5,
+          "median_abs_error_ms": 3.8875000002240085
+        },
+        "normalized_mse_floor_0p04": 0.11644677110136947,
+        "score": 0.18204322173448628,
+        "voltage_eligible": true
+      },
+      "source": {
+        "event_strength": 0.0,
+        "stage": "refine",
+        "epoch": 0,
+        "tag": "voltage"
+      }
+    },
+    {
+      "name": "event_lambda_0_refine_ema",
+      "checkpoint": "/home/lcm/DBNN_crosscell_candidate_completion_20261017/results/hay_l5/ampa/dt1.0ms/candidates/event_lambda_0_refine_ema/checkpoint.pt",
+      "checkpoint_sha256": "ae1e5fca7c27cb5c131850adadeb97323f8ec37c8aee5bac0f2d336ae7359b75",
+      "reset": {
+        "v_th": -58.90476989746094,
+        "reset_amp": 4.0,
+        "tau_reset": 16.0
+      },
+      "validation": {
+        "cases": [
+          {
+            "case_id": "train_dt1.0_A64_hz10_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 30.698612982756458,
+              "error_ss": 19.30732005695713,
+              "reference_ss": 848.4180042513087,
+              "rmse_mv": 0.0715233031953648,
+              "ve": 0.9772431514180383,
+              "bias_mv": -0.04356870951602467
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A64_hz10_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 13.612788078549784,
+              "error_ss": 12.219030270184128,
+              "reference_ss": 26.628192017930672,
+              "rmse_mv": 0.047627932383225643,
+              "ve": 0.5411242993156961,
+              "bias_mv": -0.015239890387328023
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A64_hz25_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 60.39770258037606,
+              "error_ss": 40.7985460758262,
+              "reference_ss": 2277.5379260274776,
+              "rmse_mv": 0.10032251157645447,
+              "ve": 0.9820865568868977,
+              "bias_mv": -0.05714876861140005
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A64_hz25_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 39.71824595675571,
+              "error_ss": 39.71203825181907,
+              "reference_ss": 97.58259508288468,
+              "rmse_mv": 0.08135480661091575,
+              "ve": 0.593041789695299,
+              "bias_mv": 0.0010170767335489657
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A64_hz50_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 80.20300230494468,
+              "error_ss": 48.40233328657662,
+              "reference_ss": 2801.926502347523,
+              "rmse_mv": 0.11560683180892596,
+              "ve": 0.9827253379965449,
+              "bias_mv": -0.07279579863113635
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A64_hz50_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 47.663570527685806,
+              "error_ss": 45.50041840616029,
+              "reference_ss": 89.03032979252247,
+              "rmse_mv": 0.08912129180975027,
+              "ve": 0.4889335071295916,
+              "bias_mv": 0.018985923102171773
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A128_hz10_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 81.7851106688031,
+              "error_ss": 58.944166806080915,
+              "reference_ss": 2389.0490048938263,
+              "rmse_mv": 0.11674151081802837,
+              "ve": 0.9753273513078479,
+              "bias_mv": -0.061694323986773686
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A128_hz10_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 79.66399813600583,
+              "error_ss": 79.40632081950608,
+              "reference_ss": 286.8493889406342,
+              "rmse_mv": 0.11521770915351456,
+              "ve": 0.7231776539153101,
+              "bias_mv": -0.006552790467132431
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A128_hz25_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 200.07424167974386,
+              "error_ss": 148.75751114851116,
+              "reference_ss": 7802.297066630642,
+              "rmse_mv": 0.18259285378928394,
+              "ve": 0.9809341390262201,
+              "bias_mv": -0.09247358106331237
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A128_hz25_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 250.02597152639646,
+              "error_ss": 248.40063240192865,
+              "reference_ss": 979.1445500640662,
+              "rmse_mv": 0.2041177386849522,
+              "ve": 0.7463085175874434,
+              "bias_mv": 0.016457360459454673
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A128_hz50_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 250.87389059700945,
+              "error_ss": 173.438007373864,
+              "reference_ss": 7315.458883065894,
+              "rmse_mv": 0.20446356042478078,
+              "ve": 0.976291575122465,
+              "bias_mv": -0.11359502585445558
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A128_hz50_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 326.61835257778876,
+              "error_ss": 325.63516227711716,
+              "reference_ss": 1058.0356982039727,
+              "rmse_mv": 0.2332966370871044,
+              "ve": 0.6922266773891594,
+              "bias_mv": 0.012799911867716058
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A256_hz10_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 181.7479995683534,
+              "error_ss": 166.11561919784828,
+              "reference_ss": 7454.770667823001,
+              "rmse_mv": 0.17402955366010217,
+              "ve": 0.9777168706322714,
+              "bias_mv": -0.051038833920746284
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A256_hz10_r7",
+            "voltage": {
+              "n": 6001,
+              "sse": 372.35691028868314,
+              "error_ss": 356.7213040002722,
+              "reference_ss": 7927.081253015641,
+              "rmse_mv": 0.24909665498395026,
+              "ve": 0.9549996660038564,
+              "bias_mv": 0.05104409986844641
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A256_hz25_r6",
+            "voltage": {
+              "n": 5961,
+              "sse": 489.66216454251844,
+              "error_ss": 484.7267158282001,
+              "reference_ss": 8390.180255137717,
+              "rmse_mv": 0.2866082669753744,
+              "ve": 0.9422269008426394,
+              "bias_mv": 0.028774233317139204
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 2,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A256_hz25_r7__prefix_1000ms",
+            "voltage": {
+              "n": 1001,
+              "sse": 56.73585132940207,
+              "error_ss": 55.3249655375142,
+              "reference_ss": 271.56587718406945,
+              "rmse_mv": 0.23807387961984577,
+              "ve": 0.7962742369873866,
+              "bias_mv": -0.037542992895776096
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A256_hz50_r6__prefix_4000ms",
+            "voltage": {
+              "n": 3981,
+              "sse": 501.7667663345346,
+              "error_ss": 458.1753433248351,
+              "reference_ss": 5599.8553267437765,
+              "rmse_mv": 0.35502166610617797,
+              "ve": 0.9181808606489024,
+              "bias_mv": 0.10464161516164182
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 1,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A256_hz50_r7__prefix_1000ms",
+            "voltage": {
+              "n": 1001,
+              "sse": 232.06024031958077,
+              "error_ss": 197.27975211110856,
+              "reference_ss": 930.545413681677,
+              "rmse_mv": 0.48148563001160594,
+              "ve": 0.7879955677492658,
+              "bias_mv": -0.1864020988776848
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A500_hz10_r6",
+            "voltage": {
+              "n": 6001,
+              "sse": 574.6198985786032,
+              "error_ss": 568.0090243095947,
+              "reference_ss": 12429.177067008783,
+              "rmse_mv": 0.3094414711903019,
+              "ve": 0.954300351403209,
+              "bias_mv": -0.03319079350320682
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A500_hz10_r7__prefix_1000ms",
+            "voltage": {
+              "n": 1001,
+              "sse": 32.94850411626976,
+              "error_ss": 32.886672108673835,
+              "reference_ss": 682.4245918959683,
+              "rmse_mv": 0.18142653755099342,
+              "ve": 0.9518090753187757,
+              "bias_mv": -0.007859404389555756
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A500_hz25_r6__prefix_1000ms",
+            "voltage": {
+              "n": 1001,
+              "sse": 34.97195747389924,
+              "error_ss": 30.13757871407873,
+              "reference_ss": 545.0666876974412,
+              "rmse_mv": 0.1869144736328511,
+              "ve": 0.9447084560581187,
+              "bias_mv": -0.06949495816683317
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A500_hz25_r7__prefix_1000ms",
+            "voltage": {
+              "n": 1001,
+              "sse": 116.01442121103173,
+              "error_ss": 116.01409838872286,
+              "reference_ss": 1943.7483330435257,
+              "rmse_mv": 0.34043872090046307,
+              "ve": 0.94031423903162,
+              "bias_mv": 0.0005678906664624438
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A500_hz50_r6__prefix_1000ms",
+            "voltage": {
+              "n": 1001,
+              "sse": 69.19406621262897,
+              "error_ss": 67.93432398114857,
+              "reference_ss": 1699.6704529376455,
+              "rmse_mv": 0.26291622481573407,
+              "ve": 0.9600308848908131,
+              "bias_mv": -0.03547511448512425
+            },
+            "events": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "matched_errors_ms": []
+            }
+          },
+          {
+            "case_id": "train_dt1.0_A500_hz50_r7__prefix_1000ms",
+            "voltage": {
+              "n": 961,
+              "sse": 1789.1333653159456,
+              "error_ss": 1603.9996697477573,
+              "reference_ss": 4698.505397689403,
+              "rmse_mv": 1.3644564027636088,
+              "ve": 0.6586149138965424,
+              "bias_mv": -0.43891562477233653
+            },
+            "events": {
+              "tp": 2,
+              "fp": 2,
+              "fn": 0,
+              "matched_errors_ms": [
+                -4.825000004866979,
+                -3.949999995581038
+              ]
+            }
+          }
+        ],
+        "pooled_rmse_mv": 0.23515256897536033,
+        "mean_case_ve": 0.8519413575105799,
+        "within_trace_weighted_ve": 0.9315312572158995,
+        "events": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 3,
+          "precision": 0.5,
+          "recall": 0.4,
+          "f1": 0.4444444444444444,
+          "median_abs_error_ms": 4.3875000002240085
+        },
+        "normalized_mse_floor_0p04": 0.11522872906628749,
+        "score": 0.19649019416592622,
+        "voltage_eligible": true
+      },
+      "source": {
+        "event_strength": 0.0,
+        "stage": "refine",
+        "epoch": 400,
+        "tag": "ema"
+      }
+    }
+  ]
+}

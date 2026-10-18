@@ -1,0 +1,67 @@
+{
+  "passed": true,
+  "local_host": "lcmsjtudeMacBook-Air.local",
+  "source_results_finished": true,
+  "primary_checkpoint_unchanged": true,
+  "metric_checks": [
+    {
+      "model": "passive",
+      "independently_recomputed_inputs": 96
+    },
+    {
+      "model": "active",
+      "independently_recomputed_inputs": 96
+    }
+  ],
+  "active_inference_parity": [
+    {
+      "case_id": "confirmatory_0000",
+      "max_drive_gap_mv": 6.3768992148993675e-06,
+      "max_voltage_gap_mv": 6.3768992148993675e-06,
+      "events_equal": true
+    },
+    {
+      "case_id": "confirmatory_0592",
+      "max_drive_gap_mv": 5.177538938028192e-06,
+      "max_voltage_gap_mv": 5.177538938028192e-06,
+      "events_equal": true
+    }
+  ],
+  "passive_fit_orthogonality_gap": 3.9549185808631856e-32,
+  "main_fit_V2_orthogonality_gap": 7.318364664277155e-19,
+  "maximum_passive_decomposition_identity_gap_mv": 8.881784197001252e-16,
+  "maximum_active_decomposition_identity_gap_mv": 1.7763568394002505e-15,
+  "test_inputs_retained": {
+    "passive": 32,
+    "active_original_rest": 32
+  },
+  "manuscript_modified": false,
+  "main_report_modified": false,
+  "note": "Visual plot QA is recorded separately after rendering; not inferred from file creation.",
+  "files": {
+    "passive_arrays.npz": "f7acfb82027cb285b38b56c9c68a8e4fdd25f6aafe4457247ff4825650990911",
+    "active_frozen_complete.json": "60771585a6807db1484118359d9fb7f771f5bf487d7b6d370b64ec6a2e5f6b45",
+    "active_frozen_arrays.npz": "ade695014a06647c574ed32f3b2133c4f44a64ff894f00dbd6a4f76e39d32f1a",
+    "protection.json": "aab25a7251d81bdd087da8f50c00e45aa837de81dc0c25b321d91f696803b05f",
+    "input_deduplication_v2.json": "ed337722856c8dfd9b084ae3404c5de9528646d02395be7ef9915f2baacea2da",
+    "active_error_budget_arrays.npz": "ba813f9421f1cc2c8d93bbba4cb453945ba9292131ca10ac56d5705d8062728f",
+    "active_error_budget_complete.json": "fc561fda8d629db741342caeab75bebc738672e330cd643940eb1b861e76d722",
+    "passive_complete.json": "1223e0a1f919bc09a7d65f213dd03888fe7241c937927c6375b0e701367218c5"
+  },
+  "visual_plot_qa": {
+    "inspected": true,
+    "figures": [
+      "kernel_fits",
+      "passive_budget",
+      "active_budget",
+      "holding_protocol"
+    ],
+    "overlapping_labels_or_clipping": false
+  },
+  "html_structure_qa": {
+    "figures": 4,
+    "headings": 7,
+    "all_local_links_exist": true
+  },
+  "html_sha256": "1fcf9e413462ff2a7040d4b0c3948cb6f18ef71704d1e8b1c2480b7856b6bc75"
+}

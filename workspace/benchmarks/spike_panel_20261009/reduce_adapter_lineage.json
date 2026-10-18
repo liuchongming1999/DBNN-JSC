@@ -1,0 +1,15 @@
+{
+  "source_sha256": "557792a64f2bddfebfce902bf703d2e66a3cc1c1b393c572712d70db044a7d70",
+  "adapter_sha256": "a1f76cc16ba9bf44562d24a0e905f0da5be9af4b34d2f480402dd6d62ee9f914",
+  "changes": [
+    "str(prepare(work))",
+    "gate=json.loads((work/'original/reduce_legacy/complete.json').read_text());assert gate['passed']",
+    "a=p.parse_args()",
+    "root=a.root.resolve();work=a.work.resolve();out=work/('publication' if a.publication else 'aligned')/f'reduce_{a.dt:g}ms';out.mkdir(parents=True,exist_ok=True)",
+    "src=root/'benchmarks/dt_resolution_20260929/test';manifest=json.loads((src/'manifest.json').read_text());rows=manifest['cases']",
+    "metric(ref['voltage'][::2],pv,ref['spike_times'],1.)",
+    "full_main31=not a.limit and len(records)==31"
+  ],
+  "fixed_dt_ms": 1,
+  "training_or_reduction_parameter_changes": false
+}

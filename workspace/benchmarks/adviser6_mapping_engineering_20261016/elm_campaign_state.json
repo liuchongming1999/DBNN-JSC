@@ -1,0 +1,35 @@
+{
+  "status": "superseded_by_author_aligned_sampler",
+  "reason": "User approved geometry plus corrected author batch sampling on the unchanged common dataset; restart from the same seed, not mixed-protocol fine tuning.",
+  "logged_progress": {
+    "status": "training",
+    "epoch": 1,
+    "total_epochs": 35,
+    "batch": 8600,
+    "batches_per_epoch": 10000,
+    "steps": 8600,
+    "total_updates": 350000,
+    "loss": 0.005750354611772372,
+    "lr": 0.0004992555167956684,
+    "elapsed_s": 1914.4295213222504,
+    "run_elapsed_s": 1914.4295222759247,
+    "run_updates": 8600,
+    "run_start_step": 0,
+    "execution_backend": "Original author execution"
+  },
+  "training_complete": false,
+  "stopped_processes": [
+    {
+      "pid": 3349446,
+      "command": "/home/lcm/DBNN_L5PC_surrogate_20260928/.venv/bin/python -u /home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/adviser6_mapping_engineering_20261016/finish_elm.py ",
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 3344482,
+      "command": "/home/lcm/DBNN_L5PC_surrogate_20260928/.venv/bin/python -u /home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/adviser6_mapping_engineering_20261016/train_mapped_elm.py --root /home/lcm/DBNN_L5PC_surrogate_20260928 --work /home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/adviser6_mapping_engineering_20261016 --data /home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/baselines_20260930 --method elm --dt 1 --device cuda:0 ",
+      "signal": "SIGTERM"
+    }
+  ],
+  "replacement": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/adviser6_elm_author_aligned_20261016",
+  "stopped_at": "2026-10-16T18:56:04+0800"
+}

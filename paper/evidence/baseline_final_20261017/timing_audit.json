@@ -1,0 +1,122 @@
+{
+  "passed": true,
+  "cases": 379,
+  "repeats": 7,
+  "monitor_samples": 206,
+  "all_samples_free_of_other_compute_processes": true,
+  "all_predictions_and_events_identical_to_original_final_batch": true,
+  "all_checkpoint_hashes_identical": true,
+  "all_input_ids_hashes_preserved": true,
+  "models_and_training_unchanged": true,
+  "reason_for_repeat": "Original batch had much higher latency even for unchanged models; historical process telemetry unavailable, so its cause is unresolved. A repeat on the same GPU with archived compute-process telemetry was required before publication.",
+  "original_summary": {
+    "tcn_whole": {
+      "wall_ms": 5704.624500125647,
+      "rmse_mv": 0.8651424255482972,
+      "events": {
+        "tp": 184,
+        "fp": 867,
+        "fn": 496,
+        "precision": 0.17507136060894388,
+        "recall": 0.27058823529411763,
+        "f1": 0.21259387637203928,
+        "median_abs_error_ms": 2.206249930663944
+      }
+    },
+    "elm_corrected": {
+      "wall_ms": 141898.52997660637,
+      "rmse_mv": 0.7551339231862723,
+      "events": {
+        "tp": 293,
+        "fp": 436,
+        "fn": 387,
+        "precision": 0.401920438957476,
+        "recall": 0.4308823529411765,
+        "f1": 0.41589779985805536,
+        "median_abs_error_ms": 1.9999999923250016
+      }
+    },
+    "lstm_unchanged": {
+      "wall_ms": 7845.318490639329,
+      "rmse_mv": 0.7501206356656066,
+      "events": {
+        "tp": 309,
+        "fp": 1261,
+        "fn": 371,
+        "precision": 0.19681528662420383,
+        "recall": 0.45441176470588235,
+        "f1": 0.27466666666666667,
+        "median_abs_error_ms": 2.250000033602646
+      }
+    },
+    "dbnn_frozen": {
+      "wall_ms": 2324.812503531575,
+      "rmse_mv": 0.4403635083689316,
+      "events": {
+        "tp": 387,
+        "fp": 379,
+        "fn": 293,
+        "precision": 0.5052219321148825,
+        "recall": 0.5691176470588235,
+        "f1": 0.5352697095435685,
+        "median_abs_error_ms": 2.6499999665588803
+      }
+    }
+  },
+  "verified_summary": {
+    "tcn_whole": {
+      "wall_ms": 1026.231912896037,
+      "rmse_mv": 0.8651424255482972,
+      "events": {
+        "tp": 184,
+        "fp": 867,
+        "fn": 496,
+        "precision": 0.17507136060894388,
+        "recall": 0.27058823529411763,
+        "f1": 0.21259387637203928,
+        "median_abs_error_ms": 2.206249930663944
+      }
+    },
+    "elm_corrected": {
+      "wall_ms": 36010.10570116341,
+      "rmse_mv": 0.7551339231862723,
+      "events": {
+        "tp": 293,
+        "fp": 436,
+        "fn": 387,
+        "precision": 0.401920438957476,
+        "recall": 0.4308823529411765,
+        "f1": 0.41589779985805536,
+        "median_abs_error_ms": 1.9999999923250016
+      }
+    },
+    "lstm_unchanged": {
+      "wall_ms": 1567.0961886644363,
+      "rmse_mv": 0.7501206356656066,
+      "events": {
+        "tp": 309,
+        "fp": 1261,
+        "fn": 371,
+        "precision": 0.19681528662420383,
+        "recall": 0.45441176470588235,
+        "f1": 0.27466666666666667,
+        "median_abs_error_ms": 2.250000033602646
+      }
+    },
+    "dbnn_frozen": {
+      "wall_ms": 32.121311873197556,
+      "rmse_mv": 0.4403635083689316,
+      "events": {
+        "tp": 387,
+        "fp": 379,
+        "fn": 293,
+        "precision": 0.5052219321148825,
+        "recall": 0.5691176470588235,
+        "f1": 0.5352697095435685,
+        "median_abs_error_ms": 2.6499999665588803
+      }
+    }
+  },
+  "physical_gpu": 0,
+  "source_sha256": "89803223cc80dd6eb9e61868ed689cbb7a34de11506dc8eac74dddb1378def84"
+}

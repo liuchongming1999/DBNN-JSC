@@ -10,6 +10,7 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.ticker import ScalarFormatter
+from matplotlib.offsetbox import AnnotationBbox, TextArea, VPacker
 
 ROOT = Path(__file__).resolve().parents[1]
 WORK = ROOT.parent / 'theory_data'
@@ -45,6 +46,11 @@ TABLE_CITATIONS = dict(tcn='beniaguev2021', elm='spieler2024',
 def save(fig, name):
     fig.savefig(F / (name+'.pdf'), bbox_inches=None)
     fig.savefig(F / (name+'.png'), bbox_inches=None)
+    numbered={'frontier':1,'pair_order':2,'finite_strength':3,
+              'voltage_examples':5,'events':6,'duration':7}
+    if name in numbered:
+        import shutil
+        shutil.copy2(F/(name+'.pdf'),F/f'Fig{numbered[name]}.pdf')
     plt.close(fig)
 
 def grid(ax):
@@ -60,23 +66,32 @@ def frontier():
     ax.set_xlabel('Pooled subthreshold RMSE (mV)')
     ax.set_ylabel('Sum of per-input median computation times (ms)')
     grid(ax)
+    ax.text(.025,.024,'← Lower voltage error  ·  Lower compute time ↓',
+            transform=ax.transAxes,fontsize=7,color='#718493',
+            ha='left',va='bottom',zorder=6)
 
     # Pixel offsets keep leader lengths and text spacing consistent on log axes.
     # All arrows and leaders terminate at the measured operating points.
     placements = {
         'gpu': (17, 0, 'left'),
-        'cpu8': (17, -27, 'left'),
-        'cpu1': (17, -25, 'left'),
-        'lstm': (22, 9, 'left'),
-        'tcn': (19, 7, 'left'),
-        'elm': (18, 10, 'left'),
+        'cpu8': (17, -26, 'left'),
+        'cpu1': (17, -18, 'left'),
+        'lstm': (20, 10, 'left'),
+        'tcn': (13, 2, 'left'),
+        'elm': (18, 2, 'left'),
         'neuron8': (-20, -15, 'right'),
         'core1': (-20, 15, 'right'),
-        'reduce': (0, 25, 'right'),
+        'reduce': (0, 30, 'right'),
     }
-    direct_names={**NAMES, 'cpu1':'DBNN CPU\n1 core','cpu8':'DBNN CPU\n8 cores',
-                  'neuron8':'NEURON multisplit\n8 cores','core1':'CoreNEURON\n1 core',
-                  'reduce':'Neuron_Reduce\n1 core'}
+    direct_names = dict(
+        gpu='DBNN GPU\nOurs', cpu1='DBNN CPU, 1 core\nOurs',
+        cpu8='DBNN CPU, 8 cores\nOurs',
+        tcn='TCN GPU\nBeniaguev et al. 2021',
+        elm='Branch-ELM GPU\nSpieler et al. 2024',
+        lstm='LSTM GPU\nSpieler et al. 2024',
+        neuron8='NEURON, 8 cores\nHines et al. 2008',
+        core1='CoreNEURON, 1 core\nKumbhar et al. 2019',
+        reduce='Neuron_Reduce, 1 core\nAmsalem et al. 2020')
     points={k:(D['models'][k]['accuracy']['pooled_rmse_mv'],
                D['models'][k]['timing']['wall_ms']) for k in COLORS}
     speed_ratio=points['neuron8'][1]/points['gpu'][1]
@@ -91,10 +106,18 @@ def frontier():
         marker = 'o' if k in ('gpu','cpu1','cpu8') else ('s' if k in ('tcn','elm','lstm') else ('v' if k=='neuron8' else '^'))
         ax.scatter(x,y,s=35,marker=marker,c=COLORS[k],edgecolor='white',lw=.7,zorder=5)
         dx,dy,ha=placements[k]
-        ax.annotate(direct_names[k],(x,y),xytext=(dx,dy),textcoords='offset points',
-                    ha=ha,va='center',fontsize=8,color=COLORS[k],fontweight='bold',
-                    arrowprops=dict(arrowstyle='-',lw=.6,color=COLORS[k],alpha=.65,
-                                    shrinkA=3,shrinkB=5),zorder=6)
+        title,source=direct_names[k].split('\n')
+        box=VPacker(children=[
+            TextArea(title,textprops=dict(fontsize=8,color=COLORS[k],weight='bold')),
+            TextArea(source,textprops=dict(fontsize=7,color=COLORS[k]))],
+            align=ha,pad=0,sep=2)
+        label=AnnotationBbox(box,(x,y),xybox=(dx,dy),xycoords='data',
+                            boxcoords='offset points',frameon=False,
+                            box_alignment=(0 if ha=='left' else 1,.5),
+                            arrowprops=dict(arrowstyle='-',lw=.6,color=COLORS[k],
+                                            alpha=.65,shrinkA=3,shrinkB=5),zorder=6)
+        ax.add_artist(label)
+
 
     # Position the ratio beside the middle of the displayed quadratic Bezier,
     # rather than using a free-floating box that hides part of the arrow.
@@ -110,24 +133,52 @@ def frontier():
     save(fig,'frontier')
 
 def duration():
-    fig,ax=plt.subplots(figsize=(WIDTH,3.8))
-    fig.subplots_adjust(left=.16,bottom=.18,top=.96,right=.97)
+    """Runtime and pooled voltage error on the same duration strata."""
+    fig,(ax,err)=plt.subplots(2,1,figsize=(WIDTH,4.8),sharex=True,
+                             gridspec_kw=dict(height_ratios=[1.4,1]))
+    fig.subplots_adjust(left=.16,bottom=.10,top=.80,right=.97,hspace=.27)
     ts=sorted(int(k) for k in D['durations'])
-    for k in ['gpu','cpu8','cpu1','lstm','tcn','elm','neuron8','core1','reduce']:
+    keys=['gpu','cpu8','cpu1','lstm','tcn','elm','neuron8','core1','reduce']
+    for k in keys:
         ds=[D['durations'][str(t)][k] for t in ts]
-        y=np.array([z['median_ms'] for z in ds]);lo=np.array([z['q1_ms'] for z in ds]);hi=np.array([z['q3_ms'] for z in ds])
+        y=np.array([z['median_ms'] for z in ds])
+        lo=np.array([z['q1_ms'] for z in ds]);hi=np.array([z['q3_ms'] for z in ds])
         ax.plot(ts,y,'o-',ms=3,color=COLORS[k],label=NAMES[k])
         ax.fill_between(ts,lo,hi,color=COLORS[k],alpha=.12,lw=0)
-    ax.set_yscale('log');ax.set_ylim(.02,40000);ax.set_xscale('log',base=2)
-    ax.set_xticks(ts);ax.set_xticklabels([str(t) for t in ts])
-    ax.set_xlabel('Simulated duration (s)');ax.set_ylabel('Median computation time per input (ms)')
+    ax.set_yscale('log');ax.set_ylim(.025,12000)
+    ax.set_ylabel('Median computation time (ms)')
+    ax.set_title('(a) Computation time',loc='left',pad=5)
     grid(ax)
-    ax.legend(fontsize=8,ncol=2,frameon=False,loc='upper left',bbox_to_anchor=(.01,1.0),
-              handlelength=1.25,columnspacing=.7,labelspacing=.22)
+    fig.legend(*ax.get_legend_handles_labels(),fontsize=8,ncol=2,
+               frameon=False,loc='upper center',bbox_to_anchor=(.54,.995),
+               handlelength=1.2,columnspacing=.8,labelspacing=.28)
     y16=D['durations']['16']['gpu']['median_ms']
     ratio16=D['durations']['16']['neuron8']['median_ms']/y16
-    ax.text(11,2.8*y16,f'{ratio16:,.0f}-fold\nat 16 s',color=COLORS['gpu'],ha='center',fontsize=8)
-    ax.annotate('',xy=(16,y16),xytext=(14,2.0*y16),arrowprops=dict(arrowstyle='->',color=COLORS['gpu'],lw=.8))
+    ax.annotate(f'{ratio16:,.0f}'+r'$\times$'+' at 16 s',xy=(16,y16),
+                xytext=(-8,20),textcoords='offset points',ha='right',
+                color=COLORS['gpu'],fontsize=8,
+                arrowprops=dict(arrowstyle='->',color=COLORS['gpu'],lw=.7))
+    # Identical CPU/GPU DBNN predictions and NEURON/CoreNEURON predictions
+    # share one error curve. Recompute pooling from per-input SSE and counts.
+    for k in ['gpu','lstm','tcn','elm','neuron8','reduce']:
+        ys=[]
+        for t in ts:
+            rec=[r for r in D['models'][k]['records'] if r['duration_s']==t]
+            rmse=np.sqrt(sum(r['voltage']['sse'] for r in rec)/
+                         sum(r['voltage']['n'] for r in rec))
+            frozen=D['models'][k]['groups']['duration_s'][str(t)]['pooled_rmse_mv']
+            assert np.isclose(rmse,frozen,rtol=1e-12,atol=1e-12)
+            ys.append(rmse)
+        err.plot(ts,ys,'o-',ms=3,color=COLORS[k])
+    err.set_xscale('log',base=2);err.set_xticks(ts)
+    err.set_xticklabels([str(t) for t in ts])
+    err.set_yscale('log');err.set_ylim(.12,6.5)
+    err.set_yticks([.2,.5,1,2,5]);err.yaxis.set_major_formatter(ScalarFormatter())
+    err.set_xlabel('Simulated duration (s)')
+    err.set_ylabel('Pooled subthreshold RMSE (mV)')
+    err.set_title('(b) Voltage prediction error',loc='left',pad=5)
+    err.tick_params(which='minor',labelleft=False)
+    grid(err)
     save(fig,'duration')
 
 def events():
@@ -152,8 +203,8 @@ def examples():
     outer=fig.add_gridspec(1,2,left=.145,right=.985,bottom=.16,top=.865,wspace=.47)
     for j,cid in enumerate(cases):
         d=np.load(src/(cid+'.npz'))
-        ref=np.load(src/(cid+'_native0.1.npz'))
-        sol=np.load(src/(cid+'_native0.5.npz'))
+        ref=np.load(src/(cid+'_native0.0125.npz'))
+        sol=np.load(src/(cid+'_native0.25.npz'))
         raster=np.load(src/(cid+'_input.npz'))
         x,ids=raster['x'],raster['ids']
         assert x.shape==(500,8001) and set(ids.tolist())==set(range(500))
@@ -180,9 +231,9 @@ def examples():
                          loc='left',fontsize=8,pad=5)
         # Native solver samples preserve actual action-potential peaks.
         voltage.plot(ref['time_ms']/1000,ref['voltage'],c='#35424C',lw=.65,
-                     label='Reference, 0.1 ms',zorder=2)
+                     label='Reference, 0.0125 ms',zorder=2)
         voltage.plot(sol['time_ms']/1000,sol['voltage'],c=COLORS['neuron8'],
-                     lw=.65,alpha=.9,label='NEURON, 0.5 ms',zorder=2)
+                     lw=.65,alpha=.9,label='NEURON, 0.25 ms',zorder=2)
         voltage.plot(d['time_ms']/1000,d['dbnn_voltage'],c=COLORS['gpu'],
                      lw=.7,label='DBNN, 1 ms',zorder=3)
         voltage.set_ylabel('V (mV)',fontsize=7)
@@ -296,7 +347,7 @@ def finite():
         assert all(r['ipsp_abs_peak_mv']<=3 for r in rows)
         for field,col,sty,label in [
                 ('first_relative_rms',COLORS['cpu8'],'--','First-order response'),
-                ('fixed_dbnn_relative_rms',COLORS['gpu'],'-','Fixed full quadratic readout'),
+                ('fixed_dbnn_relative_rms',COLORS['gpu'],'-','Fixed bilinear readout'),
                 ('exact_second_relative_rms','#657786',':','Physical second-order expansion')]:
             ax.plot([r['epsp_peak_mv'] for r in rows],
                     [100*r[field] for r in rows],sty,c=col,label=label)
@@ -389,4 +440,9 @@ def tables():
     (E/'paper_metric_audit.json').write_text(json.dumps(audit,indent=2))
 
 if __name__=='__main__':
+    if D['reference_dt_ms']==.0125:
+        from build_refined_figures import frontier,duration,events,tables
     frontier();duration();events();examples();pair_order();finite();tables()
+
+    from build_trained_diagnostics import main as trained_diagnostics
+    trained_diagnostics()

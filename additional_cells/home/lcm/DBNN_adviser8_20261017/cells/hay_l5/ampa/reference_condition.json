@@ -1,0 +1,41 @@
+{
+  "model": "hay_l5",
+  "modeldb": 139653,
+  "profile": "ampa",
+  "operating_point": {
+    "model": "hay_l5",
+    "spec": {
+      "modeldb": 139653,
+      "variant": "",
+      "mods_dir": "mod",
+      "celsius": 34.0,
+      "v_init": -80.0,
+      "author": "Hay et al. (2011)",
+      "label": "Rat cortical L5b",
+      "reference_dt_ms": 0.1
+    },
+    "native_spikes_2s": 0,
+    "native_firing_hz": 0.0,
+    "holding_current_na": 0.0,
+    "holding_trials": [
+      {
+        "current_na": 0.0,
+        "spikes_last_1000ms": 0,
+        "rest_mv": -77.2516079704223,
+        "std_mv": 3.269410447824795e-05
+      }
+    ],
+    "rest_mv": -77.25150464705433,
+    "weight_us": 8.014393957629178e-05,
+    "inhibition_ratio": 0.5,
+    "condition": "Original active channels and morphology retained. Fixed somatic holding current selects a stable low-spike operating point; identical current and reference state used by all solver comparisons.",
+    "weight_selection": "Reference-only 250E 10Hz mean depolarization approximately 2.5mV, before fitting/testing.",
+    "reference_dt_ms": 0.025,
+    "reference_output_interval_ms": 0.25,
+    "warmup_ms": 2000.0,
+    "reference_selection": "Predetermined same-input 0.025/0.05/0.1ms convergence pilot; .1ms requires spiking coverage, masked max-case RMSE <=.03mV and exact +/-5ms event matching."
+  },
+  "reference_dt_ms": 0.025,
+  "warmup_ms": 2000.0,
+  "condition_sha256": "3a5098f7e32b41e7d7b751ed8dfb4ecd7d3d9ff512596e45e041c69c4e4264cd"
+}

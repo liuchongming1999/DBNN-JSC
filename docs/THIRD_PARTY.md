@@ -15,10 +15,14 @@ original terms and cite the following work when reproducing comparisons.
 | PyTorch / Triton | https://github.com/pytorch/pytorch ; PyTorch 2.8.0, Triton 3.4.0 |
 
 Further-cell accessions, model variants and synaptic configurations are retained
-in `paper/evidence/crosscell_models.json` and `crosscell_events.json`.
+in `paper/evidence/crosscell_final_20261017/locked_protocol.json` and the
+per-job `reference_condition.json` files mapped by `docs/current_asset_map_20261018.json`.
+The older `crosscell_models.json` / `crosscell_events.json` remain historical evidence.
 ModelDB source files are fetched separately. Reference input/output arrays in
 this release are simulation results generated for the study.
 
 The project does not bundle the external original-dataset training/test dumps
 for TCN/Branch-ELM. The original public dataset retrieval and reproduction
 scripts, upstream commits, and completed numerical checks are supplied.
+
+The source distribution and third-party licenses are unchanged. This release does not relicense upstream models or claim a new license for external code.

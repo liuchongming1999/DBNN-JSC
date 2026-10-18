@@ -1,0 +1,76 @@
+{
+  "finished": true,
+  "engine": "reference1",
+  "dt_ms": 0.0125,
+  "case_id": "confirmatory_0605",
+  "input_sha256": "0e5ec7099c904bb5ac8aa16c8f257c44e865b57849fb2e6ce77337a0856a0a72",
+  "ids_sha256": "8065f79a2a9974b5dae115bfee6d6c506c4d71694f2104e494e7726ad1b2972c",
+  "duration_s": 8,
+  "reference_spikes_original": 0,
+  "spike_times_ms": [],
+  "timing": [
+    {
+      "solver_ms": 102494.26995776594,
+      "cpu_ms": 102444.591919,
+      "warmup_ms": 6571.434298530221,
+      "event_schedule_ms": 56.46107159554958,
+      "output_ms": 1.1787917464971542,
+      "loadavg": [
+        56.68,
+        53.2,
+        38.51
+      ]
+    }
+  ],
+  "median_solver_ms": 102494.26995776594,
+  "timing_repeats": 1,
+  "discarded_warmup_calls": 0,
+  "validation": {},
+  "runtime": {
+    "neuron": "9.0.2",
+    "neuron_build": "cmake option default differences: 'NRN_ENABLE_CORENEURON=ON' 'NRN_ENABLE_PYTHON_DYNAMIC=ON' 'NRN_LINK_AGAINST_PYTHON=OFF' 'NRN_ENABLE_MPI_DYNAMIC=ON' 'NRN_MPI_DYNAMIC=/usr/include/openmpi-x86_64;/usr/include/mpich-x86_64' 'NRN_RX3D_OPT_LEVEL=1' 'CMAKE_BUILD_TYPE=Release' 'CMAKE_INSTALL_PREFIX=/tmp/tmpot7w3zjj/wheel/platlib' 'CMAKE_C_COMPILER=/opt/rh/gcc-toolset-10/root/usr/bin/gcc' 'CMAKE_CXX_COMPILER=/opt/rh/gcc-toolset-10/root/usr/bin/g++' 'PYTHON_EXECUTABLE=/tmp/build-env-ciooowse/bin/python' 'CORENRN_ENABLE_GPU=OFF' 'CORENRN_ENABLE_SHARED=ON'",
+    "model": {
+      "root": "/home/lcm/DBNN_L5PC_surrogate_20260928/source/ShaiEtAl2015",
+      "biophys_file": "L5PCbiophys5.hoc",
+      "morphology_file": "cell1.asc",
+      "num_synapses": 500,
+      "duration_ms": 16000.0,
+      "warmup_ms": 500.0,
+      "dt": 0.0125,
+      "sample_interval_ms": 1.0,
+      "input_rate_hz": 50.0,
+      "exc_weight": 0.000188,
+      "inh_weight": 8e-05,
+      "exc_tau1_ms": 0.5,
+      "exc_tau2_ms": 5.0,
+      "inh_tau1_ms": 1.0,
+      "inh_tau2_ms": 10.0,
+      "inh_reversal_mv": -80.0,
+      "v_init": -75.0,
+      "spike_threshold": -20.0,
+      "seed": 20260425
+    },
+    "sections": 196,
+    "compartments": 642,
+    "actual_threads": 1,
+    "thread_busywait": 0,
+    "event_detector_metadata_delay_ms": 10.0,
+    "affinity": [
+      27
+    ],
+    "physical_cores": [
+      {
+        "cpu": 27,
+        "core": 51,
+        "socket": 0,
+        "siblings": "27,155"
+      }
+    ],
+    "model_preparation_ms": 225.73063522577286,
+    "source_script_sha256": "a228f4f59e59e1ebc269c0428848bea4f1c5c74e4b3e2f578282f68186d79efa",
+    "input_protocol": "only manifest events; dormant zero-weight NetStims removed",
+    "resources": "shared server; disjoint physical cores, no exclusive reservation"
+  },
+  "script_sha256": "091a3a0a5959a7889972f788e2ae24cba591419f37a732c6b5b96043b8496873",
+  "manifest_sha256": "a5a5a72e9012519214609e89ef8b2e43c3cd8305990502710123804115f9606f"
+}

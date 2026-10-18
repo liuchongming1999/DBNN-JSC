@@ -1,0 +1,311 @@
+{
+  "updated": "2026-10-17T11:52:40+0800",
+  "complete": true,
+  "completed": 12,
+  "total": 12,
+  "state": "complete",
+  "validation_only": true,
+  "test_evaluated": false,
+  "rows": [
+    {
+      "cell": "human_l23",
+      "profile": "ampa",
+      "status": "complete",
+      "fit": 70,
+      "validation": 23,
+      "old": {
+        "rmse": 0.20306114098468092,
+        "f1": 0.9230769230769231,
+        "score": 0.06132485336443978
+      },
+      "new": {
+        "rmse": 0.20396179284568344,
+        "f1": 0.9230769230769231,
+        "score": 0.06169157690621104
+      },
+      "candidate": "event_lambda_1_refine_joint",
+      "diagonal_max_abs": 0.014530089683830738,
+      "diagonal_nonzero": 500,
+      "updates": 37800,
+      "elapsed_s": 350.62469156831503,
+      "checkpoint": "/home/lcm/DBNN_crosscell_legacy_fullmatrix_20261017/results/human_l23/ampa/dt1.0ms/best_checkpoint.pt",
+      "checkpoint_sha256": "c6e7f64e6016dac48b306356bbf90eb31bea4499e38679462843503a6f4e9885",
+      "baseline_boundary_counts_equal": true
+    },
+    {
+      "cell": "human_l23",
+      "profile": "ampa_nmda",
+      "status": "complete",
+      "fit": 64,
+      "validation": 23,
+      "old": {
+        "rmse": 0.20769310969136112,
+        "f1": 0.6956521739130435,
+        "score": 0.1201380285217011
+      },
+      "new": {
+        "rmse": 0.20764294200749023,
+        "f1": 0.6956521739130435,
+        "score": 0.12011713360291139
+      },
+      "candidate": "event_lambda_0.2_refine_ema",
+      "diagonal_max_abs": 0.05907256156206131,
+      "diagonal_nonzero": 500,
+      "updates": 33600,
+      "elapsed_s": 317.6264593359083,
+      "checkpoint": "/home/lcm/DBNN_crosscell_legacy_fullmatrix_20261017/results/human_l23/ampa_nmda/dt1.0ms/best_checkpoint.pt",
+      "checkpoint_sha256": "019464b136e2f7b01730b690d4953ad4292b7587c79b6c04d1cbe9da39191d64",
+      "baseline_boundary_counts_equal": true
+    },
+    {
+      "cell": "ca1",
+      "profile": "ampa",
+      "status": "complete",
+      "fit": 70,
+      "validation": 24,
+      "old": {
+        "rmse": 0.07435817874612001,
+        "f1": 0.9473684210526315,
+        "score": 0.019297522272890718
+      },
+      "new": {
+        "rmse": 0.07435455203760652,
+        "f1": 0.9473684210526315,
+        "score": 0.019296962215684783
+      },
+      "candidate": "event_lambda_0_primary_joint",
+      "diagonal_max_abs": 0.0056197140365839005,
+      "diagonal_nonzero": 500,
+      "updates": 37800,
+      "elapsed_s": 349.20789602026343,
+      "checkpoint": "/home/lcm/DBNN_crosscell_legacy_fullmatrix_20261017/results/ca1/ampa/dt1.0ms/best_checkpoint.pt",
+      "checkpoint_sha256": "72062c25341504522d060c4d4b4065c59d12ecb90a4b48643dd653e342218e5c",
+      "baseline_boundary_counts_equal": true
+    },
+    {
+      "cell": "ca1",
+      "profile": "ampa_nmda",
+      "status": "complete",
+      "fit": 66,
+      "validation": 23,
+      "old": {
+        "rmse": 0.06092848470482374,
+        "f1": 0.6666666666666666,
+        "score": 0.0880342936969033
+      },
+      "new": {
+        "rmse": 0.060954181828882424,
+        "f1": 0.6666666666666666,
+        "score": 0.08803808340864347
+      },
+      "candidate": "event_lambda_0_refine_joint",
+      "diagonal_max_abs": 0.046671584248542786,
+      "diagonal_nonzero": 500,
+      "updates": 37800,
+      "elapsed_s": 331.7393799815327,
+      "checkpoint": "/home/lcm/DBNN_crosscell_legacy_fullmatrix_20261017/results/ca1/ampa_nmda/dt1.0ms/best_checkpoint.pt",
+      "checkpoint_sha256": "cbe1220a803f41a16aa7bcfb8844f7e672280bf0b069352ea32f2c2a112f23e1",
+      "baseline_boundary_counts_equal": true
+    },
+    {
+      "cell": "hay_l5",
+      "profile": "ampa",
+      "status": "complete",
+      "fit": 69,
+      "validation": 24,
+      "old": {
+        "rmse": 0.23329112174475866,
+        "f1": 0.5,
+        "score": 0.18171395936661658
+      },
+      "new": {
+        "rmse": 0.23391085104363074,
+        "f1": 0.5,
+        "score": 0.1820432216549253
+      },
+      "candidate": "event_lambda_0_refine_joint",
+      "diagonal_max_abs": 0.004144138190895319,
+      "diagonal_nonzero": 500,
+      "updates": 37800,
+      "elapsed_s": 341.8865571971983,
+      "checkpoint": "/home/lcm/DBNN_crosscell_legacy_fullmatrix_20261017/results/hay_l5/ampa/dt1.0ms/best_checkpoint.pt",
+      "checkpoint_sha256": "404a67e9fb67dc48a6c5ae32ee0b892466dc23e83e3dbce5bf7bf73c4526429f",
+      "baseline_boundary_counts_equal": true
+    },
+    {
+      "cell": "hay_l5",
+      "profile": "ampa_nmda",
+      "status": "complete",
+      "fit": 64,
+      "validation": 22,
+      "old": {
+        "rmse": 0.43831458867502526,
+        "f1": 0.5,
+        "score": 0.32034090289177897
+      },
+      "new": {
+        "rmse": 0.4392424605568548,
+        "f1": 0.5,
+        "score": 0.3211569167520184
+      },
+      "candidate": "event_lambda_0_refine_joint",
+      "diagonal_max_abs": 0.022516967728734016,
+      "diagonal_nonzero": 500,
+      "updates": 33600,
+      "elapsed_s": 319.61094509996474,
+      "checkpoint": "/home/lcm/DBNN_crosscell_legacy_fullmatrix_20261017/results/hay_l5/ampa_nmda/dt1.0ms/best_checkpoint.pt",
+      "checkpoint_sha256": "e3efe1570f880da312ebfc89361f7ebc5665501649bdf4d7214e488c9a9953b6",
+      "baseline_boundary_counts_equal": true
+    },
+    {
+      "cell": "granule",
+      "profile": "ampa",
+      "status": "complete",
+      "fit": 53,
+      "validation": 20,
+      "old": {
+        "rmse": 0.11815527696718628,
+        "f1": 1.0,
+        "score": 0.015034149320335716
+      },
+      "new": {
+        "rmse": 0.11815222024675338,
+        "f1": 1.0,
+        "score": 0.015033316690966518
+      },
+      "candidate": "event_lambda_0.2_refine_joint",
+      "diagonal_max_abs": 0.002898895414546132,
+      "diagonal_nonzero": 500,
+      "updates": 29400,
+      "elapsed_s": 267.29730402864516,
+      "checkpoint": "/home/lcm/DBNN_crosscell_legacy_fullmatrix_20261017/results/granule/ampa/dt1.0ms/best_checkpoint.pt",
+      "checkpoint_sha256": "923f630a823b29361e54cf30428d972d795b392ebef3eed8852fae031ddb9687",
+      "baseline_boundary_counts_equal": true
+    },
+    {
+      "cell": "granule",
+      "profile": "ampa_nmda",
+      "status": "complete",
+      "fit": 37,
+      "validation": 15,
+      "old": {
+        "rmse": 0.21129584488139405,
+        "f1": 0.8421052631578947,
+        "score": 0.08807330707851868
+      },
+      "new": {
+        "rmse": 0.21129584488139405,
+        "f1": 0.8421052631578947,
+        "score": 0.08807330707851868
+      },
+      "candidate": "event_lambda_0_primary_joint",
+      "diagonal_max_abs": 0.0,
+      "diagonal_nonzero": 0,
+      "updates": 21000,
+      "elapsed_s": 186.81190328858793,
+      "checkpoint": "/home/lcm/DBNN_crosscell_legacy_fullmatrix_20261017/results/granule/ampa_nmda/dt1.0ms/best_checkpoint.pt",
+      "checkpoint_sha256": "ed899ee206f4a9f9dea440322aa5b8ee2ced596bee2018f69a2726448df1ab28",
+      "baseline_boundary_counts_equal": true
+    },
+    {
+      "cell": "basket",
+      "profile": "ampa",
+      "status": "complete",
+      "fit": 37,
+      "validation": 15,
+      "old": {
+        "rmse": 0.42374503516789136,
+        "f1": 0.45454545454545453,
+        "score": 0.32508474671949106
+      },
+      "new": {
+        "rmse": 0.42374503516789136,
+        "f1": 0.45454545454545453,
+        "score": 0.32508474671949106
+      },
+      "candidate": "expanded_calibration_only",
+      "diagonal_max_abs": 0.0,
+      "diagonal_nonzero": 0,
+      "updates": 21000,
+      "elapsed_s": 187.5145115684718,
+      "checkpoint": "/home/lcm/DBNN_crosscell_legacy_fullmatrix_20261017/results/basket/ampa/dt1.0ms/best_checkpoint.pt",
+      "checkpoint_sha256": "4c6bb09574a47e8539be15a8f92625626bf99d98a8cd3823280959bec7d3bf11",
+      "baseline_boundary_counts_equal": true
+    },
+    {
+      "cell": "basket",
+      "profile": "ampa_nmda",
+      "status": "complete",
+      "fit": 25,
+      "validation": 10,
+      "old": {
+        "rmse": 0.3336218750678155,
+        "f1": 0.64,
+        "score": 0.2076376898437038
+      },
+      "new": {
+        "rmse": 0.3336218750678155,
+        "f1": 0.64,
+        "score": 0.2076376898437038
+      },
+      "candidate": "expanded_calibration_only",
+      "diagonal_max_abs": 0.0,
+      "diagonal_nonzero": 0,
+      "updates": 16800,
+      "elapsed_s": 133.76794309355319,
+      "checkpoint": "/home/lcm/DBNN_crosscell_legacy_fullmatrix_20261017/results/basket/ampa_nmda/dt1.0ms/best_checkpoint.pt",
+      "checkpoint_sha256": "70490c7276f70b226ababa9783f5d76fa71de03e5eb8c994dcfc644045723f2a",
+      "baseline_boundary_counts_equal": true
+    },
+    {
+      "cell": "golgi",
+      "profile": "ampa",
+      "status": "complete",
+      "fit": 67,
+      "validation": 23,
+      "old": {
+        "rmse": 0.30232797259869987,
+        "f1": 0.0,
+        "score": 0.3549510383532607
+      },
+      "new": {
+        "rmse": 0.30232797259869987,
+        "f1": 0.0,
+        "score": 0.3549510383532607
+      },
+      "candidate": "old_locked",
+      "diagonal_max_abs": 0.0,
+      "diagonal_nonzero": 0,
+      "updates": 37800,
+      "elapsed_s": 331.4693470168859,
+      "checkpoint": "/home/lcm/DBNN_crosscell_legacy_fullmatrix_20261017/results/golgi/ampa/dt1.0ms/best_checkpoint.pt",
+      "checkpoint_sha256": "67153c6c0092088a56cff080cc73e6aa4d88eadf0c22c248d85e0595159a22f5",
+      "baseline_boundary_counts_equal": true
+    },
+    {
+      "cell": "golgi",
+      "profile": "ampa_nmda",
+      "status": "complete",
+      "fit": 64,
+      "validation": 23,
+      "old": {
+        "rmse": 0.37822549351200835,
+        "f1": 0.0,
+        "score": 0.40784457156661946
+      },
+      "new": {
+        "rmse": 0.37822549351200835,
+        "f1": 0.0,
+        "score": 0.40784457156661946
+      },
+      "candidate": "old_locked",
+      "diagonal_max_abs": 0.0,
+      "diagonal_nonzero": 0,
+      "updates": 33600,
+      "elapsed_s": 316.33399117924273,
+      "checkpoint": "/home/lcm/DBNN_crosscell_legacy_fullmatrix_20261017/results/golgi/ampa_nmda/dt1.0ms/best_checkpoint.pt",
+      "checkpoint_sha256": "e1590a40e142f6f6cdde066d9f6b30ada59eec5d6bd0cacd25dde418d096fcde",
+      "baseline_boundary_counts_equal": true
+    }
+  ]
+}

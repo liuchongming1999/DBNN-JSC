@@ -1,0 +1,74 @@
+{
+  "method": "elm",
+  "dt_ms": 1.0,
+  "batch_size": 8,
+  "precision": "FP32 IEEE",
+  "input_channels": 500,
+  "seed": 930291,
+  "training_process_optimized": false,
+  "epochs": 35,
+  "batches_per_epoch": 10000,
+  "window_ms": 500,
+  "burn_in_loss_ms": 0,
+  "overlap_ms": 150,
+  "lr": 0.0005,
+  "optimizer": "Adam + per-update cosine",
+  "loss": "0.5 BCE + 0.5 MSE, voltage scaled by 0.1",
+  "recipe": "Official neuronio_train_script.py non-short-run defaults; 35x10000 updates and full-window loss. Paper Appendix B instead describes 30x11400 with 150ms loss burn-in; code recipe is used here.",
+  "model": {
+    "num_input": 500,
+    "num_output": 2,
+    "num_memory": 20,
+    "num_branch": 45,
+    "num_synapse_per_branch": 100,
+    "input_to_synapse_routing": "neuronio_routing",
+    "memory_tau_min": 1.0,
+    "memory_tau_max": 150.0,
+    "learn_memory_tau": false,
+    "delta_t": 1.0
+  },
+  "adaptations": [
+    "500 fixed E/I input IDs instead of NeuronIO 1278 inputs; exact event multiplicity retained",
+    "Physical 400/500ms windows and 150/154ms overlaps retained; ELM delta_t adjusted; TCN kernels discretized to retain 152ms physical context",
+    "Corresponding DBNN fit/validation events; no main31 data in training, PCA or selection",
+    "Original output moment alignment replaced by one validation-fitted affine map, locked before held-out evaluation; raw results retained",
+    "Geodesic morphology neighborhoods on the500 physical sites; all45 virtual branches populated. Same fixed route as mapping-only control.",
+    "Restore official ELM batch rule:8 distinct fit trajectories per batch,500ms crop starts>=500ms. No input regeneration, added trajectories, outcome screening, hyperparameter search or shortened update budget."
+  ],
+  "morphology_routing_override": {
+    "protocol": "geometry_geodesic_cover45_nearest100_v1",
+    "file": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/adviser6_elm_author_aligned_20261016/morphology_mapping.json",
+    "sha256": "9bccc39599696453ffff0fe98540160549c0a8336ac7d33eee517e4b21610c26",
+    "selection": "Geometry only; fixed before any corrected training or held-out inference",
+    "valid_slots": 4500,
+    "old_valid_slots": 3800
+  },
+  "sampler": {
+    "source": "Official neuronio_data_loader.generate_batch",
+    "batch_trajectories_replace": false,
+    "window_start_min_ms": 500,
+    "window_size_ms": 500,
+    "window_start_replace": true,
+    "shared_fit_validation_manifest_unchanged": true
+  },
+  "specification_source": "Author public PyTorch code commit52e68a6d39523ac6613a586699b116e8e606dda3; paper/JAX differences are disclosed rather than selected by held-out performance.",
+  "manifest": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/accuracy_frontier_20260929/balanced_1ms/training_manifest.json",
+  "manifest_sha256": "e7d178de1671cbb656d5b6ae32d79248b832cdcc7a501f4ed0f99328c67f4cf0",
+  "fit_cases": 117,
+  "validation_cases": 32,
+  "trainable_parameters": 8002,
+  "source_versions": {
+    "elmneuron": {
+      "url": "https://github.com/AaronSpieler/elmneuron.git",
+      "commit": "52e68a6d39523ac6613a586699b116e8e606dda3"
+    },
+    "neuron_as_deep_net": {
+      "url": "https://github.com/SelfishGene/neuron_as_deep_net.git",
+      "commit": "074c4666300a8ad246601dab179a97a6942f0f29"
+    },
+    "neuron_reduce": {
+      "url": "https://github.com/orena1/neuron_reduce.git",
+      "commit": "94b1850607f9c62a205ad8fb695f2fd91d84d87d"
+    }
+  }
+}

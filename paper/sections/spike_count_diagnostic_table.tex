@@ -1,0 +1,14 @@
+\begin{tabular}{lrrrr}
+\toprule
+Method & Inputs with events & Extra events & Count MAE & Exact counts\\
+\midrule
+DBNN & 6/79 & 10 & 0.691 & 193/379 \\
+Branch-ELM & 3/79 & 6 & 0.931 & 160/379 \\
+LSTM & 30/79 & 64 & 2.617 & 95/379 \\
+TCN & 61/79 & 196 & 2.166 & 74/379 \\
+NEURON/CN, 0.5 ms & 0/79 & 0 & 0.749 & 188/379 \\
+NEURON/CN, 0.25 ms & 0/79 & 0 & 0.296 & 281/379 \\
+NEURON/CN, 0.1 ms & 0/79 & 0 & 0.113 & 339/379 \\
+Neuron\_Reduce & 39/79 & 425 & 18.786 & 72/379 \\
+\bottomrule
+\end{tabular}

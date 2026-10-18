@@ -1,0 +1,78 @@
+{
+  "status": "results_ready_manuscript_not_yet_updated",
+  "finished": true,
+  "ready_at": "2026-10-17T21:36:28+0800",
+  "summary": {
+    "tcn_whole": {
+      "wall_ms": 1026.231912896037,
+      "rmse_mv": 0.8651424255482972,
+      "events": {
+        "tp": 184,
+        "fp": 867,
+        "fn": 496,
+        "precision": 0.17507136060894388,
+        "recall": 0.27058823529411763,
+        "f1": 0.21259387637203928,
+        "median_abs_error_ms": 2.206249930663944
+      }
+    },
+    "elm_corrected": {
+      "wall_ms": 36010.10570116341,
+      "rmse_mv": 0.7551339231862723,
+      "events": {
+        "tp": 293,
+        "fp": 436,
+        "fn": 387,
+        "precision": 0.401920438957476,
+        "recall": 0.4308823529411765,
+        "f1": 0.41589779985805536,
+        "median_abs_error_ms": 1.9999999923250016
+      }
+    },
+    "lstm_unchanged": {
+      "wall_ms": 1567.0961886644363,
+      "rmse_mv": 0.7501206356656066,
+      "events": {
+        "tp": 309,
+        "fp": 1261,
+        "fn": 371,
+        "precision": 0.19681528662420383,
+        "recall": 0.45441176470588235,
+        "f1": 0.27466666666666667,
+        "median_abs_error_ms": 2.250000033602646
+      }
+    },
+    "dbnn_frozen": {
+      "wall_ms": 32.121311873197556,
+      "rmse_mv": 0.4403635083689316,
+      "events": {
+        "tp": 387,
+        "fp": 379,
+        "fn": 293,
+        "precision": 0.5052219321148825,
+        "recall": 0.5691176470588235,
+        "f1": 0.5352697095435685,
+        "median_abs_error_ms": 2.6499999665588803
+      }
+    }
+  },
+  "elm_checkpoint_sha256": "96c192fcbba97b51d2085d0bd527ad826a5a414ae5b855a937e2a60d34583452",
+  "paths": {
+    "training": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/adviser6_elm_author_aligned_20261016/aligned/elm_1ms/complete.json",
+    "elm_accuracy": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/adviser6_elm_author_aligned_20261016/elm_evaluation/complete.json",
+    "paired_gpu_timing": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/adviser6_elm_author_aligned_20261016/final_gpu_recheck_20261017/complete.json",
+    "engineering_cumulative": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/adviser6_mapping_engineering_20261016/engineering/complete.json",
+    "engineering_rollbacks": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/adviser6_mapping_engineering_20261016/engineering_rollback/complete.json",
+    "tcn_whole_validation": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/baseline_fidelity_audit_20261016/tcn_whole_main379/complete.json"
+  },
+  "file_hashes": {
+    "training": "9bc94549338fdaa022332ccb5ce23aa288d8751afe2db0ead971d03d8e6451d1",
+    "elm_accuracy": "95e02f6d1445cf97143df173d8541e74468e8180d1effb13e489cd4197673e9c",
+    "paired_gpu_timing": "89803223cc80dd6eb9e61868ed689cbb7a34de11506dc8eac74dddb1378def84",
+    "engineering_cumulative": "e62c0c641451bc7dc29d6ec2f05a0dd2a6cb3457d5cba051c35edf7333a4e938",
+    "engineering_rollbacks": "eb42b7bb50e4f777c94be0779dbf7cbac2d1c8ce6100e352568d3c9e03eeca51",
+    "tcn_whole_validation": "5956d0a27a91c2a2320cc189951c04d0606e193e8df9464b5f7681af6372d263"
+  },
+  "constraints": "Keep frozenDBNN/LSTM, TCNwhole1ms, correctedELM1ms; original379 inputs and0.0125ms reference; no tuning or new outcome screening. Local manuscript update is separate and must validate compilation, figures, references and claims.",
+  "timing_audit": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/adviser6_elm_author_aligned_20261016/timing_recheck_audit_20261017.json"
+}

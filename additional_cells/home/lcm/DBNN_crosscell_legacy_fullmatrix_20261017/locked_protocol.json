@@ -1,0 +1,189 @@
+{
+  "created": "2026-10-17T11:22:51+0800",
+  "purpose": "Replay exact legacy event-training stage, freeing the diagonal only; the identical upstream voltage-fit checkpoint is shared, not retrained",
+  "diagonal_lr_multiplier": 0.1,
+  "diagonal_initialization": "zero",
+  "seed": 310049,
+  "trials": [
+    0.0,
+    0.2,
+    1.0
+  ],
+  "epochs": [
+    1000,
+    400
+  ],
+  "base_lrs": [
+    0.0003,
+    6e-05
+  ],
+  "gpus": [
+    2,
+    5
+  ],
+  "source_old_script_sha256": "3bf41f5aaed51732e9889ae5583ab3585463332085f7a7bdc11ec296f0910bf0",
+  "script_sha256": "26bee355cf687f9bc5eefcbf6bd7a0d310693b4330103f437a6d856d367d2442",
+  "drive_script_sha256": "d5d213ce60493e84b3f3a55787ed88fb09d8f8b5d9e88e0f9c3bd358e30454ab",
+  "input_policy": "Exact archived training/validation manifests with original retained prefixes; no new output selection",
+  "test_policy": "No test evaluation; no test-based version selection",
+  "main_model_unchanged": true,
+  "manuscript_unchanged": true,
+  "jobs": [
+    {
+      "cell": "human_l23",
+      "profile": "ampa",
+      "project": "/home/lcm/DBNN_noncerebellar_20261002",
+      "old_output": "/home/lcm/DBNN_spike_training_20261004/results/human_l23/ampa/dt1.0ms",
+      "starting_checkpoint": "/home/lcm/DBNN_noncerebellar_20261002/results/human_l23/ampa/dt1.0ms/best_checkpoint.pt",
+      "starting_checkpoint_sha256": "ea9de52a8438d2ba6c0dd5e6dc5fa3fcad96981770cd5373a08b70c26c679c9a",
+      "manifest": "/home/lcm/DBNN_noncerebellar_20261002/results/human_l23/ampa/dt1.0ms/training_manifest.json",
+      "manifest_sha256": "cb2c3fb651186b830805a220b1447eb54be243dec2976a0ba10f1c8ffc421679",
+      "fit": 70,
+      "validation": 23,
+      "expected_updates": 37800
+    },
+    {
+      "cell": "human_l23",
+      "profile": "ampa_nmda",
+      "project": "/home/lcm/DBNN_noncerebellar_20261002",
+      "old_output": "/home/lcm/DBNN_spike_training_20261004/results/human_l23/ampa_nmda/dt1.0ms",
+      "starting_checkpoint": "/home/lcm/DBNN_noncerebellar_20261002/results/human_l23/ampa_nmda/dt1.0ms/best_checkpoint.pt",
+      "starting_checkpoint_sha256": "43e604cb41ad5633dd9166162f2a89b8f9d6d8fb84f836a2bd3d97b0adc6bac6",
+      "manifest": "/home/lcm/DBNN_noncerebellar_20261002/results/human_l23/ampa_nmda/dt1.0ms/training_manifest.json",
+      "manifest_sha256": "3f462ecf0eec3ec123ff51a39e123ecbc1ea256afe7ba3fcdd2a95d75cf82410",
+      "fit": 64,
+      "validation": 23,
+      "expected_updates": 33600
+    },
+    {
+      "cell": "ca1",
+      "profile": "ampa",
+      "project": "/home/lcm/DBNN_noncerebellar_20261002",
+      "old_output": "/home/lcm/DBNN_spike_training_20261004/results/ca1/ampa/dt1.0ms",
+      "starting_checkpoint": "/home/lcm/DBNN_noncerebellar_20261002/results/ca1/ampa/dt1.0ms/best_checkpoint.pt",
+      "starting_checkpoint_sha256": "61ba5ee916bd32d75b8c8b41b45fc139a6d8d78cf9041b21b034908d363779e3",
+      "manifest": "/home/lcm/DBNN_noncerebellar_20261002/results/ca1/ampa/dt1.0ms/training_manifest.json",
+      "manifest_sha256": "40718ca73c7d42075fe61807278c71fa961a83663d6078aed4902bfa1a71729c",
+      "fit": 70,
+      "validation": 24,
+      "expected_updates": 37800
+    },
+    {
+      "cell": "ca1",
+      "profile": "ampa_nmda",
+      "project": "/home/lcm/DBNN_noncerebellar_20261002",
+      "old_output": "/home/lcm/DBNN_spike_training_20261004/results/ca1/ampa_nmda/dt1.0ms",
+      "starting_checkpoint": "/home/lcm/DBNN_noncerebellar_20261002/results/ca1/ampa_nmda/dt1.0ms/best_checkpoint.pt",
+      "starting_checkpoint_sha256": "07d6bb9046790f38c749a62ddb779e926b2b8594178255a85519ebbe484539cf",
+      "manifest": "/home/lcm/DBNN_noncerebellar_20261002/results/ca1/ampa_nmda/dt1.0ms/training_manifest.json",
+      "manifest_sha256": "f16e7fa856a980a1383c1deebac35af269a355851cc052e3a7a9f6b168d86bde",
+      "fit": 66,
+      "validation": 23,
+      "expected_updates": 37800
+    },
+    {
+      "cell": "hay_l5",
+      "profile": "ampa",
+      "project": "/home/lcm/DBNN_noncerebellar_20261002",
+      "old_output": "/home/lcm/DBNN_spike_training_20261004/results/hay_l5/ampa/dt1.0ms",
+      "starting_checkpoint": "/home/lcm/DBNN_noncerebellar_20261002/results/hay_l5/ampa/dt1.0ms/best_checkpoint.pt",
+      "starting_checkpoint_sha256": "92fe87e079fd0b2231c5a3e93f3e1007a927338fb4d63a3d98ff8eff53dbb923",
+      "manifest": "/home/lcm/DBNN_noncerebellar_20261002/results/hay_l5/ampa/dt1.0ms/training_manifest.json",
+      "manifest_sha256": "b4f1baf200e19748faf126eb248acf7e034f9a5c8e1d257c074ae215e6f50b85",
+      "fit": 69,
+      "validation": 24,
+      "expected_updates": 37800
+    },
+    {
+      "cell": "hay_l5",
+      "profile": "ampa_nmda",
+      "project": "/home/lcm/DBNN_noncerebellar_20261002",
+      "old_output": "/home/lcm/DBNN_spike_training_20261004/results/hay_l5/ampa_nmda/dt1.0ms",
+      "starting_checkpoint": "/home/lcm/DBNN_noncerebellar_20261002/results/hay_l5/ampa_nmda/dt1.0ms/best_checkpoint.pt",
+      "starting_checkpoint_sha256": "87da8a23b9c72637af24b56690ab3a264b51e5940a17b5440b8724058bb586e5",
+      "manifest": "/home/lcm/DBNN_noncerebellar_20261002/results/hay_l5/ampa_nmda/dt1.0ms/training_manifest.json",
+      "manifest_sha256": "8ecacd609d34e0de712150e627c5a3d240b6dd1286ceb479b0038821382b1eb3",
+      "fit": 64,
+      "validation": 22,
+      "expected_updates": 33600
+    },
+    {
+      "cell": "granule",
+      "profile": "ampa",
+      "project": "/home/lcm/DBNN_multineuron_20261002",
+      "old_output": "/home/lcm/DBNN_spike_training_20261004/results/granule/ampa/dt1.0ms",
+      "starting_checkpoint": "/home/lcm/DBNN_multineuron_20261002/results/granule/ampa/dt1.0ms/best_checkpoint.pt",
+      "starting_checkpoint_sha256": "c9fbd0665d2e9d38cd5d32469985df812ef9db5098cb7691e266528936094db6",
+      "manifest": "/home/lcm/DBNN_multineuron_20261002/results/granule/ampa/dt1.0ms/training_manifest.json",
+      "manifest_sha256": "2426304ac38b27b7bfe36242a7439b29a18273308db61f815564f827d065d7c6",
+      "fit": 53,
+      "validation": 20,
+      "expected_updates": 29400
+    },
+    {
+      "cell": "granule",
+      "profile": "ampa_nmda",
+      "project": "/home/lcm/DBNN_multineuron_20261002",
+      "old_output": "/home/lcm/DBNN_spike_training_20261004/results/granule/ampa_nmda/dt1.0ms",
+      "starting_checkpoint": "/home/lcm/DBNN_multineuron_20261002/results/granule/ampa_nmda/dt1.0ms/best_checkpoint.pt",
+      "starting_checkpoint_sha256": "6cd52e514f8eaac77ccefd507f38b8dcf2afbc3ffe5881d90006ff767d852df5",
+      "manifest": "/home/lcm/DBNN_multineuron_20261002/results/granule/ampa_nmda/dt1.0ms/training_manifest.json",
+      "manifest_sha256": "fb337cf84e135533995b88b5ec09ee28f9cf59841ed492f7f6238ee6c1b03242",
+      "fit": 37,
+      "validation": 15,
+      "expected_updates": 21000
+    },
+    {
+      "cell": "basket",
+      "profile": "ampa",
+      "project": "/home/lcm/DBNN_multineuron_20261002",
+      "old_output": "/home/lcm/DBNN_spike_training_20261004/results/basket/ampa/dt1.0ms",
+      "starting_checkpoint": "/home/lcm/DBNN_multineuron_20261002/results/basket/ampa/dt1.0ms/best_checkpoint.pt",
+      "starting_checkpoint_sha256": "da12bf5f245ca5423481951661ca7e789b6ae37a40b9d0f114d0a1270e9c7b1e",
+      "manifest": "/home/lcm/DBNN_multineuron_20261002/results/basket/ampa/dt1.0ms/training_manifest.json",
+      "manifest_sha256": "cb70f3bedf818582334dbe61247878958c986d4a80e8e75f2fe8563c82321cd7",
+      "fit": 37,
+      "validation": 15,
+      "expected_updates": 21000
+    },
+    {
+      "cell": "basket",
+      "profile": "ampa_nmda",
+      "project": "/home/lcm/DBNN_multineuron_20261002",
+      "old_output": "/home/lcm/DBNN_spike_training_20261004/results/basket/ampa_nmda/dt1.0ms",
+      "starting_checkpoint": "/home/lcm/DBNN_multineuron_20261002/results/basket/ampa_nmda/dt1.0ms/best_checkpoint.pt",
+      "starting_checkpoint_sha256": "91e4c2f27f0f0d141912071cca8039a0786c31d6a0b3704c6de8aaf0268b385b",
+      "manifest": "/home/lcm/DBNN_multineuron_20261002/results/basket/ampa_nmda/dt1.0ms/training_manifest.json",
+      "manifest_sha256": "ff51bab13f1e46260a9f694baa7d29b8f5656f4d34a496a8df6d159a40c03012",
+      "fit": 25,
+      "validation": 10,
+      "expected_updates": 16800
+    },
+    {
+      "cell": "golgi",
+      "profile": "ampa",
+      "project": "/home/lcm/DBNN_multineuron_20261002",
+      "old_output": "/home/lcm/DBNN_spike_training_20261004/results/golgi/ampa/dt1.0ms",
+      "starting_checkpoint": "/home/lcm/DBNN_multineuron_20261002/results/golgi/ampa/dt1.0ms/best_checkpoint.pt",
+      "starting_checkpoint_sha256": "988a52c504fa05574eab3e89b17f6cf1efb4eefc3363adc0681c39dc87beef72",
+      "manifest": "/home/lcm/DBNN_multineuron_20261002/results/golgi/ampa/dt1.0ms/training_manifest.json",
+      "manifest_sha256": "47a2d91399b26fffb0a78b6ec0e12cada275d77ef28de4cb15b1b338310e199d",
+      "fit": 67,
+      "validation": 23,
+      "expected_updates": 37800
+    },
+    {
+      "cell": "golgi",
+      "profile": "ampa_nmda",
+      "project": "/home/lcm/DBNN_multineuron_20261002",
+      "old_output": "/home/lcm/DBNN_spike_training_20261004/results/golgi/ampa_nmda/dt1.0ms",
+      "starting_checkpoint": "/home/lcm/DBNN_multineuron_20261002/results/golgi/ampa_nmda/dt1.0ms/best_checkpoint.pt",
+      "starting_checkpoint_sha256": "33ad80c9bdce6c7279a4c7a4212cfad94fa39c8d68d51fba554aa1419d6a0a1f",
+      "manifest": "/home/lcm/DBNN_multineuron_20261002/results/golgi/ampa_nmda/dt1.0ms/training_manifest.json",
+      "manifest_sha256": "7fcce9ac6a1564d4d411e340eaa5af6c48e579f164d11090f537d1b73b8c815b",
+      "fit": 64,
+      "validation": 23,
+      "expected_updates": 33600
+    }
+  ]
+}

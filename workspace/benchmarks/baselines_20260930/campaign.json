@@ -1,0 +1,28 @@
+{
+  "started": [
+    {
+      "worker": "pca",
+      "pid": 302897,
+      "already_running": true
+    },
+    {
+      "worker": "reduce",
+      "pid": 316217,
+      "cpus": "81",
+      "gpu": null,
+      "started": "2026-09-30T14:12:17+0800"
+    },
+    {
+      "worker": "tcn",
+      "pid": 302899,
+      "already_running": true
+    },
+    {
+      "worker": "recurrent",
+      "pid": 302900,
+      "already_running": true
+    }
+  ],
+  "training": "Default author recipes, no training/capacity sweeps; TCN and recurrent queues share GPU0, CPU1 reduction uses affinity81.",
+  "resource_status": "Shared GPU/CPU; no existing process stopped. Publication timing is a separate phase."
+}

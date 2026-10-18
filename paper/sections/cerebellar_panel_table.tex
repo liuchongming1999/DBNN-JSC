@@ -1,0 +1,54 @@
+\begin{tabular}{lrrrr}
+\toprule
+\shortstack[l]{Model} & \shortstack{Validation\\RMSE / F1} & \shortstack{Fixed panel\\RMSE / F1} & \shortstack{Predicted\\spikes} & \shortstack{Paired 95\% CI\\$\Delta$RMSE (mV)}\\
+\midrule
+\addlinespace[3pt]
+\multicolumn{5}{l}{\textit{Granule, E}: 2,665 reference spikes} \\
+Frozen & 0.118 / 1.000 & 1.135 / 0.411 & 4,021 & --- \\
+Reset only & 0.118 / 1.000 & 1.135 / 0.411 & 4,021 & $[+0.0000,+0.0000]$ \\
+Independent single & 0.083 / 0.968 & 1.071 / 0.403 & 3,757 & $[-0.0862,-0.0388]$ \\
+Shared single & 0.089 / 0.968 & 0.992 / 0.435 & 3,537 & $[-0.1886,-0.0918]$ \\
+Shared single, long & 0.089 / 0.968 & 0.991 / 0.435 & 3,538 & $[-0.1890,-0.0923]$ \\
+Shared two, long & 0.108 / 1.000 & 1.392 / 0.412 & 3,417 & $[+0.1675,+0.3405]$ \\
+\addlinespace[3pt]
+\multicolumn{5}{l}{\textit{Granule, E+N}: 8,606 reference spikes} \\
+Frozen & 0.211 / 0.842 & 1.230 / 0.488 & 10,145 & --- \\
+Reset only & 0.211 / 0.842 & 1.230 / 0.488 & 10,145 & $[+0.0000,+0.0000]$ \\
+Independent single & 0.221 / 0.900 & 1.244 / 0.489 & 12,960 & $[-0.0173,+0.0481]$ \\
+Shared single & 0.229 / 0.842 & 1.836 / 0.482 & 11,709 & $[+0.4404,+0.7668]$ \\
+Shared single, long & 0.230 / 0.842 & 1.780 / 0.486 & 11,492 & $[+0.3914,+0.7018]$ \\
+Shared two, long & 0.168 / 0.900 & 1.350 / 0.480 & 11,489 & $[+0.0460,+0.1889]$ \\
+\addlinespace[3pt]
+\multicolumn{5}{l}{\textit{Basket, E}: 5,864 reference spikes} \\
+Frozen & 0.423 / 0.455 & 0.839 / 0.334 & 11,929 & --- \\
+Reset only & 0.368 / 0.435 & 1.131 / 0.265 & 3,672 & $[+0.1483,+0.4455]$ \\
+Independent single & 0.410 / 0.333 & 0.992 / 0.262 & 3,878 & $[+0.0753,+0.2378]$ \\
+Shared single & 0.417 / 0.364 & 0.965 / 0.260 & 3,816 & $[+0.0490,+0.2146]$ \\
+Shared single, long & 0.417 / 0.364 & 0.965 / 0.260 & 3,816 & $[+0.0490,+0.2146]$ \\
+Shared two, long & 0.415 / 0.435 & 1.317 / 0.296 & 6,336 & $[+0.3155,+0.6627]$ \\
+\addlinespace[3pt]
+\multicolumn{5}{l}{\textit{Basket, E+N}: 10,753 reference spikes} \\
+Frozen & 0.331 / 0.667 & 0.773 / 0.416 & 16,512 & --- \\
+Reset only & 0.307 / 0.636 & 0.740 / 0.340 & 8,200 & $[-0.0936,+0.0281]$ \\
+Independent single & 0.318 / 0.522 & 1.161 / 0.367 & 19,335 & $[+0.1901,+0.6024]$ \\
+Shared single & 0.311 / 0.571 & 0.882 / 0.374 & 13,022 & $[+0.0188,+0.2093]$ \\
+Shared single, long & 0.311 / 0.571 & 0.882 / 0.374 & 13,022 & $[+0.0188,+0.2093]$ \\
+Shared two, long & 0.426 / 0.667 & 1.303 / 0.348 & 10,087 & $[+0.3326,+0.7490]$ \\
+\addlinespace[3pt]
+\multicolumn{5}{l}{\textit{Golgi, E}: 383 reference spikes} \\
+Frozen & 0.302 / 0.000 & 0.391 / 0.010 & 14 & --- \\
+Reset only & 0.302 / 0.000 & 0.391 / 0.010 & 14 & $[+0.0000,+0.0000]$ \\
+Independent single & 0.306 / 0.083 & 0.355 / 0.030 & 6,362 & $[-0.0594,-0.0157]$ \\
+Shared single & 0.320 / 0.171 & 0.416 / 0.018 & 374 & $[+0.0003,+0.0456]$ \\
+Shared single, long & 0.309 / 0.098 & 0.370 / 0.017 & 325 & $[-0.0433,-0.0014]$ \\
+Shared two, long & 0.304 / 0.083 & 0.357 / 0.031 & 3,992 & $[-0.0564,-0.0148]$ \\
+\addlinespace[3pt]
+\multicolumn{5}{l}{\textit{Golgi, E+N}: 663 reference spikes} \\
+Frozen & 0.378 / 0.000 & 0.513 / 0.006 & 11 & --- \\
+Reset only & 0.378 / 0.000 & 0.513 / 0.006 & 11 & $[+0.0000,+0.0000]$ \\
+Independent single & 0.379 / 0.081 & 0.577 / 0.018 & 766 & $[-0.0046,+0.1378]$ \\
+Shared single & 0.385 / 0.092 & 0.539 / 0.015 & 659 & $[+0.0024,+0.0525]$ \\
+Shared single, long & 0.377 / 0.064 & 0.475 / 0.022 & 2,990 & $[-0.0610,-0.0166]$ \\
+Shared two, long & 0.391 / 0.121 & 0.506 / 0.029 & 7,056 & $[-0.0458,+0.0233]$ \\
+\bottomrule
+\end{tabular}

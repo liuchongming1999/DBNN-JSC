@@ -1,0 +1,46 @@
+{
+  "author_defaults_equal_except_mapping_metadata": true,
+  "configuration_diff": {
+    "adaptations": {
+      "old": [
+        "500 fixed E/I input IDs instead of NeuronIO 1278 inputs; exact event multiplicity retained",
+        "Physical 400/500ms windows and 150/154ms overlaps retained; ELM delta_t adjusted; TCN kernels discretized to retain 152ms physical context",
+        "Corresponding DBNN fit/validation events; no main31 data in training, PCA or selection",
+        "Original output moment alignment replaced by one validation-fitted affine map, locked before held-out evaluation; raw results retained"
+      ],
+      "new": [
+        "500 fixed E/I input IDs instead of NeuronIO 1278 inputs; exact event multiplicity retained",
+        "Physical 400/500ms windows and 150/154ms overlaps retained; ELM delta_t adjusted; TCN kernels discretized to retain 152ms physical context",
+        "Corresponding DBNN fit/validation events; no main31 data in training, PCA or selection",
+        "Original output moment alignment replaced by one validation-fitted affine map, locked before held-out evaluation; raw results retained",
+        "Replace index-window routing by morphology geodesic neighborhoods; all45 branches nonempty; preserve author architecture, seed, loss, optimizer and complete350000-update budget. No hyperparameter search."
+      ]
+    },
+    "morphology_routing_override": {
+      "old": null,
+      "new": {
+        "protocol": "geometry_geodesic_cover45_nearest100_v1",
+        "file": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/adviser6_mapping_engineering_20261016/morphology_mapping.json",
+        "sha256": "9bccc39599696453ffff0fe98540160549c0a8336ac7d33eee517e4b21610c26",
+        "selection": "Single geometry-only mapping fixed before training; no output-based selection",
+        "valid_slots": 4500,
+        "old_valid_slots": 3800
+      }
+    }
+  },
+  "training_test_input_hash_overlap": [],
+  "fit_cases": 117,
+  "validation_cases": 32,
+  "heldout_cases": 379,
+  "old_geometry": {
+    "mean_pair_distance_um": 649.3818277966623,
+    "median_pair_distance_um": 526.9867088533765
+  },
+  "corrected_geometry": {
+    "mean_pair_distance_um": 243.446729138187,
+    "median_pair_distance_um": 185.28896778323596
+  },
+  "single_seed": 930291,
+  "no_hyperparameter_search": true,
+  "dbnn_checkpoint_sha256": "737efcff1e6686bfb153fca8590a8b28a605fbdb08f9a68ff44e68af8867686d"
+}

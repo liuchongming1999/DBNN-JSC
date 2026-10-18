@@ -1,0 +1,75 @@
+{
+  "case_id": "new_human_l23_0103",
+  "duration_ms": 4000,
+  "A": 500,
+  "family": "excitatory_gates",
+  "site_mode": "distal",
+  "rate_hz": 25,
+  "input_sha256": "03c4f4fabf196e81c17c10fac59f9250459b009d81e76f10bf7136e4fb2d5421",
+  "checkpoint_sha256": "fa78b5ce3e2fe31f5a61060a40e0c574f2d59b6942e1721bef5c2116597ddeaf",
+  "reference_sha256": "8b68933a392f9e1af11a3dd3cda6654acdda2bdbb4abf6e0ced4a78b445a7225",
+  "test_manifest_sha256": "f8b63220ac93587db3cfb9b75399612611a01df8a8008e6d1de6332ba2d299ae",
+  "input_seed": 202610210103,
+  "ids_sha256": "2253930180b5ae89248437a25b4c5ffeef3028bc8b3afb41da441cdbed841c56",
+  "reference_events_ms": [
+    821.3999999941047,
+    840.4749999938272,
+    2019.3249999766726,
+    2037.174999976413,
+    3219.0749999592144,
+    3236.54999995896,
+    3253.5749999587124
+  ],
+  "predicted_events_ms": [
+    816.0,
+    823.0,
+    831.0,
+    839.0,
+    848.0,
+    2015.0,
+    2021.0,
+    2028.0,
+    2035.0,
+    2043.0,
+    2053.0,
+    3215.0,
+    3222.0,
+    3229.0,
+    3236.0,
+    3243.0,
+    3250.0
+  ],
+  "voltage": {
+    "n": 3870,
+    "sse": 1171.0577162689297,
+    "reference_ss": 6680.149051401968,
+    "error_ss": 1170.9245995477756
+  },
+  "events": {
+    "tp": 7,
+    "fp": 10,
+    "fn": 0,
+    "matched_errors_ms": [
+      1.6000000058952537,
+      -1.4749999938271685,
+      -4.324999976672643,
+      -2.1749999764128916,
+      -4.074999959214438,
+      -0.549999958960143,
+      -3.5749999587123966
+    ]
+  },
+  "prepared_wall_ms": 0.06789155304431915,
+  "runs_ms": [
+    0.07580593228340149,
+    0.06789155304431915,
+    0.06579048931598663
+  ],
+  "backend": "hier_store_512",
+  "numerical": {
+    "max_abs_mv": 1.1467216680216552e-05,
+    "events_equal": true,
+    "captured_graph_max_abs_mv": 1.1467216680216552e-05,
+    "captured_graph_events_equal": true
+  }
+}

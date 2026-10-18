@@ -1,0 +1,41 @@
+{
+  "model": "human_l23",
+  "modeldb": 195667,
+  "profile": "ampa",
+  "operating_point": {
+    "model": "human_l23",
+    "spec": {
+      "modeldb": 195667,
+      "variant": "",
+      "mods_dir": "mechansims",
+      "celsius": 37.0,
+      "v_init": -86.0,
+      "author": "Eyal et al. (2016)",
+      "label": "Human temporal L2/3; active Fig.3c model",
+      "reference_dt_ms": 0.1
+    },
+    "native_spikes_2s": 0,
+    "native_firing_hz": 0.0,
+    "holding_current_na": 0.0,
+    "holding_trials": [
+      {
+        "current_na": 0.0,
+        "spikes_last_1000ms": 0,
+        "rest_mv": -86.09943977616324,
+        "std_mv": 0.0
+      }
+    ],
+    "rest_mv": -86.0994397761608,
+    "weight_us": 5.1865871327847716e-05,
+    "inhibition_ratio": 0.5,
+    "condition": "Original active channels and morphology retained. Fixed somatic holding current selects a stable low-spike operating point; identical current and reference state used by all solver comparisons.",
+    "weight_selection": "Reference-only 250E 10Hz mean depolarization approximately 2.5mV, before fitting/testing.",
+    "reference_dt_ms": 0.025,
+    "reference_output_interval_ms": 0.25,
+    "warmup_ms": 2000.0,
+    "reference_selection": "Predetermined same-input 0.025/0.05/0.1ms convergence pilot; .1ms requires spiking coverage, masked max-case RMSE <=.03mV and exact +/-5ms event matching."
+  },
+  "reference_dt_ms": 0.025,
+  "warmup_ms": 2000.0,
+  "condition_sha256": "f9c343d1956e34e46a6d21dd03614d2d2e08f944c2d3b0f6ed99bf9fef39b247"
+}

@@ -1,96 +1,119 @@
-# DBNN: fast quadratic surrogates for single-neuron simulation
+# DBNN: fast bilinear surrogates for single-neuron simulation
 
-This repository contains the code and numerical artifacts used for the DBNN
-study prepared for *Journal of Scientific Computing*. DBNN combines one
-causal double-exponential filter per synaptic site, a quadratic voltage
-calculation, and an event-triggered reset. The same fitted model is evaluated
-on CPU (one or eight cores) and GPU.
+Code, locked models, input rasters, reference trajectories, predictions, and
+numerical records supporting the study prepared for *Journal of Scientific Computing*.
+DBNN uses sitewise temporal filters, a bilinear voltage readout, and a causal
+threshold/reset stage. The same primary fitted model runs on CPU and GPU.
 
 Authors: Chongming Liu, Jingyang Ma, Yeqiang Liao, Songting Li, and Douglas Zhou.
-Chongming Liu and Jingyang Ma contributed equally. Correspondence: Douglas Zhou.
+Chongming Liu and Jingyang Ma contributed equally.
+Corresponding authors: Songting Li (`songting@sjtu.edu.cn`) and Douglas Zhou
+(`zdz@sjtu.edu.cn`).
 
-## Start here
+## Current release: 18 October 2026
+
+The primary model, reset parameters, inputs, and trained weights are unchanged.
+This release synchronizes the repository with the final recorded comparison:
+
+| Primary evaluation | Frozen value |
+|---|---:|
+| Input trajectories | 379 |
+| Total simulated time | 2,497 s |
+| Common NEURON reference step | 0.0125 ms |
+| Reference spikes | 680 |
+| DBNN pooled subthreshold RMSE | 0.440363586 mV |
+| DBNN event F1, one-to-one within ±5 ms | 0.535269710 |
+| Corrected Branch-ELM training updates | 350,000 |
+| Cell/synapse conditions fitted separately | 12 |
+| Fixed cross-cell test inputs | 182 per condition; 2,184 total |
+
+The canonical aggregate is `paper/evidence/main379_results.json`.
+The primary checkpoint remains SHA-256
+`737efcff1e6686bfb153fca8590a8b28a605fbdb08f9a68ff44e68af8867686d`.
+The corrected Branch-ELM checkpoint is
+`96c192fcbba97b51d2085d0bd527ad826a5a414ae5b855a937e2a60d34583452`.
+TCN uses whole-trajectory inference with unchanged weights and thresholds;
+LSTM keeps its recorded overlapping-window evaluation. The shared training
+split is 117 fitting and 32 validation trajectories. No test-driven checkpoint,
+threshold, input, seed, or model replacement is performed by this release.
+
+![Accuracy and computation time](paper/figures/frontier.png)
+
+The previous 13 October commit used a 0.1 ms reference and older baseline
+implementations. It is retained in Git history; those old headline values
+must not be mixed with this release. Historical paths and dated folder names
+are provenance, not separate definitions of DBNN.
+
+## Verify the recorded results without training or a GPU
 
 ```bash
 git clone https://github.com/liuchongming1999/DBNN-JSC.git
 cd DBNN-JSC
 python -m venv .venv
 source .venv/bin/activate
-# For the measured CUDA 12.8 configuration:
-pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cu128
-pip install -r requirements.txt
+pip install numpy
 python scripts/verify_release.py
 ```
 
-The last command verifies released file hashes, the separation of training and
-evaluation inputs, and recomputes DBNN RMSE and spike counts from the saved
-voltage arrays. It does not train a new model.
+This checks file hashes, training/test disjointness, the main checkpoint,
+all 13 primary model/solver rows from raw voltage arrays and events,
+the 350,000-update ELM budget, timing medians, and all 12 cross-cell models
+on their complete fixed panels. Output goes to `build/release_verification.json`.
+Use `--primary-only` for the mouse comparison alone. The verification does not
+train, recalibrate, or modify the frozen study evidence.
 
-| Primary evaluation | Frozen value |
-|---|---:|
-| Independent inputs | 379 |
-| Reference spikes | 637 |
-| Total simulated duration | 2,497 s |
-| DBNN pooled subthreshold RMSE | 0.43739656 mV |
-| DBNN event F1 | 0.47754811 |
+## Inference, fitting, and figure regeneration
 
-The published checkpoint has SHA-256
-`737efcff1e6686bfb153fca8590a8b28a605fbdb08f9a68ff44e68af8867686d`.
-The quantitative source for all methods is `paper/evidence/main379_results.json`.
-
-![Accuracy–runtime comparison](paper/figures/frontier.png)
-
-## Contents
-
-- `workspace/`: frozen source scripts, training/evaluation inputs and references,
-  selected checkpoints, per-input predictions, and measured timing records.
-  Dated directory names preserve the original experiment layout for auditing;
-  they are not names of different DBNN architectures.
-- `scripts/`: portable entry points for validation, workspace preparation,
-  native compilation, and prediction.
-- `paper/`: frozen numerical evidence, plotting code, and publication figures.
-- `theory_data/`: saved numerical trajectories used by the theoretical figures.
-- `additional_cells/`: further-cell fitting code, referenced checkpoints and test arrays.
-- `docs/`: reproduction instructions, model sources, environment and file hashes.
-
-## Run the implementations
-
-Read [the reproduction guide](docs/REPRODUCING.md) for full commands, the
-training pipeline, upstream models, numerical comparisons and timing scope.
+See [REPRODUCING.md](docs/REPRODUCING.md) for exact entry points, data mappings,
+requirements, numerical tolerances, training settings, and timing boundaries.
+For the recorded GPU environment:
 
 ```bash
+pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cu128
+pip install -r requirements.txt
 python scripts/prepare_workspace.py
-# Compile the recorded native code; a CUDA toolkit and CUTLASS 3.9.2 are needed.
 python scripts/build_native.py --workspace build/workspace --cutlass /path/to/cutlass-3.9.2
 python scripts/predict.py --workspace build/workspace --backend gpu
-python scripts/predict.py --workspace build/workspace --backend cpu --threads 1
 python scripts/predict.py --workspace build/workspace --backend cpu --threads 8
-# Regenerate publication figures and numerical table exports from frozen data:
-python paper/scripts/build_figures.py
+python scripts/replay_crosscell.py --cell granule --profile ampa --case new_granule_0000 --device cpu
 ```
 
-The measured optimized CPU implementation requires Linux x86-64, AVX-512 and
-an MKL-enabled PyTorch installation. The reference GPU environment is an RTX
-5090 with CUDA 12.8. All working-copy preparation, binaries and newly generated
-outputs are kept in `build/`, leaving the frozen files unchanged.
+Optimized CPU inference uses Linux x86-64, AVX-512, and MKL-enabled PyTorch.
+The recorded GPU is an RTX 5090 with CUDA 12.8. The cross-cell replay command
+is a portable FFT/sequential-reset reference, not a replacement timing backend.
 
-## Evaluation and timing
+## Evaluation scope
 
-The reference NEURON integrates at 0.1 ms; learned models output at 1 ms;
-comparison NEURON/CoreNEURON integrate at 0.5 ms. Voltage errors use the common
-1 ms observation grid, excluding reference spikes ±10 ms. Event matching is
-one-to-one within ±5 ms, on the full trajectory.
+Voltage RMSE pools the 1 ms observation samples outside ±10 ms of reference
+spikes. Event scoring uses inclusive ±5 ms one-to-one matching, with a 1e-6 ms
+floating-point boundary allowance. Primary model timing is prepared computation
+for one complete trajectory; packing, transfers, compilation, and graph capture
+are excluded. The four GPU surrogate timings use seven paired repetitions;
+solver and CPU records use three. Practical invocation and one-time costs are
+reported separately. Timings are measurements on shared hardware, not guarantees
+for another machine.
 
-The main timing is complete prepared computation for one input: filtering,
-voltage calculation and reset (and equivalent solver computation). Input
-creation, model setup, compilation, external packing, uploads and downloads
-are outside this boundary. Times are sums of per-input medians of three
-repetitions on a shared server. Affinity and GPU synchronization are recorded;
-absolute timings depend on hardware and resource contention.
+The 379-input mouse cohort was historically qualified for sparse firing using
+its original 0.1 ms reference; membership is unchanged after refining the
+reference. Cross-cell results are independently fitted models, not transfer
+of one mouse model. Their fixed panels were evaluated for earlier fitting
+recipes and replayed after validation-only selection; they are not a second
+newly unseen panel. All 182 inputs per condition are retained regardless of
+spike count or burst behavior. See [RESULTS.md](docs/RESULTS.md).
 
-## Third-party sources
+The separate unfiltered-637 and pressure-120 studies are not part of this
+manuscript release. Their independent author archives are unchanged.
 
-Neuron models and comparison methods retain their original authorship and
-licenses. Upstream repositories, pinned baseline commits and ModelDB accessions
-are listed in [THIRD_PARTY.md](docs/THIRD_PARTY.md). Third-party model/source
-packages are downloaded separately, rather than relicensed by this repository.
+## Sources and disclosures
+
+Third-party models and software retain their original terms and authorship;
+see [THIRD_PARTY.md](docs/THIRD_PARTY.md). ModelDB mechanisms and upstream
+comparison repositories are retrieved separately using `scripts/fetch_external.py`.
+The repository contains simulation outputs generated for the study, not new
+human or animal experiments.
+
+OpenAI Codex assisted with code development, numerical analysis, organization
+and English drafting of the manuscript, LaTeX preparation, and plotting recorded
+results. The authors reviewed and edited the resulting material, verified the
+scientific content, and take responsibility for the manuscript. In the manuscript,
+this disclosure is now in Methods Section 3.2.

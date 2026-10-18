@@ -1,0 +1,11 @@
+{
+  "reason": "Audit: unchanged DBNN latency rose from32.24ms to2324.81ms over379inputs; LSTM also slower. Verify final paired timing on presently idle same GPU before any publication update.",
+  "original_script_sha256": "8d85e7485d045b863ae0b74e21d3c6c0de2cb85e209efe5cd01ca657150d91a3",
+  "recheck_script_sha256": "26176338a832762535ede2dce91a644ed767df84bd04a399d6e831d99a8e233e",
+  "only_source_change": "Output directory names; same379cases,4models,checkpoints,thresholds,7repeats,3warmups,affinity112,FP32IEEE and CUDA graph algorithms.",
+  "physical_gpu": 0,
+  "started": "2026-10-17T21:23:28+0800",
+  "original_outputs_preserved": true,
+  "runtime": "/home/lcm/DBNN_L5PC_surrogate_20260928/.venv/bin/python",
+  "initial_launch_failure": "Alternate torch conda runtime lacked seaborn; no inference completed. Restarted in original project runtime."
+}

@@ -1,0 +1,51 @@
+{
+  "raw_arrays_recomputed": true,
+  "primary_methods": 13,
+  "primary_inputs": 379,
+  "primary_reference_step_ms": 0.0125,
+  "primary_reference_spikes": 680,
+  "crosscell_models": 12,
+  "crosscell_inputs": 2184,
+  "primary_model_unchanged": true,
+  "source_data_no_new_training": true,
+  "figure_and_paired_statistics_regeneration": true,
+  "cpu_prediction_smoke": {
+    "case": "confirmatory_0532",
+    "backend": "cpu",
+    "threads": 1,
+    "wall_median_ms": 42.86637343466282,
+    "runs_ms": [
+      42.802903801202774,
+      42.86637343466282,
+      54.05006371438503
+    ],
+    "max_difference_mv": 3.814697265625e-05,
+    "events_identical": true,
+    "output": "build/release_cpu_smoke_20261018.npz"
+  },
+  "gpu_prediction_smoke": {
+    "case": "confirmatory_0532",
+    "backend": "gpu",
+    "threads": 1,
+    "wall_median_ms": 0.09880959987640381,
+    "runs_ms": [
+      0.09943917393684387,
+      0.09880959987640381,
+      0.09559467434883118
+    ],
+    "max_difference_mv": 1.52587890625e-05,
+    "events_identical": true,
+    "output": "build/release_gpu_smoke_20261018.npz"
+  },
+  "crosscell_prediction_smoke": {
+    "cell": "granule",
+    "profile": "ampa",
+    "case": "new_granule_0000",
+    "checkpoint_sha256": "e94e649268dcc5ee2ac58800236cbe22b014be6489885cfda9ae8493a41ef4b6",
+    "max_voltage_gap_mv": 3.814697265625e-06,
+    "events_identical": true,
+    "reference_backend": "FFT + sequential FP64 reset; not benchmarked timing",
+    "output": "/home/lcm/DBNN-JSC/build/crosscell_replay.npz"
+  },
+  "floating_point_portability": "One-ULP NumPy sqrt differences in a paper-record verifier are checked with 1e-12 scalar tolerance; integer counts, event lists, file hashes and model weights remain exact."
+}

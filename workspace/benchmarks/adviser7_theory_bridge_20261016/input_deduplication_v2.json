@@ -1,0 +1,53 @@
+{
+  "reason": "Input-identity audit found deterministic duplicate test rasters. Input-only common-onset shifts preserve inter-event spacings and E-I delays; no output-dependent screening.",
+  "interrupted_only_own_pilot_pids": [
+    3566025,
+    3566177,
+    3566178,
+    3566181,
+    3566182,
+    3566183,
+    3566184,
+    3566185,
+    3566186,
+    3566187
+  ],
+  "changed_test_inputs": [
+    {
+      "name": "test_004",
+      "shift_ms": 1
+    },
+    {
+      "name": "test_006",
+      "shift_ms": 1
+    },
+    {
+      "name": "test_010",
+      "shift_ms": 1
+    },
+    {
+      "name": "test_012",
+      "shift_ms": 2
+    },
+    {
+      "name": "test_014",
+      "shift_ms": 3
+    }
+  ],
+  "final_unique_fitting_inputs": 64,
+  "final_unique_test_inputs": 32,
+  "reuse": {
+    "passive_v2": {
+      "verified_identical_input_raw_files_reused": 1807,
+      "changed_or_incomplete_files_not_reused": 85,
+      "note": "Hardlinks to immutable raw npz, no computed fit/projection outputs reused"
+    },
+    "active_error_budget_v2": {
+      "verified_identical_input_raw_files_reused": 669,
+      "changed_or_incomplete_files_not_reused": 35,
+      "note": "Hardlinks to immutable raw npz, no computed fit/projection outputs reused"
+    }
+  },
+  "pilot_directories_preserved": true,
+  "primary_checkpoint_and_existing_baseline_training_untouched": true
+}

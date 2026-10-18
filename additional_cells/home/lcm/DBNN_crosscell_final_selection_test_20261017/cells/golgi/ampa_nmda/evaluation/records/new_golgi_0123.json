@@ -1,0 +1,45 @@
+{
+  "case_id": "new_golgi_0123",
+  "duration_ms": 8000,
+  "A": 128,
+  "family": "stationary",
+  "site_mode": "proximal",
+  "rate_hz": 50,
+  "input_sha256": "8559c4de6ebc2b1223e438875bcae5f84092528edd23c4c28c72fa1cac5e69a5",
+  "checkpoint_sha256": "d2daf1c9aafbf3b2cbf33448a3c676471bd0edcadecacdb0554c8fa7aa192947",
+  "reference_sha256": "d52f0fc0fac8f1e9ada58a2700f54bf945719c6f3278d65d727363ba302c7b14",
+  "test_manifest_sha256": "507291819bbe8868ac04ba3734b0cad47de0ba43464010dcbdb79f6352d48625",
+  "input_seed": 202610180123,
+  "ids_sha256": "1affefa25fb8db14dd5f4e21d01ba85e004bd9ccc2b7427b00b514328b6cbfdd",
+  "reference_events_ms": [
+    473.22499999917136,
+    991.1999999916338,
+    1546.4999999835532
+  ],
+  "predicted_events_ms": [],
+  "voltage": {
+    "n": 7941,
+    "sse": 1395.4731112616573,
+    "reference_ss": 1213.808603564059,
+    "error_ss": 1310.664430991332
+  },
+  "events": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 3,
+    "matched_errors_ms": []
+  },
+  "prepared_wall_ms": 0.030135735869407654,
+  "runs_ms": [
+    0.045027583837509155,
+    0.030135735869407654,
+    0.02837367355823517
+  ],
+  "backend": "hier_store_512",
+  "numerical": {
+    "max_abs_mv": 7.62939453125e-06,
+    "events_equal": true,
+    "captured_graph_max_abs_mv": 7.62939453125e-06,
+    "captured_graph_events_equal": true
+  }
+}

@@ -1,0 +1,225 @@
+{
+  "models": {
+    "tcn_whole": {
+      "checkpoint": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/baselines_20260930/aligned/tcn_1ms/best.pt",
+      "sha256": "62bba4c6797f4fad76298b3944aad659df29ede74f74798b230d859d1366d80b",
+      "cfg": {
+        "method": "tcn",
+        "dt_ms": 1.0,
+        "batch_size": 8,
+        "precision": "FP32 IEEE",
+        "input_channels": 500,
+        "seed": 930291,
+        "training_process_optimized": false,
+        "epochs": 2500,
+        "stages": 250,
+        "epochs_per_stage": 10,
+        "batches_per_epoch": 288,
+        "validation_batches": 144,
+        "window_ms": 400,
+        "burn_in_loss_ms": 0,
+        "overlap_ms": 154,
+        "lr": 0.0001,
+        "optimizer": "NAdam, epsilon 1e-7, momentum_decay .004; reset each stage",
+        "loss": "BCE + soma MSE + whitened dendritic-PCA MSE, default five-stage weight schedule + kernel L2 1e-8",
+        "recipe": "Author fit_CNN.py schedule, generator length 6*int(.2*128*6000/(8*400))=288 batches/epoch. Published seven-layer NMDA TCN architecture; no capacity search.",
+        "model": {
+          "kernels": [
+            45,
+            19,
+            19,
+            19,
+            19,
+            19,
+            19
+          ],
+          "widths": [
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128
+          ],
+          "dendritic_outputs": 20,
+          "context_support_ms": 152,
+          "initializer_stddev": 0.002,
+          "BN_epsilon": 0.001,
+          "BN_momentum": 0.99
+        },
+        "adaptations": [
+          "500 fixed E/I input IDs instead of NeuronIO 1278 inputs; exact event multiplicity retained",
+          "Physical 400/500ms windows and 150/154ms overlaps retained; ELM delta_t adjusted; TCN kernels discretized to retain 152ms physical context",
+          "Corresponding DBNN fit/validation events; no main31 data in training, PCA or selection",
+          "Original output moment alignment replaced by one validation-fitted affine map, locked before held-out evaluation; raw results retained"
+        ],
+        "manifest": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/accuracy_frontier_20260929/balanced_1ms/training_manifest.json",
+        "manifest_sha256": "e7d178de1671cbb656d5b6ae32d79248b832cdcc7a501f4ed0f99328c67f4cf0",
+        "fit_cases": 117,
+        "validation_cases": 32,
+        "trainable_parameters": 4753302,
+        "source_versions": {
+          "elmneuron": {
+            "url": "https://github.com/AaronSpieler/elmneuron.git",
+            "commit": "52e68a6d39523ac6613a586699b116e8e606dda3"
+          },
+          "neuron_as_deep_net": {
+            "url": "https://github.com/SelfishGene/neuron_as_deep_net.git",
+            "commit": "074c4666300a8ad246601dab179a97a6942f0f29"
+          },
+          "neuron_reduce": {
+            "url": "https://github.com/orena1/neuron_reduce.git",
+            "commit": "94b1850607f9c62a205ad8fb695f2fd91d84d87d"
+          }
+        }
+      }
+    },
+    "elm_corrected": {
+      "checkpoint": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/adviser6_elm_author_aligned_20261016/aligned/elm_1ms/best.pt",
+      "sha256": "96c192fcbba97b51d2085d0bd527ad826a5a414ae5b855a937e2a60d34583452",
+      "cfg": {
+        "method": "elm",
+        "dt_ms": 1.0,
+        "batch_size": 8,
+        "precision": "FP32 IEEE",
+        "input_channels": 500,
+        "seed": 930291,
+        "training_process_optimized": false,
+        "epochs": 35,
+        "batches_per_epoch": 10000,
+        "window_ms": 500,
+        "burn_in_loss_ms": 0,
+        "overlap_ms": 150,
+        "lr": 0.0005,
+        "optimizer": "Adam + per-update cosine",
+        "loss": "0.5 BCE + 0.5 MSE, voltage scaled by 0.1",
+        "recipe": "Official neuronio_train_script.py non-short-run defaults; 35x10000 updates and full-window loss. Paper Appendix B instead describes 30x11400 with 150ms loss burn-in; code recipe is used here.",
+        "model": {
+          "num_input": 500,
+          "num_output": 2,
+          "num_memory": 20,
+          "num_branch": 45,
+          "num_synapse_per_branch": 100,
+          "input_to_synapse_routing": "neuronio_routing",
+          "memory_tau_min": 1.0,
+          "memory_tau_max": 150.0,
+          "learn_memory_tau": false,
+          "delta_t": 1.0
+        },
+        "adaptations": [
+          "500 fixed E/I input IDs instead of NeuronIO 1278 inputs; exact event multiplicity retained",
+          "Physical 400/500ms windows and 150/154ms overlaps retained; ELM delta_t adjusted; TCN kernels discretized to retain 152ms physical context",
+          "Corresponding DBNN fit/validation events; no main31 data in training, PCA or selection",
+          "Original output moment alignment replaced by one validation-fitted affine map, locked before held-out evaluation; raw results retained",
+          "Geodesic morphology neighborhoods on the500 physical sites; all45 virtual branches populated. Same fixed route as mapping-only control.",
+          "Restore official ELM batch rule:8 distinct fit trajectories per batch,500ms crop starts>=500ms. No input regeneration, added trajectories, outcome screening, hyperparameter search or shortened update budget."
+        ],
+        "morphology_routing_override": {
+          "protocol": "geometry_geodesic_cover45_nearest100_v1",
+          "file": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/adviser6_elm_author_aligned_20261016/morphology_mapping.json",
+          "sha256": "9bccc39599696453ffff0fe98540160549c0a8336ac7d33eee517e4b21610c26",
+          "selection": "Geometry only; fixed before any corrected training or held-out inference",
+          "valid_slots": 4500,
+          "old_valid_slots": 3800
+        },
+        "sampler": {
+          "source": "Official neuronio_data_loader.generate_batch",
+          "batch_trajectories_replace": false,
+          "window_start_min_ms": 500,
+          "window_size_ms": 500,
+          "window_start_replace": true,
+          "shared_fit_validation_manifest_unchanged": true
+        },
+        "specification_source": "Author public PyTorch code commit52e68a6d39523ac6613a586699b116e8e606dda3; paper/JAX differences are disclosed rather than selected by held-out performance.",
+        "manifest": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/accuracy_frontier_20260929/balanced_1ms/training_manifest.json",
+        "manifest_sha256": "e7d178de1671cbb656d5b6ae32d79248b832cdcc7a501f4ed0f99328c67f4cf0",
+        "fit_cases": 117,
+        "validation_cases": 32,
+        "trainable_parameters": 8002,
+        "source_versions": {
+          "elmneuron": {
+            "url": "https://github.com/AaronSpieler/elmneuron.git",
+            "commit": "52e68a6d39523ac6613a586699b116e8e606dda3"
+          },
+          "neuron_as_deep_net": {
+            "url": "https://github.com/SelfishGene/neuron_as_deep_net.git",
+            "commit": "074c4666300a8ad246601dab179a97a6942f0f29"
+          },
+          "neuron_reduce": {
+            "url": "https://github.com/orena1/neuron_reduce.git",
+            "commit": "94b1850607f9c62a205ad8fb695f2fd91d84d87d"
+          }
+        }
+      }
+    },
+    "lstm_unchanged": {
+      "checkpoint": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/baselines_20260930/aligned/lstm_1ms/best.pt",
+      "sha256": "1313e363aa781886bf7a0a199ce34dad715e7ab1b33432c8cac189cd8d1d74fa",
+      "cfg": {
+        "method": "lstm",
+        "dt_ms": 1.0,
+        "batch_size": 8,
+        "precision": "FP32 IEEE",
+        "input_channels": 500,
+        "seed": 930291,
+        "training_process_optimized": false,
+        "epochs": 30,
+        "batches_per_epoch": 11400,
+        "window_ms": 500,
+        "burn_in_loss_ms": 150,
+        "overlap_ms": 150,
+        "lr": 0.0005,
+        "optimizer": "Adam + per-update cosine",
+        "loss": "0.5 BCE + 0.5 MSE, voltage scaled by 0.1",
+        "recipe": "ICLR-2024 Appendix B / Table S10 LSTM-50. No public LSTM checkpoint provided; paper recipe, not a separately verified checkpoint replay.",
+        "model": {
+          "input": 500,
+          "hidden_size": 50,
+          "layers": 1,
+          "outputs": 2
+        },
+        "adaptations": [
+          "500 fixed E/I input IDs instead of NeuronIO 1278 inputs; exact event multiplicity retained",
+          "Physical 400/500ms windows and 150/154ms overlaps retained; ELM delta_t adjusted; TCN kernels discretized to retain 152ms physical context",
+          "Corresponding DBNN fit/validation events; no main31 data in training, PCA or selection",
+          "Original output moment alignment replaced by one validation-fitted affine map, locked before held-out evaluation; raw results retained"
+        ],
+        "manifest": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/accuracy_frontier_20260929/balanced_1ms/training_manifest.json",
+        "manifest_sha256": "e7d178de1671cbb656d5b6ae32d79248b832cdcc7a501f4ed0f99328c67f4cf0",
+        "fit_cases": 117,
+        "validation_cases": 32,
+        "trainable_parameters": 110302,
+        "source_versions": {
+          "elmneuron": {
+            "url": "https://github.com/AaronSpieler/elmneuron.git",
+            "commit": "52e68a6d39523ac6613a586699b116e8e606dda3"
+          },
+          "neuron_as_deep_net": {
+            "url": "https://github.com/SelfishGene/neuron_as_deep_net.git",
+            "commit": "074c4666300a8ad246601dab179a97a6942f0f29"
+          },
+          "neuron_reduce": {
+            "url": "https://github.com/orena1/neuron_reduce.git",
+            "commit": "94b1850607f9c62a205ad8fb695f2fd91d84d87d"
+          }
+        }
+      }
+    },
+    "dbnn_frozen": {
+      "checkpoint": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/diagonal_1ms_20261009/dbnn_w500_dt1ms_burn150_full_diag/best_checkpoint.pt",
+      "sha256": "737efcff1e6686bfb153fca8590a8b28a605fbdb08f9a68ff44e68af8867686d"
+    }
+  },
+  "manifest_sha256": "a5a5a72e9012519214609e89ef8b2e43c3cd8305990502710123804115f9606f",
+  "cases": 379,
+  "full_results": true,
+  "repeats": 7,
+  "warmups": 3,
+  "precision": "FP32IEEE; TF32 disabled",
+  "physical_gpu": "0",
+  "device": "NVIDIA GeForce RTX 5090",
+  "scope": "Prepared B1 complete forward; includes calibration/sigmoid for learned comparators, and host synchronization. Preparation, packing, transfers, capture and scoring excluded.",
+  "method_order": "Fixed-seed randomized order per input",
+  "all_training_and_thresholds_unchanged": true
+}
