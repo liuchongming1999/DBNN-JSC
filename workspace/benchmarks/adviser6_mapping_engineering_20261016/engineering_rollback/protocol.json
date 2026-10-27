@@ -1,0 +1,28 @@
+{
+  "checkpoint": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/diagonal_1ms_20261009/dbnn_w500_dt1ms_burn150_full_diag/best_checkpoint.pt",
+  "checkpoint_sha256": "737efcff1e6686bfb153fca8590a8b28a605fbdb08f9a68ff44e68af8867686d",
+  "main_manifest_sha256": "a5a5a72e9012519214609e89ef8b2e43c3cd8305990502710123804115f9606f",
+  "variants": [
+    "R0_no_packing",
+    "R1_serial_filter",
+    "R2_unfused_drive",
+    "R3_sequential_reset",
+    "R4_complete_graph",
+    "R5_no_graph"
+  ],
+  "rows": 379,
+  "repeats": 30,
+  "warmups": 5,
+  "precision": "FP32 IEEE; TF32 disabled; full quadratic matrix including trained diagonal retained",
+  "device": "NVIDIA GeForce RTX 5090",
+  "physical_gpu": "1",
+  "cpu_affinity": [
+    113
+  ],
+  "scope": "Prepared B=1 complete forward. Includes host launch and synchronization; excludes model/shape preparation, active-ID packing, transfers, graph capture and scoring. GPU-device timers measured separately.",
+  "policy": "Fixed preceding synthetic shape policy selected tag; no new timing or accuracy selection among kernels",
+  "timing_order": "Seeded per-input variant permutation, same repeat budget",
+  "source_sha256": "0614a6ea68917d258f6d408d9e6ee4e43f6931ea7d92f1b961bc994a793a28e5",
+  "interpretation": "One-at-a-time removal from the complete implementation. All graph variants use the same graph capture wrapper; no new kernel search. Includes a repeated complete and no-graph control for paired timings.",
+  "started": "2026-10-16T18:27:28+0800"
+}

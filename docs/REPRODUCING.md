@@ -2,7 +2,7 @@
 
 ## Frozen scope and software
 
-The 18 October 2026 snapshot uses the existing trained full-matrix mouse DBNN,
+The `jsc-v4-revision-20261027` snapshot uses the existing trained full-matrix mouse DBNN,
 unchanged thresholds/reset, the original 379 inputs, and a common 0.0125 ms
 NEURON reference. It incorporates the already-completed corrected Branch-ELM
 training and whole-trajectory TCN inference. No training or tuning was performed
@@ -18,6 +18,10 @@ needed for offline verification. The older `export_manifest.json` and
 `additional_artifacts.json` describe the 13 October export, not the current
 verification contract.
 
+The authoritative file-integrity contract is `docs/release_manifest_20261027.json`.
+The 13/18 October manifests and verification logs are retained as historical
+records; they are not the verification contract for this revision.
+
 ## 1. Recompute published results from raw arrays
 
 Only NumPy is required; no GPU, NEURON installation, training, or authentication:
@@ -31,7 +35,10 @@ This checks every release-file hash, original 117/32 fitting/validation split,
 379-input disjointness, current common reference, all 13 primary method/solver
 rows, per-input voltage error and one-to-one events, timing medians and sums,
 complete ELM budget, all twelve frozen cross-cell checkpoints, and all 2,184
-fixed cross-cell input/reference/prediction pairs. Original recorded GPU/FFT
+fixed cross-cell input/reference/prediction pairs. It also verifies all 757
+supplementary inputs from their saved rasters and voltage/event arrays,
+recomputes the masked SSE, and checks all 136,440 engineering timing calls.
+Original recorded GPU/FFT
 and graph parity results are also checked. This command never fits anything.
 Output: `build/release_verification.json`. Use `--primary-only` if only the
 379-input comparison is needed. `--skip-hashes` skips only file-integrity reads,
@@ -141,10 +148,19 @@ python scripts/fetch_external.py --workspace build/workspace
   `additional_cells/data/lcm/DBNN_baselines_20260930/tcn_aux/pca_1ms/`.
   `sample_tcn_aux.py` and `prepare_pca.py` can regenerate auxiliary recordings
   using the upstream neuron model if raw dendritic traces are needed.
-- **LSTM:** the recorded LSTM-50 paper-recipe adaptation and overlapping-window
-  inference remain unchanged. It is not described as an independently replayed
-  public LSTM checkpoint. Its actual model, configuration, and validation event
-  threshold are supplied.
+- **LSTM:** the published single-layer 50-unit architecture is implemented here
+  in PyTorch with a two-output linear readout and overlapping-window inference.
+  Input/readout weights use Glorot uniform initialization, recurrent weights
+  are orthogonal, and one trainable gate bias has forget-gate value one and
+  other values zero; the redundant PyTorch bias is fixed at zero. The fixed
+  run uses seed 930291, batch size eight, Adam at initial learning rate 5e-4
+  with per-update cosine decay, and 30 epochs of 11,400 updates. Its 500 ms
+  windows exclude the first 150 ms from loss. Event BCE and voltage MSE
+  have equal weight, with voltage scaled by 0.1. This is an architecture
+  adaptation, not a claim to reproduce every detail of an unpublished author
+  implementation or an independently replayed public LSTM checkpoint.
+  Appendix E.3 and `paper/evidence/lstm_implementation_clarification_20261027.json`
+  record the actual settings and source hashes; the model and results are unchanged.
 - **NEURON/CoreNEURON:** the sweep covers 0.5, 0.25, and 0.1 ms solver steps,
   with a 1 ms observation grid; the common accuracy reference uses 0.0125 ms.
   CPU engine voltage/event parity is checked in the saved per-input records.
@@ -231,3 +247,48 @@ uses seven paired repetitions on a monitored device, while CPU/solver records
 use three. Graph capture, packing, upload/download, initialization, and training
 are outside the headline prepared interval. Cost tables make those boundaries
 explicit and estimate amortization separately.
+
+
+## 7. New supplementary results: Appendices K and L
+
+```bash
+python scripts/verify_supplements.py
+python paper/scripts/build_unfiltered_stress_appendix.py --check
+python paper/scripts/build_engineering_ablation_appendix.py --check
+```
+
+These commands need only NumPy and the standard library. The raw-array mapping
+is `docs/supplement_asset_map_20261027.json`; every source file has a checksum.
+The first command reloads all 757 input rasters, common reference trajectories,
+saved accuracy predictions and separate GPU timing exports. It
+recomputes the voltage-error sample counts and squared-error sums, verifies
+native event lists and reproduces Appendix K. It requires GPU parity on the
+primary379 and reports any discrepancies on the additional stronger inputs. No GPU or fitting
+is needed to check the saved outputs. The saved accuracy traces use the
+recorded FP32 filters/readout with sequential FP64 reset, as in the original
+accuracy export. The optimized FP32 GPU timing traces are retained separately. Under some
+stronger supplementary inputs their event sequences differ from the accuracy
+traces. Those differences are reported, not assumed to pass parity and not used
+to select or replace any accuracy output. Appendix K reports accuracy only;
+none of these supplementary GPU timings replaces a main comparison timing.
+
+Appendix L retains the full original `engineering/complete.json` and
+`engineering_rollback/complete.json`, the 30 wall/device readings per case and
+variant, and the two original campaign scripts. Its compact table can be
+recomputed without executing a GPU benchmark. A new timing run requires the
+documented hardware/software and a fresh relocated workspace. Campaign scripts
+retain the original CPU affinity and completion/output paths as provenance;
+adapt those paths in a new working copy before an independent timing run.
+New timings must not overwrite or be substituted for the archived measurements.
+
+The manuscript's code/data availability statement identifies the fixed tag;
+the current release does not publish the manuscript text, submission documents,
+cover letter, or internal review checklist.
+
+The array audit reports three stress inputs with different event indices between
+the original accuracy export and the optimized GPU timing export. All 637
+original candidate inputs, including the full primary379, pass the required
+voltage/event equivalence check. All supplementary accuracy values are
+recomputed from their original accuracy arrays; no outputs are selected or
+replaced on the basis of those numerical differences. The exact case IDs and
+discrepancies are written to `build/supplement_verification.json`.

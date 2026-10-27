@@ -1,0 +1,141 @@
+{
+  "protocol": {
+    "created": "2026-10-16T17:08:23.292481",
+    "models_frozen_before_new_outputs": true,
+    "dbnn_checkpoint_sha256": "737efcff1e6686bfb153fca8590a8b28a605fbdb08f9a68ff44e68af8867686d",
+    "reference_dt_ms": 0.0125,
+    "learned_interval_ms": 1.0,
+    "event_tolerance_ms": 5.0,
+    "event_boundary_eps_ms": 1e-06,
+    "voltage_mask_ms": 10.0,
+    "full637_original_screening": {
+      "initial_reference_dt_ms": 0.1,
+      "total": 637,
+      "retained_original_main": 379,
+      "excluded_original_main": 258,
+      "above3_spikes": 258,
+      "isi_below50ms": 1,
+      "both": 1
+    },
+    "stress_design": {
+      "cases": 120,
+      "sites": 500,
+      "duration_s": 8,
+      "families": [
+        "tonic_strength",
+        "event_packets",
+        "shared_rate_modulation",
+        "synchronous_events",
+        "ei_balance"
+      ],
+      "levels_per_family": 3,
+      "seeds_per_level": 8,
+      "control": "Packet, shared-rate and synchronous families have nominal marginal E50Hz/I25Hz; tonic level0 is the independent control. Actual event totals are retained."
+    },
+    "split_validation": {
+      "training_and_validation_inputs": 149,
+      "all757_input_hashes_disjoint": true
+    },
+    "model_changes": "None: weights, filters, reset, thresholds, calibration, learned capacities and training unchanged"
+  },
+  "source_hashes": {
+    "analysis.json.gz": "6e9c4a46184b79b0863a749d9dba22b772882c262b4641d1cbcdd33a309f5484",
+    "manifest.json": "6e1bbf65133cb144ab7b60fc2f0d2d448b699df7e293b735f8c84055fee4bb25",
+    "protocol.json": "5306378afe05a1924da0513ad2b6aa57c3f2023f453cbac0fb0a46b40ecdbb5b",
+    "final_audit.json": "7a4ec3e590e0a5ebfd7840bfeb3ec4089d590f7bce90aaa544d90121fc2905ce"
+  },
+  "all_757_native_event_lists_rematched": true,
+  "primary379_reproduced": true,
+  "groups": {
+    "primary379": {
+      "cases": 379,
+      "rmse_mv": 0.4403635862353741,
+      "f1": 0.5352697095435685,
+      "reference_events": 680,
+      "predicted_events": 766,
+      "tp": 387,
+      "fp": 379,
+      "fn": 293
+    },
+    "full637": {
+      "cases": 637,
+      "rmse_mv": 0.4388465636844859,
+      "f1": 0.5105467068445975,
+      "reference_events": 2192,
+      "predicted_events": 2454,
+      "tp": 1186,
+      "fp": 1268,
+      "fn": 1006
+    },
+    "excluded258": {
+      "cases": 258,
+      "rmse_mv": 0.43756955368685424,
+      "f1": 0.499375,
+      "reference_events": 1512,
+      "predicted_events": 1688,
+      "tp": 799,
+      "fp": 889,
+      "fn": 713
+    },
+    "stress120": {
+      "cases": 120,
+      "rmse_mv": 3.5847829834597307,
+      "f1": 0.2247437774524158,
+      "reference_events": 10224,
+      "predicted_events": 69004,
+      "tp": 8903,
+      "fp": 60101,
+      "fn": 1321
+    },
+    "tonic_strength": {
+      "cases": 24,
+      "rmse_mv": 1.8507573470909802,
+      "f1": 0.21819664492078286,
+      "reference_events": 2145,
+      "predicted_events": 15023,
+      "tp": 1873,
+      "fp": 13150,
+      "fn": 272
+    },
+    "event_packets": {
+      "cases": 24,
+      "rmse_mv": 5.537260740694867,
+      "f1": 0.16430976430976432,
+      "reference_events": 1952,
+      "predicted_events": 21808,
+      "tp": 1952,
+      "fp": 19856,
+      "fn": 0
+    },
+    "shared_rate_modulation": {
+      "cases": 24,
+      "rmse_mv": 2.5746808658587126,
+      "f1": 0.3104204404614358,
+      "reference_events": 1868,
+      "predicted_events": 8621,
+      "tp": 1628,
+      "fp": 6993,
+      "fn": 240
+    },
+    "synchronous_events": {
+      "cases": 24,
+      "rmse_mv": 4.22056159492391,
+      "f1": 0.31503482179434655,
+      "reference_events": 1999,
+      "predicted_events": 7765,
+      "tp": 1538,
+      "fp": 6227,
+      "fn": 461
+    },
+    "ei_balance": {
+      "cases": 24,
+      "rmse_mv": 1.917401890932681,
+      "f1": 0.21189117304815205,
+      "reference_events": 2260,
+      "predicted_events": 15787,
+      "tp": 1912,
+      "fp": 13875,
+      "fn": 348
+    }
+  }
+}

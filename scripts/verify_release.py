@@ -132,11 +132,14 @@ def main():
     ap=argparse.ArgumentParser();ap.add_argument('--skip-hashes',action='store_true');ap.add_argument('--primary-only',action='store_true');ap.add_argument('--output',type=Path,default=REPO/'build/release_verification.json');args=ap.parse_args()
     count=0
     if not args.skip_hashes:
-        for row in read(REPO/'docs/release_manifest_20261018.json')['files']:
+        for row in read(REPO/'docs/release_manifest_20261027.json')['files']:
             p=REPO/row['path'];assert p.is_file(),row['path'];assert digest(p)==row['sha256'],row['path'];count+=1
         print('HASHES',count,flush=True)
     report={'passed':True,'files_verified':count,'primary':primary()}
-    if not args.primary_only:report['crosscell']=crosscell()
+    if not args.primary_only:
+        report['crosscell']=crosscell()
+        from verify_supplements import main as verify_supplements
+        report['supplements']=verify_supplements()
     args.output.parent.mkdir(parents=True,exist_ok=True);args.output.write_text(json.dumps(report,indent=2,allow_nan=False)+'\n')
     print(json.dumps({'passed':True,'files_verified':count,'primary_models':13,'primary_inputs':379,'crosscell_inputs':report.get('crosscell',{}).get('inputs',0),'output':str(args.output)}),flush=True)
 if __name__=='__main__':main()

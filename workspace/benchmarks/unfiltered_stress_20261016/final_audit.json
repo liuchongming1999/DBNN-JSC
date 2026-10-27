@@ -1,0 +1,53 @@
+{
+  "finished": true,
+  "inputs": 757,
+  "full637": 637,
+  "stress120": 120,
+  "all_models_coverage": true,
+  "no_output_exclusions": true,
+  "no_training": true,
+  "protected_files_unchanged": true,
+  "reused_timing_hashes_unchanged": true,
+  "canonical_original379_regression": true,
+  "manifest_sha256": "6e1bbf65133cb144ab7b60fc2f0d2d448b699df7e293b735f8c84055fee4bb25",
+  "method_case_counts": {
+    "dbnn": 757,
+    "gpu": 757,
+    "cpu1": 757,
+    "cpu8": 757,
+    "tcn": 757,
+    "elm": 757,
+    "lstm": 757,
+    "multisplit8_dt0.5": 757,
+    "multisplit8_dt0.25": 757,
+    "core1_dt0.5": 757,
+    "core1_dt0.25": 757
+  },
+  "strict_parity_differences_retained": {
+    "gpu": 3,
+    "cpu1": 0,
+    "cpu8": 0,
+    "tcn": 0,
+    "elm": 0,
+    "lstm": 0,
+    "multisplit8_dt0.5": 104,
+    "multisplit8_dt0.25": 74,
+    "core1_dt0.5": 0,
+    "core1_dt0.25": 0
+  },
+  "compute_scripts_sha256": {
+    "reuse_solver_timing.py": "46ea7326f2c2064526743550ad928846091b588ca410cf9f7b2135c3ad74900d",
+    "benchmark.py": "147fd2aa17b486125aeb8980bd9305c8ac378c264715e524c24185acba1591ac",
+    "analyze.py": "5dfe37af1e9d206a7468854d5d010ec26f788f7889c91b76e4928f907be4b368",
+    "predict.py": "c6937edfec4ecea88ecd2131803bd8b0721b48a56e45cacbe1a39de61f545fb8",
+    "benchmark_campaign.py": "67779afafd9cab0e7636029351fbbc670e6e3512a130e736e1539a578f97613e",
+    "reference_campaign.py": "a350bf5299e0b95d917d9866594275f114263cb273d44ab30410a2b114d0be24",
+    "audit_parity.py": "680e3feeb9d70cdecd9436c0d87f17f2ef7fc885fb9ce1bf3dca32430ea53c6c",
+    "resume_after_fine.py": "38454116a958a4b3e1c1b9e8493b5a0d903d49a66e638ace411e334092702794",
+    "audit_solver.py": "8028d606eb531da5e33a7b2a781534346a34525e017118a381ab5e7adfab6ee9",
+    "run_grid.py": "6fa25ad5c67a68f42ae49300d3e98991ba0549ba8753b14d9a4c7bbc3eff8983",
+    "reset_benchmark.py": "224f05952446b118b99b41af8dee41a9ee118d4247daee05234b065c34d1a306",
+    "finalize.py": "91a39e7ee810705d1449e51359b1d8a0584329ec6473d936cc57ad430c28cb21",
+    "prepare.py": "dca7dfe4d2a4c31a6131c2ab59c8a1b8d2b6cc71089eb351c02378f7bef7b799"
+  }
+}

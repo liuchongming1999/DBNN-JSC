@@ -10,7 +10,11 @@ Chongming Liu and Jingyang Ma contributed equally.
 Corresponding authors: Songting Li (`songting@sjtu.edu.cn`) and Douglas Zhou
 (`zdz@sjtu.edu.cn`).
 
-## Current release: 18 October 2026
+## Current manuscript revision: 27 October 2026
+
+Frozen version: [`jsc-v4-revision-20261027`](https://github.com/liuchongming1999/DBNN-JSC/tree/jsc-v4-revision-20261027).
+See [the revision map](docs/MANUSCRIPT_REVISION_20261027.md) for the added
+supplementary data and the correspondence to the manuscript appendices.
 
 The primary model, reset parameters, inputs, and trained weights are unchanged.
 This release synchronizes the repository with the final recorded comparison:
@@ -49,6 +53,7 @@ are provenance, not separate definitions of DBNN.
 ```bash
 git clone https://github.com/liuchongming1999/DBNN-JSC.git
 cd DBNN-JSC
+git checkout jsc-v4-revision-20261027
 python -m venv .venv
 source .venv/bin/activate
 pip install numpy
@@ -58,7 +63,8 @@ python scripts/verify_release.py
 This checks file hashes, training/test disjointness, the main checkpoint,
 all 13 primary model/solver rows from raw voltage arrays and events,
 the 350,000-update ELM budget, timing medians, and all 12 cross-cell models
-on their complete fixed panels. Output goes to `build/release_verification.json`.
+on their complete fixed panels, plus the supplementary 637 original candidates
+and 120 stress inputs. Output goes to `build/release_verification.json`.
 Use `--primary-only` for the mouse comparison alone. The verification does not
 train, recalibrate, or modify the frozen study evidence.
 
@@ -101,8 +107,20 @@ recipes and replayed after validation-only selection; they are not a second
 newly unseen panel. All 182 inputs per condition are retained regardless of
 spike count or burst behavior. See [RESULTS.md](docs/RESULTS.md).
 
-The separate unfiltered-637 and pressure-120 studies are not part of this
-manuscript release. Their independent author archives are unchanged.
+Appendix K now reports the frozen DBNN on all 637 original candidates and
+120 prespecified stress inputs, without additional output screening. The 379
+primary inputs are a subset of the original 637, not an additional independent
+cohort. Appendix L adds cumulative and single-removal implementation controls.
+Their original arrays, repeated timings, source and offline verification are
+included; older baseline rankings from those exploratory campaigns are not
+used in the current comparison. The primary checkpoint, main-panel results
+and main figure remain unchanged.
+
+The headline speed ratios (about 16,404 versus eight-core NEURON and 32 versus
+the fastest measured learned surrogate) use prepared computation. A separate
+complete-call campaign gives about 234 versus NEURON with a resident model
+and cached recurring layouts, including input processing and data transfers.
+These are distinct timing boundaries; see Appendix I and the revision map.
 
 ## Sources and disclosures
 

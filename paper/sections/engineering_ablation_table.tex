@@ -1,0 +1,12 @@
+\begin{tabularx}{\textwidth}{Xrr}
+\toprule
+Implementation step & Cumulative (ms) & Removal (ms)\\
+\midrule
+Serial reference, all sites & 136.263 & --- \\
+Active-site restriction & 133.829 & 33.506 \\
+Parallel filtering & 146.566 & 35.430 \\
+Fused voltage calculation & 127.695 & 46.012 \\
+Event-based reset & 49.223 & 111.662 \\
+CUDA Graph replay & 31.869 & 49.598 \\
+\bottomrule
+\end{tabularx}

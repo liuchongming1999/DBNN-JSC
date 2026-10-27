@@ -1,0 +1,67 @@
+{
+  "created": "2026-10-16T17:08:23.292481",
+  "models_frozen_before_new_outputs": true,
+  "dbnn_checkpoint": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/diagonal_1ms_20261009/dbnn_w500_dt1ms_burn150_full_diag/best_checkpoint.pt",
+  "dbnn_checkpoint_sha256": "737efcff1e6686bfb153fca8590a8b28a605fbdb08f9a68ff44e68af8867686d",
+  "baseline_models": {
+    "tcn": {
+      "folder": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/spike_panel_20261009/methods/tcn_author_default",
+      "checkpoint": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/baselines_20260930/aligned/tcn_1ms/best.pt",
+      "checkpoint_sha256": "62bba4c6797f4fad76298b3944aad659df29ede74f74798b230d859d1366d80b",
+      "protocol_sha256": "b276988161041c6e8f02340ebc29f93b39f55c5f80567a941799bd33363ac0c0"
+    },
+    "elm": {
+      "folder": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/spike_panel_20261009/methods/elm_author_default",
+      "checkpoint": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/baselines_20260930/aligned/elm_1ms/best.pt",
+      "checkpoint_sha256": "e19834595192362c1c4a05146c6bfec6c32bc16119e4048a086c4d2bc574d917",
+      "protocol_sha256": "77c585600d397ed00c2e5c02bd2cd352399c06d5ec79ad750a37392836bd98ea"
+    },
+    "lstm": {
+      "folder": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/spike_panel_20261009/methods/lstm_common150",
+      "checkpoint": "/home/lcm/DBNN_L5PC_surrogate_20260928/benchmarks/baselines_20260930/aligned/lstm_1ms/best.pt",
+      "checkpoint_sha256": "1313e363aa781886bf7a0a199ce34dad715e7ab1b33432c8cac189cd8d1d74fa",
+      "protocol_sha256": "c383c09fa1cdfe6e59a489ea098150570618105b3f84747e455bac65d6b60fe1"
+    }
+  },
+  "reference_dt_ms": 0.0125,
+  "solver_steps_ms": [
+    0.5,
+    0.25
+  ],
+  "learned_interval_ms": 1.0,
+  "event_tolerance_ms": 5.0,
+  "event_boundary_eps_ms": 1e-06,
+  "voltage_mask_ms": 10.0,
+  "input_output_screening": "None. All637 original candidates and all120 fixed stress inputs retained regardless of output.",
+  "full637_original_screening": {
+    "initial_reference_dt_ms": 0.1,
+    "total": 637,
+    "retained_original_main": 379,
+    "excluded_original_main": 258,
+    "above3_spikes": 258,
+    "isi_below50ms": 1,
+    "both": 1
+  },
+  "stress_design": {
+    "cases": 120,
+    "sites": 500,
+    "duration_s": 8,
+    "families": [
+      "tonic_strength",
+      "event_packets",
+      "shared_rate_modulation",
+      "synchronous_events",
+      "ei_balance"
+    ],
+    "levels_per_family": 3,
+    "seeds_per_level": 8,
+    "control": "Packet, shared-rate and synchronous families have nominal marginal E50Hz/I25Hz; tonic level0 is the independent control. Actual event totals are retained."
+  },
+  "split_validation": {
+    "training_and_validation_inputs": 149,
+    "all757_input_hashes_disjoint": true
+  },
+  "measurement": "Prepared compute,5 measured repetitions following3 warmups for learned methods;3 repeats after1 warmup for detailed solvers. Timed learned GPU methods run serially on GPU0.",
+  "model_changes": "None: weights, filters, reset, thresholds, calibration, learned capacities and training unchanged",
+  "manuscript_changes": "None; standalone experimental report first"
+}

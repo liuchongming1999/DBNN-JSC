@@ -1,4 +1,8 @@
-# Frozen published-study results (18 October 2026)
+# Frozen study results — revision 27 October 2026
+
+The primary and cross-cell values below are unchanged from 18 October.
+New Appendices K/L and implementation clarifications are mapped in
+[MANUSCRIPT_REVISION_20261027.md](MANUSCRIPT_REVISION_20261027.md).
 
 All values below are copied from the approved, already-validated manuscript evidence.
 They are not newly trained or selected results. The common reference is NEURON

@@ -1,0 +1,176 @@
+{
+  "source_hashes": {
+    "engineering_cumulative.json": "e62c0c641451bc7dc29d6ec2f05a0dd2a6cb3457d5cba051c35edf7333a4e938",
+    "engineering_rollbacks.json": "eb42b7bb50e4f777c94be0779dbf7cbac2d1c8ce6100e352568d3c9e03eeca51"
+  },
+  "checkpoint_sha256": "737efcff1e6686bfb153fca8590a8b28a605fbdb08f9a68ff44e68af8867686d",
+  "inputs": 379,
+  "calls_per_variant_per_input": 30,
+  "warmups": 5,
+  "all_input_hashes_match_primary_panel": true,
+  "all_archived_call_medians_and_parity_records_verified": true,
+  "overall_cumulative_speedup": 4.275773210488186,
+  "complete_removal_control_ms": 31.875393353402615,
+  "summary": {
+    "cumulative": {
+      "G0_dense_serial": {
+        "cases": 379,
+        "sum_per_input_wall_median_ms": 136.263070628047,
+        "sum_per_input_device_median_ms": 135.10958394780755,
+        "max_voltage_discrepancy_mv": 1.8388851486861313e-05,
+        "all_event_sequences_equal": true,
+        "rmse_mv": 0.4403635057962597,
+        "tp_fp_fn": [
+          387,
+          379,
+          293
+        ]
+      },
+      "G1_active_serial": {
+        "cases": 379,
+        "sum_per_input_wall_median_ms": 133.82932543754578,
+        "sum_per_input_device_median_ms": 132.6587040796876,
+        "max_voltage_discrepancy_mv": 1.8388851486861313e-05,
+        "all_event_sequences_equal": true,
+        "rmse_mv": 0.44036350637924254,
+        "tp_fp_fn": [
+          387,
+          379,
+          293
+        ]
+      },
+      "G2_parallel_filter": {
+        "cases": 379,
+        "sum_per_input_wall_median_ms": 146.56626619398594,
+        "sum_per_input_device_median_ms": 144.9472480714321,
+        "max_voltage_discrepancy_mv": 1.9305893189880408e-05,
+        "all_event_sequences_equal": true,
+        "rmse_mv": 0.44036350534994995,
+        "tp_fp_fn": [
+          387,
+          379,
+          293
+        ]
+      },
+      "G3_fused_drive": {
+        "cases": 379,
+        "sum_per_input_wall_median_ms": 127.69457045942545,
+        "sum_per_input_device_median_ms": 126.40670401230454,
+        "max_voltage_discrepancy_mv": 1.9224865212663644e-05,
+        "all_event_sequences_equal": true,
+        "rmse_mv": 0.44036350566159094,
+        "tp_fp_fn": [
+          387,
+          379,
+          293
+        ]
+      },
+      "G4_event_reset": {
+        "cases": 379,
+        "sum_per_input_wall_median_ms": 49.22332148998976,
+        "sum_per_input_device_median_ms": 48.33004778623581,
+        "max_voltage_discrepancy_mv": 1.9224865212663644e-05,
+        "all_event_sequences_equal": true,
+        "rmse_mv": 0.44036350836893184,
+        "tp_fp_fn": [
+          387,
+          379,
+          293
+        ]
+      },
+      "G5_cuda_graph": {
+        "cases": 379,
+        "sum_per_input_wall_median_ms": 31.86863847076893,
+        "sum_per_input_device_median_ms": 30.63564802799374,
+        "max_voltage_discrepancy_mv": 1.9224865212663644e-05,
+        "all_event_sequences_equal": true,
+        "rmse_mv": 0.44036350836893184,
+        "tp_fp_fn": [
+          387,
+          379,
+          293
+        ]
+      }
+    },
+    "removal": {
+      "R0_no_packing": {
+        "cases": 379,
+        "sum_per_input_wall_median_ms": 33.50647818297148,
+        "sum_per_input_device_median_ms": 32.26993608567864,
+        "max_voltage_discrepancy_mv": 1.9224865212663644e-05,
+        "all_event_sequences_equal": true,
+        "rmse_mv": 0.44036350872829205,
+        "tp_fp_fn": [
+          387,
+          379,
+          293
+        ]
+      },
+      "R1_serial_filter": {
+        "cases": 379,
+        "sum_per_input_wall_median_ms": 35.4303615167737,
+        "sum_per_input_device_median_ms": 34.20219206996262,
+        "max_voltage_discrepancy_mv": 1.9224865212663644e-05,
+        "all_event_sequences_equal": true,
+        "rmse_mv": 0.44036350914806616,
+        "tp_fp_fn": [
+          387,
+          379,
+          293
+        ]
+      },
+      "R2_unfused_drive": {
+        "cases": 379,
+        "sum_per_input_wall_median_ms": 46.0122199729085,
+        "sum_per_input_device_median_ms": 44.88211189582944,
+        "max_voltage_discrepancy_mv": 1.9305893189880408e-05,
+        "all_event_sequences_equal": true,
+        "rmse_mv": 0.44036350831810095,
+        "tp_fp_fn": [
+          387,
+          379,
+          293
+        ]
+      },
+      "R3_sequential_reset": {
+        "cases": 379,
+        "sum_per_input_wall_median_ms": 111.66240647435188,
+        "sum_per_input_device_median_ms": 110.48432000167668,
+        "max_voltage_discrepancy_mv": 1.9224865212663644e-05,
+        "all_event_sequences_equal": true,
+        "rmse_mv": 0.44036350566159094,
+        "tp_fp_fn": [
+          387,
+          379,
+          293
+        ]
+      },
+      "R4_complete_graph": {
+        "cases": 379,
+        "sum_per_input_wall_median_ms": 31.875393353402615,
+        "sum_per_input_device_median_ms": 30.6535200830549,
+        "max_voltage_discrepancy_mv": 1.9224865212663644e-05,
+        "all_event_sequences_equal": true,
+        "rmse_mv": 0.44036350836893184,
+        "tp_fp_fn": [
+          387,
+          379,
+          293
+        ]
+      },
+      "R5_no_graph": {
+        "cases": 379,
+        "sum_per_input_wall_median_ms": 49.59843493998051,
+        "sum_per_input_device_median_ms": 48.55071983858943,
+        "max_voltage_discrepancy_mv": 1.9224865212663644e-05,
+        "all_event_sequences_equal": true,
+        "rmse_mv": 0.44036350836893184,
+        "tp_fp_fn": [
+          387,
+          379,
+          293
+        ]
+      }
+    }
+  }
+}

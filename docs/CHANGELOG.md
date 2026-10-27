@@ -1,5 +1,20 @@
 # Release history
 
+## 27 October 2026 — jsc-v4-revision-20261027
+
+- Keep all main/cross-cell checkpoints, thresholds, primary numerical evidence
+  and scientific figure files unchanged from the 18 October release.
+- Add Appendix K's 637-candidate/120-stress input data and saved reference,
+  accuracy and separate GPU timing output arrays, with offline per-input verification.
+- Add Appendix L's cumulative/removal engineering controls, original source,
+  complete repeated timings and numerical-equivalence records.
+- Clarify the unchanged LSTM comparator's actual PyTorch implementation,
+  initialization, optimizer, loss and completed budget (Appendix E.3).
+- Document prepared computation separately from cached complete invocation
+  and distinguish full-process accuracy from unmeasured training-component gains.
+- Pin a named revision and verify the complete file manifest and regenerated
+  tables/figures without requiring the author's original filesystem.
+
 ## 18 October 2026
 
 - Synchronize with the final approved primary and cross-cell manuscript evidence.
